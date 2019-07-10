@@ -1,0 +1,590 @@
+﻿@charset "utf-8";
+/* CSS Document - G213A│g213A_Overlay.css */
+
+
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background:#939393 url(images/g13A_2.jpg) -0px -300px;
+
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 100%;
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px*/
+}
+
+p, ul, ol{
+	margin:0 0 0 0;
+}
+
+/*頁面最大容器*/
+/*程式初始化時，會來抓取width和min-height的字串值*/
+.pageWrapper {
+	/*◎居中，但前提是.pageWrapper必須有設定寬度*/
+	/*margin:0 auto 0 auto;*/
+	padding:0px 0px 0px 0px; 
+	width:800px; 
+	height:auto;
+}
+
+/*最上方標題列.g213A_header，但在此版型只是利用其高度，拉出與下方物件的間距*/
+/*↓------------------------------↓*/
+.g213A_header {
+	display:block;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	width:100%;
+	/*可藉.g213A_header的高度，使.mediaWrapper距離上緣有[20]px間距*/
+	height:20px;
+	text-align:center;
+	/*background:#C52B2E;*/
+}
+
+/*↑------------------------------↑*/
+
+
+/*↓------------------------------↓*/
+/*每一頁.g213A_card都在此(.g213A_cardGroupShow)容器顯示*/
+.g213A_cardGroupShow {
+	display: block;
+	margin:0px auto 0px auto;
+	width:640px;
+	height:auto;
+	background:#FFF;
+	
+	/*說明*/
+	/*min-height設為20px，在Android、iOS 以手機(小尺寸視窗)進入頁面，讀入媒體檔之前，尚未能偵測cue點，所以圖檔並不會出現。*/
+	/*這時，g213A_numButtonGroup會與上方.barOuter_2緊靠一起*/
+	/*甚至.g213A_numButtonGroup局部往上滑入播放介面，所以，需給一個最小高度，補救。 - 放棄使用這方法*/
+	/*min-height:20px;*/
+	/*---※●改為在.g213A_numButtonGroup設clear:both來處理---*/
+}
+
+/*圖文區塊 - 在此版型，其內容為圖*/
+.g213A_card {
+	/*1051108 - ●[桌機]這可避免.g213A_numButtonGroup往上浮動10px。這是個怪異現象。*/
+	/*--------------*/
+	clear:both;
+	/*--------------*/
+	
+	/*勿修改*/
+	display: block;
+	visibility:hidden;
+	
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	width:100%;
+	height:auto;
+	text-align:center;
+}
+
+/*圖文區塊裡面的排版圖形：不跳大圖(.normalPic)、點小圖跳出大圖(.toBigPic)*/
+/*在此處覆蓋tPlayer.css*/
+.normalPic, .toBigPic  {
+	background: none;
+}
+.normalPic > img, .toBigPic > img  {
+	border:none;
+}
+/*↑------------------------------↑*/
+
+
+/*------------------------------*/
+/*「數字按鈕的外層容器」*/
+.g213A_numButtonGroup {
+	/*※請見：.g213A_cardGroupShow的說明*/
+	clear:both;
+	
+	display:block;
+	margin:0 auto 0 auto;
+	padding:10px 0 10px 0;
+	width:640px;
+	height:auto;
+	background:#FFF;
+	text-align:center;
+}
+/**/
+/*「數字按鈕外層容器」：當「開啟下方選單列表」按鈕被按下時，.g213A_numButtonGroup會附加此class*/
+.g213A_numButtonGroup_list {
+	text-align:left;
+	padding-left:5px;
+	/*※此處不能改變margin-left和margin-right的auto值，否則會失去居中的狀態*/
+}
+
+/*數字按鈕*/
+.g213A_numButton {
+	margin:2px 0 2px 13px;
+	padding:3px 0 0 0;
+	display: inline-block;
+	/*float:left;*/
+	width:30px;
+	height:30px;
+	background:url(images/numButton.png) no-repeat;
+	cursor:pointer;
+	text-align:center;
+	
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 1.2em; 
+	font-weight:600;
+	line-height: 1.2em; 
+	letter-spacing:0.0625em;
+	color:#333;
+}
+/*數字按鈕：滑鼠懸浮狀態*/
+.g213A_numButton_over {
+	background:url(images/numButton_over.png) no-repeat;
+	width:32px;
+	height:32px;
+}
+/*數字按鈕：滑鼠點擊、作用中*/
+.g213A_numButton_keep {
+	background:url(images/numButton_keep.png) no-repeat;
+	color:#FFF;
+}
+/**/
+/*數字按鈕：當「開啟下方選單列表」按鈕被按下時，數字按鈕.g213A_menuButton會附加此class*/
+.g213A_numButton_list {
+	margin:0px 0px 0px 0px;
+}
+/*------------------------------*/
+
+/*------------------------------*/
+/*「開啟下方選單列表」按鈕*/
+.g213A_menuButton {
+	margin:2px 0px 2px 0px;
+	padding:3px 0 0 0;
+	display: inline-block;
+	/*float:left;*/
+	width:30px;
+	height:30px;
+	background:url(images/menuButton.png) no-repeat;
+	cursor:pointer;
+}
+/*「開啟下方選單列表」按鈕：滑鼠懸浮其上*/
+.g213A_menuButton_over {
+	background:url(images/menuButton_over.png) no-repeat;
+	width:32px;
+	height:32px;
+}
+
+/*滑鼠懸浮在數字按鈕上方時，出現的小標題容器*/
+.g213A_showCueTitle {
+	position:absolute;
+	padding:10px 5px 10px 5px;
+	width:640px;
+	height:auto;
+	background:#454545;
+	display:none;
+	
+	text-align:center;
+	line-height:1.2em;
+	font-size:1em;
+	font-weight:600;
+	color:#FFF;
+}
+/*------------------------------*/
+
+/*------------------------------*/
+/*「切換回純粹數字」按鈕*/
+.g213A_returnNumButton {
+	margin:2px 0 2px 10px;
+	padding:3px 0 0 0;
+	display: none; /*出現時需改為display: inline-block*/
+	/*float:left;*/
+	width:30px;
+	height:30px;
+	background:url(images/returnNumButton.png) no-repeat;
+	cursor:pointer;
+}
+/*「切換回純粹數字」按鈕：滑鼠懸浮其上*/
+.g213A_returnNumButton_over {
+	background:url(images/returnNumButton_over.png) no-repeat;
+	width:32px;
+	height:32px;
+}
+/*------------------------------*/
+
+/*------------------------------*/
+/*下方選單區塊*/
+.g213A_menuZone {
+	display:none; /*當出現時，程式會設定為display:table*/
+	margin:0 auto 0 auto;
+	padding:0px 0px 0px 0px;
+	width:640px;
+	height:auto;
+	background:#EEE;
+	text-align:left;
+	
+	/*避免播放介面物件被選取反白*/
+	-moz-user-select: none;
+    -webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+/*選單項目*/
+.g213A_menuItem {
+	padding:5px 3px 5px 15px;
+	background: #EEE;
+	border-bottom:1px #A6A6A6 solid;
+	cursor:pointer;
+}
+/*選單項目：未被訪問的連結*/
+.g213A_menuItem:link {
+	background: #EEE;
+}
+/*選單項目：滑鼠懸浮其上*/
+.g213A_menuItem:hover {
+	background: #FFF;
+}
+/*選單項目：第1個*/
+.g213A_menuItem:nth-child(1) {
+	border-top:1px #A6A6A6 solid;
+}
+/*選單項目：數字按鈕的容器*/
+.g213A_menuItem .numOrder {
+	display: table-cell;
+	vertical-align:middle;
+	padding:0 6px 0 0;
+}
+/*選單項目：小標題字串的容器*/
+.g213A_menuItem .titleStr {
+	display: table-cell;
+	vertical-align:middle;
+	font-size:0.95em;
+}
+
+
+
+/*↓↓↓↓↓↓ 媒體播放介面 ↓↓↓↓↓↓*/
+/*包裹 .mediaHeader、.mediaDiv、.playbackDiv ...等之外圍容器*/
+.mediaWrapper {
+	/*◎居中*/
+	margin:0px auto 0px auto;
+
+	/*◎從這裡調整.mediaWrapper播放介面的《水平方向位置》*/
+	/*margin:0px 0px 0px 0px;*/
+	/*==================*/
+	width:640px; 
+	height:auto;
+	/*display: block;*/
+	
+	/*1051104 - ●於IE，.mediaWrapper的高度會多出一些，可能露出下方物件，或.mediaWrapper底色
+		此例，，將.mediaWrapper背景色設為白色，補救瑕疵。*/
+	/*1051108 - ●此問題已經解決：在HTML中將.mediaHeight設為-10。 - 此解會造成全畫面產生bug。所以，不可用此法*/
+	/*1051108 - 在g213A_AudioCue.js主程式中，計算與動態操控.mediaWrapper的高度。解決OK*/
+	background:#FFF;
+}
+
+/*影音媒體-容器 - 包裝 媒體物件 和 .playbackDiv*/
+.mediaDiv {
+	width:640px; 
+	height:0px;
+	/*底色設為白色，避免播放距面下緣露出其他顏色(如背景圖顏色)*/
+	background:#FFF;
+}
+
+/*標題列*/
+/*========================================*/
+/*媒體標題列-容器*/
+.mediaHeader {
+	background:#454545;
+}
+/*標題列-icon-容器*/
+.icon {
+	width:auto;
+	height:38px;
+	display: table-cell;
+	padding:0 10px 0 23px; 
+	vertical-align: middle;
+}
+/*標題列-icon-圖形*/
+.icon img {
+	width:45px; 
+	height:auto;
+	vertical-align: middle;
+}
+/*標題列-字串-容器*/
+.mediaHeaderString {
+	/*與.buttons共用100%，可因應狀況為調%*/
+	width:82%;
+	height:auto;
+	display: table-cell;
+	padding:0 0 0 0;
+	vertical-align:middle;
+
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size:1.0625em;
+	font-weight:500;
+	color:#F9FFE1;
+}
+/*標題列右側.notebook和.help的容器*/
+.buttons {
+	/*與.mediaHeaderString共用100%，可因應狀況微調%*/
+	width:18%;
+	height:auto;
+	display: table-cell;
+	vertical-align:middle;
+}
+/*新手上路按鈕*/
+.help {
+	display: table-cell;
+	margin:-1px 25px 0 0; 
+	float:right;
+}
+.help img {
+	width:24px; 
+	cursor: pointer;
+	vertical-align: middle;
+}
+/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+.notebook {
+	display: table-cell;
+	margin:0 12px 0 0; 
+	float:right;
+}
+.notebook img {
+	width:25px; 
+	cursor:pointer;
+	vertical-align: middle;
+}
+/*========================================*/
+
+/*播放界面UI - 右邊界*/
+.pbRight {
+	margin:3px 0 0 0px; /*原margin:3px 0 0 10px*/
+}
+
+/*播放介面UI*/
+/*↓------------------------------↓*/
+.barOuter_2 {
+	margin:10px 20px 3px 25px; /*(.barOuter)原margin:3px 0 0 0*/
+	/*background: #215EBC;*/
+}
+/*↑------------------------------↑*/
+	
+	
+	
+
+/*↑↑↑↑↑↑ 媒體播放介面 ↑↑↑↑↑↑*/
+
+
+
+/*↓↓↓↓↓↓ 名詞解釋 ↓↓↓↓↓↓*/
+
+/*標註包圍名詞之用的class*/
+.glossary {
+	padding:1px 1px 0px 1px; /*未改變*/
+	border-bottom:2px dashed #FF0000; /*未改變*/
+	cursor:pointer; /*未改變*/
+	background:#EEE;
+}
+
+/*滑鼠指標hover懸浮到.glossary上方時，採用此CSS。程式會來取用。*/
+/*關閉.glossary_explain面板後，程式會取消.glossary_hover之CSS*/
+.glossary_hover {
+	background:#FFF; /*未改變*/
+	border:dashed #475F3D;
+	border-width:2px 0 2px 0; /*未改變*/
+	padding:1px 1px 1px 1px; /*未改變*/
+}
+
+/*↑↑↑↑↑↑ 名詞解釋 ↑↑↑↑↑↑*/
+
+
+/*資料：小標題字串 - 隱藏*/
+.g213A_cardTitle {
+	display:none;
+}
+
+/*timeCode資料，需隱藏起來*/
+.cue_start, .total_time {
+	display:none;
+}
+
+
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ */
+
+
+/*測試用 - 已隱藏*/
+.showInfo {
+	position:absolute;
+	top:0px;
+	left:800px;
+	padding:10px;
+	width:400px;
+	height:300px;
+	display:none;
+	background:#E8E8E8;
+	
+}
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:769px) {
+	
+	.pageWrapper {
+		width:100%;
+	}
+	
+	/*媒體檔標題列*/
+	/*========================================*/
+	/*媒體檔標題列-容器*/
+	.mediaHeader {
+	}
+	/*標題列-icon-容器*/
+	.icon {
+		padding:0 10px 0 15px; /*原padding:0 10px 0 23px*/
+	}
+	/*標題列-字串-容器*/
+	.mediaHeaderString {
+		/*原本與.buttons共用100%，為82%*/
+		width:100%;
+	}
+	/*標題列右側.notebook和.help的容器*/
+	.buttons {
+		/*原與.mediaHeaderString共用100% - width:18%;*/
+		/*width:auto;*/
+	}
+	/*新手上路按鈕*/
+	.help {
+		/*原本為display: table-cell;*/
+		display: none;
+	}
+	/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+	.notebook {
+		/*原本為display: table-cell;*/
+		display: none;
+	}
+	/*========================================*/
+
+
+	
+	/*最上方標題列.g213A_header*/
+	/*↓------------------------------↓*/
+	.g213A_header {
+		/*可藉.g213A_header的高度，使.mediaWrapper距離上緣有[20]px間距*/
+		height:0px; /*原height:20px*/
+	}
+	/*↑------------------------------↑*/
+	
+	
+	/*每一頁.g213A_card都在此(.g213A_cardGroupShow)容器顯示*/
+	.g213A_cardGroupShow {
+		width:100%; /*原width:800px*/
+	}
+	
+	/*圖文區塊 - 在此版型，其內容為圖*/
+	/*↓------------------------------↓*/
+	.g213A_card {
+	}
+	/*↑------------------------------↑*/
+	
+	
+	.g213A_numButtonGroup {
+		/*●margin-top設為-10px：因在小視窗，.g213A_cardGroupShow和.g213A_numButtonGroup之間會出現水平間隙，補救用*/
+		margin:-10px auto 0 auto; /*原margin:0 auto 0 auto*/
+		width:100%; /*原width:640px*/
+	}
+	/*滑鼠懸浮在數字按鈕上方時，出現的小標題容器*/
+	.g213A_showCueTitle {
+		width:100%; /*原width:640px*/
+	}
+	
+	.g213A_menuZone {
+		width:100%; /*原width:640px*/
+	}
+	.g213A_menuButton {
+		margin:2px 0px 0px 10px; /*原margin:2px 0px 2px 0px*/
+	}
+	
+	
+	
+	/*▲☆★ 「點小圖跳大圖」、「無點小圖跳大圖」*/
+	/*↓------------------------------↓*/
+	/*▲☆★ - 「點小圖跳大圖」、「無點小圖跳大圖」 的容器div 
+	--- 已由程式根據externalData.js的param.rwdSmallWindowImgPercent操控寬度，高度自動比例*/
+	/*.toBigPic, .normalPic {
+	}*/
+	
+	/*▲☆★ - 已在程式中設為100%*/
+	/*「.toBigPic > img, .normalPic > img 」小圖本身寬度設為100%，則寬度由「.toBigPic和.normalPic」的寬度來決定*/
+	/*.toBigPic > img, .normalPic > img {
+	}*/
+
+	
+	/* 放大鏡圖示的容器 (圖形具備放大功能時，自動附加放大鏡圖示)，小尺寸視窗因無法定位，所以需隱藏*/
+	.zoomIconSpan {
+		display:none; /*原display:block*/
+	}
+	/*↑------------------------------↑*/
+	
+	
+	/*「文字大小切換」*/
+	/*↓------------------------------↓*/
+	.fontSizeSwitcher {
+		background:url(); /*原在TPlayer.css - background:url(images/fontSizeSwitcherBg.png) no-repeat;*/
+	}
+	/*↑------------------------------↑*/
+	
+
+	
+}
+	
+	
+	

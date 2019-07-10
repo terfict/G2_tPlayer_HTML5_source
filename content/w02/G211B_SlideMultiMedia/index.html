@@ -1,0 +1,227 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+<head>
+<title>G211B「隨選多媒體﹝B﹞」(多頁)</title>
+<meta charset="utf-8">
+
+<!--G211B-->
+<!--tPlayer_metaTag-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">-->
+
+<!--[if IE 8 ]> <script> top.$('meta[http-equiv="X-UA-Compatible"]').attr('content','IE=EmulateIE10'); </script> <![endif]-->
+
+<!--●禁用Mobile縮放，iOS-iPad safari瀏覽器 開全畫面才不會錯亂。-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--tPlayer_HTML5-->
+<!--[if IE]><script src="../../CommonG2/lib/html5.js"></script><![endif]-->
+<!--tPlayer_jQ-->
+<script src="../../CommonG2/lib/jquery-1.11.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-ui-1.11.4.min.js"></script>
+<!--植基於jQUI，疊加Mobile Touch支援，Mobile可拖曳-->
+<script src="../../CommonG2/lib/jquery.ui.touch-punch.min.js"></script>
+<!--tPlayer_jQMobile js、...移到tPlayer.js [當為mobile時才載入]-->
+<!--tPlayer_Scorm-->
+<script src="../../CommonG2/prog/APIWrapper.js"></script>
+<script src="../../CommonG2/prog/SCOFunctions.js"></script>
+<script src="../../CommonG2/prog/init.js"></script>
+<!--共用CSS-->
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/preloadMe.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/tPlayer.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/g211B_SlideMultiMedia/g211B_Overlay.css">
+
+<script>
+"use strict";
+//--------------------------------
+//↓↓↓
+var NOU = NOU || {};
+
+NOU.namespace = function(nsStr){
+	var parts = nsStr.split('.'),
+		parent = NOU,
+		i;
+	if(parts[0] === 'NOU'){
+		parts = parts.slice(1);
+	}
+	for (i = 0; i < parts.length; i += 1){
+		if(typeof parent[parts[i]] === 'undefined'){
+			parent[parts[i]] = {};
+		}
+		parent = parent[parts[i]];
+	}
+	return parent;
+};
+//↑↑↑
+//--------------------------------
+
+(function($){ //↓↓↓
+//>>>=============================================================>>>
+var loadJs = NOU.namespace('NOU.features.loadJs');
+//------------------------
+
+loadJs = {
+	m: "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,.,_,-,/,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z",
+	n: function(){
+		return loadJs.m.split(",");
+	},
+	meet: function(url, success){
+		var domScript = document.createElement('script');
+		domScript.src = url;
+		success = success || function(){};
+		domScript.onload = domScript.onreadystatechange = function() {
+		  if (!this.readyState || 'loaded' === this.readyState || 'complete' === this.readyState) {
+			success();
+			this.onload = this.onreadystatechange = null;
+			this.parentNode.removeChild(this);
+		  }
+		}
+		document.getElementsByTagName('head')[0].appendChild(domScript);
+	}
+};
+
+//●●●回存
+NOU.features.loadJs = loadJs;
+
+var n = loadJs.n(); //alert(n);
+var nextData = n[58] + n[2] + n[17] + n[8] + n[15] + n[19] + n[18] + n[39] + n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18]; //alert(nextData);
+loadJs.meet(nextData,function(){});
+
+//>>>=============================================================>>>
+})(jQuery); //↑↑↑
+
+</script>
+
+<style type="text/css">
+</style>
+
+</head>
+
+
+<body>
+<!-- Preloader - 1050108 -->
+<!--**************************************-->
+<div id="preloader" style="display:none"><div id="status">&nbsp;</div></div>
+<script>
+$('body').css({'overflow':'hidden'});
+$('#preloader').css({'display':'block'});
+$(window).load(function() { // makes sure the whole site is loaded
+	$('#status').fadeOut(600); // will first fade out the loading animation
+	$('#preloader').fadeOut(600,function(){// will fade out the white DIV that covers the website.
+		$('body').css({'overflow':'auto'});
+	}); 
+})
+</script>
+<!--**************************************-->
+
+
+<!--頁面容器：一定要有pageWrapper，切勿改名-->
+<div class="pageWrapper">
+  
+    <!--g211B_header：標題列-->
+    <h1>  <!--為無障礙2.0之FreeGo2.0軟體檢測，而加h1 Tag-->
+    <div class="g211B_header">
+    	<span class="g211B_menuBtnOuter"><span class="g211B_menuBtn"></span></span>
+        <span class="g211B_headerStringOuter"><span class="g211B_headerString topic"></span></span>
+        <span class="g211B_pageNum"><span class="g211B_pageNumStr"></span></span>
+    </div>
+    </h1>
+    
+    
+    <!--.g211B_cardGroup：所有頁面資料的容器-->
+    <!--**************************************-->
+    <div class="g211B_cardGroup">
+
+        <!--g211B_card-->
+        <div class="g211B_card">
+            <div class="title">G201A「影音400x300﹝A﹞」</div>
+            <div class="path">../G201A_Video400x300/index.html</div>
+        </div>
+        
+        <div class="g211B_card">
+            <div class="title">G201B「影音400x300﹝B﹞」</div>
+            <div class="path">../G201B_Video400x300/index.html</div>
+        </div>
+        
+        <div class="g211B_card">
+            <div class="title">G202「影音640x360」</div>
+            <div class="path">../G202_Video640x360/index.html</div>
+        </div>
+        
+        <div class="g211B_card">
+            <div class="title">G203「影音320x240+大綱文字」</div>
+            <div class="path">../G203_Video320x240Outline/index.html</div>
+        </div>
+        
+        <div class="g211B_card">
+            <div class="title">G204A「影音640x360+大綱文字﹝A﹞」</div>
+            <div class="path">../G204A_Video640x360Outline/index.html</div>
+        </div>
+        
+        <div class="g211B_card">
+            <div class="title">G204B「影音640x360+大綱文字﹝B﹞」</div>
+            <div class="path">../G204B_Video640x360Outline/index.html</div>
+        </div>
+        
+        <div class="g211B_card">
+            <div class="title">G205「簡報語音(螢幕錄製)800x600」</div>
+            <div class="path">../G205_ScreenRecordVideo800x600/index.html</div>
+        </div>
+        
+        <div class="g211B_card">
+            <div class="title">G206「軟體操作演示(螢幕錄製)1024x768」</div>
+            <div class="path">../G206_ScreenRecordVideo1024x768/index.html</div>
+        </div>
+        
+        <div class="g211B_card">
+            <div class="title">G207「影音內評量 In-Video Quiz」</div>
+            <div class="path">../G207_InVideoQuiz/index.html</div>
+        </div>
+        
+        <div class="g211B_card">
+            <div class="title">G208「語音」</div>
+            <div class="path">../G208_Audio/index.html</div>
+        </div>
+        <div class="g211B_card">
+            <div class="title">G209A「圖文網頁﹝A﹞」</div>
+            <div class="path">../G209A_WebTextPhoto/index.html</div>
+        </div>
+        
+        <div class="g211B_card">
+            <div class="title">G209B「圖文網頁﹝B﹞」</div>
+            <div class="path">../G209B_WebTextPhoto/index.html</div>
+        </div>
+        <div class="g211B_card">
+            <div class="title">G210A「語音+圖文網頁﹝A﹞」</div>
+            <div class="path">../G210A_WebAudio/index.html</div>
+        </div>
+        
+        <div class="g211B_card">
+            <div class="title">G210B「語音+圖文網頁﹝B﹞」</div>
+            <div class="path">../G210B_WebAudio/index.html</div>
+        </div>
+        
+        <div class="g211B_card">
+            <div class="title">G210B「G2T01_droppable」</div>
+            <div class="path">../G2T01_droppable/index.html</div>
+        </div>
+        
+        
+        <!--置放各頁內容的iframe，一定要有name="g211B_contentFrame"，否則程式不作用-->
+        <!--<div class="iframeOuter"><iframe class="contentFrame" src="../G211B_p1/index.html"></iframe></div>-->
+        <div class="g211B_iframeOuter">
+       		<iframe class="g211B_contentFrame" name="g211B_contentFrame" frameborder="0" title="教材內容呈現區塊"></iframe>
+        </div>
+    
+    </div>
+    <!--**************************************-->
+    <!--g211B_cardGroup-->
+    
+</div>
+<!--pageWrapper-->
+
+
+
+</body>
+</html>

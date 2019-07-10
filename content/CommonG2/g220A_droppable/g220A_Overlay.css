@@ -1,0 +1,476 @@
+﻿@charset "utf-8";
+/* CSS Document - G220A│g220A_Overlay.css */
+
+
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+* {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+}
+
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background:/*#212121*/ url(images/pattern_1.png) repeat;
+
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 100%;
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px*/
+}
+
+
+/*頁面最大容器*/
+/*程式初始化時，會來抓取width和min-height的字串值*/
+.pageWrapper {
+	/*◎居中，但前提是.pageWrapper必須有設定寬度*/
+	margin:0 auto 0 auto;
+	padding:0px 0px 0px 0px; 
+	width:800px; /*width:auto*/
+	max-width:1024px;
+	min-width:800px; 
+	height:auto;
+	display:block;
+	background:#cbedff;
+	text-align:center;
+	/*border:1px dashed #e4a742;*/
+	
+	/*避免物件被選取反白*/
+	-moz-user-select: none;
+    -webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/*標題列*/
+.g220A_header {
+	width:100%;
+	height:72px;
+	display: table;
+	background: url(images/title_1.png);
+	text-align:left;
+}
+
+/*單元標題*/
+.g220A_header .topic {
+	padding:0 0 0 30px;
+	display:table-cell;
+	vertical-align:middle;
+	
+	font-size:1.6em;
+	font-weight:600;
+	color:#FFF;
+	/*text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de;*/
+	text-shadow:0 1px 1px #fff;  
+}
+
+
+/*工作區塊：在g220A_header下方的整個區塊*/
+.g220A_workArea {
+	margin:0 auto;
+	padding:15px 10px 60px 10px;
+	width:100%;
+	height:auto;
+	display:block;
+	background:#dff4f6; /*cbedff*/
+	border-radius:0px;
+}
+
+/*題目敘述欄位*/
+.question {
+	margin:0 auto 0px auto;
+	padding:10px 10px 10px 10px;
+	width:95%;
+	min-height:40px;
+	background:#edf8fe;
+	border:1px solid #FFF;
+	border-radius:8px;
+	
+	text-align:left;
+	line-height: 1.2em;
+}
+
+
+/*置放用目標物件區塊*/
+/*------------------------------*/
+.targetZone {
+	margin:36px auto 30px auto;
+	padding:0 10px 0 10px;
+	width:auto;
+	height:auto;
+	display: table;
+	background:#b2c1cb;  /*background:#a4b6c1;*/
+	border-radius:18px;
+	
+	/**/
+	border-collapse: separate;
+  	border-spacing:15px;
+}
+
+/*置放用目標物件的容器*/
+.targetOuter {
+	margin:0px 20px 0px 0px;
+	padding: 0px 0 0 0;
+	display: table-cell;
+	width:156px;
+	height:86px;
+	border-radius:18px;
+	/*background: #0F1162;*/
+	border:5px #87164b double;
+	
+	vertical-align:middle;
+	text-align:center;
+	
+	/**/
+	border-collapse: collapse;
+}
+
+/*置放用目標物件*/
+.target {
+	margin:0px 0px 0px 0px;
+	padding: 0px 0 0 0;
+	display: table-cell;
+	width:150px;
+	height:80px;
+	border-radius:18px;
+	/*background: #9BFFA9;*/
+	
+	/**/
+	border-collapse: collapse;
+}
+.target img {
+	width:150px;
+	height:auto;
+}
+/*------------------------------*/
+
+
+
+/*拖曳答題之後的「正確或錯誤」回饋區*/
+/*------------------------------*/
+.feedbackZone {
+	display:table;
+	margin:0 auto 10px auto;
+	padding:6px 6px 6px 6px;
+	width:360px;
+	height:50px;
+	background:#FFF;
+	border-radius:16px;
+	
+	/**/
+	border-collapse: separate;
+  	border-spacing: 5px 0px;
+}
+
+/*答對或答錯的圖示*/
+.feedbackIcon {
+	display:table-cell;
+	width:50px;
+	height:50px;
+	background:url(images/note.png) no-repeat;
+}
+/*答對時，程式會來附加此class*/
+.feedbackIcon_right {
+	background:url(images/right.png) no-repeat;
+}
+/*答錯時，程式會來附加此class*/
+.feedbackIcon_wrong {
+	background:url(images/wrong.png) no-repeat;
+}
+/*全部答對時，程式會來附加此class*/
+.feedbackIcon_completed {
+	background:url(images/completed.png) no-repeat;
+}
+
+/*答對或答錯的回饋字串*/
+.feedbackString {
+	padding:0 0 0 15px;
+	display:table-cell;
+	vertical-align:middle;
+	border-radius:12px;
+	background:#FFF;  /*f1c251*/
+	
+	font-size:0.9em;
+	font-weight:600;
+	color:#555;
+	line-height:1.2em;
+	text-align:left;
+}
+/*答對時，程式會來附加此class*/
+.feedbackString_right {
+	background:#B5F36D; 
+	font-size:1.5em;
+	text-align:center;
+	padding:0 0 0 0px;
+}
+/*答錯時，程式會來附加此class*/
+.feedbackString_wrong { /*f1c251*/
+	background:#cbedff;
+	font-size:1.5em;
+	text-align:center;
+	padding:0 0 0 0px;
+}
+/*全部答對時，程式會來附加此class*/
+.feedbackString_completed  { 
+	background:#cbedff;
+	font-size:1.2em;
+	line-height:1.05em;
+	text-align:center;
+	padding:0 0 0 0px;
+}
+/*------------------------------*/
+
+
+/*●每一拖曳答題正確時，所顯示的答題內容*/
+.correctFeedback {
+	visibility:hidden;
+	margin:0 auto 0 auto;
+	padding:7px 10px 7px 10px;
+	width:80%;
+	height:auto;
+	background:#FFFFFF;
+	border-radius:8px;
+	
+	font-size:1.0em;
+	font-weight:600;
+}
+
+
+
+/*拖曳物件區塊*/
+/*------------------------------*/
+/*拖曳物件區塊*/
+.draggerZone {
+	margin:30px auto 0px auto;
+	padding:0 10px 0 10px;
+	width:auto;
+	height:auto;
+	display: table;
+	text-align:center;
+	background:#b2c1cb;
+	border-radius:18px;
+	
+	/**/
+	border-collapse: separate;
+  	border-spacing:15px;
+}
+
+/*拖曳物件的容器*/
+.draggerOuter {
+	padding: 0px 0 0 0;
+	display: table-cell;
+	width:156px;
+	height:86px;
+	background:#dff4f6;
+	border-radius:18px;
+	border:4px #87164b solid;
+	
+	/**/
+	border-collapse: collapse;
+}
+
+/*拖曳答題若正確，程式會來取用此class，附加到.draggerOuter上*/
+/*拖曳答題全部完成時，多餘的問題項目或拖曳選項也會附加此class，就是使用這裡的透明度。*/
+.draggerOuter_matching {
+	opacity:0.6;
+}
+
+/*拖曳物件*/
+.dragger {
+	padding: 0px 0 0 0;
+	display: table-cell;
+	width:150px;
+	height:80px;
+	border-radius:18px;
+	cursor: move;
+	background:#67ff5b;
+}
+.dragger img {
+	width:150px;
+	height:auto;
+}
+
+/*各個「拖曳選項」的id*/
+#DaMao {
+}
+#ZhongZhong {
+}
+#XiaoHua {
+}
+/*------------------------------*/
+
+
+/*全部拖曳完成(答題正確)後的反饋資訊：資料 - 隱藏*/
+.completedInfo {
+	display:none;
+}
+
+
+
+/*媒體檔為語音時(不論是否有播放介面)，.mediaDiv的背景色最好設為透明。(避免底色露出)*/
+.mediaDiv {
+	background:transparent;
+}
+
+/*新手上路*/
+.help {
+	margin:-40px -60px 0 0;
+	display:block;
+}
+
+
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ */
+
+
+/*測試用 - 已隱藏*/
+.showInfo {
+	position:absolute;
+	top:0px;
+	left:800px;
+	padding:10px;
+	width:400px;
+	height:300px;
+	display: none;
+	background:#E8E8E8;
+	
+}
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:769px) {
+	
+	.pageWrapper {
+		width:100%; /*原width:800px*/
+		max-width: none;
+		min-width: 100%; 
+	}
+	
+	/*標題列*/
+	.g220A_header {
+		height:50px;
+		text-align:center;
+		background: url(images/title_2.png);
+	}
+	
+	/*單元標題*/
+	.g220A_header .topic {
+		padding:0 0 0 10px;
+		
+		font-size:1.2em;
+		font-weight:500;
+	}
+	
+	/*置放用目標物件區塊*/
+	/*------------------------------*/
+	.targetZone {
+		margin:20px auto 20px auto;
+	}
+	
+	/*置放用目標物件的容器*/
+	.targetOuter {
+		height:auto;
+	}
+	
+	/*置放用目標物件：「問題項目」*/
+	.target {
+		height:auto;
+	}
+	.target img{
+		width:100%;
+		height:auto;
+	}
+	
+	/*------------------------------*/
+	/*拖曳答題之後的「正確或錯誤」回饋區*/
+	.feedbackZone {
+		width:85%;
+	}
+	/*全部答完(答對)時，程式會來取用此class，並附加到.feedbackString*/
+	.feedbackString_completed {
+		font-size:1.0em;
+	}
+	/*------------------------------*/
+	
+	/*拖曳物件區塊*/
+	.draggerZone {
+		width:auto; /*寬度必須保持auto*/
+	}
+	
+	/*拖曳物件的容器*/
+	.draggerOuter {
+		height:auto;
+	}
+	
+	/*拖曳物件：「拖曳選項」*/
+	.dragger {
+		height:auto;
+	}
+	.dragger img {
+		width:100%;
+		height:auto;
+	}
+	
+	/*新手上路*/
+	.help {
+		display: none;
+	}
+
+}	
+	
+	

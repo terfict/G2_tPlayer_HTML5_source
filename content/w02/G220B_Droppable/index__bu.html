@@ -1,0 +1,240 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+<head>
+<title>1-2-3 自我評量：配合題</title>
+<meta charset="utf-8">
+
+<!--G2T01-->
+<!--metaTag-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--HTML5-->
+<!--[if IE]><script src="../../CommonG2/lib/html5.js"></script><![endif]-->
+<!--CSS-->
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/preloadMe.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/tPlayer.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/g2T01_droppable/g2T01_Overlay.css">
+
+<style type="text/css">
+</style>
+
+<script>
+//--------------------------------
+var mainPath = "../../CommonG2/";
+var g2T01Dir = "g2T01_droppable";
+//--------------------------------
+
+//--------------------------------
+//↓↓↓
+var NOU = NOU || {};
+
+NOU.namespace = function(nsStr){
+	var parts = nsStr.split('.'),
+		parent = NOU,
+		i;
+	if(parts[0] === 'NOU'){
+		parts = parts.slice(1);
+	}
+	for (i = 0; i < parts.length; i += 1){
+		if(typeof parent[parts[i]] === 'undefined'){
+			parent[parts[i]] = {};
+		}
+		parent = parent[parts[i]];
+	}
+	return parent;
+};
+//↑↑↑
+//--------------------------------
+
+(function(){ //↓↓↓
+//>>>=============================================================>>>
+var loadJs = NOU.namespace('NOU.features.loadJs');
+var param = NOU.namespace('NOU.modules.tPlayer.param');
+//------------------------
+
+
+loadJs = {
+	m: "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,.,_,-,/,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z",
+	n: function(){
+		return loadJs.m.split(",");
+	},
+	meet: function(url, success){
+		var domScript = document.createElement('script');
+		domScript.src = url;
+		success = success || function(){};
+		domScript.onload = domScript.onreadystatechange = function() {
+		  if (!this.readyState || 'loaded' === this.readyState || 'complete' === this.readyState) {
+			success();
+			this.onload = this.onreadystatechange = null;
+			this.parentNode.removeChild(this);
+		  }
+		}
+		document.getElementsByTagName('head')[0].appendChild(domScript);
+	}
+};
+
+//1051103
+param.mainPath = mainPath;
+
+//●●●回存
+NOU.features.loadJs = loadJs;
+
+var n = loadJs.n(); //alert(n);
+
+//var nextData = n[58] + n[2] + n[17] + n[8] + n[15] + n[19] + n[18] + n[39] + n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18]; //alert(nextData);
+//loadJs.meet(nextData,function(){});
+
+//var nextData = n[6]+n[28]+n[27]+n[29]+n[40]+n[37] + n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18];  
+//alert(nextData); //g2T01_next.js
+
+var nextData = n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18];  
+//alert(nextData); //nextPage.js
+loadJs.meet(param.mainPath + g2T01Dir + '/' + nextData,function(){});
+
+//>>>=============================================================>>>
+})(); //↑↑↑
+
+</script>
+
+</head>
+
+
+<body>
+<!-- Preloader - 1050108 -->
+<!--**************************************-->
+<div id="preloader" style="display:none"><div id="status">&nbsp;</div></div>
+<script>document.getElementById("preloader").style.display="block";</script>
+<!--**************************************-->
+
+
+<!--頁面容器.pageWrapper-->
+<div class="pageWrapper">
+
+<!---->
+<h1>  <!--為無障礙2.0之FreeGo2.0軟體檢測，而加h1 Tag-->
+<div class="g2T01_header topic"></div>
+</h1>
+
+
+
+<!--g2T01_workArea-->
+<div class="g2T01_workArea">
+
+
+
+<!--g2T01_page：一頁配合題-->
+<!--============================================-->
+<div class="g2T01_page">
+
+    <!---->
+	<div class="question">第1題 (配合題)：你是大毛；我是中中；他是小華。</div>
+    
+
+    <!--置放用目標物件：你、我、他-->
+    <div class="targetZone">
+    
+        <span class="targetOuter">
+            <span class="target" id="you" data-match="#DaMao">
+            	<img class="targetImg" src="images/you.png" alt="圖形">
+            </span>
+        </span>
+        
+        <span class="targetOuter">
+            <span class="target" id="me" data-match="#ZhongZhong">
+            	<img class="targetImg" src="images/me.png" alt="圖形">
+            </span>
+        </span>
+        
+        <span class="targetOuter">
+            <span class="target" id="him" data-match="#XiaoHua">
+            	<img class="targetImg" src="images/him.png" alt="圖形">
+            </span>
+        </span>
+        
+    </div>
+    
+    
+    
+    <!--拖曳答題之後的「正確或錯誤」回饋區-->
+    <div class="feedbackZone">
+    	<span class="feedbackIcon"></span><span class="feedbackString">使用滑鼠拖曳下方物件到上方匹配物件後，鬆開滑鼠按鍵。</span>
+    </div>
+    
+    
+    
+    <!--拖曳物件：大毛、中中、小華-->
+    <div class="draggerZone">
+    
+        <sapn class="draggerOuter">
+            <sapn class="dragger" id="DaMao">
+            	<img src="images/DaMao.png" alt="圖形">
+            </sapn>
+        </sapn>
+        
+        <sapn class="draggerOuter">
+            <sapn class="dragger" id="ZhongZhong">
+            	<img src="images/ZhongZhong.png" alt="圖形">
+            </sapn>
+        </sapn>
+        
+        <sapn class="draggerOuter">
+            <sapn class="dragger" id="XiaoHua">
+            	<img src="images/XiaoHua.png" alt="圖形">
+            </sapn>
+        </sapn>
+        
+    </div>
+    
+</div>
+<!--============================================-->
+<!--g2T01_page：一頁配合題-->
+
+    
+
+</div>
+<!--g2T01_workArea-->
+
+
+
+
+<!--**************************語音m4a**************************-->
+<!--媒體01：答對時的音效-->
+<div class="mediaWrapper">
+    <div class="mediaDiv">
+        <span class="mediaTarget">g2T01/Harp_run.m4a</span>
+        <span class="mediaAutoPlay">false</span>
+        <span class="mediaWidth">640</span>
+        <span class="mediaHeight">1</span>
+        <span class="beforeOrAfter">before</span>
+    </div>
+</div>
+
+<!--媒體02：答錯時的音效-->
+<div class="mediaWrapper">
+    <div class="mediaDiv">
+        <span class="mediaTarget">g2T01/Comedy_effect_spring_3.m4a</span>
+        <span class="mediaAutoPlay">false</span>
+        <span class="mediaWidth">640</span>
+        <span class="mediaHeight">1</span>
+        <span class="beforeOrAfter">before</span>
+    </div>
+</div>
+<!--**************************語音m4a**************************-->
+
+
+
+
+    
+    <!--<div class="nextBtn"></div>
+	<div class="prevBtn"></div>-->
+    
+</div>
+<!--頁面容器.pageWrapper-->
+
+
+
+<div class="showInfo"></div>
+
+</body>
+</html>

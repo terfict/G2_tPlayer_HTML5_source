@@ -1,0 +1,91 @@
+G2H5£∫tPlayer.js
+
+423
+method.addShortcut = function(index){
+
+485
+//°∂s°∑ÊI - È_Ü¢ ‘O∂®√Ê∞Â.setting
+		if(e.keyCode === 83){
+
+2459
+method.createSettingPannel(index);
+
+4347
+method.createSettingPannel = function(index){
+
+4397
+method.settingPanelMEvent(index);
+4404
+method.settingPanelMEvent_remove = function(index){
+
+4443
+method.settingPanelMEvent = function(index){
+
+4993
+method.menu1F_videoRateOnClick(e, index);
+
+5148
+method.menu1F_videoRateOnClick = function(e, index){
+
+5096
+$('.mediaWrapper:eq(' + index + ') .settingPanel .menu1F_quickKey').on('mousedown', function(e){
+5100
+method.menu1F_quickKeyOnClick(e, index);
+5548
+method.menu1F_quickKeyOnClick = function(e, index){
+
+5621
+$('.mediaWrapper:eq(' + index + ') .settingPanel .quickKeyPanel').html(
+
+5772
+method.localStorage_rate = function(index){
+5823
+method.localStorage_volume = function(index){
+
+param.settingPanelDisplayFlag[param.tmpState]
+param.quickKeyPanelDisplayFlag[param.tmpState]
+
+5421
+$('.mediaWrapper:eq(' + index + ') .settingPanel .panelHeader').on('mouseup'
+
+
+
+
+
+===============================
+4479
+$('.mediaWrapper:eq(' + index + ') .settings').on('mousedown', function(e){
+4781
+$('.mediaWrapper:eq(' + index + ') .settingPanel .menuF1_volume .minus').on('mouseover'
+4784
+$('.mediaWrapper:eq(' + index + ') .settingPanel .menuF1_volume .minus').on('mouseout'
+4789
+$('.mediaWrapper:eq(' + index + ') .settingPanel .menuF1_volume .plus').on('mouseover'
+4792
+$('.mediaWrapper:eq(' + index + ') .settingPanel .menuF1_volume .plus').on('mouseout'
+4798
+$('.mediaWrapper:eq(' + index + ') .settingPanel .menuF1_volume .plus').on('mousedown'
+4853
+$('.mediaWrapper:eq(' + index + ') .settingPanel .menuF1_volume .minus').on('mousedown'
+===============================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

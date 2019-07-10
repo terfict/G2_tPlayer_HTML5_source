@@ -1,0 +1,551 @@
+﻿@charset "utf-8";
+/* CSS Document - G226A│g226A_Overlay.css */
+
+
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+* {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+}
+
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background:#f2d1b3;
+
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 100%;
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px*/
+}
+
+
+/*頁面最大容器*/
+/*程式初始化時，會來抓取width和min-height的字串值*/
+.pageWrapper {
+	/*◎居中，但前提是.pageWrapper必須有設定寬度*/
+	margin:0 0 0 0;
+	padding:0px 0px 0px 0px; 
+	width:800px; 
+	height:auto;
+	display:block;
+}
+
+/*標題列*/
+.g226A_header {
+	display:block;
+	width:100%;
+	height:62px;
+	background: #538ea6;
+}
+
+
+/*=====================================*/
+/*menu按鈕外圍容器*/
+.menuBtnOuter {
+	display: inline-block;
+	width:10%;
+	height:62px;
+	text-align:center;
+	float:left;
+}
+/*menu按鈕*/
+.menuBtn {
+	margin:8px auto 0 auto;
+	display: block;
+	width:42px;
+	height:42px;
+	background:url(images/menuBtn.png) no-repeat;
+	cursor: pointer;
+}
+
+/*關閉menu的按鈕*/
+.menuCloseBtn {
+	margin:8px auto 0 auto;
+	display: block;
+	width:42px;
+	height:42px;
+	background:url(images/menuCloseBtn.png) no-repeat;
+	cursor: pointer;
+}
+/*=====================================*/
+
+
+/*沒用到*/
+/*--------------------------------*/
+/*rwd小尺寸式窗時，用來關閉分頁內容的關閉按鈕所在的橫列*/
+.rwdCloseContentColumn {
+	padding:3px 10px 0 0;
+	display:none;
+}
+.rwdCloseContentBtn {
+	display:block;
+	width:42px;
+	height:42px;
+	background: url(images/rwdCloseContentBtn.png) no-repeat; 
+	float:right;
+	cursor:pointer;
+}
+/*--------------------------------*/
+
+
+/*單元標題*/
+.g226A_header .topic {
+	display: inline-block;
+	margin:21px 0 0 0px;
+	padding:0 0 0 0px;
+	width:90%;
+	
+	font-size:1.3em;
+	font-weight:600;
+	letter-spacing:0.01em;
+	text-align:center;
+	color:#FFF;
+	/*text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de;*/
+	/*text-shadow:0 1px 1px #fff; */ 
+}
+
+
+
+
+/*工作區塊：在g226A_header下方的整個區塊*/
+.g226A_workArea {
+	margin:0 auto;
+	padding:0px 0px 30px 0px;
+	width:800px;
+	height:auto;
+	display:block;
+	background:#f2b8a2;
+	border-radius:0px;
+}
+
+
+/*時間軸容器：包括.leftBtn、.timeline、.rightBtn*/
+/*---------------------------------*/
+/*時間軸容器*/
+.timelineWrapper {
+	margin:0 auto 0 auto;
+	display: block;
+	
+	/*避免物件被選取反白*/
+	-moz-user-select: none;
+    -webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/*左按鈕*/
+.leftBtn {
+	display: inline-block;
+	margin:22px 6px 20px 6px;
+	width:71px;
+	height:71px;
+	background:url(images/left_btn.png) no-repeat;
+	float: left;
+	cursor:pointer;
+}
+
+/*時間軸：時間軸項目.timelineItem的容器*/
+.timeline {
+	margin:7px 0 0 0;
+	display: inline-block;
+	width:auto;
+	height:46px;
+}
+
+/*右按鈕*/
+.rightBtn {
+	display: inline-block;
+	margin:18px 6px 20px 3px;
+	width:71px;
+	height:71px;
+	float: right;
+	background:url(images/right_btn.png) no-repeat;
+	cursor:pointer;
+}
+
+/*時間軸項目*/
+.timelineItem {
+	padding:3px;
+	width:168px;
+	height:46px;
+	display: block;
+	float:left;
+	background:no-repeat;
+}
+
+/*時間軸項目的標籤*/
+.label {
+	display:table;
+	margin:35px auto 0 auto;
+	padding:3px 7px 3px 7px;
+	width:148px;
+	height:59px;
+	background: url(images/label_bg.png);
+	text-align:center;
+	cursor:pointer;
+}
+
+/*時間軸項目的標籤裡的標籤文字*/
+.labelText {
+	display:table-cell;
+	vertical-align:middle;
+	width:100%;
+	height:auto;
+	
+	font-size:0.95em;
+	line-height:1.1em;
+	letter-spacing:0.03em;
+}
+/*---------------------------------*/
+
+
+/*載入分頁之用的iframe*/
+.iframeTag {
+	clear:both;
+	margin:6px auto 0 auto;
+	padding:8px 8px 8px 8px;
+	display:block;
+	width:770px;
+	height:auto;
+	/*●*/
+	min-height:476px;
+	background:#FFF;
+	
+	/*圓角*/
+	border-top-left-radius:12px; 
+	border-top-right-radius:12px;
+	border-bottom-left-radius:12px; 
+	border-bottom-right-radius:12px; 
+}
+
+
+/*資料：隱藏*/
+.linkDataZone {
+	display:none;
+}
+
+
+
+/*顯示選單區塊*/
+/*=====================================*/
+/*選單區塊：最大容器*/
+.g226A_menuZone {
+	position:absolute;
+	z-index:2010;
+	left:0px;
+	top:62px;
+	padding:0px 0px 0px 0px;
+	display:none;
+	width:800px;
+	height:auto;
+	background:#EEE;
+	
+	color:#333;
+	font-weight:500;
+	font-size: 1.0em;
+	line-height: 1.2em;
+	letter-spacing:0.0625em;
+	
+	box-shadow:12px 8px 12px rgba(20%,20%,20%,0.3);
+
+}
+/*選單區塊：標頭*/
+.g226A_menuHeader {
+	margin:0 0 0 0;
+	padding:2px 5px 2px 7px;
+	width:100%;
+	height:30px;
+	border-bottom:1px solid #333;
+	background: #243752;
+	
+	font-size: 0.9em;
+	color:#DDD;
+	font-weight:600;
+}
+/*選單區塊：一個橫列*/
+.g226A_menuRow {
+	margin:0 0 0 0;
+	padding:5px 5px 5px 10px;
+	width:100%;
+	height:auto;
+	border-bottom:1px solid #AAA;
+	cursor:pointer;
+}
+/*選單區塊：一個橫列的滑鼠懸浮狀態*/
+.g226A_menuRow_hover{
+	background: #98dcf7;
+}
+/*選單區塊：目前作用中的橫列。其內包括.g211B_menuRowOrder和.g211B_menuRowItem*/
+.g226A_menuRow_current{
+	background: #2d5f73;
+}
+/*選單區塊：一個橫列中的流水號*/
+.g226A_menuRowOrder {
+	margin:0 5px 0 0;
+	padding:0px 6px 0px 6px;
+	background:#CCC;
+	width:5%;
+}
+/*選單區塊：一個橫列流水號的滑鼠懸浮狀態*/
+.g226A_menuRowOrder_hover {
+	background:#FFF;
+}
+/*選單區塊：作用中橫列的流水號*/
+.g226A_menuRowOrder_current {
+	background:#FFF;
+	color:#21643c;
+}
+/*選單區塊：橫列的主題文字的外圍容器*/
+.g226A_menuRowItemOuter {
+	width:95%;
+	display:inline-block;
+}
+/*選單區塊：橫列的主題文字*/
+.g226A_menuRowItem {
+	padding:2px 2px 2px 2px;
+	
+	/* 斷行 */
+	white-space: normal; 
+	word-wrap: break-word; 
+	word-break: break-all; 
+}
+/*選單區塊：作用中橫列的主題文字*/
+.g226A_menuRowItem_current {
+	color: #FFF;
+	font-weight:500;
+}
+/*=====================================*/
+
+
+
+/*新手上路*/
+.help {
+	float:right;
+	
+	/*不可位移 - 否則help無法觸發。怪現象。*/
+	/*margin:-45px 20px 0 0;*/
+	
+	display:block;
+	width:25px;
+	height:25px;
+	cursor:pointer;
+}
+.help a {
+}
+.help img {
+	width:25px;
+	height:25px;
+}
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ */
+
+
+/*測試用 - 已隱藏*/
+.showInfo {
+	position:absolute;
+	top:0px;
+	left:800px;
+	padding:10px;
+	width:400px;
+	height:300px;
+	display: none;
+	background:#E8E8E8;
+	
+}
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:769px) {
+	
+	.pageWrapper {
+		width:100%; /*原width:800px*/
+		max-width: none;
+		min-width: 100%; 
+	}
+	
+	/*標題列*/
+	.g226A_header {
+		display:table;
+		height:62px;
+	}
+	
+	/*menu按鈕外圍容器*/
+	.menuBtnOuter {
+		display:table-cell;
+		width:62px;
+		float:none;
+	}
+	/*menu按鈕*/
+	.menuBtn {
+		margin:8px 0 0 10px;
+	}
+	
+	/*單元標題*/
+	.g226A_header .topic {
+		display:table-cell;
+		vertical-align:middle;
+		margin:21px 0 0 0px;
+		padding:0 0 0 5px;
+		width:auto;
+		
+		font-size:1.25em;
+		font-weight:500;
+		line-height:1.1em;
+		text-align:left;
+	}
+	
+	/*工作區塊：在g226A_header下方的整個區塊*/
+	.g226A_workArea {
+		width:100%;
+	}
+	
+	/*時間軸容器*/
+	.timelineWrapper {
+		display:none;
+	}
+	
+	/*沒用到*/
+	/*--------------------------------*/
+	/*rwd小尺寸式窗時，用來關閉分頁內容的關閉按鈕所在的橫列*/
+	.rwdCloseContentColumn {
+		position: fixed;
+		top:0px;
+		left:0px;
+		/*display:block;*/
+		width:100%;
+		height:48px;
+		background: #538ea6;
+	}
+	/*按下關閉按鈕時，程式來取用*/
+	.rwdCloseContentColumn_close {
+		display:none;
+	}
+	/*--------------------------------*/
+	
+	
+	/*載入分頁之用的iframe*/
+	.iframeTag {
+		/*position:absolute;
+		top:48px;
+		left:0px;*/
+		margin:0px auto 0 auto;
+		width:100%;
+		min-height:500px;
+		
+		/*圓角*/
+		border-top-left-radius:0px; 
+		border-top-right-radius:0px;
+		border-bottom-left-radius:0px; 
+		border-bottom-right-radius:0px; 
+	}
+	/*按下關閉按鈕時，程式來取用*/
+	.iframeTag_close {
+		position:static;
+		margin:6px auto 0 auto;
+	}
+	
+	
+	/*選單區塊：一個橫列中的流水號*/
+	.g226A_menuRowOrder {
+		width:10%;
+	}
+	/*選單區塊：橫列的主題文字的外圍容器*/
+	.g226A_menuRowItemOuter {
+		width:90%;
+	}
+	
+	
+	/*新手上路*/
+	.help {
+		display: none;
+	}
+
+}	
+
+
+@media screen and (max-width:480px) {
+	
+	/*選單區塊：一個橫列中的流水號*/
+	.g226A_menuRowOrder {
+		width:20%;
+	}
+	/*選單區塊：橫列的主題文字的外圍容器*/
+	.g226A_menuRowItemOuter {
+		width:80%;
+	}
+	
+	/*標題列*/
+	.g226A_header {
+		position:fixed;
+	}
+	
+	/*載入分頁之用的iframe*/
+	.iframeTag {
+		margin:62px auto 0 auto;
+		
+		/* ●處理：Collapsing margins (失控的margin-top) */
+		/*否則內頁的播放介面會被.g226A_header遮到*/
+		/*------------*/
+		float:left;
+		/*------------*/
+	}
+	
+}
+	
+	

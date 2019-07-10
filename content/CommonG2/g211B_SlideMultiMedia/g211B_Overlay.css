@@ -1,0 +1,532 @@
+﻿@charset "utf-8";
+/* CSS Document - G211B│G211B_Overlay.css */
+
+
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background: #e6e7eb;
+
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 100%;
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px*/
+}
+
+p, ul, ol{
+	margin:0 0 0 0;
+}
+
+/*頁面最大容器*/
+/*此版型視窗尺寸變動時，程式會操控.pageWrapper的寬高，塞滿視窗*/
+.pageWrapper {
+	/*◎居中*/
+	margin:0 auto 0 auto;
+	/*◎從這裡調整.mediaWrapper播放介面的《垂直方向位置》 - padding-top*/
+	padding:0px 0px 0px 0px; 
+	/*●必要：*/
+	overflow: hidden;
+}
+
+/*小尺寸視窗會用到，包裹.g211B_prevBtn、.g211B_nextBtn、.g211B_pageNum*/
+.g211B_rwdNavDiv {
+	display:none;
+}
+
+
+
+/*=====================================*/
+/*上一頁按鈕*/
+.g211B_prevBtn {
+	position:fixed;
+	right:0px;
+	top:150px;
+	z-index:2010;
+	padding:10px 18px 10px 18px;
+	background:#f00530;
+	cursor:pointer;
+	
+	border-top-left-radius:10px; 
+	border-top-right-radius:0px; 
+	border-bottom-right-radius:0px;
+	border-bottom-left-radius:10px;
+}
+.g211B_prevBtn > img {
+	width:38px;
+}
+/*上一頁按鈕 - 滑鼠懸浮狀態CSS，程式會來取用*/
+.g211B_prevBtnOver {
+	background:#27309C;
+}
+/*上一頁按鈕 - 滑鼠按下狀態CSS，程式會來取用*/
+.g211B_prevBtnDown {
+	background: #B07300;
+}
+/*=====================================*/
+
+/*=====================================*/
+/*下一頁按鈕*/
+.g211B_nextBtn {
+	position:fixed;
+	right:0px;
+	top:245px;
+	z-index:2010;
+	padding:10px 18px 10px 18px;
+	background:#f00530;
+	cursor:pointer;
+	
+	border-top-left-radius:10px; 
+	border-top-right-radius:0px; 
+	border-bottom-right-radius:0px;
+	border-bottom-left-radius:10px;
+}
+.g211B_nextBtn > img {
+	width:38px;
+}
+/*下一頁按鈕 - 滑鼠懸浮狀態CSS，程式會來取用*/
+.g211B_nextBtnOver {
+	background:#27309C;
+}
+/*下一頁按鈕 - 滑鼠按下狀態CSS，程式會來取用*/
+.g211B_nextBtnDown {
+	background: #B07300;
+}
+/*=====================================*/
+
+
+
+/*最上方標題列.g203_header*/
+/*↓-----------------------------------------------------------↓*/
+
+/*最上方標題列 - 大容器*/
+.g211B_header {
+	display:table;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	width:100%;
+	height:56px;
+	text-align:center;
+	background:#605c6b;
+}
+
+/*=====================================*/
+/*menu按鈕外圍容器*/
+.g211B_menuBtnOuter {
+	padding:0px 12px 0px 12px;
+	display: table-cell;
+	width:5%;
+	height:auto;
+	vertical-align:middle;
+}
+/*menu按鈕*/
+.g211B_menuBtn {
+	display: table-cell;
+	width:auto;
+	height:auto;
+	vertical-align:middle;
+	cursor: pointer;
+	float:left;
+}
+.g211B_menuBtn > img {
+	display: table-cell;
+	width:47px;
+	height:47px;
+}
+/*關閉menu的按鈕*/
+.g211B_menuCloseBtn {
+	display: table-cell;
+	width:auto;
+	height:auto;
+	vertical-align:middle;
+	cursor: pointer;
+}
+.g211B_menuCloseBtn > img {
+	display: table-cell;
+	width:47px;
+	height:47px;
+}
+/*=====================================*/
+
+/*=====================================*/
+/*單元標題 - 標題字串g211B_headerString的容器*/
+.g211B_headerStringOuter {
+	display:table-cell;
+	vertical-align:middle;
+	padding:0px 12px 2px 3px;
+	text-align:left;
+	width:70%;
+}
+/*單元標題 - 標題字串*/
+.g211B_headerString {
+	padding:5px 18px 5px 18px; 
+	width:100%;
+	height:auto;
+	/*background:#f3f385;
+	opacity:0.7;*/
+	background:#c7c67d;
+	
+	font-family: 'LiHei Pro', "微軟正黑體", sans-serif;
+	color: #605c6b;
+	font-weight:500;
+	font-size: 1.1em;
+	line-height: 1.2em;
+	letter-spacing:0.0625em;
+	
+	border-top-left-radius:8px; 
+	border-top-right-radius:8px; 
+	border-bottom-right-radius:8px;
+	border-bottom-left-radius:8px;
+	
+	box-shadow:4px 4px 3px rgba(20%,20%,20%,0.3);
+	
+}
+/*=====================================*/
+
+/*=====================================*/
+/*.g211B_pageNum：頁碼容器*/
+.g211B_pageNum {
+	display:table-cell;
+	vertical-align:middle;
+	width:10%;
+	min-width:140px;
+	height:auto;
+	/*background:#D4FF82;*/
+	text-align:center;
+}
+/*.g211B_pageNumStr：頁碼字串*/
+.g211B_pageNumStr {
+	padding:3px 0 3px 0;
+	display: inline-block;
+	width:100%;
+	height:auto;
+	background: #88138F;
+	
+	color:#DDD;
+	font-weight:500;
+	font-size: 1.05em;
+	line-height: 1.2em;
+	letter-spacing:0.0625em; 
+	
+	border-top-left-radius:5px; 
+	border-top-right-radius:0px; 
+	border-bottom-right-radius:0px;
+	border-bottom-left-radius:5px;
+}
+/*共幾頁的CSS*/
+.g211B_pageTotalStr {
+	font-size: 0.8em;
+	color:#AAA;
+}
+/*=====================================*/
+
+
+/*顯示選單區塊*/
+/*=====================================*/
+/*選單區塊：最大容器*/
+.g211B_menuZone {
+	position:absolute;
+	z-index:2010;
+	left:0px;
+	top:56px;
+	padding:0px 0px 24px 0px;
+	display:none;
+	width:100%;
+	height:auto;
+	background:#EEE;
+	
+	color:#333;
+	font-weight:500;
+	font-size: 1.0em;
+	line-height: 1.2em;
+	letter-spacing:0.0625em;
+	
+	box-shadow:12px 8px 12px rgba(20%,20%,20%,0.3);
+
+}
+/*選單區塊：標頭*/
+.g211B_menuHeader {
+	margin:0 0 0 0;
+	padding:2px 5px 2px 7px;
+	width:100%;
+	height:30px;
+	border-bottom:1px solid #333;
+	background: #413c4d;
+	
+	font-size: 0.9em;
+	color:#BBB;
+	font-weight:500;
+}
+/*選單區塊：一個橫列*/
+.g211B_menuRow {
+	margin:0 0 0 0;
+	padding:5px 5px 5px 10px;
+	width:100%;
+	height:auto;
+	border-bottom:1px solid #AAA;
+	cursor:pointer;
+}
+/*選單區塊：一個橫列的滑鼠懸浮狀態*/
+.g211B_menuRow_hover{
+	background: #98ef63;
+}
+/*選單區塊：目前作用中的橫列。其內包括.g211B_menuRowOrder和.g211B_menuRowItem*/
+.g211B_menuRow_current{
+	background: #568a49;
+}
+/*選單區塊：一個橫列中的流水號*/
+.g211B_menuRowOrder {
+	margin:0 5px 0 0;
+	padding:0px 6px 0px 6px;
+	background:#CCC;
+}
+/*選單區塊：一個橫列流水號的滑鼠懸浮狀態*/
+.g211B_menuRowOrder_hover {
+	background:#FFF;
+}
+/*選單區塊：作用中橫列的流水號*/
+.g211B_menuRowOrder_current {
+	background:#FFF;
+	color:#21643c;
+}
+/*選單區塊：橫列的主題文字的外圍容器*/
+.g211B_menuRowItemOuter {
+	width:85%;
+	display:inline-block;
+	
+	/* 斷行 */
+	white-space: normal; 
+	word-wrap: break-word; 
+	word-break: break-all; 
+}
+/*選單區塊：橫列的主題文字*/
+.g211B_menuRowItem {
+	width:100%;
+	padding:2px 5px 2px 2px;
+}
+/*選單區塊：作用中橫列的主題文字*/
+.g211B_menuRowItem_current {
+	color: #FFF;
+	font-weight:500;
+}
+/*=====================================*/
+
+
+
+/*↑-----------------------------------------------------------↑*/
+
+
+
+/*所有.g211B_card的容器*/
+.g211B_cardGroup {
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px; 
+	width:100%;
+	height:auto;
+	display:block;
+	overflow: hidden;
+}
+
+
+/*各頁資料，必須隱藏*/
+.g211B_card {
+	display:none;
+}
+.g211B_card .path, .g211B_card .width, .g211B_card .height {
+	display:none;
+}
+
+
+/************************************/
+/*iframe的容器*/
+.g211B_iframeOuter {
+	margin:0px auto 36px auto;
+	width:100%;
+	height:auto;
+	background:transparent;
+	display:none; 
+	overflow: hidden;
+}
+
+/*置放各頁內容的iframe。 .g211B_contentFrame的寬高，依.g211B_iframeOuter的寬高而定*/
+.g211B_contentFrame {
+	width:100%;
+	height:100%;
+	background:transparent;
+	overflow: hidden;
+}
+/************************************/
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ */
+
+
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:769px) {
+	
+	/*此版型視窗尺寸變動時，程式會操控.pageWrapper的寬高，塞滿視窗*/
+	.pageWrapper {
+	}
+	
+	/*最上方標題列 - 大容器*/
+	.g211B_header {
+		height:60px; /*原height:56px*/
+	}
+	
+	/*menu按鈕*/
+	.g211B_menuBtn {
+	}
+	.g211B_menuBtn > img {
+	}
+	
+	/*單元標題 - 標題字串g211B_headerString的容器*/
+	.g211B_headerStringOuter {
+		padding:3px 5px 3px 5px; /*原padding:0px 12px 2px 3px*/
+	}
+	/*單元標題 - 標題字串*/
+	.g211B_headerString {
+		background:transparent; /*原background:#f3f385;*/
+		color:#f6ac6d; /*原color: #f9f95d*/
+		box-shadow: none; /*原有box-shadow，三行描述*/
+	}
+	
+	/*小尺寸視窗會用到，包裹.g211B_prevBtn、.g211B_nextBtn、.g211B_pageNum*/
+	.g211B_rwdNavDiv {
+		display:table; /*原display:none;*/
+		width:100%; /*原無width*/
+		height:42px; /*原無height*/
+		background:#FFF; /*原無background*/
+	}
+	
+	/*上一頁按鈕*/
+	.g211B_prevBtn {
+		position: static; /*原position:fixed;*/
+		display: inline-block; /*原無display*/
+		padding:5px 9px 5px 9px; /*原padding:10px 18px 10px 18px*/
+		width:10%; /*原無width*/
+		max-height:42px; /*原無max-height*/
+		float:left; /*原無float*/
+		text-align:center; /*原無text-align*/
+		
+		border-top-left-radius:0px; /*原border-top-left-radius:10px*/
+		border-top-right-radius:0px; /*原border-top-right-radius:10px*/
+		border-bottom-right-radius:0px; /*原border-bottom-right-radius:0px*/
+		border-bottom-left-radius:0px; /*原border-bottom-left-radius:0px*/
+	}
+	.g211B_prevBtn > img {
+		width:100%; /*原width:47px*/
+		max-width:20px; /*原無max-width*/
+	}
+	
+	/*下一頁按鈕*/
+	.g211B_nextBtn {
+		position: static; /*原position:fixed;*/
+		display: inline-block; /*原無display*/
+		padding:5px 9px 5px 9px; /*原padding:10px 18px 10px 18px*/
+		width:10%; /*原無width*/
+		max-height:42px; /*原無max-height*/
+		float:right; /*原無float*/
+		text-align:center; /*原無text-align*/
+		
+		border-top-left-radius:0px; /*原border-top-left-radius:10px*/
+		border-top-right-radius:0px; /*原border-top-right-radius:0px*/
+		border-bottom-right-radius:0px; /*原border-bottom-right-radius:0px*/
+		border-bottom-left-radius:0px; /*原border-bottom-left-radius:10px*/
+	}
+	.g211B_nextBtn > img {
+		width:100%; /*原width:47px*/
+		max-width:20px; /*原無max-width*/
+	}
+	
+	/*.g211B_pageNum：頁碼容器*/
+	.g211B_pageNum {
+		display:table; /*原table-cell*/
+		margin:0 auto 0 auto; /*原無margin*/
+		width:80%; /*原width:10%*/
+		height:42px;/*原height:auto*/
+		float:left; /*原無float*/
+	}
+	/*.g211B_pageNumStr：頁碼字串*/
+	.g211B_pageNumStr {
+		display: table-cell; /*原display: inline-block*/
+		height:100%; /*原height:auto*/
+		background: url(images/red-pattern-texture-lines.jpg); /*原background:#88138F*/
+		vertical-align:middle; /*原無vertical-align:middle*/
+		
+		color: #630211; /*原color: #f9f95d*/
+		
+		border-top-left-radius:0px; /*原border-top-left-radius:5px*/
+		border-top-right-radius:0px;  /*原border-top-right-radius:0px*/
+		border-bottom-right-radius:0px; /*原border-bottom-right-radius:0px*/
+		border-bottom-left-radius:0px; /*原border-bottom-left-radius:5px*/
+	}
+	/*共幾頁的CSS*/
+	.g211B_pageTotalStr {
+		font-size: 0.8em; 
+		color:#9d162c;
+	}
+
+	/*所有.g211B_card的容器*/
+	.g211B_cardGroup {
+	}
+	
+}
+	
+	
+	
+

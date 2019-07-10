@@ -1,0 +1,45 @@
+
+tPlayer.js
+//=======================
+行6509
+c21Quiz.initQuiz(indexNum);
+
+
+$('#quizArea').append( $('.mediaWrapper:eq(1)') );
+			$('.mediaWrapper:eq(1)').css({'display':'block'});
+
+
+g207B_InVideoQuiz.js
+//=========================
+47~95
+183
+param.newMedia[quizSetIndex][quizzingIndex]
+215
+
+
+tPlayer_QuizB.js
+//=========================
+377~381 - 題目的語音檔需seek到語音檔起點(0)，並隱藏tPlayer專用播放介面
+(●必須有正確的媒體檔index)？？？
+
+448~449 - 改為：不可隱藏#quizDiv等...(新的語音媒體介面出現、評量不隱藏)
+510~514 - 加入與音專用播放介面
+------------------------------------------------
+684~~708
+function stopBtnState(index){}
+1382 --- 增加code
+/*註冊「檢視結果」滑鼠事件*/
+function viewResultBtnMouseEvent(){}
+------------------------------------------------
+296 --- 增加code
+/*進入下一題*/
+function nextQuiz(){}
+------------------------------------------------
+
+
+
+
+
+
+
+

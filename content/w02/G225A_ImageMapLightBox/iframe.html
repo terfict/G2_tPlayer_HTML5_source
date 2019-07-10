@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>iframe</title>
+
+<style type="style/css">
+html, body {
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+}
+#mainFrame {
+}
+</style>
+
+
+</head>
+
+<body>
+	<iframe id="mainFrame" src="index.html" frameborder="0" scrolling="auto" allowtransparency="yes" allowfullscreen width="100%" height="auto"></iframe>
+
+
+<!--tPlayer_HTML5-->
+<!--[if IE]><script src="../Common/lib/html5.js"></script><![endif]-->
+
+<!--tPlayer_jQ-->
+<script src="../../CommonG2/lib/jquery-1.11.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-ui-1.11.4.min.js"></script>
+
+<!--植基於在jQUI，疊加Mobile Touch支援，Mobile可拖曳-->
+<script src="../../CommonG2/lib/jquery.ui.touch-punch.min.js"></script>
+<script>
+$(document).ready(function(e) {
+    $('#mainFrame').css({'position':'absolute','left':'0','top':'0'}).animate({'width':$(window).width(),'height':$(window).height()},0);
+
+    $(window).on('resize',function(){
+    	$('#mainFrame').css({'position':'absolute','left':'0','top':'0'}).animate({'width':$(window).width(),'height':$(window).height()},0);
+    })
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,852 @@
+﻿@charset "utf-8";
+/* CSS Document - G214A│g214A_Overlay.css */
+
+
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background-color: #e6e7eb;
+
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 100%;
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px*/
+}
+
+p, ul, ol{
+	margin:0 0 0 0;
+}
+
+/*●頁面最大容器*/
+/*此版型視窗尺寸變動時，程式會操控.pageWrapper的寬高，塞滿視窗*/
+.pageWrapper {
+	/*◎居中*/
+	margin:0 auto 0 auto;
+	/*◎從這裡調整.mediaWrapper播放介面的《垂直方向位置》 - padding-top*/
+	padding:0px 0px 0px 0px; 
+	width:auto;
+	height:100%;
+	background:#393939;
+	display:block;
+}
+
+/*小尺寸視窗會用到，包裹.g214A_prevBtn、.g214A_nextBtn、.g214A_pageNum*/
+.g214A_rwdNavDiv {
+	display:none;
+}
+
+/*上一頁按鈕*/
+.g214A_prevBtn {
+	position:fixed;
+	left:0px;
+	top:250px;
+	z-index:2010;
+	padding:10px 18px 10px 18px;
+	background:#6ea261;
+	cursor:pointer;
+	
+	border-top-left-radius:0px; 
+	border-top-right-radius:10px; 
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:0px;
+}
+.g214A_prevBtn > img {
+	width:38px;
+}
+/*上一頁按鈕 - 滑鼠懸浮狀態CSS，程式會來取用*/
+.g214A_prevBtnOver {
+	background:#27309C;
+}
+/*上一頁按鈕 - 滑鼠按下狀態CSS，程式會來取用*/
+.g214A_prevBtnDown {
+	background: #B07300;
+}
+/*下一頁按鈕*/
+.g214A_nextBtn {
+	position:fixed;
+	right:0px;
+	top:250px;
+	z-index:2010;
+	padding:10px 18px 10px 18px;
+	background:#6ea261;
+	cursor:pointer;
+	
+	border-top-left-radius:10px; 
+	border-top-right-radius:0px; 
+	border-bottom-right-radius:0px;
+	border-bottom-left-radius:10px;
+}
+.g214A_nextBtn > img {
+	width:38px;
+}
+/*下一頁按鈕 - 滑鼠懸浮狀態CSS，程式會來取用*/
+.g214A_nextBtnOver {
+	background:#27309C;
+}
+/*下一頁按鈕 - 滑鼠按下狀態CSS，程式會來取用*/
+.g214A_nextBtnDown {
+	background: #B07300;
+}
+
+
+/*最上方標題列.g203_header*/
+/*↓------------------------------↓*/
+/*●最上方標題列 - 大容器*/
+.g214A_header {
+	display:table;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	width:100%;
+	height:56px;
+	text-align:center;
+	background:#393939 url(images/red-pattern-texture-lines.png) 0px 0px;
+	
+}
+
+/*=====================================*/
+/*menu按鈕外圍容器*/
+.g214A_menuBtnOuter {
+	padding:0px 12px 0px 12px;
+	display: table-cell;
+	width:5%;
+	height:auto;
+	vertical-align:middle;
+}
+/*menu按鈕*/
+.g214A_menuBtn {
+	display: table-cell;
+	width:auto;
+	height:auto;
+	vertical-align:middle;
+	cursor: pointer;
+}
+.g214A_menuBtn > img {
+	display: table-cell;
+	width:47px;
+	height:47px;
+}
+/*關閉menu的按鈕*/
+.g214A_menuCloseBtn {
+	display: table-cell;
+	width:auto;
+	height:auto;
+	vertical-align:middle;
+	cursor: pointer;
+}
+.g214A_menuCloseBtn > img {
+	display: table-cell;
+	width:47px;
+	height:47px;
+}
+/*=====================================*/
+
+/*=====================================*/
+/*單元標題 - 標題容器*/
+.g214A_headerStringOuter {
+	display:table-cell;
+	vertical-align:middle;
+	padding:0px 12px 2px 3px;
+	text-align:left;
+	width:85%;
+}
+/*單元標題 - 標題字串*/
+.g214A_headerString {
+	padding:3px 12px 3px 12px; 
+	width:100%;
+	height:auto;
+	background:#21643a;
+	opacity:0.7;
+	
+	color: #e7e7e7;
+	font-weight:500;
+	font-size: 1.2em;
+	line-height: 1.2em;
+	letter-spacing:0.0625em;
+	
+	border-top-left-radius:18px; 
+	border-top-right-radius:18px; 
+	border-bottom-right-radius:18px;
+	border-bottom-left-radius:18px;
+	
+	box-shadow:4px 4px 3px rgba(20%,20%,20%,0.5);
+	box-shadow:2px 2px 1px rgba(20%,20%,20%,0.5) inset;
+	box-shadow:2px 2px 2px rgba(20%,20%,20%,0.6),4px 4px 6px rgba(20%,20%,20%,0.4),6px 6px 12px rgba(20%,20%,20%,0.4);
+}
+/*=====================================*/
+
+/*=====================================*/
+/*.g214A_pageNum：頁碼容器*/
+.g214A_pageNum {
+	display:table-cell;
+	vertical-align:middle;
+	width:10%;
+	min-width:140px;
+	height:auto;
+	text-align:center;
+
+}
+/*.g214A_pageNumStr：頁碼字串*/
+.g214A_pageNumStr {
+	padding:3px 0 3px 0;
+	display: inline-block;
+	width:100%;
+	height:auto;
+	background:#cde2c5;
+	
+	color: #3c3b36;
+	font-weight:500;
+	font-size: 1.05em;
+	line-height: 1.2em;
+	letter-spacing:0.0625em; 
+	
+	border-top-left-radius:5px; 
+	border-top-right-radius:0px; 
+	border-bottom-right-radius:0px;
+	border-bottom-left-radius:5px;
+}
+/*共幾頁的CSS*/
+.g214A_pageTotalStr {
+	font-size: 0.8em;
+	color: #3c3b36;
+}
+/*=====================================*/
+
+
+/*顯示選單區塊*/
+/*=====================================*/
+/*選單區塊：最大容器*/
+.g214A_menuZone {
+	position:absolute;
+	z-index:2010;
+	left:0px;
+	top:56px;
+	padding:0px 0px 0px 0px;
+	display:none;
+	width:100%;
+	height:auto;
+	background:#EEE;
+	
+	color:#333;
+	font-weight:500;
+	font-size: 1.0em;
+	line-height: 1.2em;
+	letter-spacing:0.0625em;
+	
+	box-shadow:12px 8px 12px rgba(20%,20%,20%,0.3);
+
+}
+/*選單區塊：標頭*/
+.g214A_menuHeader {
+	margin:0 0 0 0;
+	padding:2px 5px 2px 7px;
+	width:100%;
+	height:30px;
+	border-bottom:1px solid #333;
+	background: #21643c;
+	
+	font-size: 0.9em;
+	color:#7ca961;
+	font-weight:600;
+}
+/*選單區塊：一個橫列*/
+.g214A_menuRow {
+	margin:0 0 0 0;
+	padding:5px 5px 5px 10px;
+	width:100%;
+	height:auto;
+	border-bottom:1px solid #AAA;
+	cursor:pointer;
+}
+/*選單區塊：一個橫列的滑鼠懸浮狀態*/
+.g214A_menuRow_hover{
+	background: #98ef63;
+}
+/*選單區塊：目前作用中的橫列。其內包括.g211B_menuRowOrder和.g211B_menuRowItem*/
+.g214A_menuRow_current{
+	background: #568a49;
+}
+/*選單區塊：一個橫列中的流水號*/
+.g214A_menuRowOrder {
+	margin:0 5px 0 0;
+	padding:0px 6px 0px 6px;
+	background:#CCC;
+}
+/*選單區塊：一個橫列流水號的滑鼠懸浮狀態*/
+.g214A_menuRowOrder_hover {
+	background:#FFF;
+}
+/*選單區塊：作用中橫列的流水號*/
+.g214A_menuRowOrder_current {
+	background:#FFF;
+	color:#21643c;
+}
+/*選單區塊：橫列的主題文字的外圍容器*/
+.g214A_menuRowItemOuter {
+	width:85%;
+	display:inline-block;
+	
+	/* 斷行 */
+	white-space: normal; 
+	word-wrap: break-word; 
+	word-break: break-all; 
+}
+/*選單區塊：橫列的主題文字*/
+.g214A_menuRowItem {
+	padding:2px 2px 2px 2px;
+}
+/*選單區塊：作用中橫列的主題文字*/
+.g214A_menuRowItem_current {
+	color: #FFF;
+	font-weight:500;
+}
+
+/*↑------------------------------↑*/
+
+
+/*●所有.g214A_card的容器*/
+.g214A_cardSet {
+	margin:0px 0px 0px 0px;
+	padding:30px 0px 60px 0px; 
+	width:100%;
+	/*max-height:95%;*/
+	height:auto;
+	background:#494847 url(images/g214A_cardSet_bg1a.jpg) center 55%;
+	/*overflow-y: auto;
+	overflow-x: hidden;*/
+	
+	display:block;
+	/*visibility: hidden;*/
+	
+	box-shadow:4px 4px 3px rgba(20%,20%,20%,0.5);
+	box-shadow:2px 2px 1px rgba(20%,20%,20%,0.5);
+	box-shadow:2px 2px 2px rgba(20%,20%,20%,0.6),4px 4px 6px rgba(20%,20%,20%,0.4),6px 6px 12px rgba(20%,20%,20%,0.4) inset;
+	
+	/*border-top-left-radius:12px; 
+	border-top-right-radius:12px; 
+	border-bottom-right-radius:12px;
+	border-bottom-left-radius:12px;*/
+	
+}
+/*各頁資料*/
+.g214A_card {
+	width:100%;
+	height:auto;
+}
+/**/
+.g214A_outsideZone {
+	position:absolute;
+	top:-10000px;
+	left:-2000px;
+}
+
+
+
+
+/*圖文區塊*/
+/*↓------------------------------↓*/
+/*圖文區塊 - 容器外層*/
+.textPhoto {
+	
+	/*●必要：clear:both
+		因IE進平台，渲染(解譯成像)引擎被降低版本，在大尺寸喊和小尺寸視窗之間切換，會產生瑕疵
+		但做此處理後，所有IE版本可能會出現1px縫隙，露出底色 (.mediaWrapper和.textPhoto之間)
+		所以必須把.pageWrapper的背景色設為#FFF白色，以與播放介面之白色相符，視覺上就不會有縫隙*/
+	/*==========================*/
+	clear:both;
+	/*==========================*/
+	
+	display:block;
+	margin:0 auto 0px auto;
+	padding:30px 0px 30px 0px;
+	width:640px;
+	height:auto;
+	/*border: solid #CFCFCF 1px;*/
+	background:#D3DBC5 url(images/10.png) -20px 0px;
+	
+	/*圓角*/
+	border-top-left-radius:0px; 
+	border-top-right-radius:0px;
+	border-bottom-left-radius:0px; 
+	border-bottom-right-radius:0px; 
+	
+	box-shadow:6px 6px 12px rgba(20%,20%,20%,0.4);
+}
+/*圖文區塊 - 容器內層*/
+.textPhoto .inner {
+	display:block;
+	margin:0 0 0 0;
+	padding:20px 36px 36px 36px;
+	background:#EEE;
+	width:100%;
+	height:auto;
+	border: solid #CFCFCF 1px;
+	
+	/*圓角*/
+	border-top-left-radius:0px; 
+	border-top-right-radius:0px;
+	border-bottom-left-radius:10px; 
+	border-bottom-right-radius:10px; 
+	
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+/*圖文區塊 - 容器內層裡面的標題*/
+.textPhoto .inner .title {
+	display: inline-block;
+	margin:0px 0 8px 0;
+	padding:0px 0px 0px 0px;
+	width:100%;
+	height:auto;
+	float:left;
+	
+	font-family: 'LiHei Pro', "微軟正黑體", sans-serif;
+	color:#000;
+	font-size: 1.4em;
+	font-weight:400;
+	line-height: 1.3em;
+	text-indent:0.0em;
+	text-align:center;
+	
+	text-shadow: 2px 2px 2px #CCC;
+	-moz-text-shadow: 2px 2px 2px #CCC;
+	-webkit-text-shadow: 2px 2px 2px #CCC;
+}
+
+/*圖文區塊 - 容器內層裡面的內文*/
+.textPhoto .inner .text {
+	width:100%;
+	height:auto;
+	
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	color:#000;
+	font-size: 1.0em;
+	font-weight:320;
+	line-height: 1.6em;
+	letter-spacing:0.0625em;
+	/**/
+	text-indent:2.1em;
+	
+	/*◎若有動態縮放文字區塊，務必加入word-wrap:break-word這行在上方，否則IE10可能會當掉*/
+	word-wrap: break-word;
+	text-align:justify;
+	text-justify:inter-ideograph;
+}
+
+
+
+
+/*↓↓↓--------「點小圖跳大圖功能」--------↓↓↓*/
+
+/*有「點小圖跳大圖」功能<img>的外圍容器的class*/
+.toBigPic {
+}
+/*有「點小圖跳大圖」功能<img>*/
+.toBigPic > img {
+	border:1px #82CAFD solid;
+}
+
+/*無跳圖之小圖*/
+.normalPic > img {
+	border:1px #ADA2A2 solid;
+}
+
+/*↑↑↑--------「點小圖跳大圖功能」--------↑↑↑*/
+
+
+
+/*↓↓↓--------「名詞解釋：glossary」--------↓↓↓*/
+
+/*解釋內容面板區塊裡面的文字說明內容*/
+.glossary_content {
+}
+.glossary_content p {
+	margin:0 0 3px 0;
+}
+
+/*↑↑↑--------「名詞解釋：glossary」--------↑↑↑*/
+
+
+
+
+/*↓↓↓↓↓↓ 媒體播放介面 ↓↓↓↓↓↓*/
+/*包裹 .mediaHeader、.mediaDiv、.playbackDiv ...等之外圍容器*/
+.mediaWrapper {
+	/*◎居中*/
+	margin:0 auto 0 auto;
+
+	/*◎從這裡調整.mediaWrapper播放介面的《水平方向位置》*/
+	/*margin:0px 0px 0px 0px;*/
+	/*==================*/
+	width:640px; 
+	height:auto;
+	display: block;
+	
+	box-shadow:6px 6px 12px rgba(20%,20%,20%,0.4);
+}
+
+/*影音媒體-容器 - 包裝 媒體物件 和 .playbackDiv*/
+.mediaDiv {
+	width:640px; 
+	height:auto;
+	background:transparent;
+}
+
+/*標提列*/
+/*========================================*/
+/*媒體標提列-容器*/
+.mediaHeader {
+	background:#FFF;
+	border-top:1px solid #DDD;
+	
+	border-top-left-radius:12px; 
+	border-top-right-radius:12px; 
+	border-bottom-right-radius:0px;
+	border-bottom-left-radius:0px;
+}
+/*標提列-icon-容器*/
+.icon {
+	width:auto;
+	height:38px;
+	display: table-cell;
+	padding:0 10px 0 23px; 
+	vertical-align: middle;
+}
+/*標提列-icon-圖形*/
+.icon img {
+	width:45px; 
+	height:auto;
+	vertical-align: middle;
+}
+/*標提列-字串-容器*/
+.mediaHeaderString {
+	/*與.buttons共用100%，可因應狀況為調%*/
+	width:82%;
+	height:auto;
+	display: table-cell;
+	padding:0 0 0 0;
+	vertical-align:middle;
+
+	font-family: 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size:1em;
+	font-weight:600;
+	color: #a5a28d;
+}
+/*標提列右側.notebook和.help的容器*/
+.buttons {
+	/*與.mediaHeaderString共用100%，可因應狀況微調%*/
+	width:18%;
+	height:auto;
+	display: table-cell;
+	vertical-align:middle;
+}
+/*新手上路按鈕*/
+.help {
+	display: table-cell;
+	margin:-1px 27px 0 0; /*原margin:-1px 12px 0 0*/
+	float:right;
+}
+.help img {
+	width:24px; 
+	cursor: pointer;
+	vertical-align: middle;
+}
+/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+.notebook {
+	display: table-cell;
+	margin:0 12px 0 0; 
+	float:right;
+}
+.notebook img {
+	width:25px; 
+	cursor:pointer;
+	vertical-align: middle;
+}
+/*========================================*/
+
+
+/*播放界面UI - 右邊界*/
+.pbRight {
+	margin:3px 0 0 0px; /*原margin:3px 0 0 10px*/
+}
+.barOuter_2 {
+}
+
+/*↑↑↑↑↑↑ 媒體播放介面 ↑↑↑↑↑↑*/
+
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ */
+
+
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:769px) {
+	
+	/*此版型視窗尺寸變動時，程式會操控.pageWrapper的寬高*/
+	.pageWrapper {
+		width:100%; /*原width:auto*/
+		height:auto; /*原height:100%*/
+	}
+	
+	/**/
+	.g214A_header {
+		height:60px; /*原height:56px*/
+		background-image: none; /*原background:#393939 url(images/red-pattern-texture-lines.png) 0px 0px*/
+	}
+	
+	/*menu按鈕*/
+	.g214A_menuBtn {
+	}
+	.g214A_menuBtn > img {
+	}
+	
+	/*單元標題 - 標題容器*/
+	.g214A_headerStringOuter {
+		padding:3px 5px 3px 5px; /*原padding:0px 12px 2px 3px*/
+	}
+	
+	/*單元標題 - 標題字串*/
+	.g214A_headerString {
+		background:transparent; /*background:#21643a*/
+		color: #FFF; /*原color: #e7e7e7*/
+		box-shadow: none; /*原有box-shadow，三行描述*/
+		/*原font-size: 1.2em*/
+		font-size:1.0em; 
+	}
+	
+	/*小尺寸視窗會用到，包裹.g214A_prevBtn、.g214A_nextBtn、.g214A_pageNum*/
+	.g214A_rwdNavDiv {
+		display:table; /*原display:none;*/
+		width:100%; /*原無width*/
+		height:42px; /*原無height*/
+	}
+	
+	/*上一頁按鈕*/
+	.g214A_prevBtn {
+		position: static; /*原position:fixed;*/
+		display: inline-block; /*原無display*/
+		padding:5px 9px 5px 9px; /*原padding:10px 18px 10px 18px*/
+		width:10%; /*原無width*/
+		max-height:42px; /*原無max-height*/
+		float:left; /*原無float*/
+		text-align:center; /*原無text-align*/
+		
+		border-top-right-radius:0px; /*原border-top-right-radius:10px*/
+		border-bottom-right-radius:0px; /*原border-bottom-right-radius:10px*/
+	}
+	.g214A_prevBtn > img {
+		width:100%; /*原width:47px*/
+		max-width:20px; /*原無max-width*/
+	}
+	
+	/*下一頁按鈕*/
+	.g214A_nextBtn {
+		position: static; /*原position:fixed;*/
+		display: inline-block; /*原無display*/
+		padding:5px 9px 5px 9px; /*原padding:10px 18px 10px 18px*/
+		width:10%; /*原無width*/
+		max-height:42px; /*原無max-height*/
+		float:right; /*原無float*/
+		text-align:center; /*原無text-align*/
+		
+		border-top-left-radius:0px; /*原border-top-left-radius:10px*/
+		border-bottom-left-radius:0px; /*原border-bottom-left-radius:10px*/
+	}
+	.g214A_nextBtn > img {
+		width:100%; /*原width:47px*/
+		max-width:20px; /*原無max-width*/
+	}
+	
+	/*.g214A_pageNum：頁碼容器*/
+	.g214A_pageNum {
+		display:table; /*原table-cell*/
+		margin:0 auto 0 auto; /*原無margin*/
+		width:80%; /*原width:10%*/
+		height:42px;/*原height:auto*/
+		float:left; /*原無float*/
+		
+		
+	}
+	/*.g214A_pageNumStr：頁碼字串*/
+	.g214A_pageNumStr {
+		display: table-cell; /*原display: inline-block*/
+		height:100%; /*原height:auto*/
+		vertical-align:middle; /*原無vertical-align:middle*/
+		
+		border-top-left-radius:3px; /*原border-top-left-radius:5px*/
+		border-bottom-left-radius:3px; /*原border-bottom-left-radius:5px*/
+		border-top-right-radius:3px; 
+		border-bottom-right-radius:3px; 
+	}
+	/*共幾頁的CSS*/
+	.g214A_pageTotalStr {
+	}
+	
+	/*所有.g214A_card的容器*/
+	.g214A_cardSet {
+		padding:0px 0px 0px 0px; /*原padding:30px 0px 60px 0px*/
+		width:auto; /*原width:100%*/
+	}
+	
+	
+	
+	/*媒體檔標題列*/
+	/*========================================*/
+	/*媒體檔標題列-容器*/
+	.mediaHeader {
+		/*取消圓角*/
+		border-top-left-radius:0; /*原border-top-left-radius:6px*/
+		border-top-right-radius:0; /*原border-top-right-radius:6px*/
+	}
+	/*標題列-icon-容器*/
+	.icon {
+		/*padding:0 10px 0 23px;*/ /*原padding:0 10px 0 23px*/
+	}
+	/*標題列-字串-容器*/
+	.mediaHeaderString {
+		/*原本與.buttons共用100%，為82%*/
+		width:100%;
+	}
+	/*標題列右側.notebook和.help的容器*/
+	.buttons {
+		/*與.mediaHeaderString共用100%*/
+		/*width:18%;*/
+	}
+	/*新手上路按鈕*/
+	.help {
+		/*原本為display: table-cell;*/
+		display: none;
+	}
+	/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+	.notebook {
+		/*原本為display: table-cell;*/
+		display: none;
+	}
+	/*========================================*/
+	
+	
+	
+	/*圖文區塊*/
+	/*↓------------------------------↓*/
+	/*圖文區塊 - 容器外層*/
+	.textPhoto {
+		width:100%;
+	}
+	
+	/*圖文區塊 - 容器內層*/
+	.textPhoto .inner {
+		padding:20px 30px 36px 30px; /*原padding:20px 36px 36px 36px;*/
+	}
+	/*圖文區塊 - 內層裡面的標題*/
+	.textPhoto .inner .title {
+	}
+	/*圖文區塊 - 內層裡面的文字、圖形*/
+	.textPhoto .inner .text {
+		line-height: 1.7em; /*原line-height: 1.6em;*/
+	}
+	/*↑------------------------------↑*/
+	
+	
+	
+	/*▲☆★ 「點小圖跳大圖」、「無點小圖跳大圖」*/
+	/*↓------------------------------↓*/
+	/*▲☆★ - 「點小圖跳大圖」、「無點小圖跳大圖」 的容器div 
+	--- 已由程式根據externalData.js的param.rwdSmallWindowImgPercent操控寬度，高度自動比例*/
+	/*.toBigPic, normalPic {
+	}*/
+	
+	/*▲☆★ - 已在程式中設為100%*/
+	/*「.toBigPic > img」小圖本身寬度設為100%，則寬度由「.toBigPic」的寬度來決定*/
+	/*.toBigPic > img {
+	}*/
+	
+	/*▲☆★ - 已在程式中設為100%*/
+	/*==============================================================*/
+	/*.normalPic > img {
+	}*/
+	/*==============================================================*/
+	
+	
+	
+	/* 放大鏡圖示的容器 (圖形具備放大功能時，自動附加放大鏡圖示)，小尺寸視窗因無法定位，所以需隱藏*/
+	.zoomIconSpan {
+		display:none; /*原在TPlayer.css - display:block*/
+	}
+	/*↑------------------------------↑*/
+	
+	
+	/*「文字大小切換」*/
+	/*↓------------------------------↓*/
+	.fontSizeSwitcher {
+		background: none; /*原在TPlayer.css - background:url(images/fontSizeSwitcherBg.png) no-repeat;*/
+	}
+	/*↑------------------------------↑*/
+	
+	
+}
+	
+	
+	
+

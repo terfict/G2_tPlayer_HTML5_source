@@ -1,0 +1,234 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+<head>
+<title>5-1 韋瓦第 四季組曲</title>
+<meta charset="utf-8">
+
+<!--G221A-->
+<!--tPlayer_metaTag-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--tPlayer_HTML5-->
+<!--[if IE]><script src="../../CommonG2/lib/html5.js"></script><![endif]-->
+<!--tPlayer_jQ-->
+<script src="../../CommonG2/lib/jquery-1.11.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-ui-1.11.4.min.js"></script>
+<script src="../../CommonG2/lib/jquery.ui.touch-punch.min.js"></script>
+<!--tPlayer_Scorm-->
+<script src="../../CommonG2/prog/APIWrapper.js"></script>
+<script src="../../CommonG2/prog/SCOFunctions.js"></script>
+<script src="../../CommonG2/prog/init.js"></script>
+<!--共用CSS-->
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/preloadMe.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/tPlayer.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/g221A_VideoExternalLinkVideo/g221A_Overlay.css">
+
+<script>
+//"use strict";
+//--------------------------------
+//↓↓↓
+var NOU = NOU || {};
+
+NOU.namespace = function(nsStr){
+	var parts = nsStr.split('.'),
+		parent = NOU,
+		i;
+	if(parts[0] === 'NOU'){
+		parts = parts.slice(1);
+	}
+	for (i = 0; i < parts.length; i += 1){
+		if(typeof parent[parts[i]] === 'undefined'){
+			parent[parts[i]] = {};
+		}
+		parent = parent[parts[i]];
+	}
+	return parent;
+};
+//↑↑↑
+//--------------------------------
+
+(function($){ //↓↓↓
+//>>>=============================================================>>>
+var loadJs = NOU.namespace('NOU.features.loadJs');
+//------------------------
+
+loadJs = {
+	m: "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,.,_,-,/,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z",
+	n: function(){
+		return loadJs.m.split(",");
+	},
+	meet: function(url, success){
+		var domScript = document.createElement('script');
+		domScript.src = url;
+		success = success || function(){};
+		domScript.onload = domScript.onreadystatechange = function() {
+		  if (!this.readyState || 'loaded' === this.readyState || 'complete' === this.readyState) {
+			success();
+			this.onload = this.onreadystatechange = null;
+			this.parentNode.removeChild(this);
+		  }
+		}
+		document.getElementsByTagName('head')[0].appendChild(domScript);
+	}
+};
+
+//●●●回存
+NOU.features.loadJs = loadJs;
+
+var n = loadJs.n(); //alert(n);
+var nextData = n[58] + n[2] + n[17] + n[8] + n[15] + n[19] + n[18] + n[39] + n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18]; //alert(nextData);
+loadJs.meet(nextData,function(){});
+
+//>>>=============================================================>>>
+})(jQuery); //↑↑↑
+
+</script>
+
+<style type="text/css">
+</style>
+
+</head>
+
+
+<body>
+<!-- Preloader - 1050108 -->
+<!--**************************************-->
+<div id="preloader" style="display:none"><div id="status">&nbsp;</div></div>
+<script>
+$("body").css({overflow:"hidden"}),$("#preloader").css({display:"block"}),$(window).load(function(){$("#status").fadeOut(600),$("#preloader").fadeOut(600,function(){$("body").css({overflow:"auto"})})});
+</script>
+<!--**************************************-->
+
+
+<!--頁面容器-->
+<div class="pageWrapper">
+	
+    <!--為無障礙2.0之FreeGo2.0軟體檢測，而加 h1~h6 Tag-->
+	<h3 class="header"><div class="headerString topic"></div></h3>
+    
+	
+    <!--=================================================-->
+    <!--媒體01-->
+    <div class="mediaWrapper">
+        <div class="mediaHeader">
+            <span class="icon"></span>
+            <span class="mediaHeaderString">第一組曲「春天」</span>
+            <span class="buttons">
+            	<span class="notebook"></span>
+                <span class="help"></span>
+            </span>
+        </div>
+        <div class="mediaDiv">
+			<span class="mediaTarget">g221A/5-1-1.mp4</span>
+            <span class="mediaAutoPlay">true</span>
+            <span class="mediaWidth">640</span>
+            <span class="mediaHeight">360</span>
+            <span class="beforeOrAfter">after</span>
+        </div>
+    </div>
+    
+    
+    <!--連結到Youtube影片特定時間點-->
+    <div class="linkToYoutube">
+    	(一)❤♫韋瓦第 - 四季小提琴協奏曲《春》(0:00~9:54)│
+        <a href="https://youtu.be/zzE-kVadtNw?t=0m1s" target="_blank">前往聆聽</a>
+    </div>
+    <!--=================================================-->
+
+    
+	
+    <!--=================================================-->
+    <!--媒體02-->
+    <div class="mediaWrapper">
+        <div class="mediaHeader">
+            <span class="icon"></span>
+            <span class="mediaHeaderString">第二組曲「夏天」</span>
+            <!--<span class="buttons">
+            	<span class="notebook"></span>
+                <span class="help"></span>
+            </span>-->
+        </div>
+        <div class="mediaDiv">
+			<span class="mediaTarget">g221A/5-1-2.mp4</span>
+            <span class="mediaAutoPlay">false</span>
+            <span class="mediaWidth">640</span>
+            <span class="mediaHeight">360</span>
+            <span class="beforeOrAfter">after</span>
+        </div>
+    </div>
+    
+    
+    <!--連結到Youtube影片特定時間點-->
+    <div class="linkToYoutube">
+    	(二)❤♫韋瓦第 - 四季小提琴協奏曲《夏》(9:54~20:27)│
+        <a href="https://youtu.be/zzE-kVadtNw?t=9m54s" target="_blank">前往聆聽</a>
+    </div>
+    <!--=================================================-->
+    
+    
+    
+    <!--=================================================-->
+    <!--媒體03-->
+    <div class="mediaWrapper">
+        <div class="mediaHeader">
+            <span class="icon"></span>
+            <span class="mediaHeaderString">第三組曲「秋天」</span>
+            <!--<span class="buttons">
+            	<span class="notebook"></span>
+                <span class="help"></span>
+            </span>-->
+        </div>
+        <div class="mediaDiv">
+			<span class="mediaTarget">g221A/5-1-3.mp4</span>
+            <span class="mediaAutoPlay">false</span>
+            <span class="mediaWidth">640</span>
+            <span class="mediaHeight">360</span>
+            <span class="beforeOrAfter">after</span>
+        </div>
+    </div>
+    
+    
+    <!--連結到Youtube影片特定時間點-->
+    <div class="linkToYoutube">
+    	(三)❤♫韋瓦第 - 四季小提琴協奏曲《秋》(20:27~31:46)│
+        <a href="https://youtu.be/zzE-kVadtNw?t=20m27s" target="_blank">前往聆聽</a>
+    </div>
+    <!--=================================================-->
+    
+    
+    
+    <!--=================================================-->
+    <!--媒體04-->
+    <div class="mediaWrapper">
+        <div class="mediaHeader">
+            <span class="icon"></span>
+            <span class="mediaHeaderString">第四組曲「冬天」</span>
+            <!--<span class="buttons">
+            	<span class="notebook"></span>
+                <span class="help"></span>
+            </span>-->
+        </div>
+        <div class="mediaDiv">
+			<span class="mediaTarget">g221A/5-1-4.mp4</span>
+            <span class="mediaAutoPlay">false</span>
+            <span class="mediaWidth">640</span>
+            <span class="mediaHeight">360</span>
+            <span class="beforeOrAfter">after</span>
+        </div>
+    </div>
+    
+    
+    <!--連結到Youtube影片特定時間點-->
+    <div class="linkToYoutube">
+    	(四)❤♫韋瓦第 - 四季小提琴協奏曲《冬》(31:46~48:54)│
+        <a href="https://youtu.be/zzE-kVadtNw?t=31m46s" target="_blank">前往聆聽</a>
+    </div>
+    <!--=================================================-->
+    
+    
+</div>
+
+
+</body>
+</html>

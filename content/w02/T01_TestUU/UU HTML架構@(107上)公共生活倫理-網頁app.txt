@@ -1,0 +1,42 @@
+
+
+
+#minBtn
+
+<div id="minBtn" class="icon-close-hr" onclick="pathtree.minimize(); return false;" title="縮小" style="margin-top: 5px;"></div>
+
+
+
+
+
+UU測試目錄
+065_初階英語_100903★G2_H5
+10011996
+
+
+
+<frameset cols="266,*" framespacing="1" frameborder="yes" border="1" name="envClassRoom" id="envClassRoom" bordercolor="#FFFFFF">
+	<frame src="about:blank" name="s_catalog" id="s_catalog" frameborder="No" scrolling="no">
+	<frame src="about:blank" name="s_main" id="s_main" frameborder="No" scrolling="Auto">
+	<frame src="/learn/path/co_dialog.html" name="s_dialog" id="s_dialog" frameborder="No" scrolling="Auto">
+</frameset>
+
+
+id="s_catalog"
+
+
+
+<div id="minBtn" class="icon-open-hr" onclick="pathtree.minimize(); return false;" title="放大" style="margin-top: 5px;"></div>
+
+pathtree.minimize()
+
+
+
+
+
+
+
+
+
+
+

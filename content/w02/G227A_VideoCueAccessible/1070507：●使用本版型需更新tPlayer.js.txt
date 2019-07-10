@@ -1,0 +1,35 @@
+
+753
+
+//1051115
+	//1070507 - 為無障礙版型G227A，新增param.fontSizeOffsetMax、param.fontSizeOffsetMin
+	//定義在 G227A的external.js。當然也可定義在 g227A_Overlay.js裡。
+	var fontSizeOffsetMax = param.fontSizeOffsetMax || 8;
+	var fontSizeOffsetMin = param.fontSizeOffsetMin || -6;
+
+
+3817
+
+//1070508 - 新增：點擊影片範圍.mediaDiv，可暫停或播放 影片
+	$('.mediaWrapper:eq(' + index + ') .mediaDiv').on('mousedown', function(){
+		$('.mediaWrapper:eq(' + index + ') .playPause').trigger('mousedown');
+	});
+
+	//1070508 - 原設在 行2886
+	//mousedown事件處理，不要放在 load事件之內，否則IE不正常
+	$('.mediaDiv:eq(' + index + ') .coverPlayIcon').on('mousedown',function(){
+		$('.mediaWrapper:eq(' + index + ') .coverPlayIcon').empty().remove();
+		$('.mediaWrapper:eq(' + index + ') .playPause').trigger('mousedown');
+	});
+
+
+
+
+
+
+
+
+
+
+
+

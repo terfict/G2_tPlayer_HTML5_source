@@ -1,0 +1,12 @@
+﻿
+
+
+<span class="g216A_menuBtnOuter"><span class="g216A_menuBtn"></span></span>
+
+//
+$('.g216A_menuBtn').append('<img src=' + param.mainPath + 'g215A_TabAudioStraight/images/menuBtn.png' + '>');
+
+
+191
+
+982

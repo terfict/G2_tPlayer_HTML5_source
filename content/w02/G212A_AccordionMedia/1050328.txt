@@ -1,0 +1,52 @@
+
+
+370
+method.deployment = function(){
+
+
+try {
+		
+		if(param.parentWidth > $(parent.window).width()){
+			param.mediaWidthArr[index] = $(parent.window).width(); 
+		}
+		
+		alert($(parent.window).width() + '/' + param.mediaWidthArr[index]);
+	
+	}catch(err){
+	}
+
+
+466
+//method.modifyMediaWidth(index);
+
+663
+method.modifyMediaWidth = function(index){
+
+
+2400
+winOnResize
+
+
+1911
+method.caculateSmallWindows = function(index){
+
+1939
+--->·s¼W
+//¡´¡´¡´1050328
+		//¡´¡´¡´¡´¡´¡´ 1050328
+		//=========================================
+		//
+		try {
+			if(mediaWidth > $(parent.window).width()){
+				mediaWidth = $(parent.window).width(); 
+			}
+			//alert($(parent.window).width() + '/' + param.mediaWidthArr[index]);
+		}catch(err){
+			//
+		}
+		//=========================================
+
+
+param.mediaTmpWidthArr
+
+

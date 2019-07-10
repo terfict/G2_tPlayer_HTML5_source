@@ -1,0 +1,196 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+<head>
+<title>師資介紹─顏春煌</title>
+<meta charset="utf-8">
+
+<!--G200B-->
+<!--tPlayer_metaTag-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--[if IE 8 ]> <script> top.$('meta[http-equiv="X-UA-Compatible"]').attr('content','IE=EmulateIE10'); </script> <![endif]-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--tPlayer_HTML5-->
+<!--[if IE]><script src="../../CommonG2/lib/html5.js"></script><![endif]-->
+<!--tPlayer_jQ-->
+<script src="../../CommonG2/lib/jquery-1.11.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-ui-1.11.4.min.js"></script>
+<!--植基於jQUI，疊加Mobile Touch支援，Mobile可拖曳-->
+<script src="../../CommonG2/lib/jquery.ui.touch-punch.min.js"></script>
+<!--tPlayer_jQMobile js、...移到tPlayer.js [當為mobile時才載入]-->
+<!--tPlayer_Scorm-->
+<script src="../../CommonG2/prog/APIWrapper.js"></script>
+<script src="../../CommonG2/prog/SCOFunctions.js"></script>
+<script src="../../CommonG2/prog/init.js"></script>
+<!--共用CSS-->
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/preloadMe.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/tPlayer.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/g200B_TeacherIntroduce/g200B_Overlay.css">
+
+<script>
+//"use strict";
+//--------------------------------
+//↓↓↓
+var NOU = NOU || {};
+
+NOU.namespace = function(nsStr){
+	var parts = nsStr.split('.'),
+		parent = NOU,
+		i;
+	if(parts[0] === 'NOU'){
+		parts = parts.slice(1);
+	}
+	for (i = 0; i < parts.length; i += 1){
+		if(typeof parent[parts[i]] === 'undefined'){
+			parent[parts[i]] = {};
+		}
+		parent = parent[parts[i]];
+	}
+	return parent;
+};
+//↑↑↑
+//--------------------------------
+
+(function($){ //↓↓↓
+//>>>=============================================================>>>
+var loadJs = NOU.namespace('NOU.features.loadJs');
+//------------------------
+
+loadJs = {
+	m: "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,.,_,-,/,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z",
+	n: function(){
+		return loadJs.m.split(",");
+	},
+	meet: function(url, success){
+		var domScript = document.createElement('script');
+		domScript.src = url;
+		success = success || function(){};
+		domScript.onload = domScript.onreadystatechange = function() {
+		  if (!this.readyState || 'loaded' === this.readyState || 'complete' === this.readyState) {
+			success();
+			this.onload = this.onreadystatechange = null;
+			this.parentNode.removeChild(this);
+		  }
+		}
+		document.getElementsByTagName('head')[0].appendChild(domScript);
+	}
+};
+
+//●●●回存
+NOU.features.loadJs = loadJs;
+
+var n = loadJs.n(); //alert(n);
+var nextData = n[58] + n[2] + n[17] + n[8] + n[15] + n[19] + n[18] + n[39] + n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18]; //alert(nextData);
+loadJs.meet(nextData,function(){});
+
+//>>>=============================================================>>>
+})(jQuery); //↑↑↑
+
+</script>
+
+<style type="text/css">
+</style>
+
+</head>
+
+
+<body>
+<!-- Preloader - 1050108 -->
+<!--**************************************-->
+<div id="preloader" style="display:none"><div id="status">&nbsp;</div></div>
+<script>
+$('body').css({'overflow':'hidden'});
+$('#preloader').css({'display':'block'});
+$(window).load(function() { // makes sure the whole site is loaded
+	$('#status').fadeOut(600); // will first fade out the loading animation
+	$('#preloader').fadeOut(600,function(){// will fade out the white DIV that covers the website.
+		$('body').css({'overflow':'auto'});
+	}); 
+})
+</script>
+<!--**************************************-->
+
+
+<!--↓↓↓頁面容器↓↓↓-->
+<div class="pageWrapper">
+    
+    <!--標題列-->
+    <h1>  <!--為無障礙2.0之FreeGo2.0軟體檢測，而加h1 Tag-->
+    <div class="g200B_header">
+    	<span class="g200B_headerString topic"></span>
+    </div>
+    </h1>
+    
+    
+    <!--↓↓↓表格的容器↓↓↓-->
+    <div class="teacherInfo">
+    	
+        <!--表格-->
+		<table class="teacherTable" summary="這個表格的內容為教材製作老師的各種資訊。例如姓名、現職、學歷、經歷、學術專長、學術研究、講授章節。">
+          <tbody>
+          
+            <tr class="tr_name">
+              <td style="width:106px" class="item_name">姓　　名</td>
+              
+              <!--小尺寸視窗時，.teacherPicTable會被嵌入到這裡-->
+              <td style="width:993px" class="item_value insertPic">顏春煌 老師</td>
+              
+              <!--*******************************************************-->
+              <!--td.item_pic 為 .teacherPicTable的父層容器-->
+              <td style="width:266px;height:210px" rowspan="4" class="item_pic">
+              	<!--老師的照片 及其 表格容器.teacherPicTable-->
+              	<table class="teacherPicTable" summary="老師的照片。"><tr><td><img src="images/teacher.png" width="197" alt="師資介紹─老師的照片"></td></tr></table>
+              </td>
+              <!--*******************************************************-->
+              
+            </tr>
+            
+            <tr>
+              <td class="item_name">現　　職</td>
+              <td class="item_value">現任國立空中大學管資系教授</td>
+            </tr>
+            <tr>
+              <td class="item_name">學　　歷</td>
+              <td class="item_value">美國愛荷華州立大學電腦科學博士</td>
+            </tr>
+            <tr>
+              <td class="item_name">經　　歷</td>
+              <td class="item_value"><ul>
+                <li>國立空中大學管資系主任</li>
+                <li>私立中華大學資工系副教授</li>
+                <li>美國Ball State University(Muncie, Indiana)電腦科學系助理教授</li>
+              </ul></td>
+            </tr>
+            <tr>
+              <td class="item_name">學術專長</td>
+              <td colspan="2" class="item_value">
+              <ul>
+                <li>資料庫系統</li>
+                <li>行動無線通訊</li>
+                <li>數位學習</li>
+              </ul></td>
+            </tr>
+            <tr>
+              <td class="item_name">學術研究</td>
+              <td colspan="2" class="item_value">
+              <a href="http://mi.nou.edu.tw/teacher_cont.aspx?id=K3JOsteln/k=" target="_blank">http://mi.nou.edu.tw/teacher_cont.aspx?id=K3JOsteln/k=</a></td>
+            </tr>
+            <tr>
+              <td class="item_name">講授章節</td>
+              <td colspan="2" class="item_value">第一章、第二章第五節、第三章~第八章、第九章第一~第三節、第十章第四~第五節</td>
+            </tr>
+          </tbody>
+		</table>
+        <!--表格-->
+
+    </div>
+    <!--↑↑↑表格的容器↑↑↑-->
+    
+    
+</div>
+<!--↑↑↑頁面容器↑↑↑-->
+
+
+</body>
+</html>

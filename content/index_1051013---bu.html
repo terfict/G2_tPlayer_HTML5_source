@@ -1,0 +1,287 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<title>G2開發測試中版型</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--tPlayer_jQ-->
+<script src="CommonG2/lib/jquery-1.11.1.min.js"></script>
+<script src="CommonG2/lib/jquery-migrate-1.2.1.min.js"></script>
+<!--tPlayer_HTML5-->
+<!--[if IE]><script src="CommonG2/lib/html5.js"></script><![endif]-->
+
+
+<style type="text/css">
+/*CSS Reset - (CSS重置)此段落不需理會、不需變動*/
+/*================================================================*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    /*vertical-align:baseline;*/
+	vertical-align: top; /*設成top比較ok*/
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+/*================================================================*/
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background:#594534;
+	font-size:100%;
+}
+.container {
+	margin:0 auto 0 auto;
+	background:#EEE;
+	width:800px;
+}
+.linkZone {
+	width:100%;
+	height:auto;
+	/**/
+	display:inline-block;
+}
+.headerRow {
+	margin:0 0 0 0;
+	padding:15px 10px 15px 10px;
+	width:100%;
+	background:#A69180;
+	
+	text-align:center;
+	font-size:36px;
+	font-weight:600;
+	color:#FAF5D6;
+}
+.mylink {
+	margin:0px 0px 0px 0px;
+	padding:10px 10px 10px 20px;
+	width:100%;
+	height:auto;
+	background:#F2F2F2;
+	
+	font-family: 'LiHei Pro', "微軟正黑體", sans-serif;
+	/*font-family: "微軟正黑體", "Courier New", Courier, monospace;*/
+	font-size:16px;
+	font-weight:600;
+	color:#594534;
+	/*color:#8d5e37;*/
+	border-bottom: 1px dashed #D94854;
+	
+	word-break: break-all;
+}
+a {
+	width:100%;
+	display:block;
+	text-decoration:none;
+	color:#594534;
+	/*color:#8d5e37;*/
+}
+a::before {
+	content:"◎ ";
+}
+/*a:link {
+	background:#D04347;
+	color:#EEE;
+}
+a:hover {
+	background:#EEE;
+	color:#222;
+}*/
+footer {
+	width:800px;
+	height:60px;
+	display:block;
+	background:#A69180;
+}
+
+@media all and (max-width:800px) {
+	.container {
+		width:100%;
+	}
+	footer {
+		width:100%;
+	}
+	a::before {
+		content:" ";
+	}
+	.mylink {
+		
+	}
+	
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <!---->
+	<div class="linkZone">
+    	<h1 class="headerRow">G2開發測試中版型</h1>
+        
+        <div class="mylink"><a href="w02/G200A_TeachingObjectives/index.html" target="_blank">G200A「教學目標與課程概要﹝1﹞」</a></div>
+        <div class="mylink"><a href="w02/G200A2_TeachingObjectives/index.html" target="_blank">G200A2「教學目標與課程概要﹝2﹞」</a></div>
+        <div class="mylink"><a href="w02/G200B_TeacherIntroduce/index.html" target="_blank">G200B「師資介紹」</a></div>
+        <div class="mylink"><a href="w02/G200C_LearningSchedules/index.html" target="_blank">G200C「學習進度表﹝1﹞」</a></div>
+        <div class="mylink"><a href="w02/G200C2_LearningSchedules/index.html" target="_blank">G200C2「學習進度表﹝2﹞」</a></div>
+        
+    	<div class="mylink"><a href="w02/G201A_Video400x300/index.html" target="_blank">G201A「影音400x300﹝A﹞」</a></div>
+        <div class="mylink"><a href="w02/G201B_Video400x300/index.html" target="_blank">G201B「影音400x300﹝B﹞」</a></div>
+        <div class="mylink"><a href="w02/G202_Video640x360/index.html" target="_blank">G202「影音640x360」</a></div>
+        <div class="mylink"><a href="w02/G203_Video320x240Outline/index.html" target="_blank">G203「影音320x240+大綱文字」</a></div>
+        <div class="mylink"><a href="w02/G203_Video320x240Outline/index2.html" target="_blank">G203-2「影音320x240+大綱文字」-2</a></div>
+        <div class="mylink"><a href="w02/G204A_Video640x360Outline/index.html" target="_blank">G204A「影音640x360+大綱文字﹝A﹞」</a></div>
+        <div class="mylink"><a href="w02/G204A_Video640x360Outline/index2.html" target="_blank">G204A-2「影音640x360+大綱文字﹝A﹞」-2</a></div>
+        <div class="mylink"><a href="w02/G204B_Video640x360Outline/index.html" target="_blank">G204B「影音640x360+大綱文字﹝B﹞」</a></div>
+        <div class="mylink"><a href="w02/G204B_Video640x360Outline/index2.html" target="_blank">G204B-2「影音640x360+大綱文字﹝B﹞」-2</a></div>
+        <div class="mylink"><a href="w02/G205_ScreenRecordVideo800x600/index.html" target="_blank">G205「簡報語音800x600 (螢幕錄製)」</a></div>
+        <div class="mylink"><a href="w02/G206_ScreenRecordVideo1024x768/index.html" target="_blank">G206「軟體操作演示1024x768 (螢幕錄製)」</a></div>
+    	<div class="mylink"><a href="w02/G207_InVideoQuiz/index.html" target="_blank">G207「影音內評量 In-Video Quiz」</a></div>
+        <div class="mylink"><a href="w02/G208_Audio/index.html" target="_blank">G208「語音」</a></div>
+        <div class="mylink"><a href="w02/G209A_WebTextPhoto/index.html" target="_blank">G209A「圖文網頁﹝A﹞」</a></div>
+        <div class="mylink"><a href="w02/G209B_WebTextPhoto/index.html" target="_blank">G209B「圖文網頁﹝B﹞」</a></div>
+        <div class="mylink"><a href="w02/G210A_WebAudio/index.html" target="_blank">G210A「語音+圖文網頁﹝A﹞」</a></div>
+        <div class="mylink"><a href="w02/G210B_WebAudio/index.html" target="_blank">G210B「語音+圖文網頁﹝B﹞」</a></div>
+        <div class="mylink"><a href="w02/G211A_SlideMultiMedia/index.html" target="_blank">G211A「隨選多媒體﹝A﹞」(多頁)</a></div>
+        <div class="mylink"><a href="w02/G211B_SlideMultiMedia/index.html" target="_blank">G211B「隨選多媒體﹝B﹞」(多頁)</a></div>
+        <div class="mylink"><a href="w02/G211C_SlideMultiMedia/index.html" target="_blank">G211C「隨選多媒體﹝C﹞」(多頁)</a></div>
+        <div class="mylink"><a href="w02/G212A_AccordionMedia/index.html" target="_blank">G212A「手風琴隨選多媒體﹝A﹞」(多頁)</a></div>
+        <!--<div class="mylink"><a href="w02/G213A_SwitchPageByAudioCuepoint/index.html" target="_blank">G213A_SwitchPageByAudioCuepoint</a></div>-->
+        <div class="mylink"><a href="w02/G214A_MultiPageAudio/index.html" target="_blank">G214A「隨選語音圖文﹝A﹞」(多頁)</a></div>
+        <div class="mylink"><a href="w02/G215A_TabAudioStraight/index.html" target="_blank">G215A「頁籤語音圖文﹝A﹞」(多頁)</a></div>
+        <div class="mylink"><a href="w02/G216A_MultiScreenRecord/index.html" target="_blank">G216A「隨選多重簡報語音﹝A﹞」(多頁)</a></div>
+        <div class="mylink"><a href="w02/G217A_ImageAudioNote/index.html" target="_blank">G217A「影像語音+短註解﹝A﹞」(多頁)(一)</a></div>
+        <div class="mylink"><a href="w02/G217A_ImageAudioNote/index2.html" target="_blank">G217A「影像語音+短註解﹝A﹞」(多頁)(二)</a></div>
+        
+        
+	</div>
+    <!---->
+
+    <footer></footer>
+
+</div>
+
+<script>
+$(document).ready(function(e) {
+	$('.mylink')
+		.on('mouseover',function(){
+			$(this).css({'background':'#594534'});
+			$(this).find('a').css({'color':'#FFFFFF'});
+		})
+		.on('mouseout',function(){
+			$(this).css({'background':'#F2F2F2'});
+			$(this).find('a').css({'color':'#594534'});
+		});
+	
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

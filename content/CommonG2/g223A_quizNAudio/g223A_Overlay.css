@@ -1,0 +1,191 @@
+﻿@charset "utf-8";
+/* CSS Document - G223A│g223A_Overlay.css */
+
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background-color: #1f2437;
+	background-image: url(images/fzm_Denim_Jeans_Texture_07_400x400.jpg);
+
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 100%;
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px*/
+}
+p, ul, ol{
+	margin:0 0 1em 0;
+}
+
+/*頁面最大容器*/
+/*程式初始化時，會來抓取width和min-height的字串值*/
+.pageWrapper {
+	width:800px; 
+	height:auto;
+	display:block;
+}
+
+.header {
+	width:800px;
+	height:50px;
+	display:block;
+	background:url(images/header.jpg) no-repeat;
+}
+
+.g223A_help {
+	float:right;
+	margin:12px 15px 0 0;
+	width:25px;
+	height:25px;
+	display:block;
+	cursor:pointer;
+}
+
+
+/*●承載評量題的Div容器*/
+/*●#quizDiv被append()進入$('#mediaDiv')*/
+/*--------------------------------*/
+#quizDiv {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+
+	position:relative;
+	padding:0 0 0 0;
+	width:100%;
+	height:100%;
+
+	/**/
+	display:none;
+	background:#999;
+}
+/*--------------------------------*/
+
+
+/**/
+.addVoice {
+	display:none;
+}
+
+
+/*--------------------------------*/
+/*語音播放控制器*/
+.simplePlayer {
+	display:block;
+	padding:8px 0 0 30px;
+	width:206px;
+	height:39px;
+	background:url(images/simplePlayer_bg.png) no-repeat;
+}
+
+.btnWrapper {
+	display:block;
+	margin:0px auto 0 auto;
+	width:206px;
+	height:23px;
+}
+
+.playBtn, .pauseBtn, .stopBtn {
+	display: inline-block;
+	margin:0px 7px 0px 0px;
+	width:26px;
+	height:23px;
+	float:left;
+	cursor:pointer;
+}
+.playBtn > img, .pauseBtn > img, .stopBtn > img {
+	width:26px;
+	height:23px;
+}
+/*--------------------------------*/
+
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ 
+
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:769px) {
+	
+	/*●有媒體檔的頁面：.pageWrapper寬高不可設定，因，當以小尺寸視窗進入，此處若有設定寬高(100%也不行)，會抓不到大尺寸視窗的800px，而抓到此處縮小視窗寬度後的小尺寸視窗寬度。這時把視窗拉大，由於沒抓到大視窗在CSS中的初始寬度，因此無法恢復寬度 - ●已修改程式，所以可以設為100%了*/
+	.pageWrapper {
+		padding:0px 0 60px 0; /*原padding:0 0 30px 0*/
+		width:100%;
+	}
+	
+	.header {
+		width:100%;
+	}
+	
+	.g223A_help {
+		display:none;
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+

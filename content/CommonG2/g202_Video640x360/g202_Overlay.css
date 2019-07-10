@@ -1,0 +1,200 @@
+﻿@charset "utf-8";
+/* CSS Document - G202│g202_Overlay.css */
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background-color: #1f2437;
+	background-image: url(images/bg.jpg);
+
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 100%; 
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px*/
+}
+
+/*頁面最大容器*/
+/*程式初始化時，會來抓取width和min-height的字串值*/
+.pageWrapper {
+	/*margin:0 auto 0 auto;*/
+	padding:0 0 38px 0; 
+	width:800px; 
+	min-height:520px; 
+	height:auto;
+	background:transparent url(images/hv_bg.jpg);
+	background-position:0 -42px; 
+	display:block;
+}
+
+/*包裹 .mediaHeader、.mediaDiv、.playbackDiv ...等之外圍容器*/
+.mediaWrapper {
+	margin:0 auto 0 auto;
+
+	/*●藉由margin調整.mediaWrapper的位置*/
+	/*margin:0px 0px 0px 0px;*/
+	/*==================*/
+	width:640px; 
+	height:auto;
+	background:#aabbff;
+	display: block;
+
+}
+.mediaDiv {
+}
+
+/*標提列*/
+/*========================================*/
+/*媒體標提列-容器*/
+.mediaHeader {
+}
+/*標提列-icon-容器*/
+.icon {
+}
+/*標提列-icon-圖形*/
+.icon img {
+}
+/*標提列-字串-容器*/
+.mediaHeaderString {
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-weight:500; /*原font-weight:360*/
+	color:#006B10; /*原color:#333*/
+}
+/*標提列右側.notebook和.help的容器*/
+.buttons {
+}
+/*新手上路按鈕*/
+.help {
+}
+.help img {
+}
+/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+.notebook {
+}
+.notebook img {
+}
+/*========================================*/
+
+
+/*》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》*/
+/*●○●○●○第2組UI介面，用於小尺寸行動裝置●○●○●*/
+/*》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》*/
+
+
+/* 《 2 》播放介面UI外觀元素佈署 - 《 2 》 */
+/*.track_2和.progressBar_2的容器*/
+.barOuter_2 {
+}
+
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ 
+
+
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:769px) {
+	
+	/*●有媒體檔的頁面：.pageWrapper寬高不可設定，因，當以小尺寸視窗進入，此處若有設定寬高(100%也不行)，會抓不到大尺寸視窗的800px，而抓到此處縮小視窗寬度後的小尺寸視窗寬度。這時把視窗拉大，由於沒抓到大視窗在CSS中的初始寬度，因此無法恢復寬度*/
+	.pageWrapper {
+		padding:0 0 60px 0; /*原padding:0 0 38px 0*/
+		width:100%;
+	}
+	
+	/*標提列*/
+	/*========================================*/
+	/*媒體標提列-容器*/
+	.mediaHeader {
+		/*取消圓角*/
+		border-top-left-radius:0; /*原border-top-left-radius:6px*/
+		border-top-right-radius:0; /*原border-top-right-radius:6px*/
+	}
+	
+	/*標提列-icon-容器*/
+	.icon {
+		padding:0 10px 0 17px; /*原padding:0 10px 0 23px*/
+	}
+	
+	/*標提列-字串-容器*/
+	.mediaHeaderString {
+		/*原本與.buttons共用100%，為82%，在小尺寸視窗設為100%*/
+		width:100%;
+	}
+	/*標提列右側.notebook和.help的容器*/
+	.buttons {
+		/*與.mediaHeaderString共用100%，當.mediaHeaderString設為100%，.button自動歸0%*/
+		/*width:0%;*/
+	}
+	/*新手上路按鈕*/
+	.help {
+		/*原本為display: table-cell;*/
+		display: none;
+	}
+	/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+	.notebook {
+		/*原本為display: table-cell;*/
+		display: none;
+	}
+	/*========================================*/
+	
+	
+
+
+	
+}
+	
+	
+	

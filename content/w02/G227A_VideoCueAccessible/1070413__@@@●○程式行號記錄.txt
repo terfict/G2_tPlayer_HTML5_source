@@ -1,0 +1,263 @@
+
+226---●
+g227A.checkTimeCode = function(mediaIndex, timeCodeIndex){}
+
+374---●
+//滑鼠按下數字按鈕的事件處理 《《《 按下.g227A_menuItem也調用此事件處理
+g227A.numButtonMDownEvent = function(timeCodeIndex, arrangement){
+
+451
+g227A.numButtonOverOut = function(){}
+
+551---●
+//.g227A_menuZone內容的建立
+g227A.createMenuzone = function(){}
+
+573---●xxx
+$('.g227A_menuItem').each(function(index, element) {}});
+
+600---●●●
+$('.g227A_menuItem:eq(' + itemIndex + ')').attr({'tabindex':itemIndex+1, 'accesskey':itemIndex+1});
+
+665
+//1070507 - 增加無障礙規格所需的全文下載按鈕	
+					$('.g227A_menuZone').append('<div class="g227A_fullTextDownloadBtn" alt="「全文下載」按鈕，請按「ENTER」鍵"></div>');
+
+669				
+//1070507 - 
+//g227A.totalCard
+$('.g227A_menuZone .g227A_fullTextDownloadBtn').attr({'tabindex':g227A.totalCard+1, 'accesskey':g227A.totalCard+1});
+					//==========================================================
+
+720---●●●
+$('.g227A_menuItem:eq('+ itemIndex + ')').on('mousedown'
+			
+1872---●●●●●●●
+method.menuItemFocus = function(){}
+1877
+$('.g227A_menuItem').each(function(index, element) {...
+
+1917---●●●●●●●
+g227A.addShortcut = function(){}
+
+
+//●○●○●○1070418
+			//==========================================●
+			//$('.g227A_menuItem:eq('+ 0 + ')').focus();
+			$('.g227A_menuItem:eq('+ 0 + ')').trigger('mousedown');
+			//==========================================●
+
+
+
+e.preventDefault();
+						e.stopImmediatePropagation();
+
+
+◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎◎
+//======================================
+◎◎◎tPlayer.js◎◎◎
+
+
+4425
+//IOS、Android
+$('.mediaWrapper:eq(' + index + ') .mediaDiv video').on('tap', function(){
+	if(utils.isMobile && utils.isIOS){
+		$('.mediaWrapper:eq(' + index + ') .playPause').trigger('mousedown');
+		//alert(utils.isMobile);
+	}
+});
+//非行動裝置
+$('.mediaWrapper:eq(' + index + ') .mediaDiv video').on('mousedown', function(){
+	if(!utils.isMobile || (utils.isMobile && utils.isAndroid)){
+		$('.mediaWrapper:eq(' + index + ') .playPause').trigger('mousedown');
+		//alert(utils.isAndroid);
+	}
+});
+
+4443
+//IOS、Android
+$('.mediaWrapper:eq(' + index + ') .mediaDiv video').on(on('tap',function(){
+	if(utils.isMobile && utils.isIOS){
+		//$('.mediaWrapper:eq(' + index + ') .coverPlayIcon').empty().remove();
+		//$('.mediaWrapper:eq(' + index + ') .playPause').trigger('mousedown');
+	}
+});
+//非行動裝置 - 
+$('.mediaDiv:eq(' + index + ') .coverPlayIcon').on('mousedown',function(){
+	if(!utils.isMobile){
+		$('.mediaWrapper:eq(' + index + ') .coverPlayIcon').empty().remove();
+		$('.mediaWrapper:eq(' + index + ') .playPause').trigger('mousedown');
+	}
+});
+
+4673
+$('.mediaWrapper:eq(' + index + ') .mediaDiv video').on('tap', function(){}
+4680
+$('.mediaWrapper:eq(' + index + ') .mediaDiv video').on('mousedown', function(){}
+4690
+$('.mediaDiv:eq(' + index + ') .coverPlayIcon').on('tap',function(){}
+4697
+$('.mediaDiv:eq(' + index + ') .coverPlayIcon').on('mousedown',function(){}
+
+5064
+//●○●○●○改變右鍵選單
+	/*---------------------------------------*/
+	$(tPlayer.h5MediaObj[index]).on('mousedown',function(e){
+		method.showDropdown(e,this,index);
+	});
+	/*---------------------------------------*/
+
+
+
+3489 - ●○●○●○拉動視窗寬度相應之處理
+param.mediaRWDWork = function(index){}
+
+3917
+method.menu1F_videoRateOnClick = function(e, index){}
+4095
+method.settingPanelMEvent = function(){}
+
+4404
+method.playbackMouseEvent = function(index){}
+4655
+method.playbackMouseEvent_2 = function(index){}
+
+4603
+method.clearPbMouseEvent = function(index){}
+4427
+method.clearPbMouseEvent_2 = function(index){}
+
+
+param.defaultPlaybackRate
+
+1679
+method.embedH5Media = function(index){}
+
+1153
+method.embedHlsJsH5Media = function(index){}
+
+1956 - ●
+method.createPbHtml = function(index){}
+
+1974---●●●
+base64之「設定」圖示
+
+2004 - ●●●播放速度控制HTML
+method.createSettingPannel(index);
+2011
+method.createSettingPannel = function(index){}
+
+2041
+method.getPlaybackUI = function(index){}
+
+2258
+method.caculateTrackWidth($('.mediaWrapper:eq(' + index + ') .playbackDiv').width(), index);
+
+2281
+method.caculateTrackWidth = function(_allWidth, index){}
+
+2011
+method.createSettingPannel = function(index){}
+
+4037 - ●●●播放速度控制
+$('.settings').on('mousedown', function(){}
+
+3917 - ●●●
+method.menu1F_videoRateOnClick = function(e, index){}
+
+3992
+if( parseFloat($('.mediaWrapper:eq(' + index + ') .ratePicker > .rate:eq(' + rateIndex + ')').attr('data-rate')) ===  tPlayer.h5MediaObj[index].playbackRate ){
+	$('.mediaWrapper:eq(' + index + ') .ratePicker > .rate:eq(' + rateIndex + ')').css({'border':'#FFF 1px solid',});
+}
+
+4316
+//###################1070601
+$('.mediaWrapper:eq(' + index + ') .settingPanel .menu1F_videoRate').on('mousedown', function(e){ 
+	method.menu1F_videoRateOnClick(e, index);
+});
+
+4072
+method.settingPanelMEvent_remove = function(){}
+
+4095 - ●●●
+method.settingPanelMEvent = function(){}
+
+5337 - ●●●
+tPlayer.play = function(index){}
+
+
+settingPanel
+
+tPlayer.h5MediaObj[index].defaultPlaybackRate = param.defaultPlaybackRate;
+
+param.beforeOrAfter[index]
+
+param.fullScreenFlagArr[index]
+
+
+2378
+method.createPbLessThenBPHtml = function(index){}
+
+2471
+method.getPlaybackUILessThenBP = function(index){}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

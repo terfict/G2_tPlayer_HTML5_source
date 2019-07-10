@@ -1,0 +1,80 @@
+
+
+
+http://211.76.247.16/course_materials/750002/imsmanifest.xml
+
+http://211.76.247.16/course_materials/760046/imsmanifest.xml
+
+
+7438
+method.fullScreenObjAjust = function(_mediaObj,_mediaW,_mediaH, index){
+7464
+if(top.document && parent.document){
+
+
+8041
+method.normalScreenObjAjust = function(_mediaObj,_mediaW,_mediaH, index){
+
+8290
+if(top.document && parent.document){ 
+
+
+10598
+method.clickSmallToBig = function(_imgTag,_w,_h){
+
+10877
+method.closeBtnClickHandler = function(){
+
+===========================================
+
+613
+//《向右鍵》
+		if( e.keyCode === 39 ){
+
+
+9902
+$('#wallDiv').on('mousedown'
+9908
+$('#closeBtn').on('mousedown'
+
+5732 - 顯示清單 例外
+if( param.G2ID === "G207B" ||  param.G2ID === "G223A"){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

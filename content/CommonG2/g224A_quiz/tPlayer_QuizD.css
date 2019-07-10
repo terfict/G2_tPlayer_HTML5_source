@@ -1,0 +1,471 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*Html主檔頁面本來就有的Html物件*/
+/*********************************/
+/*評量題的大容器Div*/
+.quizContainer {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	
+	width: 100%;
+	height:100%;
+	background: #FFF;
+	display:none;
+	float:left;
+}
+/*標題列Div --- 目前沒用到*/
+#headerDiv {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	
+	width:100%;
+	height:90px;
+	background:#485571;
+	display:block;
+}
+/*題目(包括答案)區Div*/
+#quizArea {	
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	
+	padding: 10px 10px 50px 10px;
+	width: 100%;
+	height:85%;
+	
+	/*●1061002*/
+	/*------------------*/
+	min-height:280px;
+	/*------------------*/
+	
+	/**/
+	background:#EEE;
+	display: none;
+	
+	font-size:1.0em;
+	line-height:20px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	text-align:left;
+	
+	overflow:auto;
+}
+/*最下方 #interactiveArea 裡面包括
+  #submitBtnSpan、#quizTotalContainer、#quizFeedbackContainer*/
+#interactiveArea {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	
+	/*●padding-bottom從原本的10px增加為50px，以避免版面高度不足時，quiz的容器下方空間不夠，邊緣緊靠按鈕，感覺像不妥適的版面配置*/
+	padding: 20px 30px 50px 10px;
+	width: 100%;
+	height:15%;
+	background:#FFF;
+	
+	display:block;
+	float:left;
+	overflow:auto;
+	
+}
+/*1040930新增：評量題下方，#interactiveArea裡面，《共幾題、第幾題》 的容器*/
+#interactiveLeft {
+	display:inline-block;
+	float:left;
+	margin-top:10px;
+}
+/*1040930新增：評量題下方，#interactiveArea裡面，《提交按鈕、繼續播放按鈕》 的容器*/
+#interactiveRight {
+	display:inline-block;
+	float:right;
+	margin-bottom:20px;
+}
+/*繼續播放按鈕容器*/
+#continueBtnSpan {
+	position:relative;
+	float:right;
+	
+	cursor:pointer;
+}
+/*提交按鈕容器*/
+#submitBtnSpan {
+	position:relative;
+	float:right;
+	/*right:20px;*/
+	margin:0px 0px 0px 15px;
+	cursor:default;
+}
+/*題目資料容器*/
+#questionsData {
+	display:none;
+}
+/*一個題目的資料區塊*/
+#quizzing {
+	display:none;
+}
+/*********************************/
+
+
+/*不管單選題或是非題，程式都會動態產生的Html物件*/
+/*------------------------------------------*/
+/*顯示共x題/第x題：動態產生 - 在 #interactiveArea 裡面*/
+#quizTotalContainer {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	
+	position:relative;
+	left:10px;
+	top:-7px;
+	width:auto;
+	/*margin-left:10px;*/
+	font-size:1.2em;
+	font-weight:500;
+	float:left;
+	/*background:#CCC*/
+	
+}
+/*包圍題目總數數字的span - 動態產生*/
+#quizTotalSpan {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:1.5em;
+	font-weight:500px;
+	vertical-align: baseline;
+}
+/*包圍目前題號的span - 動態產生*/
+#feedbackCurrentQuizSpan {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:1.5em;
+	font-weight:500px;
+}
+/*答題後的回饋資訊在此容器顯示：動態產生 - 在 #interactiveArea 裡面*/
+/*您答對了!!! 或 您答錯了!!! <--在此顯示*/
+#quizFeedbackContainer {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	
+	position:relative;
+	left:20px;
+	top:0px;
+	/*margin-left:10px;*/
+	font-size:1.5em;
+	font-weight:600;
+	float:left;
+	color:#900;
+	
+	font-family:"微軟正黑體";
+	clear:both;
+}
+
+/*-----------------------------*/
+/*補救學習建議資訊面板(容器)*/
+#suggestionZoneDiv {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	
+	/*width:700px;
+	height:56px;*/
+	background:#CCC;
+	/*border:#666 dashed 2px;*/
+	padding:9px 9px 9px 9px;
+	position:absolute;
+	
+	/*width:70%;*/
+	max-width:70%;
+	height:auto;
+	min-height:200px;
+	
+	right:25px;
+	top:60px;
+	
+	-webkit-box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+	-moz-box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+	box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+	/*box-shadow: 2px 4px 3px rgba(20%,20%,20%,0.3);*/
+
+}
+/*補救學習建議資訊面版<span>Tag*/
+#suggestionZone {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	
+	width:100%;
+	height:100%;
+	min-height:inherit;
+	padding:12px 10px 10px 12px;
+	float:left;
+	overflow-y:auto;
+	
+	/*border:#888 solid 2px;*/
+	background:#FFF;
+	
+	font-family:"微軟正黑體";
+	font-size:1.05em;
+	font-weight:500;
+	line-height:1.3em;
+	text-indent:2.1em;
+}
+/*補救學習建議資訊面板- 關閉按鈕*/
+#suggestionCloseIcon {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+	
+	position:absolute;
+	left:-12px;
+	top:-12px;
+	width:36px;
+	height:36px;
+	line-height:36px;
+	cursor:pointer;
+}
+#suggestionCloseIcon img {
+	height:36px;
+	line-height:36px;
+}
+/*-----------------------------*/
+
+/*radio的外圍<p>Tag的class*/
+.horizontalRow {
+	display:block;
+	cursor:pointer;
+	background:transparent;
+	
+	/*opacity:1.0;
+	filter:alpha(opacity=100);*/
+}
+/*radio的外圍<p>Tag的class的hover偽類*/
+.horizontalRow:hover {
+	display:block;
+	cursor:pointer;
+	background:#FFF;
+	
+	/*opacity:0.4;
+	filter:alpha(opacity=40);*/
+}
+
+/*------------------------------------------*/
+
+
+/*singleChoice單選題時，程式動態產生的html物件*/
+/*---------------------------*/
+form input {
+	/*background:#000;*/
+}
+/*單選題容器 - 動態產生*/
+#singleChoiceDiv {
+	display:block;
+	line-height:2.0em;
+}
+/*顯示目前題號 - 單選題、是非題 共用*/
+#currentQuizSpan {
+	font-size:1.8em;
+	font-weight:500;
+	position:relative;
+	top:-5px;
+	
+}
+/*單選題-題目容器 - 動態產生*/
+#scQuestion{
+	display:block;
+	background:#FFF;
+	padding:5px 10px 10px 10px;
+}
+/*單選題-答案容器 - 動態產生*/
+#scAnswer {
+	padding:10px 10px 5px 15px;
+}
+/*單選題-答題用的radio - 動態產生*/
+.singleChoiceRadio {
+}
+/*---------------------------*/
+
+
+/*trueFalse是非題時，程式動態產生的html物件*/
+/*---------------------------*/
+form input {
+	/*background:#000;*/
+}
+/*是非題容器 - 動態產生*/
+#trueFalseDiv {
+	display:block;
+}
+/*是非題-題目容器 - 動態產生*/
+#tfQuestion{
+	display:block;
+	background:#FFF;
+	padding:5px 10px 10px 10px;
+}
+/*是非題-答案容器 - 動態產生*/
+#tfAnswer {
+	padding:10px 10px 5px 15px;
+}
+/*---------------------------*/
+
+
+/*viewResult時，程式動態產生的html物件*/
+/*---------------------------*/
+/*檢視結果容器 - 動態產生*/
+#viewResultDiv {
+	display:block;
+}
+/*檢視結果-標題容器 - 動態產生*/
+#viewResultTitle {
+	display:block;
+	background:#FFF;
+	padding:5px 10px 0px 10px;
+	font-size:1.3em;
+	line-height:1.3em;
+}
+/*檢視結果-標題左側icon - 動態產生*/
+#iconViewResult {
+	vertical-align:bottom;
+}
+/*檢視結果-標題文字右方的題目總數Span - 動態產生*/
+#quizNumSpan {
+	font-family:"Times New Roman", Times, serif;
+	font-size:1.3em;
+	font-weight:500;
+	vertical-align:baseline;
+}
+/*檢視結果-內容容器 - 動態產生*/
+#viewResultContent {
+	padding:10px 10px 5px 15px;
+}
+/*檢視結果-內容容器內的每題答對字串Span - 動態產生*/
+#resultRightSpan {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:1.1em;
+	font-weight:600;
+	color:#066;
+}
+/*檢視結果-內容容器內的每題答錯字串Span - 動態產生*/
+#resultWrongSpan {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:1.1em;
+	font-weight:600;
+	color:#D00;
+}
+.viewResultSuggestion {
+	color:#F00;
+}
+/*---------------------------*/
+
+.redColor {
+	color:#F00;
+}
+
+.imgContainer {}
+.needHandCursor {	border-color:#cccccc;
+	border-width:1px;
+	border-style:solid;
+	cursor:pointer;
+}
+
+#tmpInfo {
+	width:790px;
+	height:100px;
+	background:#DDD;
+	padding:5px 5px 5px 5px;
+	color:#000;
+	font-size:1.4em;
+	
+	display:none;
+}
+/*預載頁面元件時，盛載loading GIF圖檔之DIV，佔滿整個800x600px的頁面*/
+#loading {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:800px;
+	height:600px;
+	z-index:2000;
+	background:#e0dfdf;
+	text-align:center;
+	font-size: 2.4em;
+	color:#ffffff;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	display:none;
+}
+/*下載中gif檔位置在此設定*/
+#loadingGif {
+	top:240px;
+	position:relative;
+}
+
+
+
+
+/**/
+
+@media screen and (max-width:800px) {
+	
+	/*quiz*/
+	/*========================================*/
+	/*顯示共x題/第x題：動態產生 - 在 #interactiveArea 裡面*/
+	#quizTotalContainer {
+		font-size:1.2em;
+		font-weight:500;
+	}
+	/*包圍題目總數數字的span - 動態產生*/
+	#quizTotalSpan {
+		font-size:1.0em;
+		font-weight:500px;
+	}
+	/*包圍目前題號的span - 動態產生*/
+	#feedbackCurrentQuizSpan {
+		font-size:1.0em;
+		font-weight:500px;
+	}
+	
+	/*顯示目前題號 - 單選題、是非題 共用*/
+	#currentQuizSpan {
+		font-size:2.0em;
+		font-weight:500;
+	}
+	
+	/*========================================*/
+	
+	
+	
+	/*====================1060803嵌入圖檔的RWD====================*/
+	/*Type A - 圖檔放在題目和所有答案之間*/
+	#addPicDiv img.addPic {
+		width:100%;
+	}
+	/*Type B - 圖檔放在每個答案橫列的下方*/
+	#scAnswer img.addPic {
+		width:100%;
+	}
+	#tfAnswer > #addPicDiv >img {
+		width:100%;
+	}
+	/*====================1060803嵌入圖檔的RWD====================*/
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

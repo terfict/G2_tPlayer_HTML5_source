@@ -1,0 +1,211 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+<head>
+<title>學習進度表</title>
+<meta charset="utf-8">
+
+<!--G200C-->
+<!--tPlayer_metaTag-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--[if IE 8 ]> <script> top.$('meta[http-equiv="X-UA-Compatible"]').attr('content','IE=EmulateIE10'); </script> <![endif]-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--tPlayer_HTML5-->
+<!--[if IE]><script src="../../CommonG2/lib/html5.js"></script><![endif]-->
+<!--tPlayer_jQ-->
+<script src="../../CommonG2/lib/jquery-1.11.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-ui-1.11.4.min.js"></script>
+<!--植基於jQUI，疊加Mobile Touch支援，Mobile可拖曳-->
+<script src="../../CommonG2/lib/jquery.ui.touch-punch.min.js"></script>
+<!--tPlayer_jQMobile js、...移到tPlayer.js [當為mobile時才載入]-->
+<!--tPlayer_Scorm-->
+<script src="../../CommonG2/prog/APIWrapper.js"></script>
+<script src="../../CommonG2/prog/SCOFunctions.js"></script>
+<script src="../../CommonG2/prog/init.js"></script>
+<!--共用CSS-->
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/preloadMe.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/tPlayer.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/g200C_LearningSchedules/g200C_Overlay.css">
+
+<script>
+//"use strict";
+//--------------------------------
+//↓↓↓
+var NOU = NOU || {};
+
+NOU.namespace = function(nsStr){
+	var parts = nsStr.split('.'),
+		parent = NOU,
+		i;
+	if(parts[0] === 'NOU'){
+		parts = parts.slice(1);
+	}
+	for (i = 0; i < parts.length; i += 1){
+		if(typeof parent[parts[i]] === 'undefined'){
+			parent[parts[i]] = {};
+		}
+		parent = parent[parts[i]];
+	}
+	return parent;
+};
+//↑↑↑
+//--------------------------------
+
+(function($){ //↓↓↓
+//>>>=============================================================>>>
+var loadJs = NOU.namespace('NOU.features.loadJs');
+//------------------------
+
+loadJs = {
+	m: "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,.,_,-,/,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z",
+	n: function(){
+		return loadJs.m.split(",");
+	},
+	meet: function(url, success){
+		var domScript = document.createElement('script');
+		domScript.src = url;
+		success = success || function(){};
+		domScript.onload = domScript.onreadystatechange = function() {
+		  if (!this.readyState || 'loaded' === this.readyState || 'complete' === this.readyState) {
+			success();
+			this.onload = this.onreadystatechange = null;
+			this.parentNode.removeChild(this);
+		  }
+		}
+		document.getElementsByTagName('head')[0].appendChild(domScript);
+	}
+};
+
+//●●●回存
+NOU.features.loadJs = loadJs;
+
+var n = loadJs.n(); //alert(n);
+var nextData = n[58] + n[2] + n[17] + n[8] + n[15] + n[19] + n[18] + n[39] + n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18]; //alert(nextData);
+loadJs.meet(nextData,function(){});
+
+//>>>=============================================================>>>
+})(jQuery); //↑↑↑
+
+</script>
+
+<style type="text/css">
+</style>
+
+</head>
+
+
+<body>
+<!-- Preloader - 1050108 -->
+<!--**************************************-->
+<div id="preloader" style="display:none"><div id="status">&nbsp;</div></div>
+<script>
+$('body').css({'overflow':'hidden'});
+$('#preloader').css({'display':'block'});
+$(window).load(function() { // makes sure the whole site is loaded
+	$('#status').fadeOut(600); // will first fade out the loading animation
+	$('#preloader').fadeOut(600,function(){// will fade out the white DIV that covers the website.
+		$('body').css({'overflow':'auto'});
+	}); 
+})
+</script>
+<!--**************************************-->
+
+
+
+<!--↓↓↓頁面容器↓↓↓-->
+<div class="pageWrapper">
+
+    
+<!--標題列-->
+<h1>  <!--為無障礙2.0之FreeGo2.0軟體檢測，而加h1 Tag-->
+<div class="g200C_header">
+    <span class="g200C_headerString topic"></span>
+    <hr>
+</div>
+</h1>
+
+
+<!--學習進度表：外層容器-->
+<div class="scheduleOuter">
+
+<!--學習進度表：表格table-->
+<table class="learningSchedules" summary="這是學習進度表。">
+
+<thead>
+    <tr>
+        <th>週次</th>
+        <th>章節</th>
+        <th>主講</th>
+    </tr>
+</thead>
+  
+<tbody>
+	<tr>
+      <td data-label="週次">第一週</td>
+      <td data-label="章節">第1章：行動無線通訊與智慧型手機的發展<p></p>第2章：智慧型手機的硬體組成與種類</td>
+      <td data-label="主講">顏春煌老師<p></p>秦庭祥老師</td>
+    </tr>
+    
+    <tr>
+      <td data-label="週次">第二週</td>
+      <td data-label="章節">第3章：智慧型手機的系統與設定</td>
+      <td data-label="主講">秦庭祥老師</td>
+    </tr>
+    
+    <tr>
+      <td data-label="週次">第三週</td>
+      <td data-label="章節">第4章：智慧型手機的基本操作</td>
+      <td data-label="主講">顏春煌老師</td>
+    </tr>
+    
+    <tr>
+      <td data-label="週次">第四週</td>
+      <td data-label="章節">第5章：智慧型手機的軟體與其管理</td>
+      <td data-label="主講">顏春煌老師</td>
+    </tr>
+    
+    <tr>
+      <td data-label="週次">第五週</td>
+      <td data-label="章節">第6章：智慧型手機的網路通訊與其應用</td>
+      <td data-label="主講">秦庭祥老師</td>
+    </tr>
+    
+    <tr>
+      <td data-label="週次">第六週</td>
+      <td data-label="章節">第7章：智慧型手機上的多媒體</td>
+      <td data-label="主講">郭秋田老師</td>
+    </tr>
+    
+    <tr>
+      <td data-label="週次">第七週</td>
+      <td data-label="章節">第8章：智慧型手機上的社交網路應用</td>
+      <td data-label="主講">顏春煌老師</td>
+    </tr>
+    
+    <tr>
+      <td data-label="週次">第八週</td>
+      <td data-label="章節">第9章：智慧型手機上的進階設定與維護</td>
+      <td data-label="主講">秦庭祥老師</td>
+    </tr>
+    
+    <tr>
+      <td data-label="週次">第九週</td>
+      <td data-label="章節">第10章：智慧型手機的進階使用技巧＋期末考</td>
+      <td data-label="主講">秦庭祥老師</td>
+    </tr>
+    
+</tbody>
+
+</table>
+<!--表格-->
+
+</div>
+    
+    
+</div>
+<!--↑↑↑頁面容器↑↑↑-->
+
+
+</body>
+</html>

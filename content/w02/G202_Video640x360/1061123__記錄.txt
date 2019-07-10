@@ -1,0 +1,39 @@
+
+urlObj.rtmpMediaURLArr[index]
+urlObj.pcHttpMediaURLArr
+
+getStreamingData
+
+param.httpProtocol
+
+
+
+//¡´¡³1061123
+		urlObj.pcHttpMediaURLArr[index] = param.httpProtocol + '://' + param.httpURLPrefix + param.courseCode +'/' + param.mediaURLArr[index];
+		alert(urlObj.pcHttpMediaURLArr);
+
+
+$('.mediaWrapper').each(function(index) {
+	urlObj = method.getStreamingData(index);
+});
+
+
+http://192.192.51.104/~terfict/5298/g225A/audio7.mp4
+
+---G2-localMedia-Html5Video
+
+tPlayer.toggleFullScreen
+
+
+
+
+
+
+
+
+
+
+
+
+
+

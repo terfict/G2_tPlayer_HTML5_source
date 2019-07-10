@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+<title>T01_TestUU「操控UU選單測試」</title>
+<meta charset="utf-8">
+
+<!--G226A-->
+<!--metaTag-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--HTML5-->
+<!--[if IE]><script src="../../CommonG2/lib/html5.js"></script><![endif]-->
+<!--CSS-->
+<!--tPlayer_jQ-->
+<script src="../../CommonG2/lib/jquery-1.11.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-ui-1.11.4.min.js"></script>
+
+<style type="text/css">
+	.btn {
+		width:300px;
+		height: 200px;
+		display: block;
+		background: #aabbff;
+	}
+</style>
+
+
+
+</head>
+
+
+<body>
+
+<!--頁面容器.pageWrapper-->
+<div class="btn"></div>
+
+
+
+
+<script>
+
+	$(document).ready(function(){
+
+		// alert($('#s_catalog', parent.document).contents().find('#minBtn'));
+		// $('#s_catalog', parent.document).get(0).contentWindow.pathtree.minimize(); 
+
+		try{
+			// $('#s_catalog', parent.document).contents().find('#minBtn').css({'display':'none'});
+
+			//(點擊物件)操控UU平台左側垂直選單開闔。
+			$('.btn').on('click',function(){
+				$('#s_catalog', parent.document).get(0).contentWindow.pathtree.minimize();
+			})
+			// $(document.body).on('dblclick',function(){
+			// 	return false;
+			// })
+		}catch(err){
+			//
+		}
+	});
+
+
+	//(快速鍵)操控UU平台左側垂直選單開闔。
+	$(document).keyup(function(event){
+		 switch(event.keyCode) {
+		 case 82: //R
+		  $('#s_catalog', parent.document).get(0).contentWindow.pathtree.minimize();
+		 break;
+		 case 76: //L
+		  $('#s_catalog', parent.document).get(0).contentWindow.pathtree.minimize();
+		 break;
+		 }
+	});
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,383 @@
+﻿@charset "utf-8";
+/* CSS Document - G217B│g217B_Overlay.css */
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background-color: #f0f0f0;
+	background-image: url(images/bg_01.jpg);
+	background-repeat:repeat-x;
+
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 100%;
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px*/
+}
+
+/*頁面最大容器*/
+/*程式初始化時，會來抓取width和min-height的字串值*/
+.pageWrapper {
+	/*◎居中*/
+	/*margin:0 auto 0 auto;*/
+	/*◎從這裡調整.mediaWrapper播放介面的《垂直方向位置》 - padding-top*/
+	padding:38px 0px 0px 0px; 
+	width:800px; 
+	min-height:520px; 
+	height:auto;
+	background:transparent;
+	display:block;
+}
+
+/*QA的文字*/
+.g217B_subtitle {
+	margin:0 auto 0 auto;
+	padding:10px;
+	width:688px;
+	height:auto;
+	
+	font-size:1.3em;
+	line-height:1.1em;
+	font-weight:600;
+	color:#FFF;
+	/*建議： 一行字時用center。字超過一行時，改用left*/
+	text-align:center;
+}
+
+/*內容-圖檔*/
+.g217B_showContent {
+	margin:10px auto 0 auto;
+	padding:0 0 0 0;
+	width:634px;
+	height:auto;
+}
+
+/*云*/
+.g217B_cloudBg {
+	position:absolute;
+	z-index:10;
+	top:445px;
+	left:0px;
+	width:100%;
+	height:178px;
+	display:block;
+	background:url(images/bg_02.png);
+	clear:both;
+}
+
+/*大尺寸視窗下的單元標題*/
+.g217B_normalHeader {
+	margin:0 0 0 120px;
+	display: block;
+	font-size:1.6em;
+	font-weight:800;
+	color:#a5ccf5;
+	
+}
+
+/*.mediaWrapper的外圍容器*/
+.mediaWrapperOuter {
+	/*◎居中*/
+	margin:0 auto 0 auto;
+	padding:30px 0 0 0;
+	width:686px;
+	height:66px;
+	background: url(images/play_bg.png) no-repeat;
+}
+
+/*數字按鈕容器*/
+.g217B_numButtonGroup {
+	margin:-2px 0 0 0;
+	padding:0 8px 0 18px;
+	width:auto;
+	height:33px;
+	background:transparent;
+	display: inline-block;
+	/*float:left;*/
+	border-right:1px #4578bc solid;
+}
+
+/*資料：隱藏*/
+/*按鈕標籤字串前綴。在HTML中留白則沒有前綴。*/
+.btnLabelPrefix {
+	display:none;
+}
+
+/*數字按鈕*/
+.g217B_numButton {
+	margin:0 5px 0 0;
+	padding:8px 0 0 0;
+	width:33px;
+	height:33px;
+	display:inline-block;
+	background:url(images/numBtnBg.png) no-repeat;
+	cursor:pointer;
+	
+	font-size:1em;
+	font-weight:600;
+	color:#FFF;
+	text-align:center;
+	
+	/*避免播放介面物件被選取反白*/
+	-moz-user-select: none;
+    -webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+/*數字按鈕：鼠標懸浮狀態*/
+.g217B_numButton_over {
+	background:url(images/numBtnBg_over.png);
+}
+/*數字按鈕：鼠標按下、按鈕作用中*/
+.g217B_numButton_keep {
+	background:url(images/numBtnBg_keep.png);
+}
+
+
+/*包裹 .mediaHeader、.mediaDiv、.playbackDiv ...等之外圍容器*/
+.mediaWrapper {
+	/*◎居中*/
+	margin:0 auto 0 auto;
+
+	/*◎從這裡調整.mediaWrapper播放介面的《水平方向位置》*/
+	/*margin:0px 0px 0px 0px;*/
+	/*==================*/
+	width:640px; 
+	height:auto;
+	
+	display: inline-block; /*顯示時應設為display: inline-block*/
+	visibility:hidden;
+}
+
+/*.mediaDiv：影音媒體-容器 - 包裝 媒體物件 和 .playbackDiv*/
+.mediaDiv {
+	width:640px; 
+	height:0px;
+	background:transparent; /*原#000。設為透明，避免語音介面下露出一條黑線*/
+}
+
+
+/*播放控制列：●背景被隱藏了*/
+.playbackDiv {
+	background: URL() transparent;
+}
+/*播放控制列：●背景出現*/
+.playbackDiv_showBg {
+	background:url(../tPlayer_CSS/playerUI/bg_640px_2.png) #FFF repeat-x;
+}
+
+/*●*/
+.progressBar > img {
+	opacity:0.5;
+}
+
+
+/*.track_2和.progressBar_2的容器*/
+.barOuter_2 {
+	margin:10px 20px 3px 25px; /*(.barOuter)原margin:3px 0 0 0*/
+}
+
+/*資料：隱藏*/
+.g217B_card {
+	display:none;
+}
+
+
+/*標題列*/
+/*========================================*/
+/*媒體標題列-容器*/
+.mediaHeader { /*●.mediaHeader被隱藏了*/
+	display:none;
+	/*background: none;*/
+}
+/*標題列-icon-容器*/
+.icon {
+}
+/*標題列-icon-圖形*/
+.icon img {
+}
+/*標題列-字串-容器*/
+.mediaHeaderString {
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-weight:500; /*原font-weight:360*/
+	color:#F9FFE1; /*原color:#333*/
+}
+/*標題列右側.notebook和.help的容器*/
+.buttons {
+}
+/*新手上路按鈕*/
+.help {
+}
+.help img {
+}
+/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+.notebook {
+}
+.notebook img {
+}
+/*========================================*/
+
+
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ 
+
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:769px) {
+	
+	.pageWrapper {
+		padding:0 0 60px 0; /*原padding:38px 0px 0px 0px*/
+		width:100%; /*原width:800px*/
+	}
+	
+	/**/
+	.g217B_normalHeader {
+		display:none; /*原display: block*/
+	}
+	
+	/**/
+	.mediaWrapperOuter {
+		padding:0px 0 0 0; /*原padding:30px 0 0 0*/
+		width:100%; /*原width:686px*/
+		background: none; /*原background: url(images/play_bg.png) no-repeat*/
+	}
+	
+	/**/
+	.g217B_numButtonGroup {
+		margin:0px 0 0 0; /*原margin:-2px 0 0 0*/
+		padding:3px 8px 0 8px; /*原padding:0 8px 0 18px*/
+		width:100%; /*原width:auto*/
+		height:40px; /*原height:33px*/
+		border-right: none; /*原border-right:1px #4578bc solid*/
+		float:none;
+	}
+	
+	/**/
+	.playbackDiv {
+		background: url(../tPlayer_CSS/playerUI/bg_640px_2.png) #DDD repeat-x;
+		
+	}
+	
+	/*QA的文字*/
+	.g217B_subtitle {
+		width:100%;
+		text-align:left;
+		margin:25px auto 0 auto; /*margin-top設為25px，以修正往上跑的問題。*/
+		/*原font-size:1.3em;*/
+		font-size:1.2em; 
+		font-weight:500; /*原font-weight:600;*/
+		/*●若沒有float:left，.g217B_subtitle會往上跑得更厲害。*/
+		float:left;
+	}
+	
+	/*內容-圖檔*/
+	.g217B_showContent {
+		margin:50px 0 0 0; /*原margin:250px 0 0 0;*/
+		width:100%;
+	}
+	.g217B_showContent img {
+		width:100%;
+	}
+	
+	/*云*/
+	.g217B_cloudBg {
+		display:none;
+	}
+	
+	
+	/*標題列*/
+	/*========================================*/
+	/*媒體標題列-容器*/
+	.mediaHeader {
+		/*取消圓角*/
+		border-top-left-radius:0; /*原border-top-left-radius:6px*/
+		border-top-right-radius:0; /*原border-top-right-radius:6px*/
+		display:block;
+		background:#FFF;
+		padding:5px 0 0px 0; /*tPlayer.css原padding:5px 0 5px 0*/
+	}
+	
+	/*標題列-icon-容器*/
+	.icon {
+		padding:0 10px 0 17px; /*原padding:0 10px 0 23px*/
+	}
+	
+	/*標題列-字串-容器*/
+	.mediaHeaderString {
+		width:100%; /*原本與.buttons共用100%，為82%，在小尺寸視窗設為100%*/
+		color:#123150;
+	}
+	/*標題列右側.notebook和.help的容器*/
+	.buttons {
+		/*與.mediaHeaderString共用100%，當.mediaHeaderString設為100%，.button自動歸0%*/
+		/*width:18%;*/
+	}
+	/*新手上路按鈕*/
+	.help {
+		display: none; /*原本為display: table-cell;*/
+	}
+	/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+	.notebook {
+		display: none; /*原本為display: table-cell;*/
+	}
+	/*========================================*/
+
+	
+}
+	
+	
+	

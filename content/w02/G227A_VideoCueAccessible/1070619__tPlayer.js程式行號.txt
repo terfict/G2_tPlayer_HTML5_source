@@ -1,0 +1,776 @@
+﻿
+tPlayer.js
+=================================
+
+175
+$.preload = function(){}
+
+190
+method.getPath = function(){}
+
+217
+method.getLocalMediaPath = function(){}
+
+233
+method.preloadPhoto = function(){}
+
+241
+method.pageInit = function() {}
+
+245
+method.init = function(){}
+
+307
+method.initData = function(){}
+
+324
+utils.getBrowserWH = function(){}
+
+332
+utils.showUtils = function(){}
+
+358
+method.mediaWidthAjust = function(_currParent){}
+
+380
+method.deployment = function(){}
+
+683
+utils.getOrientation = function(){}
+
+728
+method.createFontSizeSwitcher = function(){}
+
+840
+method.entering = function(index){}
+
+853
+method.noebookMouseEvent = function(index){}
+
+866
+method.helpMouseEvent = function(index){}
+
+879 //沒用到
+method.getMediaFileExtention = function(_mediaTargetStr, index){}
+
+899
+method.embedMedia = function(index){}
+
+945
+method.embedFlashMedia = function(index){}
+
+1124 - ●速度控制
+method.storageAvailable = function(type){}
+
+1154 - ●速度控制
+method.embedHlsJsH5Media = function(index){}
+
+1811 - ●速度控制
+method.embedH5Media = function(index){}
+
+2138 - ●速度控制 - 2126、2145、2156
+method.createPbHtml = function(index){}
+
+2193 - ●速度控制
+method.createSettingPannel = function(index){}
+
+2223
+method.getPlaybackUI = function(index){}
+
+2463
+method.caculateTrackWidth = function(_allWidth, index){}
+
+2560
+method.createPbLessThenBPHtml = function(index){}
+
+2653
+method.getPlaybackUILessThenBP = function(index){}
+
+2811
+method.adjustInSmallWindows = function(index){}
+
+2961
+method.caculateSmallWindows = function(index){}
+
+3142 - 3173 - ●速度控制
+method.insertCoverImg = function(index){}
+
+3204
+method.adjustCoverImgPos = function(index,count){}
+
+3290
+tPlayer.isJsReadyFunc = function() {}
+
+3297
+tPlayer.currIndexFunc = function(_swfCurrIndex){}
+
+3303
+tPlayer.receiveFlashOk = function(info){}
+
+3312
+tPlayer.alert2 = function(info){}
+
+3319
+tPlayer.parametersForTPlayer = function(){}
+
+3328
+tPlayer.urlForTPlayer = function(){}
+
+3346
+tPlayer.setPlayFlag = function(_flag, index){}
+
+3357
+function setPlayFlag(_flag, index){}
+
+3375
+tPlayer.updateTotalTime = function(_totalTime, index){ }
+
+3437
+tPlayer.updateCurrTime = function(_currTime, index){}
+
+3512
+tPlayer.updateCurrTimeOnly = function(_currTime, index){}
+
+3531
+method.updateProgress = function(index){}
+
+3552 //沒用到
+function sendToActionScript(value) {}
+
+3560
+method.winOnResize = function(){ }
+
+3671
+param.mediaRWDWork = function(index){}
+
+4041
+method.mouseVisualState = function(index){}
+
+4071
+method.clearMouseVisualState = function(index){}
+
+4081
+method.updatePbBtnState = function(index){}
+
+4099 - ●速度控制
+method.menu1F_videoRateOnClick = function(e, index){}
+
+4312 - ●速度控制
+method.settingPanelMEvent_remove = function(index){}
+
+4338 - ●速度控制
+method.settingPanelMEvent = function(index){}
+
+4650
+method.playbackMouseEvent = function(index){}
+
+4869 - ●速度控制
+method.clearPbMouseEvent = function(index){}
+
+4893 - ●速度控制
+method.clearPbMouseEvent_2 = function(index){}
+
+4921 - ●速度控制
+method.playbackMouseEvent_2 = function(index){}
+
+5119
+method.jqUITouchPunchDrag = function(index){}
+
+5246
+method.jqUITouchPunchDrag_2 = function(index){}
+
+5397
+tPlayer.play = function(index){}
+5473
+method.h5_playVideo = function(index){}
+
+5489
+method.pauseAllMedia = function(_currIndex){}
+
+5503
+tPlayer.pause = function(index){}
+5533
+method.h5_pauseVideo = function(index){}
+
+5546
+tPlayer.seek = function(_targetTime, index){}
+
+5567 //似乎目前未調用
+tPlayer.step = function(_frames, index){}
+
+5580 //似乎目前未調用
+tPlayer.totalTime = function(){}
+
+5593 //似乎目前未調用
+tPlayer.currTime = function(index){}
+
+5608
+tPlayer.pauseUpdateTimer = function(index){}
+
+5626
+tPlayer.resumeUpdateTimer= function(index){}
+
+5654
+tPlayer.completed = function(_flag, index){}
+
+5681 //尚未用到
+//Flash安全性措施，無法從Flash外部調用Flash全螢幕功能
+tPlayer.toFullScreen = function(index){}
+5693 //尚未用到
+//Flash安全性措施，無法從Flash外部調用Flash全螢幕功能
+tPlayer.toNormalScreen = function(index){}
+
+5707 //未用到
+tPlayer.h5GoFullScreen = function(element){}
+
+5724 //HTNL5全螢幕：未用到 - ●●●但考慮使用
+tPlayer.toggleFullScreen = function (elem) {}
+
+5818
+tPlayer.enterH5FullScreen = function(index/*element*/) {}
+
+5857
+function dumpFullscreen() {}
+
+5874
+method.attachH5MediaEvent = function(index) {}
+
+6051
+method.fullScreenObjAjust = function(_mediaObj,_mediaW,_mediaH, index){}
+
+6374
+method.fullScreenWinOnResize = function(_mediaObj,_mediaW,_mediaH, index){}
+
+6571
+tPlayer.leaveH5FullScreen = function(index/*element*/) {}
+
+6605
+method.normalScreenObjAjust = function(_mediaObj,_mediaW,_mediaH, index){}
+
+6859
+method.getStreamingData = function(index){ }
+
+7036
+method.choosePlayMode = function(){ }
+
+7219
+utils.userAgentProp = function(){}
+
+7309 //●判斷劉覽器種類 - 目前未用到
+utils.detectBrowser = function(){}
+
+7322 //●判斷劉覽器種類&版本 - ●new - 1070309
+utils.detectBrowserVersion = function(){}
+
+7384 //●判斷劉覽器種類&版本 - old
+utils.detectBrowserVersion__old = function(){}
+
+7477
+method.minuteSecond = function(_totalSec){}
+
+7507
+method.hmsToSecond = function(_hmsStr){}
+
+7524
+method.addDocumentTitle = function(){}
+
+7542 //未用到吧
+method.formatSecond = function(secs){  }
+
+7559 //●○●○●○改變右鍵選單 {●關閉右鍵選單}
+method.showDropdown = function(e, obj, index){}
+
+7588 //顯示自訂的右鍵選單
+method.showMenu = function(e, obj, index){}
+
+7708 //將inVideoQuiz暫停點時間存入timeCodeArr陣列
+method.createTimeCodeArr = function(){}
+
+7733 //一般模式下的putDot
+method.putDot = function(){}
+
+7820 //RWD模式下的putDot2
+method.putDot2 = function(){}
+
+7908
+method.removeDotSpan = function(){}
+
+7919
+method.removeDotSpan2 = function(){}
+
+7936
+method.pauseNQuiz = function(indexNum){ }
+
+8040
+method.guidingPrompt = function(){}
+
+8070
+method.clearSuggestionZoneDiv = function(){}
+
+8083
+method.createFocus = function(indexNum){}
+
+8114
+method.filterDivice = function(indexNum,_targetJqObject, _autoPlayFlag){}
+
+8155
+method.showWall = function(indexNum,_w,_h,lightBoxJqObj,_autoPlayFlag){}
+
+8226
+method.adjustLightBox = function(){}
+
+8292
+method.getLightBoxJqObjSize = function(){}
+
+8306
+method.attachCloseIcon = function(indexNum,_w,_h,lightBoxJqObj,_autoPlayFlag){}
+
+8338
+method.hideWall = function(indexNum,_w,_h,lightBoxJqObj,_autoPlayFlag){}
+
+8379 //建立「評量」
+method.createQuiz = function(indexNum){}
+
+8441
+method.quizAdjust = function(){}
+
+8525  //建立 「小反思」
+method.createReflection = function(indexNum){}
+
+8569 //●●●1031127 - 小反思
+method.reflectionAdjust = function(){}
+
+8670  //『●○無』點小圖跳大圖之圖檔之取值計算、RWD大小尺寸
+method.normalPicUtils = function(){}
+
+8801  處理放大鏡圖示
+method.createMagnifierIcon = function(){}
+
+9007  //點小圖跳出大圖
+method.triggerToBig = function(_imgIndex,_w,_h){}
+9021
+method.clickSmallToBig = function(_imgTag,_w,_h){	}
+9175
+method.addCloseBtn = function(){}
+9211
+method.addWall = function(){}
+9219
+method.removeWall = function(){}
+9229
+method.addCloseBtnClickHandler = function(){}
+9234
+method.closeBtnClickHandler = function(){}
+
+9251   「名詞解釋：glossary」 
+method.glossary = function(){}
+9397
+method.makeGlossary = function(){}
+9413
+method.showGlossary = function(index, glossary_explain_Html){}
+
+9520  //@@@未用到
+function embedFlash__old(){}
+
+9635 - 9664  //●●●hls.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,265 @@
+﻿@charset "utf-8";
+/* CSS Document - G225A│g225A_Overlay.css */
+
+
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+* {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+}
+
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background:#a9d051;
+
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 100%;
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px*/
+}
+
+
+/*頁面最大容器*/
+/*程式初始化時，會來抓取width和min-height的字串值*/
+.pageWrapper {
+	/*◎居中，但前提是.pageWrapper必須有設定寬度*/
+	margin:0 0 0 0;
+	padding:0px 0px 0px 0px; 
+	width:800px; 
+	height:auto;
+	display:block;
+	
+	/*避免物件被選取反白*/
+	-moz-user-select: none;
+    -webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/*標題列*/
+.g225A_header {
+	display: block;;
+	width:100%;
+	height:62px;
+	background: #095db1;
+	text-align:left;
+}
+
+/*標提列icon*/
+.g225A_header .headerIcon {
+	display: inline-block;
+	margin:2px 10px 0 24px;
+	width:58px;
+	height:50px;
+	float:left;
+	background: url(images/headerIcon.png);
+}
+
+
+
+/*單元標題*/
+.g225A_header .topic {
+	display: inline-block;
+	margin:14px 0 0 0px;
+	padding:8px 0 0 10px;
+	width:683px;
+	height:33px;
+	background:#FFF url(images/headerTopic_bg.png);
+	border-radius:15px;
+	
+	font-size:1.3em;
+	font-weight:600;
+	letter-spacing:0.01em;
+	text-align:center;
+	color:#095db1;
+	/*text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de;*/
+	/*text-shadow:0 1px 1px #fff; */ 
+}
+
+
+
+
+/*工作區塊：在g225A_header下方的整個區塊*/
+.g225A_workArea {
+	margin:0 auto;
+	padding:0px 0px 0px 0px;
+	width:100%;
+	height:auto;
+	display:block;
+	background:#dff4f6; /*cbedff*/
+	border-radius:0px;
+}
+
+.outerDiv {
+	margin:0 auto 0 auto;
+	display:block;
+	padding:12px;
+	width:100%;
+	height:auto;
+	background:#e5eaf0;
+}
+
+.innerDiv {
+	margin:0 auto 0 auto;
+	padding:15px 0 20px 0;
+	display:block;
+	width:100%;
+	height:auto;
+	background:#FFF;
+	text-align:center;
+}
+
+.innerDiv img {
+	width:579px;
+	height:auto;
+}
+
+/*資料：隱藏*/
+.linkDataZone {
+	display:none;
+}
+
+
+/*新手上路*/
+.help {
+	float:right;
+	margin:-45px 20px 0 0;
+	display:block;
+	width:25px;
+	height:25px;
+	cursor:pointer;
+}
+.help img {
+	width:25px;
+	height:25px;
+}
+
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ */
+
+
+/*測試用 - 已隱藏*/
+.showInfo {
+	position:absolute;
+	top:0px;
+	left:800px;
+	padding:10px;
+	width:400px;
+	height:300px;
+	display: none;
+	background:#E8E8E8;
+	
+}
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:769px) {
+	
+	.pageWrapper {
+		width:100%; /*原width:800px*/
+		max-width: none;
+		min-width: 100%; 
+	}
+	
+	/*標題列*/
+	.g225A_header {
+		display:table;
+	}
+	
+	/*標提列icon*/
+	.g225A_header .headerIcon {
+		display:table-cell;
+		vertical-align:middle;
+		margin:2px 0 0 10px;
+		width:58px;
+		max-width:65px;
+		height:50px;
+		background: url(images/headerIcon.png);
+		text-align:center;
+	}
+	
+	/*單元標題*/
+	.g225A_header .topic {
+		display:table-cell;
+		vertical-align:middle;
+		padding:0 0 0 7px;
+		width:90%;
+		background:none;
+		
+		font-size:1.25em;
+		font-weight:500;
+		line-height:1.1em;
+		text-align:left;
+		color:#FFF;
+	}
+	
+	
+	
+	.innerDiv img {
+		width:100%;
+	}
+	
+	/*新手上路*/
+	.help {
+		display: none;
+	}
+
+}	
+	
+	

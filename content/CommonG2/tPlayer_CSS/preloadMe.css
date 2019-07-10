@@ -1,0 +1,32 @@
+﻿@charset "utf-8";
+/* CSS Document - Preloader預載 */
+
+
+/* Preloader預載 */
+/*================================================================*/
+body {
+	overflow:hidden;
+}
+
+#preloader {
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#fff; /* change if the mask should have another color then white */
+	z-index:3000; /* makes sure it stays on top */
+	display:block;
+}
+
+#status {
+	width:64px;
+	height:64px;
+	position:absolute;
+	left:50%; /* centers the loading animation horizontally one the screen */
+	top:50%; /* centers the loading animation vertically one the screen */
+	background-image:url(preloadMe_img/284.gif); /* path to your loading animation */
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:-32px 0 0 -32px; /* is width and height divided by two */
+}

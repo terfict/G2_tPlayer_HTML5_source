@@ -1,0 +1,11 @@
+
+Note01__●InVideoQuiz的時間偵測程式碼「method.pauseNQuiz()」，在「tPlayer.js」的@「行6031」左右
+
+
+行5798
+method.createTimeCodeArr()
+
+
+
+
+

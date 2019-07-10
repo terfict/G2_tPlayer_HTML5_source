@@ -1,0 +1,372 @@
+﻿@charset "utf-8";
+/* CSS Document - G200C│g200C_Overlay.css */
+
+
+
+/*引入 Google Fonts 思源黑體Webfont*/
+/*================================================================*/
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+/*================================================================*/
+
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background-color: #ffddde;
+	font-family:Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 100%; 
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px*/
+}
+
+p, ul, ol{
+	margin:0 0 0 0;
+}
+
+/*頁面最大容器*/
+/*程式初始化時，會來抓取width和min-height的字串值*/
+.pageWrapper {
+	/*◎居中*/
+	/*margin:0 auto 0 auto;*/
+	
+	/*◎從這裡調整.mediaWrapper播放介面的《垂直方向位置》 - padding-top*/
+	padding:8px 0px 60px 0px; 
+	
+	width:800px; 
+	min-height:630px; 
+	height:auto;
+	background: #f0ecd1 url(images/bg_1.png) repeat-y;
+	display:block;
+}
+
+/*最上方標題列.g200C_header*/
+/*↓------------------------------↓*/
+.g200C_header {
+	display:table;
+	margin:0px auto 0px auto;
+	padding:0px 0px 10px 0px;
+	width:93%;
+	height:56px;
+	text-align: center;
+	/**/
+	background:url(images/pattern_2.png) repeat-x left bottom;
+}
+
+/*標題列字串*/
+.g200C_headerString {
+	display:table-cell;
+	vertical-align:middle;
+	padding:0 20px 0 20px;
+	width:100%;
+	height:auto;
+	/*background:#82FFA7;*/
+	
+	/*'Noto Sans TC' - 思源黑體Webfont*/
+	font-family: 'LiHei Pro', 'Noto Sans TC', "微軟正黑體", sans-serif;
+	color: #5b4e10;
+	font-weight:400;
+	font-size: 1.5em;
+	line-height: 1.2em;
+	letter-spacing:0.0625em; 
+	
+	text-shadow: 2px 2px 2px #CCC;
+	-moz-text-shadow: 2px 2px 2px #CCC;
+	-webkit-text-shadow: 2px 2px 2px #CCC;
+}
+/*↑------------------------------↑*/
+
+
+
+/*學習進度表 - 表格*/
+/*↓------------------------------↓*/
+/*學習進度表：外層容器*/
+.scheduleOuter {
+	display:block;
+	margin:15px auto 0px auto;
+	padding:10px 10px 10px 10px;
+	width:93%;
+	height:480px;
+	background: #FFF;
+	/**/
+	overflow:auto;
+	
+	/*圓角*/
+	/*border-top-left-radius:10px; 
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px; 
+	border-bottom-right-radius:10px; */
+	
+	/* 斷行 */
+	/*white-space: normal; 
+	word-wrap: break-word; 
+	word-break: break-all;*/ 
+}
+
+/*學習進度表：表格table*/
+.learningSchedules {
+	width:100%;
+	height:auto;
+	
+	/*'Noto Sans TC' - 思源黑體Webfont*/
+	font-family: 'LiHei Pro', 'Noto Sans TC', "微軟正黑體", sans-serif;
+	font-size:0.98em;
+	line-height: 1.3em;
+	font-weight:310;
+}
+
+/*thead标签：表格的表頭。用於组合HTML表格的表頭内容。*/
+thead {
+}
+
+/*th：「表頭單元格」*/
+th {
+	font-weight:300;
+	padding:10px 3px 10px 3px;
+	background: #FFDDDE;
+	border:1px #FFF solid;
+	
+	/*圓角*/
+	border-top-left-radius:3px; 
+	border-top-right-radius:3px;
+	border-bottom-left-radius:3px; 
+	border-bottom-right-radius:3px; 
+}
+
+/*「表頭」的每個「表頭單元格」*/
+th {
+	border-right:1px #FFF solid;
+}
+
+/*「表頭」的最後一個「表頭單元格」*/
+th:last-child {
+	border-right: none;
+}
+
+/*藉由控制 表頭各th 的寬度，以控制 表格各欄位(行)(colomn) 的寬度 (直行橫列)*/
+/*---------------------------------------------------------------*/
+th:nth-child(1) { width:15%; }
+th:nth-child(2) { width:65%; }
+th:nth-child(3) { width:20%; }
+/*---------------------------------------------------------------*/
+
+
+/*tr：「標準單元格」 (直行橫列)*/
+tr {
+	color:#515a7b;
+}
+
+/*tr：「標準單元格」 的奇數列(直行橫列)*/
+tr:nth-child(odd) {
+	background:#FFF;
+}
+
+/*tr：「標準單元格」 的偶數列(直行橫列)*/
+tr:nth-child(even) {
+	background-color: #FFDDDE;
+}
+
+/*td：「標準單元格」*/
+td {
+	padding:10px 3px 10px 3px;
+	background:transparent;
+	border-right:1px #D1D1D1 dotted;
+	text-align:center;
+}
+
+/*tr裡面的第2個「標準單元格」*/
+td:nth-child(2) {
+	padding-left:15px;
+	text-align: left;
+}
+
+/*tr裡面的最後一個「標準單元格」*/
+td:last-child {
+	border-right: none;
+}
+/*↑------------------------------↑*/
+
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ */
+
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:769px) {
+	
+	/**/
+	.pageWrapper {
+		padding:8px 0 100px 0; /*原padding:8px 0px 60px 0px*/
+		width:100%; /*原width:800px*/
+	}
+	
+	
+	/*最上方標題列.g200C_header*/
+	/*↓------------------------------↓*/
+	.g200C_header {
+		width:100%; /*原width:90%*/
+	}
+	.g200C_headerString {
+	}
+	/*↑------------------------------↑*/
+	
+
+	/*學習進度表：外層容器*/
+	.scheduleOuter {
+		width:95%; /*原width:93%*/
+		/**/
+		height:auto;
+		overflow:visible;
+	}
+	
+	/*學習進度表：表格table*/
+	.learningSchedules {
+	}
+	
+	/*==================================*/
+	/*原為表格特性，皆改為block*/
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/*thead标签：表格的表頭。用於组合HTML表格的表頭内容。*/
+	thead {
+      display: none; /*原無display*/
+    }
+	
+	/*tr：HTML表格中的橫列(直行橫列)*/
+	tr {
+		padding:0px 6px 0px 6px; /*原無padding*/
+		
+		/**/
+		border:2px #EEE solid; /*原無border。 此處定義每個tr都有框線圍繞，以做區隔*/
+		margin: 8px 0 8px 0; /*原無margin。 此處定義tr之間的上下間距*/
+	}
+	
+	/*td：「標準單元格」*/
+	td {
+		/*定位 - relative*/
+		position: relative;
+		
+		/*●關鍵：左側內距保留60px - ●●●必須「加強權重」 !important，否則會失效。 */
+		/*====================================================*/
+		padding: 5px 3px 5px 60px !important;  /*原padding:10px 3px 10px 3px*/
+		/*====================================================*/
+		
+		/**/
+		border-right: none; /*原border-right:1px #D1D1D1 dotted;*/
+		text-align:left; /*原text-align:center*/
+	}
+	
+	
+	/*********************************/
+	/*●關鍵 - 原無 td:before --- CSS3屬性，低版本IE不支援*/
+	td:before { 
+		/*取用data-label屬性值*/
+		content: attr(data-label); 
+		
+		/*絕對定位 - absolute - 這相對於其父層td*/
+		position: absolute; 
+		top:0px;
+		left:0px;
+		/*微調垂直向位置*/
+		margin-top:5px;
+		
+		float: left;
+		color:#C82022;
+		background:#DDD;
+		padding:0px 2px 0px 2px;
+		display:block;
+		/*段落中的文本不换行*/
+		white-space: nowrap;
+		border-left:1px #D1D1D1 dotted;
+    }
+	/*********************************/
+	
+	
+	
+	/*奇數tr 裡的所有 「td標準單元格」*/
+	tr:nth-child(odd)>td {
+		/*建立下框線*/
+		border-bottom:1px dotted #CCC;
+	}
+	
+	/*偶數tr 裡的所有 「td標準單元格」*/
+	tr:nth-child(even)>td {
+		/*建立下框線*/
+		border-bottom:1px solid #FFF;
+	}
+	
+	/*每個tr 裡的最後一個 「td標準單元格」*/
+	tr>td:last-child {
+		border-bottom: none;
+	}
+	/*==================================*/
+	
+
+	
+	
+	/*「文字大小切換」*/
+	/*↓------------------------------↓*/
+	.fontSizeSwitcher {
+		background:url(); /*原在TPlayer.css - background:url(images/fontSizeSwitcherBg.png) no-repeat;*/
+	}
+	/*↑------------------------------↑*/
+	
+	
+}
+	
+	

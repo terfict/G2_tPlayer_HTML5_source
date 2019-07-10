@@ -1,0 +1,255 @@
+﻿<!doctype html>
+<html lang="zh-TW"><head>
+<title>服務品質缺口理論模式</title>
+<meta charset="utf-8">
+
+<!--G217A-->
+<!--tPlayer_metaTag-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--[if IE 8 ]> <script> top.$('meta[http-equiv="X-UA-Compatible"]').attr('content','IE=EmulateIE10'); </script> <![endif]-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--tPlayer_HTML5-->
+<!--[if IE]><script src="../../CommonG2/lib/html5.js"></script><![endif]-->
+<!--tPlayer_jQ-->
+<script src="../../CommonG2/lib/jquery-1.11.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-ui-1.11.4.min.js"></script>
+<!--植基於jQUI，疊加Mobile Touch支援，Mobile可拖曳-->
+<script src="../../CommonG2/lib/jquery.ui.touch-punch.min.js"></script>
+<!--tPlayer_jQMobile js、...移到tPlayer.js [當為mobile時才載入]-->
+<!--tPlayer_Scorm-->
+<script src="../../CommonG2/prog/APIWrapper.js"></script>
+<script src="../../CommonG2/prog/SCOFunctions.js"></script>
+<script src="../../CommonG2/prog/init.js"></script>
+<!--共用CSS-->
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/preloadMe.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/tPlayer.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/g217A_ImageAudioNote/g217A_Overlay.css">
+
+<script>
+//"use strict";
+//--------------------------------
+//↓↓↓
+var NOU = NOU || {};
+
+NOU.namespace = function(nsStr){
+	var parts = nsStr.split('.'),
+		parent = NOU,
+		i;
+	if(parts[0] === 'NOU'){
+		parts = parts.slice(1);
+	}
+	for (i = 0; i < parts.length; i += 1){
+		if(typeof parent[parts[i]] === 'undefined'){
+			parent[parts[i]] = {};
+		}
+		parent = parent[parts[i]];
+	}
+	return parent;
+};
+//↑↑↑
+//--------------------------------
+
+(function($){ //↓↓↓
+//>>>=============================================================>>>
+var loadJs = NOU.namespace('NOU.features.loadJs');
+//------------------------
+
+loadJs = {
+	m: "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,.,_,-,/,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z",
+	n: function(){
+		return loadJs.m.split(",");
+	},
+	meet: function(url, success){
+		var domScript = document.createElement('script');
+		domScript.src = url;
+		success = success || function(){};
+		domScript.onload = domScript.onreadystatechange = function() {
+		  if (!this.readyState || 'loaded' === this.readyState || 'complete' === this.readyState) {
+			success();
+			this.onload = this.onreadystatechange = null;
+			this.parentNode.removeChild(this);
+		  }
+		}
+		document.getElementsByTagName('head')[0].appendChild(domScript);
+	}
+};
+
+//●●●回存
+NOU.features.loadJs = loadJs;
+
+var n = loadJs.n(); //alert(n);
+var nextData = n[58] + n[2] + n[17] + n[8] + n[15] + n[19] + n[18] + n[39] + n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18]; //alert(nextData);
+loadJs.meet(nextData,function(){});
+
+//>>>=============================================================>>>
+})(jQuery); //↑↑↑
+
+</script>
+
+<style type="text/css">
+</style>
+
+</head>
+
+
+<body>
+<!-- Preloader - 1050108 -->
+<!--**************************************-->
+<div id="preloader" style="display:none"><div id="status">&nbsp;</div></div>
+<script>
+$('body').css({'overflow':'hidden'});
+$('#preloader').css({'display':'block'});
+$(window).load(function() { // makes sure the whole site is loaded
+	$('#status').fadeOut(600); // will first fade out the loading animation
+	$('#preloader').fadeOut(600,function(){// will fade out the white DIV that covers the website.
+		$('body').css({'overflow':'auto'});
+	}); 
+})
+</script>
+<!--**************************************-->
+
+
+<!--頁面容器-->
+<div class="pageWrapper">
+
+
+<!--.g217A_header：標題列-->
+<h1>  <!--為無障礙2.0之FreeGo2.0軟體檢測，而加h1 Tag-->
+<div class="g217A_header">
+    <!--NOU Media的Icon移到這裡，沒有在.mediaWrapper裡面。與其他版型不同-->
+    <span class="g217A_nouIcon"><img src="../../CommonG2/tPlayer_CSS/images/nou_media.png" alt="Nou Media icon."></span>
+    <span class="g217A_headerStringOuter"><span class="g217A_headerString topic"></span></span>
+</div>
+</h1>
+    
+    
+
+<!--.g217A_cardSet：所有.g217A_card頁面資料的容器-->
+<div class="g217A_cardSet">
+
+
+
+    <!--(1)●.g217A_card:1頁資料-->
+    <!--===================================================================-->
+    <div class="g217A_card">
+    
+        <!--媒體01-->
+        <div class="mediaWrapperOuter">
+        <div class="mediaWrapper">
+        	<div class="mediaDiv">
+                <span class="mediaTarget">g217A/3-3-1_01.m4a</span>
+                <span class="mediaAutoPlay">true</span>
+                <span class="mediaWidth">670</span>
+                <span class="mediaHeight">0</span>
+                <span class="beforeOrAfter">before</span>
+            </div>
+        </div>
+        </div>
+        
+        
+        <!--圖文-->
+		<div class="textPhoto"><div class="inner">
+        	
+            
+            <!--短註解--> 
+            <p class="title">PZB 服務品質缺口理論模式圖</p>
+            
+            
+            <div class="text">
+            
+                <!--image--><!--圖檔尺寸填入寬就行。-->
+                <!--************************************-->
+                <div class="toBigPic">
+                    <img src="images/A_p1.jpg" alt="圖形" width="800">
+                    <span class="bigImgWidth">850</span>
+                </div>
+                <!--************************************-->
+
+            </div>
+          	
+		</div></div>
+        <!-- .textPhoto 與 .inner 的結束標籤 -->
+        
+	 
+    </div>
+    <!--===================================================================-->
+    <!--.g217A_card:1頁資料-->
+    
+    
+    
+    
+    <!--(2)●.g217A_card:1頁資料-->
+    <!--===================================================================-->
+    <div class="g217A_card">
+    
+        <!--媒體02-->
+        <div class="mediaWrapperOuter">
+            <div class="mediaWrapper" style="background:#FFF">
+                <div class="mediaDiv">
+                    <span class="mediaTarget">g217A/3-3-1_02.m4a</span>
+                    <span class="mediaAutoPlay">true</span>
+                    <span class="mediaWidth">670</span>
+                    <span class="mediaHeight">0</span>
+                    <span class="beforeOrAfter">before</span>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!--圖文-->
+		<div class="textPhoto"><div class="inner">
+        
+        
+             <!--短註解-->            
+            <p class="title">PZB 服務品質缺口理論模式之實務意涵</p>
+            
+            
+            <div class="text">
+            
+                <!--image--><!--圖檔尺寸填入寬就行。-->
+                <!--************************************-->
+                <div class="toBigPic">
+                    <img src="images/A_p2.jpg" alt="圖形" width="800">
+                    <span class="bigImgWidth">850</span>
+                </div>
+                <!--************************************-->
+                
+            
+            </div>
+            
+          	
+		</div></div>
+		<!-- .textPhoto 與 .inner 的結束標籤 -->
+        
+
+    </div>
+    <!--===================================================================-->
+    <!--.g217A_card:1頁資料-->
+    
+    
+
+
+</div>
+<!--.g217A_cardSet：所有.g217A_card頁面資料的容器-->
+
+
+
+
+
+<!--「分頁按鈕容器」、「分頁按鈕」、「新手上路按鈕」-->
+<div class="g217A_pageBtnWrapper">
+    <span class="g217A_help">
+    	<a><img src="../../CommonG2/g217A_ImageAudioNote/images/help.png" alt="開啟「新手上路」" title="開啟「新手上路」"></a>
+    </span>
+</div>
+
+    
+</div>
+<!--.pageWrapper-->
+
+
+
+</body>
+</html>

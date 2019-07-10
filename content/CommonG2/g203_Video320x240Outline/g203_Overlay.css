@@ -1,0 +1,530 @@
+﻿@charset "utf-8";
+/* CSS Document - G203│g203_Overlay.css */
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background: #B39B82;
+
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 100%; 
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px=0.0625em*/
+
+}
+
+/*頁面最大容器*/
+/*程式初始化時，會來抓取width和min-height的字串值*/
+.pageWrapper {
+	/*margin:0 0 0 0;*/
+	/*margin:0 auto 0 auto;*/
+	padding:0px 0px 0px 0px; 
+	width:800px;
+	min-height:520px; 
+	height:auto;
+	background:transparent url(images/w02-03-01-c-tv_04.jpg) no-repeat;
+	background-position:0 0;
+	display:block;
+}
+
+/*最上方標題列.g203_header*/
+/*↓------------------------------↓*/
+.g203_header {
+	display:table;
+	margin:0 0 50px 0;
+	padding:0px 0px 0px 0px;
+	width:100%;
+	height:65px;
+}
+.g203_headerString {
+	display:table-cell;
+	vertical-align:middle;
+	padding:2px 0px 0px 62px;
+	width:100%;
+	height:100%;
+	
+	color:#1f262f;
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-weight: 500;
+	font-size: 1.3em;
+	line-height: 1.0em;
+	letter-spacing:0.0625em; 
+	
+	text-shadow: 2px 2px 2px #CCC;
+	-moz-text-shadow: 2px 2px 2px #CCC;
+	-webkit-text-shadow: 2px 2px 2px #CCC;
+}
+/*↑------------------------------↑*/
+
+
+/*大綱文字*/
+/*↓------------------------------↓*/
+.g203_outline {
+	margin:0px 0px 0px 23px;
+	padding:15px 9px 3px 8px;
+	width:310px;
+	height:330px;
+	display: inline-block;
+	float:left;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.g203_subtitle {
+	margin:15px 0px 12px 2px;
+	color: #CC3300;
+	font-weight: bold;
+	font-size: 1.1em;
+	line-height: 1.0em;
+	letter-spacing:0.0625em; 
+}
+ul.g203_ul {
+	width:100%;
+	height:auto;
+}
+ul.g203_ul li {
+	margin:0px 0px 0px 26px;
+	color: #330000;
+	font-size: 1.0em;
+	line-height: 1.5em;
+	letter-spacing:0.0625em; 
+}
+/*↑------------------------------↑*/
+
+
+
+
+/*↓↓↓--------「點小圖跳大圖功能」--------↓↓↓*/
+
+/*有「點小圖跳大圖」功能<img>的外圍容器的class*/
+.toBigPic {
+}
+/*有「點小圖跳大圖」功能<img>*/
+.toBigPic > img {
+}
+
+/*無跳圖之小圖*/
+.normalPic > img {
+}
+
+/*↑↑↑--------「點小圖跳大圖功能」--------↑↑↑*/
+
+
+
+
+/*包裹 .mediaHeader、.mediaDiv、.playbackDiv ...等之外圍容器*/
+.mediaWrapper {
+	/*●藉由margin調整.mediaWrapper的位置*/
+	margin:0px 0px 0px 80px;
+	/*==================*/
+	width:320px; 
+	height:auto;
+	display: block;
+	float:left;
+}
+/*●G203這裏定要有.mediaWrapper_fullScreen，否則全畫面時不會居中*/
+/*全畫面狀態下的.mediaWrapper以程式取用.mediaWrapper_fullScreen的css*/
+.mediaWrapper_fullScreen {
+	margin:0px 0px 0px 0px;
+}
+
+
+/*標提列*/
+/*========================================*/
+/*媒體標提列-容器*/
+.mediaHeader {
+	padding:2px 0 2px 0; /*原padding:5px 0 5px 0*/
+	
+}
+/*標提列-icon-容器*/
+.icon {
+	padding:0 18px 0 15px; /*原padding:0 10px 0 23px*/
+}
+/*標提列-icon-圖形*/
+.icon img {
+}
+
+/*標提列-字串-容器*/
+.mediaHeaderString {
+	font-weight:600;
+	color:#006B10;
+	/**/
+	width:78%;
+	/*background:#FF5456;*/
+}
+
+/*標提列右側.notebook和.help的容器*/
+.buttons {
+	/*background:#88FD83;*/
+	/**/
+	width:22%; /*若.notebook有出現，此處width改為22*/
+}
+/*新手上路按鈕*/
+.help {
+	margin:0px 15px 0 0; /*若.notebook有出現，此處改為margin:0px 8px 0 0*/
+}
+.help img {
+}
+/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+.notebook {
+	margin:0px 8px 0 0;
+}
+.notebook img {
+}
+
+/*========================================*/
+
+/*=================================*/
+/*影音媒體-容器 - 包裝 媒體物件 和 .playbackDiv*/
+.mediaDiv {
+	width:320px; 
+	height:300px; 
+}
+
+/*播放介面UI外觀元素佈署*/
+/*=====================================================*/
+/*●●●播放控制介面-外容器●●●*/
+.playbackDiv {
+	/*background:url(../tPlayer_CSS/playerUI/bg_640px_2.png) #FFF repeat-x;*/
+}
+/*播放控制介面-內容器*/
+/*●○●○●.pbDivInner_2有用em設定font-size，所以其內層的元素使用em需注意「級聯」關係*/
+.pbDivInner {
+}
+/*左邊界*/
+.pbLeft {
+	margin:3px 0 0 0; /*原3px 10px 0 0*/
+}
+/*播放/暫停按鈕-容器*/
+.playPause {
+	/*●1070529*/
+	margin:3px 0 0 -5px; /*原margin:3px 0 0 0 ---> 3px 0 0 -15px*/
+}
+/*播放/暫停按鈕-圖形*/
+.playPause > img {
+}
+/*顯示目前播放時間-容器*/
+.currTime {
+	margin:3px 0 0 -5px; /*原margin:3px 0 0 0*/
+}
+
+/*******.barOuter、.track和.progressBar*******/
+/*↓↓↓--------------------------------*/
+
+/*.track和.progressBar的容器*/
+.barOuter {
+}
+/*播放進度列之下層軌道-容器*/
+.track {
+}
+.track > img {
+}
+/*播放進度列-容器-隨播放時間伸縮*/
+.progressBar {
+}
+/*播放進度列-圖形-隨播放時間伸縮*/
+.progressBar > img {
+}
+.slider {
+}
+.slider > img {
+}
+
+/*↑↑↑--------------------------------*/
+
+/*顯示媒體長度-容器*/
+.totalTime {
+	margin:3px -5px 0 0; /*tPlayer.css原為margin:3px 0 0 0*/
+}
+/*全畫面/一般畫面按鈕-容器*/
+.fullNormalScreen {
+	/*1070529*/
+	margin:3px -5px 0px 0px; /*tPlayer.css原為margin:3px 0 0 0 ---> 3px -15px 0px 0px*/
+}
+/*全畫面/一般畫面按鈕-圖形*/
+.fullNormalScreen >img {
+}
+/*右邊界*/
+.pbRight {
+	margin:3px 0 0 0; /*tPlayer.css原為margin:3px 0 0 10px*/
+}
+
+/*●○ timeCode暫停點的圖示容器*/
+.dotSpan {
+	top:19px; /*tPlayer.css原為top:16px*/
+	/*background:url(../tPlayer_CSS/playerUI/dot.png) no-repeat;*/
+}
+/*=====================================================*/
+
+
+.fontSizeSwitcher {
+	margin:-10px 0px 5px auto; /*原margin:-10px -10px 5px auto*/
+}
+
+
+
+
+/*》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》*/
+/*●○●○●○第2組UI介面，用於小尺寸行動裝置●○●○●*/
+/*》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》*/
+
+
+
+
+
+/* 《 2 》播放介面UI外觀元素佈署 - 《 2 》 */
+/*=====================================================*/
+/*=====================================================*/
+/*=====================================================*/
+/*●●●播放控制介面-外容器●●●*/
+.playbackDiv_2 {
+}
+
+/*******.barOuter_2、.track_2和.progressBar_2*******/
+/*↓↓↓--------------------------------*/
+
+/*.track_2和.progressBar_2的容器*/
+.barOuter_2 {
+}
+/*播放進度列之下層軌道-容器*/
+.track_2 {
+}
+.track_2 > img {
+}
+/*播放進度列-容器-隨播放時間伸縮*/
+.progressBar_2 {
+}
+/*播放進度列-圖形-隨播放時間伸縮*/
+.progressBar_2 > img {
+}
+.slider_2 {
+}
+.slider_2 > img {
+}
+/*●○ timeCode暫停點的圖示容器*/
+.dotSpan_2 {
+}
+/*↑↑↑--------------------------------*/
+
+/*播放控制介面-內容器*/
+/*●○●○●.pbDivInner_2有用em設定font-size，所以其內層的元素使用em需注意「級聯」關係*/
+.pbDivInner_2 {
+}
+/*左邊界*/
+.pbLeft_2 {
+	margin:4px 7px 0px 0px; /*(.pbLeft)原margin:3px 0 0 0*/
+}
+/*播放/暫停按鈕-容器*/
+.playPause_2 {
+	margin:4px 0 0 0; /*(.playPause)原margin:3px 0 0 -15px*/
+}
+/*播放/暫停按鈕-圖形*/
+.playPause_2 > img {
+}
+/*顯示目前播放時間-容器*/
+.currTime_2 {
+	margin:4px 0 0 0; /*(.currTime)原margin:3px 0 0 -5px*/
+}
+
+/*顯示媒體長度-容器*/
+.totalTime_2 {
+	margin:4px 20px 0 0; /*(.totalTime)原margin:3px -5px 0 0*/
+}
+/*全畫面/一般畫面按鈕-容器*/
+.fullNormalScreen_2 {
+	margin:4px 0 0 0; /*(.fullNormalScreen)原margin:3px -15px 0px 0px*/
+}
+/*全畫面/一般畫面按鈕-圖形*/
+.fullNormalScreen_2 >img {
+}
+/*右邊界*/
+.pbRight_2 {
+	margin:4px 0 0 10px; /*(.pbRight)原margin:3px 0 0 0*/
+}
+/*=====================================================*/
+
+
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ 
+
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:769px) {
+	
+	body {
+		background:#FFFFFF; /*原background: #B39B82*/
+	}
+	
+	/*●有媒體檔的頁面：.pageWrapper寬高不可設定，因，當以小尺寸視窗進入，此處若有設定寬高(100%也不行)，會抓不到大尺寸視窗的800px，而抓到此處縮小視窗寬度後的小尺寸視窗寬度。這時把視窗拉大，由於沒抓到大視窗在CSS中的初始寬度，因此無法恢復寬度 - ●已修改程式，所以可以設為100%了*/
+	.pageWrapper {
+		padding:0 0 60px 0; /*原padding:0px 0px 0px 0px*/
+		width:100%;
+	}
+	
+	/*最上方標題列.g203_header*/
+	/*↓------------------------------↓*/
+	.g203_header {
+		margin:0px 0px 0px 0px; /*原margin:0 0 50px 0;*/
+	}
+	.g203_headerString {
+	}
+	/*↑------------------------------↑*/
+
+	
+	/*包裹 .mediaHeader、.mediaDiv、.playbackDiv ...等之外圍容器*/
+	.mediaWrapper {
+		margin:0px 0px 0px 0px; /*原margin:0px 0px 0px 80px*/
+		/*==================*/
+	}
+		
+	/*標提列*/
+	/*========================================*/
+	/*媒體標提列-容器*/
+	.mediaHeader {
+		/*取消圓角*/
+		border-top-left-radius:0; /*原border-top-left-radius:6px*/
+		border-top-right-radius:0; /*原border-top-right-radius:6px*/	
+		
+		padding:5px 0 5px 0; /*原padding:2px 0 2px 0 - (RWD狀態下，padding的上下皆5px，高度比較合適) */
+	}
+	
+	/*標提列-icon-容器*/
+	.icon {
+		padding:0 10px 0 23px; /*原padding:0 18px 0 15px*/
+	}
+	
+	/*標提列-字串-容器*/
+	.mediaHeaderString {
+		/*原本與.buttons共用100%，為82%，在小尺寸視窗設為100%*/
+		width:100%;
+	}
+	/*標提列右側.notebook和.help的容器*/
+	.buttons {
+		/*與.mediaHeaderString共用100%，當.mediaHeaderString設為100%，.button自動歸0%*/
+		/*width:18%;*/
+	}
+	/*新手上路按鈕*/
+	.help {
+		/*原本為display: table-cell;*/
+		display: none;
+	}
+	/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+	.notebook {
+		/*原本為display: table-cell;*/
+		display: none;
+	}
+	/*========================================*/
+	
+	
+	
+	/*大綱文字*/
+	/*↓------------------------------↓*/
+	.g203_outline {
+		margin:0px 0px 0px 0px; /*原margin:0px 0px 0px 23px*/
+		padding:20px 9px 3px 12px; /*原padding:15px 9px 3px 8px*/
+		width:100%; /*原width:310px*/
+		height:auto; /*原height:330px*/
+		background:#FFFFFF; /*原未設定，即為transparent*/
+	}
+	.g203_subtitle {
+	}
+	ul.g203_ul {
+	}
+	ul.g203_ul li {
+	}
+	/*↑------------------------------↑*/
+	
+	
+	/*「文字大小切換」*/
+	/*↓------------------------------↓*/
+	.fontSizeSwitcher {
+		background:url(); /*原在TPlayer.css - background:url(images/fontSizeSwitcherBg.png) no-repeat*/
+		margin:-10px auto 5px -2px; /*原margin:-10px 0px 5px auto*/
+	}
+	/*↑------------------------------↑*/
+	
+	
+	
+	/*▲☆★ 「點小圖跳大圖」、「無點小圖跳大圖」*/
+	/*↓------------------------------↓*/
+	/*▲☆★ - 「點小圖跳大圖」、「無點小圖跳大圖」 的容器div 
+	--- 已由程式根據externalData.js的param.rwdSmallWindowImgPercent操控寬度，高度自動比例*/
+	/*.toBigPic, normalPic {
+	}*/
+	
+	/*▲☆★ - 已在程式中設為100%*/
+	/*「.toBigPic > img」小圖本身寬度設為100%，則寬度由「.toBigPic」的寬度來決定*/
+	/*.toBigPic > img {
+	}*/
+	
+	/*▲☆★ - 已在程式中設為100%*/
+	/*==============================================================*/
+	/*.normalPic > img {
+	}*/
+	/*==============================================================*/
+	
+	
+	/* 放大鏡圖示的容器 (圖形具備放大功能時，自動附加放大鏡圖示)，小尺寸視窗因無法定位，所以需隱藏*/
+	.zoomIconSpan {
+		display:none; /*原display:block*/
+	}
+	/*↑------------------------------↑*/
+	
+		
+	
+}
+	

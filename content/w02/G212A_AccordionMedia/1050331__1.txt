@@ -1,0 +1,32 @@
+
+
+pageWrapper
+
+g212A_accordionDiv
+
+g212A_itemGroupDiv
+
+g212A_itemUnit
+g212A_itemBody
+g212A_contentFrame
+
+$('.g212A_accordionDiv, .g212A_itemGroupDiv, g212A_itemUnit, .g212A_itemBody, .g212A_contentFrame').width($(parent.window).width());
+
+
+
+==============================================
+663
+method.modifyMediaWidth = function(index){
+
+
+1017
+1224
+
+
+if($(window).width() <= param.breakpoint){
+						param.mediaWidthArr[index] = $(window).width();
+					}
+					
+					if($(parent.window).width() <= param.breakpoint){
+						param.mediaWidthArr[index] = $(parent.window).width();
+					}

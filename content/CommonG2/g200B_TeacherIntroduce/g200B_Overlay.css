@@ -1,0 +1,270 @@
+﻿@charset "utf-8";
+/* CSS Document - G200B│g200B_Overlay.css */
+
+
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background-color: #E3DFC4;
+
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 100%; 
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px*/
+}
+
+p, ul, ol{
+	margin:0 0 0 0;
+}
+
+/*頁面最大容器*/
+/*程式初始化時，會來抓取width和min-height的字串值*/
+.pageWrapper {
+	/*◎居中*/
+	/*margin:0 auto 0 auto;*/
+	/*◎從這裡調整.mediaWrapper播放介面的《垂直方向位置》 - padding-top*/
+	padding:8px 0px 0px 0px; 
+	width:800px; 
+	min-height:700px; 
+	height:auto;
+	background: #f0ecd1 url(images/bg_1.jpg);
+	display:block;
+}
+
+/*最上方標題列.g203_header*/
+/*↓------------------------------↓*/
+.g200B_header {
+	display:table;
+	margin:0px auto 0px auto;
+	padding:0px 0px 0px 0px;
+	width:100%;
+	height:50px;
+	text-align:center;
+	background: url(images/title_bg_1.png) no-repeat center;
+	
+}
+.g200B_headerString {
+	display:table-cell;
+	vertical-align:middle;
+	padding:0 30px 0 30px;
+	width:100%;
+	height:auto;
+	/*background:#82FFA7;*/
+	
+	color: #5b4e10;
+	font-weight:500;
+	font-size: 1.2em;
+	line-height: 1.2em;
+	letter-spacing:0.0625em; 
+	
+	/*text-shadow: 2px 2px 2px #CCC;
+	-moz-text-shadow: 2px 2px 2px #CCC;
+	-webkit-text-shadow: 2px 2px 2px #CCC;*/
+}
+/*↑------------------------------↑*/
+
+
+/*師資介紹 - 表格*/
+/*↓------------------------------↓*/
+/*師資介紹 - 外層容器*/
+.teacherInfo {
+	display:block;
+	margin:10px auto 0px auto;
+	padding:10px 10px 10px 10px;
+	width:93%;
+	height:auto;
+	background: #f0ecd1;
+	border:1px solid #FFF;
+	
+	/*圓角*/
+	border-top-left-radius:10px; 
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px; 
+	border-bottom-right-radius:10px; 
+	
+	/* 斷行 */
+	white-space: normal; 
+	word-wrap: break-word; 
+	word-break: break-all; 
+}
+
+
+/*表格table*/
+.teacherTable {
+	width:100%;
+	height:auto;
+	border-collapse:collapse;
+	line-height: 1.2em;
+}
+/*表格.teacherTable裡面的UL，左外邊界設為20px*/
+.teacherTable UL {
+	margin:0 0 0 20px;
+}
+/*表格.teacherTable裡面的 a標籤，(連結)設為無底線*/
+.teacherTable a {
+	text-decoration:none;
+}
+/*表格.teacherTable及其內的th、tr、td的border框線設定*/
+.teacherTable, th, tr, td{
+	border:1px solid #29661A;
+}
+/*表格.teacherTable之內的td*/
+.teacherTable td {
+	padding:15px;
+	min-height:35px;
+	vertical-align: middle;
+	text-align: left;
+	
+	/*「經歷」的內容文字欄位下方的框線在IE會不見，在此重複設定一次，
+		但顏色值刻意差一些(#29661A和#29661B的差異)，才有作用*/
+	border-bottom:1px solid #29661B; 
+}
+
+/*此列包括 姓名、現職、學歷、經歷、學術專長、學術研究、講授章節 的〈名稱〉*/
+td.item_name {
+	min-width:100px;
+}
+/*此列包括 姓名、現職、學歷、經歷、學術專長、學術研究、講授章節 的〈值〉*/
+td.item_value {
+}
+/*td.item_pic 為 .teacherPicTable的父層容器。 老師的照片在表格.teacherPicTable裡面*/
+td.item_pic {
+	text-align:center;
+}
+/*表格.teacherPicTable裡面的各種tr、td、th標籤的border都設為無。才不會受到表格.teacherTable的相關css影響*/
+.teacherPicTable, .teacherPicTable tr, .teacherPicTable td, .teacherPicTable th {
+	border: none;
+}
+/*表格.teacherPicTable 左右居中於其父層。 其父層可為 .item_pic 或 .insertPic */
+.teacherPicTable {
+	margin:0 auto 0 auto;
+}
+	
+/*↑------------------------------↑*/
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ */
+
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:769px) {
+	
+	/**/
+	.pageWrapper {
+		padding:8px 0 100px 0; /*原padding:8px 0px 0px 0px*/
+		width:100%; /*原width:800px*/
+		background-repeat:no-repeat;
+		background-position:center top;
+	}
+	
+	
+	/*最上方標題列.g200B_header*/
+	/*↓------------------------------↓*/
+	.g200B_header {
+	}
+	.g200B_headerString {
+	}
+	/*↑------------------------------↑*/
+	
+	
+	/*表格*/
+	/*↓------------------------------↓*/
+	/*表格外圍容器*/
+	.teacherInfo {
+		width:100%;
+	}
+	/*表格：於一般尺寸CSS，已設為100%*/
+	.teacherTable {
+	}
+	/*此列包括 姓名、現職、學歷、經歷、學術專長、學術研究、講授章節 的〈名稱〉*/
+	td.item_name {
+		width:20%;
+	}
+	/*此列包括 姓名、現職、學歷、經歷、學術專長、學術研究、講授章節 的〈值〉*/
+	td.item_value {
+		width:80%;
+	}
+	/*td.item_pic 為 .teacherPicTable的父層容器。 老師的照片在表格.teacherPicTable裡面*/
+	td.item_pic {
+	}
+	/*.teacherPicTable寬度若設100%，遇小尺寸視窗時，老師照片的寬度會依照.teacherPicTable的寬度*/
+	/*但Mobile擺橫式，圖檔會太大。所以，不設為100%*/
+	.teacherPicTable {
+		/*width:100%;*/
+	}
+	/*老師照片寬度設為100%會根據其父層的寬度做為照片寬度。*/
+	/*行動裝置在小尺寸視窗，圖檔若不設為100%，可能會將表格寬度擠出.teacherInfo之外*/
+	.teacherPicTable img {
+		width:100%;
+	}
+	/*↑------------------------------↑*/
+	
+
+	
+	
+	/*「文字大小切換」*/
+	/*↓------------------------------↓*/
+	.fontSizeSwitcher {
+		background:url(); /*原在TPlayer.css - background:url(images/fontSizeSwitcherBg.png) no-repeat;*/
+	}
+	/*↑------------------------------↑*/
+	
+	
+}
+	
+	

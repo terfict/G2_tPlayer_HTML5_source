@@ -1,0 +1,2 @@
+94.23.174.56 - - [16/Sep/2016:05:47:23 -0700] "GET /?author=1 HTTP/1.1" 200 945 "-" "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:28.0) Gecko/20100101 Firefox/28.0"
+94.23.174.56 - - [16/Sep/2016:05:47:23 -0700] "GET /administrator/index.php HTTP/1.1" 404 857 "-" "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:28.0) Gecko/20100101 Firefox/28.0"

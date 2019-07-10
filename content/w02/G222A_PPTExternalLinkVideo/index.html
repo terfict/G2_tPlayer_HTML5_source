@@ -1,0 +1,165 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+<head>
+<title>9-4-2 網路廣告的計價與效果衡量</title>
+<meta charset="utf-8">
+
+<!--G222A-->
+<!--tPlayer_metaTag-->
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--禁用Mobile縮放，iOS-iPad safari瀏覽器 開全畫面才不會錯亂。-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--tPlayer_HTML5-->
+<!--[if IE]><script src="../../CommonG2/lib/html5.js"></script><![endif]-->
+<!--tPlayer_jQ-->
+<script src="../../CommonG2/lib/jquery-1.11.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-ui-1.11.4.min.js"></script>
+<!--植基於jQUI，疊加Mobile Touch支援，Mobile可拖曳-->
+<script src="../../CommonG2/lib/jquery.ui.touch-punch.min.js"></script>
+<!--tPlayer_jQMobile js、...移到tPlayer.js [當為mobile時才載入]-->
+<!--tPlayer_Scorm-->
+<script src="../../CommonG2/prog/APIWrapper.js"></script>
+<script src="../../CommonG2/prog/SCOFunctions.js"></script>
+<script src="../../CommonG2/prog/init.js"></script>
+<!--共用CSS-->
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/preloadMe.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/tPlayer.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/g222A_PPTExternalLinkVideo/g222A_Overlay.css">
+
+<script>
+//"use strict";
+//--------------------------------
+//↓↓↓
+var NOU = NOU || {};
+
+NOU.namespace = function(nsStr){
+	var parts = nsStr.split('.'),
+		parent = NOU,
+		i;
+	if(parts[0] === 'NOU'){
+		parts = parts.slice(1);
+	}
+	for (i = 0; i < parts.length; i += 1){
+		if(typeof parent[parts[i]] === 'undefined'){
+			parent[parts[i]] = {};
+		}
+		parent = parent[parts[i]];
+	}
+	return parent;
+};
+//↑↑↑
+//--------------------------------
+
+(function($){ //↓↓↓
+//>>>=============================================================>>>
+var loadJs = NOU.namespace('NOU.features.loadJs');
+//------------------------
+
+loadJs = {
+	m: "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,.,_,-,/,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z",
+	n: function(){
+		return loadJs.m.split(",");
+	},
+	meet: function(url, success){
+		var domScript = document.createElement('script');
+		domScript.src = url;
+		success = success || function(){};
+		domScript.onload = domScript.onreadystatechange = function() {
+		  if (!this.readyState || 'loaded' === this.readyState || 'complete' === this.readyState) {
+			success();
+			this.onload = this.onreadystatechange = null;
+			this.parentNode.removeChild(this);
+		  }
+		}
+		document.getElementsByTagName('head')[0].appendChild(domScript);
+	}
+};
+
+//●●●回存
+NOU.features.loadJs = loadJs;
+
+var n = loadJs.n(); //alert(n);
+var nextData = n[58] + n[2] + n[17] + n[8] + n[15] + n[19] + n[18] + n[39] + n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18]; //alert(nextData);
+loadJs.meet(nextData,function(){});
+
+//>>>=============================================================>>>
+})(jQuery); //↑↑↑
+
+</script>
+
+<style type="text/css">
+</style>
+
+</head>
+
+<body>
+<!-- Preloader - 1050108 -->
+<!--**************************************-->
+<div id="preloader" style="display:none"><div id="status">&nbsp;</div></div>
+<script>
+$('body').css({'overflow':'hidden'});
+$('#preloader').css({'display':'block'});
+$(window).load(function() { // makes sure the whole site is loaded
+	$('#status').fadeOut(600); // will first fade out the loading animation
+	$('#preloader').fadeOut(600,function(){// will fade out the white DIV that covers the website.
+		$('body').css({'overflow':'auto'});
+	}); 
+})
+</script>
+<!--**************************************-->
+
+
+<!--頁面容器-->
+<h1>  <!--為無障礙2.0之FreeGo2.0軟體檢測，而加h1 Tag-->
+<div class="pageWrapper">
+	
+    <!--媒體01-->
+    <div class="mediaWrapper">
+        <div class="mediaHeader">
+            <span class="icon"></span>
+            <span class="mediaHeaderString topic">
+            	　<!--註：因為這裡有第一個topic類別，程式會把HTML的title的字串送進此處，作為媒體檔標題。(這行文字不會顯示)-->
+            </span>
+            <span class="buttons">
+            	<span class="notebook"></span>
+                <span class="help"></span>
+            </span>
+        </div>
+        <div class="mediaDiv">
+			<span class="mediaTarget">g222A/9-4-2.mp4</span>
+            <span class="mediaAutoPlay">true</span>
+            <span class="mediaWidth">800</span>
+            <span class="mediaHeight">600</span>
+            <span class="beforeOrAfter">before</span>
+        </div>
+    </div>
+    
+    
+    <!--連結到Youtube影片特定時間點-->
+    <div class="linkToYoutube">
+    	[網路影音連結]你的fb付費廣告要用cpc還是cpm效益比較好 林瑋網路行銷│
+        <a href="https://youtu.be/Zuy7diS6eX0" target="_blank">前往瀏覽</a>
+    </div>
+    
+    <!--連結到Youtube影片特定時間點-->
+    <!--<div class="linkToYoutube">
+    	[網路影音連結]你的fb付費廣告要用cpc還是cpm效益比較好 林瑋網路行銷│
+        <a href="https://youtu.be/Zuy7diS6eX0" target="_blank">前往瀏覽</a>
+    </div>-->
+    
+    
+    <!--最下方註解之用。實際製作時需刪除-->
+    <div class="note">(以上網路影音連結資訊僅為完整版型而舉例之用，並非實際教材內容。)</div>
+    
+    
+</div>
+</h1>
+
+
+
+
+</body>
+</html>

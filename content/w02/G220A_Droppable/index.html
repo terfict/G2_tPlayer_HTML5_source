@@ -1,0 +1,258 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+<head>
+<title>1-2-3 自我評量：拖曳配合題</title>
+<meta charset="utf-8">
+
+<!--G220A-->
+<!--metaTag-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--HTML5-->
+<!--[if IE]><script src="../../CommonG2/lib/html5.js"></script><![endif]-->
+<!--CSS-->
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/preloadMe.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/tPlayer.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/g220A_droppable/g220A_Overlay.css">
+
+<style type="text/css">
+</style>
+
+<script>
+//--------------------------------
+var mainPath = "../../CommonG2/";
+var g220ADir = "g220A_droppable";
+//--------------------------------
+
+//--------------------------------
+//↓↓↓
+var NOU = NOU || {};
+
+NOU.namespace = function(nsStr){
+	var parts = nsStr.split('.'),
+		parent = NOU,
+		i;
+	if(parts[0] === 'NOU'){
+		parts = parts.slice(1);
+	}
+	for (i = 0; i < parts.length; i += 1){
+		if(typeof parent[parts[i]] === 'undefined'){
+			parent[parts[i]] = {};
+		}
+		parent = parent[parts[i]];
+	}
+	return parent;
+};
+//↑↑↑
+//--------------------------------
+
+(function(){ //↓↓↓
+//>>>=============================================================>>>
+var loadJs = NOU.namespace('NOU.features.loadJs');
+var param = NOU.namespace('NOU.modules.tPlayer.param');
+//------------------------
+
+
+loadJs = {
+	m: "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,.,_,-,/,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z",
+	n: function(){
+		return loadJs.m.split(",");
+	},
+	meet: function(url, success){
+		var domScript = document.createElement('script');
+		domScript.src = url;
+		success = success || function(){};
+		domScript.onload = domScript.onreadystatechange = function() {
+		  if (!this.readyState || 'loaded' === this.readyState || 'complete' === this.readyState) {
+			success();
+			this.onload = this.onreadystatechange = null;
+			this.parentNode.removeChild(this);
+		  }
+		}
+		document.getElementsByTagName('head')[0].appendChild(domScript);
+	}
+};
+
+//1051103
+param.mainPath = mainPath;
+
+//●●●回存
+NOU.features.loadJs = loadJs;
+
+var n = loadJs.n(); //alert(n);
+
+//var nextData = n[58] + n[2] + n[17] + n[8] + n[15] + n[19] + n[18] + n[39] + n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18]; //alert(nextData);
+//loadJs.meet(nextData,function(){});
+
+//var nextData = n[6]+n[28]+n[27]+n[29]+n[40]+n[37] + n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18];  
+//alert(nextData); //g220A_next.js
+
+var nextData = n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18];  
+//alert(nextData); //nextPage.js
+loadJs.meet(param.mainPath + g220ADir + '/' + nextData,function(){});
+
+//>>>=============================================================>>>
+})(); //↑↑↑
+
+</script>
+
+</head>
+
+
+<body>
+<!-- Preloader - 1050108 -->
+<!--**************************************-->
+<div id="preloader" style="display:none"><div id="status">&nbsp;</div></div>
+<script>document.getElementById("preloader").style.display="block";</script>
+<!--**************************************-->
+
+
+<!--頁面容器.pageWrapper-->
+<div class="pageWrapper">
+
+<!--標題列-->
+<h1>  <!--為無障礙2.0之FreeGo2.0軟體檢測，而加h1 Tag-->
+<div class="g220A_header">
+	<div class="topic"></div>
+</div>
+</h1>
+
+
+
+<!--.g220A_workArea：在g220A_header下方的整個工作區塊-->
+<div class="g220A_workArea">
+<!--============================================-->
+
+
+    <!--題號、題目-->
+	<div class="question">題目(配合題)：你是大毛；我是中中；他是小華。</div>
+    
+
+    <!--「.targetOuter」：一組置放用目標物件的容器-->
+    <!--「.target」：問題項目。置放用目標物件。-->
+    <!--.target的「data-match屬性値」：匹配的「拖曳選項.dragger」的id名稱，id前面包含#字。-->
+    <!--.target的「data-text屬性値」：答題正確時，所顯示出來的答題內容-->
+    <div class="targetZone">
+    
+        <span class="targetOuter">
+            <span class="target" data-match="#DaMao" data-text="你是小毛">
+            	<img src="images/you.png" alt="圖形">
+            </span>
+        </span>
+        
+        <span class="targetOuter">
+            <span class="target" data-match="#ZhongZhong" data-text="我是中中">
+            	<img src="images/me.png" alt="圖形">
+            </span>
+        </span>
+        
+        <span class="targetOuter">
+            <span class="target" data-match="#XiaoHua" data-text="他是小華">
+            	<img src="images/him.png" alt="圖形">
+            </span>
+        </span>
+        
+        <!--<span class="targetOuter">
+            <span class="target">
+            	<img src="images/it.png" alt="圖形">
+            </span>
+        </span>-->
+
+        
+    </div>
+    
+    
+    
+    <!--拖曳答題之後的「正確或錯誤」回饋區-->
+    <div class="feedbackZone">
+    	<span class="feedbackIcon"></span><span class="feedbackString">使用滑鼠(手指)拖曳下方物件到上方匹配物件範圍內，鬆開滑鼠按鍵。</span>
+    </div>
+    
+    <!--答題完成後的反饋資訊-->
+	<div class="completedInfo">全部答對。您已經完成本題</div>
+    
+    <!--每一拖曳答題正確時，所顯示的答題內容-->
+    <div class="correctFeedback">※您的答題：</div>
+    
+    
+    
+    <!--「.draggerOuter」：一組拖曳物件的容器-->
+    <!--「.dragger」：拖曳選項。被拖曳的物件。必須明確給定id。混淆用多餘的.dragger則不必設定id。-->
+    <div class="draggerZone">
+    
+        <sapn class="draggerOuter">
+            <sapn class="dragger" id="DaMao">
+            	<img src="images/DaMao.png" alt="圖形">
+            </sapn>
+        </sapn>
+        
+        <sapn class="draggerOuter">
+            <sapn class="dragger" id="ZhongZhong">
+            	<img src="images/ZhongZhong.png" alt="圖形">
+            </sapn>
+        </sapn>
+        
+        <sapn class="draggerOuter">
+            <sapn class="dragger" id="XiaoHua">
+            	<img src="images/XiaoHua.png" alt="圖形">
+            </sapn>
+        </sapn>
+        
+        <!--<sapn class="draggerOuter">
+            <sapn class="dragger">
+            	<img src="images/XiaoMing.png" alt="圖形">
+            </sapn>
+        </sapn>-->
+        
+    </div>
+    
+
+
+</div>
+<!--============================================-->
+<!--.g220A_workArea-->
+
+
+
+
+<!--**************************語音m4a**************************-->
+<!--媒體01：答對時的音效-->
+<div class="mediaWrapper">
+
+	<!--.mediaWrapper裡面要有一個.help，頁面上才會出現[新手上路按鈕]-->
+	<span class="help"></span>
+    
+    <div class="mediaDiv">
+        <span class="mediaTarget">g220A/right.m4a</span>
+        <span class="mediaAutoPlay">false</span>
+        <span class="mediaWidth">640</span>
+        <span class="mediaHeight">1</span>
+        <span class="beforeOrAfter">before</span>
+    </div>
+</div>
+
+<!--媒體02：答錯時的音效-->
+<div class="mediaWrapper">
+    <div class="mediaDiv">
+        <span class="mediaTarget">g220A/wrong.m4a</span>
+        <span class="mediaAutoPlay">false</span>
+        <span class="mediaWidth">640</span>
+        <span class="mediaHeight">1</span>
+        <span class="beforeOrAfter">before</span>
+    </div>
+</div>
+<!--**************************語音m4a**************************-->
+
+
+                
+    
+</div>
+<!--頁面容器.pageWrapper-->
+
+
+<!--測試用，已在CSS裡面隱藏-->
+<div class="showInfo"></div>
+
+</body>
+</html>

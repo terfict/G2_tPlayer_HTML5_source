@@ -1,0 +1,213 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+<head>
+<title>G223A「自我評量﹝A﹞：單選+語音出題」</title>
+<meta charset="utf-8">
+
+<!--G223A-->
+<!--tPlayer_metaTag-->
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--禁用Mobile縮放，iOS-iPad safari瀏覽器 開全畫面才不會錯亂。Android瀏覽器仍可手動設定為可縮放。-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--tPlayer_HTML5-->
+<!--[if IE]><script src="../../CommonG2/lib/html5.js"></script><![endif]-->
+<!--tPlayer_jQ-->
+<script src="../../CommonG2/lib/jquery-1.11.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-ui-1.11.4.min.js"></script>
+<!--植基於jQUI，疊加Mobile Touch支援，Mobile可拖曳-->
+<script src="../../CommonG2/lib/jquery.ui.touch-punch.min.js"></script>
+<!--tPlayer_jQMobile js、...移到tPlayer.js [當為mobile時才載入]-->
+<!--tPlayer_Scorm-->
+<script src="../../CommonG2/prog/APIWrapper.js"></script>
+<script src="../../CommonG2/prog/SCOFunctions.js"></script>
+<script src="../../CommonG2/prog/init.js"></script>
+
+<!--共用CSS，載入順序請勿變動-->
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/preloadMe.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/tPlayer.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/g223A_quizNAudio/tPlayer_QuizC.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/g223A_quizNAudio/g223A_Overlay.css">
+
+<script>
+//"use strict";
+//--------------------------------
+//↓↓↓
+var NOU = NOU || {};
+
+NOU.namespace = function(nsStr){
+	var parts = nsStr.split('.'),
+		parent = NOU,
+		i;
+	if(parts[0] === 'NOU'){
+		parts = parts.slice(1);
+	}
+	for (i = 0; i < parts.length; i += 1){
+		if(typeof parent[parts[i]] === 'undefined'){
+			parent[parts[i]] = {};
+		}
+		parent = parent[parts[i]];
+	}
+	return parent;
+};
+//↑↑↑
+//--------------------------------
+
+(function($){ //↓↓↓
+//>>>=============================================================>>>
+var loadJs = NOU.namespace('NOU.features.loadJs');
+//------------------------
+
+loadJs = {
+	m: "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,.,_,-,/,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z",
+	n: function(){
+		return loadJs.m.split(",");
+	},
+	meet: function(url, success){
+		var domScript = document.createElement('script');
+		domScript.src = url;
+		success = success || function(){};
+		domScript.onload = domScript.onreadystatechange = function() {
+		  if (!this.readyState || 'loaded' === this.readyState || 'complete' === this.readyState) {
+			success();
+			this.onload = this.onreadystatechange = null;
+			this.parentNode.removeChild(this);
+		  }
+		}
+		document.getElementsByTagName('head')[0].appendChild(domScript);
+	}
+};
+
+//●●●回存
+NOU.features.loadJs = loadJs;
+
+var n = loadJs.n(); //alert(n);
+var nextData = n[58] + n[2] + n[17] + n[8] + n[15] + n[19] + n[18] + n[39] + n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18]; //alert(nextData);
+loadJs.meet(nextData,function(){});
+
+//>>>=============================================================>>>
+})(jQuery); //↑↑↑
+
+</script>
+
+<style type="text/css">
+</style>
+
+</head>
+
+
+<body>
+<!-- Preloader - 1050108 -->
+<!--**************************************-->
+<div id="preloader" style="display:none"><div id="status">&nbsp;</div></div>
+<script>
+$('body').css({'overflow':'hidden'});
+$('#preloader').css({'display':'block'});
+$(window).load(function() { // makes sure the whole site is loaded
+	$('#status').fadeOut(600); // will first fade out the loading animation
+	$('#preloader').fadeOut(600,function(){// will fade out the white DIV that covers the website.
+		$('body').css({'overflow':'auto'});
+	}); 
+})
+</script>
+<!--**************************************-->
+
+
+<!--頁面容器-->
+<div class="pageWrapper">
+
+<h1>  <!--為無障礙2.0之FreeGo2.0軟體檢測，而加h1 Tag-->
+<div class="header"><div class="g223A_help"><a><img src="images/help.png" alt="「新手上路」連結按鈕" title="「新手上路」連結按鈕"></a></div></div>
+</h1>
+
+
+<!--↓↓↓↓↓↓↓↓quiz↓↓↓↓↓↓↓↓↓-->
+<!--評量題目、圖檔與解答的資料區，格式需固定-->
+
+<!--題目與解答.questionsData and .quizSet-->
+<div id="questionsData">
+<div class="quizSet">
+
+    
+
+    <!--●自我測驗_1-->
+    <div class="quizzing">
+    
+        <!--※題目語音檔※-->
+		<span class="mediaTarget addVoice">g223A/01_create.m4a</span>
+    	
+      <div class="questionType">singleChoice</div>
+      <div class="correctAnswer">2</div>
+      <div><span class="question">達文西初次學畫前三年的經驗中，以下何者為錯：</span>
+        <!--單選題：只有這裡...--><!--<span class="pic">quizImages/img1.jpg</span>-->
+        <span class="pic">quizImages/subject.png</span>
+      </div>
+      <div class="answerContainer">
+        <!--...和這裡，可;以嵌入圖檔-->
+        <p><span class="answer">仔細觀察光影變化</span><!--<span class="pic">quizImages/img1.jpg</span>--></p>
+        <p><span class="answer">老師直接教導如何畫人體</span><!--<span class="pic">quizImages/img2.jpg</span>--></p>
+        <p><span class="answer">屬於內隱學習</span><!--<span class="pic">quizImages/img3.jpg</span>--></p>
+        <p><span class="answer">只靠自己的體悟</span><!--<span class="pic">quizImages/img3.jpg</span>--></p>
+      </div>
+      <div class="suggestion">達文西初次學畫的前三年，老師只叫他畫一顆蛋，並非畫人體，且老師也未直接教導他如何畫。</div>
+    </div>
+    
+    
+    <!--●自我測驗_2-->
+    <div class="quizzing">
+    
+        <!--※題目語音檔※-->
+       <span class="mediaTarget addVoice">g223A/noAudio_1.m4a</span>
+    
+      <div class="questionType">singleChoice</div>
+      <div class="correctAnswer">2</div>
+      <div><span class="question">以下關於「內隱學習」的敘述何者為錯？</span>
+        <!--單選題：只有這裡...--><!--<span class="pic">quizImages/img1.jpg</span>-->
+      </div>
+      <div class="answerContainer">
+        <!--...和這裡，可;以嵌入圖檔-->
+        <p><span class="answer">提取察覺不易</span><!--<span class="pic">quizImages/img1.jpg</span>--></p>
+        <p><span class="answer">容易直接教導的</span><!--<span class="pic">quizImages/img2.jpg</span>--></p>
+        <p><span class="answer">倚賴親身經驗</span><!--<span class="pic">quizImages/img3.jpg</span>--></p>
+        <p><span class="answer">根深蒂固、不易檢討</span><!--<span class="pic">quizImages/img3.jpg</span>--></p>
+      </div>
+      <div class="suggestion">「內隱學習」通常都是隱而不顯，無法分析、說明，更沒辦法直接教導的。</div>
+	</div>
+    
+    
+     <!--●自我測驗_3-->
+    <div class="quizzing">
+    
+    	<!--※題目語音檔※-->
+        <span class="mediaTarget addVoice">g223A/03_communication.m4a</span>
+                
+      <div class="questionType">singleChoice</div>
+      <div class="correctAnswer">4</div>
+      <div><span class="question">以下關於「外顯學習」的敘述何者為錯？</span>
+        <!--單選題：只有這裡...--><!--<span class="pic">quizImages/img1.jpg</span>-->
+      </div>
+      <div class="answerContainer">
+        <!--...和這裡，可;以嵌入圖檔-->
+        <p><span class="answer">常由第二手學習而來</span><!--<span class="pic">quizImages/img1.jpg</span>--></p>
+        <p><span class="answer">容易透過言語描述</span><!--<span class="pic">quizImages/img2.jpg</span>--></p>
+        <p><span class="answer">倚賴記憶累積</span><!--<span class="pic">quizImages/img3.jpg</span>--></p>
+        <p><span class="answer">察覺不易</span><!--<span class="pic">quizImages/img3.jpg</span>--></p>
+      </div>
+      <div class="suggestion">「外顯學習」是容易觀察得到，也可以直接教導的。</div>
+    </div>
+    
+
+  
+</div>
+</div>
+<!--題目與解答.questionsData and .quizSet-->
+
+<!--↑↑↑↑↑↑↑↑Quiz↑↑↑↑↑↑↑↑-->
+
+
+</div>
+
+</body>
+</html>

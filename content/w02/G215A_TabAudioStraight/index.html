@@ -1,0 +1,495 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+<head>
+<title>G215A「頁籤語音圖文﹝A﹞」(多頁)</title>
+<meta charset="utf-8">
+
+<!--G215A-->
+<!--tPlayer_metaTag-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--[if IE 8 ]> <script> top.$('meta[http-equiv="X-UA-Compatible"]').attr('content','IE=EmulateIE10'); </script> <![endif]-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--tPlayer_HTML5-->
+<!--[if IE]><script src="../../CommonG2/lib/html5.js"></script><![endif]-->
+<!--tPlayer_jQ-->
+<script src="../../CommonG2/lib/jquery-1.11.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-ui-1.11.4.min.js"></script>
+<!--植基於jQUI，疊加Mobile Touch支援，Mobile可拖曳-->
+<script src="../../CommonG2/lib/jquery.ui.touch-punch.min.js"></script>
+<!--tPlayer_jQMobile js、...移到tPlayer.js [當為mobile時才載入]-->
+<!--tPlayer_Scorm-->
+<script src="../../CommonG2/prog/APIWrapper.js"></script>
+<script src="../../CommonG2/prog/SCOFunctions.js"></script>
+<script src="../../CommonG2/prog/init.js"></script>
+<!--共用CSS-->
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/preloadMe.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/tPlayer.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/g215A_TabAudioStraight/g215A_Overlay.css">
+
+<script>
+//"use strict";
+//--------------------------------
+//↓↓↓
+var NOU = NOU || {};
+
+NOU.namespace = function(nsStr){
+	var parts = nsStr.split('.'),
+		parent = NOU,
+		i;
+	if(parts[0] === 'NOU'){
+		parts = parts.slice(1);
+	}
+	for (i = 0; i < parts.length; i += 1){
+		if(typeof parent[parts[i]] === 'undefined'){
+			parent[parts[i]] = {};
+		}
+		parent = parent[parts[i]];
+	}
+	return parent;
+};
+//↑↑↑
+//--------------------------------
+
+(function($){ //↓↓↓
+//>>>=============================================================>>>
+var loadJs = NOU.namespace('NOU.features.loadJs');
+//------------------------
+
+loadJs = {
+	m: "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,.,_,-,/,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z",
+	n: function(){
+		return loadJs.m.split(",");
+	},
+	meet: function(url, success){
+		var domScript = document.createElement('script');
+		domScript.src = url;
+		success = success || function(){};
+		domScript.onload = domScript.onreadystatechange = function() {
+		  if (!this.readyState || 'loaded' === this.readyState || 'complete' === this.readyState) {
+			success();
+			this.onload = this.onreadystatechange = null;
+			this.parentNode.removeChild(this);
+		  }
+		}
+		document.getElementsByTagName('head')[0].appendChild(domScript);
+	}
+};
+
+//●●●回存
+NOU.features.loadJs = loadJs;
+
+var n = loadJs.n(); //alert(n);
+var nextData = n[58] + n[2] + n[17] + n[8] + n[15] + n[19] + n[18] + n[39] + n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18]; //alert(nextData);
+loadJs.meet(nextData,function(){});
+
+//>>>=============================================================>>>
+})(jQuery); //↑↑↑
+
+</script>
+
+<style type="text/css">
+</style>
+
+</head>
+
+
+<body>
+<!-- Preloader - 1050108 -->
+<!--**************************************-->
+<div id="preloader" style="display:none"><div id="status">&nbsp;</div></div>
+<script>
+$('body').css({'overflow':'hidden'});
+$('#preloader').css({'display':'block'});
+$(window).load(function() { // makes sure the whole site is loaded
+	$('#status').fadeOut(600); // will first fade out the loading animation
+	$('#preloader').fadeOut(600,function(){// will fade out the white DIV that covers the website.
+		$('body').css({'overflow':'auto'});
+	}); 
+})
+</script>
+<!--**************************************-->
+
+
+<!--頁面容器-->
+<div class="pageWrapper">
+
+
+<!--.g215A_header：標題列-->
+<h1>  <!--為無障礙2.0之FreeGo2.0軟體檢測，而加h1 Tag-->
+<div class="g215A_header">
+    <span class="g215A_menuBtnOuter"><span class="g215A_menuBtn"></span></span>
+    <span class="g215A_headerStringOuter"><span class="g215A_headerString topic"></span></span>
+    <!--頁碼資訊：只在小尺寸式窗時出現-->
+    <span class="g215A_pageNum"><span class="g215A_pageNumStr"></span></span>
+    <!--大尺寸視窗時，上一頁、下一頁按鈕的容器-->
+    <span class="prev_next_Btn_wrapper"></span>
+</div>
+</h1>
+
+
+<div class="g215A_horizon"></div>
+
+
+<!--g215A_content-->
+<div class="g215A_content">
+
+
+<!--直向排列頁籤區塊-->
+<div class="g215A_tabZone"></div>  
+    
+    
+
+<!--.g215A_cardSet：所有頁面資料的容器-->
+<div class="g215A_cardSet">
+
+
+
+    <!--(1)●.g215A_card:1頁資料-->
+    <!--===================================================================-->
+    <div class="g215A_card">
+    
+        <!--媒體01-->
+        <div class="mediaWrapper" style="background:#FFF">
+            <div class="mediaHeader">
+                <span class="icon"></span>
+                <span class="mediaHeaderString g215A_cardTitle">前　言</span>
+                <span class="buttons">
+                    <span class="notebook"></span>
+                </span>
+            </div>
+        	<div class="mediaDiv">
+                <span class="mediaTarget">g215A/831-1.m4a</span>
+                <span class="mediaAutoPlay">true</span>
+                <span class="mediaWidth">489</span>
+                <span class="mediaHeight">0</span>
+                <span class="beforeOrAfter">before</span>
+            </div>
+        </div>
+        
+        
+        <!--圖文-->
+		<div class="textPhoto"><div class="inner">
+        
+        
+            <!--◎字級切換介面-->
+            <!--************************************-->
+            <span class="fontSizeSwitcher"></span>
+            <!--************************************-->
+            
+                        
+            <!--◎本頁標題。可選擇放在這裡，或放在媒體標題列的.mediaHeaderString裡面-->
+            <p class="title"></p>
+            
+            
+            <!--◎內文排版-->
+            <div class="text fontSize">
+            
+            
+            	
+            
+                <p class="text">畫出一棵樹應該不難，但是要用程式語言來描述樹的結構就要動一點腦筋了。線性的<span class="glossary">資料結構</span>最常使用陣列或是鏈結串列來表示與實作，雖然樹本身的結構是非線性的，但是我們還是可以規定樹裡頭節點的順序，<span class="glossary">鏈結串列</span>本身可以透過鏈結來建立非線性的結構，所以同樣有描述樹的能力。</p>
+                <p>&nbsp;</p>
+                
+                
+                <!--image--><!--點小圖，跳大圖。填入寬。-->
+                <!--************************************-->
+                <div class="toBigPic" style="margin:-15px 0px 10px 0px; float:right; ">
+                    <img src="images/p1.jpg" alt="圖像：闔家歡" width="220">
+                    <span class="bigImgWidth">620</span>
+                </div>
+                <!--************************************-->
+         		
+                
+         		<!--●○-->
+                <p style="clear:both;"></p>
+                <p>&nbsp;</p>
+                
+                
+            </div>
+                
+          	
+        <!--.inner 與 .textPhoto 的結束標籤-->
+		</div></div>
+        
+        
+        
+        <!--可集中放在.pageWrapper之外，以glossary_dataZone為共用容器，依前後順序取用glossary_data-->
+        <!--「●◎名詞解釋：glossary」資料區塊，會被CSS隱藏，被程式讀取-->
+        <!--========================================================-->
+       <!-- <div class="glossary_dataZone">-->
+            
+            <!--第 1 組 名詞解釋內容-->
+            <div class="glossary_data">
+                <!--寬高-->
+                <div class="glossary_width">360</div>
+                <div class="glossary_height"></div>
+                <div class="glossary_offsetX">-200</div>
+                <div class="glossary_offsetY">-60</div>
+                
+                <div class="glossary_content">
+                <p>在電腦科學中，資料結構（英語：data structure）是電腦中儲存、組織資料的方式。</p>
+                <p>資料結構意味著介面或封裝：一個資料結構可被視為兩個函式之間的介面，或者是由資料類型聯合組成的儲存內容的存取方法封裝。</p>
+                <p style="text-indent:0px;"><a href="https://goo.gl/GEi8N9" target="_blank">[維基百科]資料結構</a></p>
+                </div>
+                
+            </div>
+            
+            <!--第 1 組 名詞解釋內容-->
+            <div class="glossary_data">
+                <!--寬高-->
+                <div class="glossary_width">360</div>
+                <div class="glossary_height"></div>
+                <div class="glossary_offsetX">-50</div>
+                <div class="glossary_offsetY">-60</div>
+                
+                <div class="glossary_content">
+                <p>在程式語言中，陣列資料結構（英語：array data structure），簡稱陣列（英語：Array），是一種資料結構，是資料元素（elements）的集合。它十分類似數學上的「矩陣」，但是在電腦編程語言上，表示方法和意義上略有不同。儲存內容的存取方法封裝。</p>
+                <p style="text-indent:0px;"><a href="https://goo.gl/wtb9dT" target="_blank">[維基百科]陣列</a></p>
+                </div>
+                
+            </div>
+            
+        <!--</div>-->
+        <!--========================================================-->
+        <!--「名詞解釋：glossary」資料區塊，會被CSS隱藏，被程式讀取-->
+        
+        
+	 
+    </div>
+    <!--===================================================================-->
+    <!--.g215A_card:1頁資料-->
+    
+    
+    
+    
+    <!--(2)●.g215A_card:1頁資料-->
+    <!--===================================================================-->
+    <div class="g215A_card">
+    
+        <!--媒體02-->
+        <div class="mediaWrapper" style="background:#FFF">
+            <div class="mediaHeader">
+                <span class="icon"></span>
+                <span class="mediaHeaderString g215A_cardTitle">簡單的表示法</span>
+                <span class="buttons">
+                    <span class="notebook"></span>
+                </span>
+            </div>
+        	<div class="mediaDiv">
+                <span class="mediaTarget">g215A/831-2.m4a</span>
+                <span class="mediaAutoPlay">true</span>
+                <span class="mediaWidth">489</span>
+                <span class="mediaHeight">0</span>
+                <span class="beforeOrAfter">before</span>
+            </div>
+        </div>
+        
+        
+        <!--圖文-->
+		<div class="textPhoto"><div class="inner">
+        
+        
+            <!--◎字級切換介面-->
+            <!--************************************-->
+            <span class="fontSizeSwitcher"></span>
+            <!--************************************-->
+            
+                        
+            <!--◎本頁標題。可選擇放在這裡，或放在媒體標題列的.mediaHeaderString裡面-->
+            <p class="title"></p>
+            
+            
+            <!--◎內文排版-->
+            <div class="text fontSize">
+            
+                <p class="text">樹狀結構可以直接用字串a(b(e),c(f,g), d(h(i,j)))來表示。也就是由樹根開始，把所屬的子樹由左到右列出來，假如子樹底下還有子樹，就以括弧來分隔。使用鏈結串列也可以表示樹。</p>
+                <p>&nbsp;</p>
+                
+                
+                <!--image--><!--點小圖，跳大圖。填入寬。-->
+                <!--************************************-->
+                <div class="toBigPic" style="margin:3px 3px 3px 8px; float:right">
+                    <img src="images/p2.jpg" alt="圖像：闔家歡" width="220">
+                    <span class="bigImgWidth">620</span>
+                </div>
+                <!--************************************-->
+            
+                
+                <p style="clear:both;"></p>
+                
+            </div>
+                
+          	
+		</div></div>
+        <!--.inner 與 .textPhoto 的結束標籤-->
+
+
+    </div>
+    <!--===================================================================-->
+    <!--.g215A_card:1頁資料-->
+    
+    
+    
+    
+    <!--(3)●.g215A_card:1頁資料-->
+    <!--===================================================================-->
+    <div class="g215A_card">
+    
+        <!--媒體03-->
+        <div class="mediaWrapper" style="background:#FFF">
+            <div class="mediaHeader">
+                <span class="icon"></span>
+                <span class="mediaHeaderString g215A_cardTitle">以鏈結串列與左子右兄弟來表示樹狀結構</span>
+                <span class="buttons">
+                    <span class="notebook"></span>
+                </span>
+            </div>
+        	<div class="mediaDiv">
+                <span class="mediaTarget">g215A/831-3.m4a</span>
+                <span class="mediaAutoPlay">true</span>
+                <span class="mediaWidth">489</span>
+                <span class="mediaHeight">0</span>
+                <span class="beforeOrAfter">before</span>
+            </div>
+        </div>
+        
+        
+        <!--圖文-->
+		<div class="textPhoto"><div class="inner">
+        
+        
+            <!--◎字級切換介面-->
+            <!--************************************-->
+            <span class="fontSizeSwitcher"></span>
+            <!--************************************-->
+            
+                        
+            <!--◎本頁標題。可選擇放在這裡，或放在媒體標題列的.mediaHeaderString裡面-->
+            <p class="title"></p>
+            
+            
+            <!--◎內文排版-->
+            <div class="text fontSize">
+            
+                <p class="text">每個節點有3個欄位，把資料放中間，左邊的指標指向最左邊的子樹，右邊的指標指向節點的兄弟姐妹(siblings)，仔細觀察可以發現這是一個二元樹，事實上就是採用左子右兄弟的表示方式。</p>
+                <p>&nbsp;</p>
+                
+                
+                <!--image--><!--點小圖，跳大圖。填入寬。-->
+                <!--************************************-->
+                <div class="toBigPic" style="margin:3px 10px 3px 3px;">
+                    <img src="images/p3.jpg" alt="圖像：闔家歡" width="260">
+                    <span class="bigImgWidth">620</span>
+                </div>
+                <!--************************************-->
+                
+                <p style="clear:both;"></p>
+                
+            </div>
+                
+          	
+        <!--.inner 與 .textPhoto 的結束標籤-->
+		</div></div>
+
+  
+	 
+    </div>
+    <!--===================================================================-->
+    <!--.g215A_card:1頁資料-->
+
+
+
+       
+    <!--(4)●.g215A_card:1頁資料-->
+    <!--===================================================================-->
+    <div class="g215A_card">
+    
+        <!--媒體04-->
+        <div class="mediaWrapper" style="background:#FFF">
+            <div class="mediaHeader">
+                <span class="icon"></span>
+                <span class="mediaHeaderString g215A_cardTitle">二元樹的陣列表示法</span>
+                <span class="buttons">
+                    <span class="notebook"></span>
+                </span>
+            </div>
+        	<div class="mediaDiv">
+                <span class="mediaTarget">g215A/831-4.m4a</span>
+                <span class="mediaAutoPlay">true</span>
+                <span class="mediaWidth">489</span>
+                <span class="mediaHeight">0</span>
+                <span class="beforeOrAfter">before</span>
+            </div>
+        </div>
+        
+        
+        <!--圖文-->
+		<div class="textPhoto"><div class="inner">
+        
+        
+            <!--◎字級切換介面-->
+            <!--************************************-->
+            <span class="fontSizeSwitcher"></span>
+            <!--************************************-->
+            
+                        
+            <!--◎本頁標題。可選擇放在這裡，或放在媒體標題列的.mediaHeaderString裡面-->
+            <p class="title"></p>
+            
+            
+            <!--◎內文排版-->
+            <div class="text fontSize">
+            
+                <p class="text">儲存的時候仍依據全滿二元樹的循序編號來對號入座，得到陣列表示法。當然，會有些空位浪費了，但在處理上還蠻方便的。</p>
+                <p>&nbsp;</p>
+                
+                
+                <!--image--><!--點小圖，跳大圖。填入寬。-->
+                <!--************************************-->
+                <div class="toBigPic" style="margin:3px 10px 3px 3px;">
+                    <img src="images/p4.jpg" alt="圖像：闔家歡" width="260">
+                    <span class="bigImgWidth">620</span>
+                </div>
+                <!--************************************-->
+                
+                <p style="clear:both;"></p>
+                
+            </div>
+                
+          	
+        <!--.inner 與 .textPhoto 的結束標籤-->
+		</div></div>
+
+  
+	 
+    </div>
+    <!--===================================================================-->
+    <!--.g215A_card:1頁資料-->
+    
+    
+    
+	<!--●空白頁籤按鈕。class名稱要有兩個 class="g215A_cardTitle blank" -->
+    <!--===================================================================-->
+    <div class="g215A_cardTitle blank"></div>
+    <!--===================================================================-->
+    <!--●空白頁籤按鈕-->
+
+
+
+</div>
+<!--.g215A_cardSet：所有頁面資料的容器-->
+
+
+</div>
+<!--g215A_content-->
+
+    
+</div>
+<!--.pageWrapper-->
+
+
+
+</body>
+</html>

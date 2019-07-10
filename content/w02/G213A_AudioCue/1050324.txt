@@ -1,0 +1,51 @@
+
+
+1180
+method.createPbHtml = function(index){
+
+1576
+method.getPlaybackUILessThenBP = function(index){
+
+
+1873
+method.caculateSmallWindows = function(index){
+
+
+3059
+method.jqUITouchPunchDrag = function(index){
+
+3099
+method.jqUITouchPunchDrag_2 = function(index){
+
+
+1503
+//建立小尺寸播放介面 Html
+method.createPbLessThenBPHtml = function(index){
+
+//建立播放介面 - ●○.barOuter、.slider、.playPause、.currTime、.totalTime 需與第一組共用
+	var playbackHtmlStruc =
+	//------------------------------------------------------------------------
+	
+		//------------------------------------------------------------------------
+		'<div class="barOuter">'+ //
+			'<span class="track"><img>'+
+				'<span class="progressBar"><img></span>'+
+				'<span class="slider"><img></span>'+ //
+			'</span>'+
+		'</div>'+
+		//------------------------------------------------------------------------
+		'<div class="pbDivInner">'+
+			'<span class="pbLeft"></span>'+
+			'<span class="playPause"><img></span>'+ //
+			'<span class="currTime">00:00</span>'+
+			//------------------------------------------------------------------------
+			'<span class="totalTime">00:00</span>'+
+			'<span class="pbRight"></span>'+
+		'<div>';
+		//------------------------------------------------------------------------
+		
+	//------------------------------------------------------------------------
+
+
+
+method.getPlaybackUILessThenBP = function(index){

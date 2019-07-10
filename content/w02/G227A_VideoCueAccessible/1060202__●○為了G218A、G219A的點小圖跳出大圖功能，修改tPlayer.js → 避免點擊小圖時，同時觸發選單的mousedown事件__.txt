@@ -1,0 +1,19 @@
+
+7091~~~7103 
+
+7096¡G
+¼W¥[return false;
+
+method.triggerToBig = function(_imgIndex,_w,_h){
+	
+	var imgTag = $('.toBigPic:eq(' + _imgIndex + ') > img');
+	$(imgTag).on('mousedown',function(){
+		method.clickSmallToBig(imgTag,_w,_h);
+		return false;
+	});
+	
+	$('.toBigPic:eq(' + _imgIndex + ') .zoomIconSpan > img').on('mousedown',function(){
+		method.clickSmallToBig(imgTag,_w,_h);
+	});
+	
+};

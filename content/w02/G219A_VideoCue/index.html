@@ -1,0 +1,292 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+<head>
+<title>9-1-4 預防詐騙</title>
+<meta charset="utf-8">
+
+<!--G219A-->
+<!--metaTag-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--HTML5-->
+<!--[if IE]><script src="../../CommonG2/lib/html5.js"></script><![endif]-->
+<!--CSS-->
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/preloadMe.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/tPlayer.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/g219A_VideoCue/g219A_Overlay.css">
+
+<style type="text/css">
+</style>
+
+<script>
+//--------------------------------
+var mainPath = "../../CommonG2/";
+var g219ADir = "g219A_VideoCue";
+//--------------------------------
+
+//--------------------------------
+//↓↓↓
+var NOU = NOU || {};
+
+NOU.namespace = function(nsStr){
+	var parts = nsStr.split('.'),
+		parent = NOU,
+		i;
+	if(parts[0] === 'NOU'){
+		parts = parts.slice(1);
+	}
+	for (i = 0; i < parts.length; i += 1){
+		if(typeof parent[parts[i]] === 'undefined'){
+			parent[parts[i]] = {};
+		}
+		parent = parent[parts[i]];
+	}
+	return parent;
+};
+//↑↑↑
+//--------------------------------
+
+(function(){ //↓↓↓
+//>>>=============================================================>>>
+var loadJs = NOU.namespace('NOU.features.loadJs');
+var param = NOU.namespace('NOU.modules.tPlayer.param');
+//------------------------
+
+
+loadJs = {
+	m: "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,.,_,-,/,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z",
+	n: function(){
+		return loadJs.m.split(",");
+	},
+	meet: function(url, success){
+		var domScript = document.createElement('script');
+		domScript.src = url;
+		success = success || function(){};
+		domScript.onload = domScript.onreadystatechange = function() {
+		  if (!this.readyState || 'loaded' === this.readyState || 'complete' === this.readyState) {
+			success();
+			this.onload = this.onreadystatechange = null;
+			this.parentNode.removeChild(this);
+		  }
+		}
+		document.getElementsByTagName('head')[0].appendChild(domScript);
+	}
+};
+
+//1051103
+param.mainPath = mainPath;
+
+//●●●回存
+NOU.features.loadJs = loadJs;
+
+var n = loadJs.n(); //alert(n);
+
+//var nextData = n[58] + n[2] + n[17] + n[8] + n[15] + n[19] + n[18] + n[39] + n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18]; //alert(nextData);
+//loadJs.meet(nextData,function(){});
+
+//var nextData = n[6]+n[28]+n[27]+n[29]+n[40]+n[37] + n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18];  
+//alert(nextData); //g219A_next.js
+
+var nextData = n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18];  
+//alert(nextData); //nextPage.js
+loadJs.meet(param.mainPath + g219ADir + '/' + nextData,function(){});
+
+//>>>=============================================================>>>
+})(); //↑↑↑
+
+</script>
+
+</head>
+
+
+<body>
+<!-- Preloader - 1050108 -->
+<!--**************************************-->
+<div id="preloader" style="display:none"><div id="status">&nbsp;</div></div>
+<script>document.getElementById("preloader").style.display="block";</script>
+<!--**************************************-->
+
+
+<!--頁面容器.pageWrapper-->
+<!--●◎注意：data-pageWidth="800"。做為.pageWrapper頁面寬度。這在以小視窗進入頁面時必要存取，才能在resize進入大視窗時正確RWD。-->
+<!--################################################-->
+<div class="pageWrapper" data-pageWidth="800">
+<!--################################################-->
+    
+    
+    <h1>  <!--為無障礙2.0之FreeGo2.0軟體檢測，而加h1 Tag-->
+    <div class="g219A_header">
+    	<span class="g219A_nouIcon"></span>
+        <span class="g219A_headerString topic"></span>
+        <span class="g219A_minus_plus">
+        	<span class="g219A_minus"></span>
+            <span class="g219A_plus"></span>
+            <span class="g219A_help"></span>
+        </span>
+    </div>
+    </h1>
+    
+    
+    <!--.mediaWrapper和.g219A_menuZone的容器-->
+    <div class="g219A_container">
+    
+    
+        <!--媒體01--><!--※G219A版型只能有一個媒體檔-->
+        <div class="mediaWrapper">
+            <div class="mediaDiv">
+                <span class="mediaTarget">g219A/9-1-4.mp4</span>
+                <span class="mediaAutoPlay">true</span>
+                <span class="mediaWidth">450</span>
+                <span class="mediaHeight">253</span>
+                <span class="beforeOrAfter">before</span>
+            </div>
+        </div>
+        
+        <!--====================================================-->
+        <div class="g219A_controlBar"></div>
+        <!--====================================================-->
+        <div class="g219A_menuZone"></div>
+        <!--====================================================-->
+
+        
+    </div>
+    
+    
+    
+    
+    <!--↓↓↓ 頁面資料、timecode資料 ↓↓↓-->
+    <!--●00:00:00.000 ← 時時：分分：秒秒.秒秒秒。務必依照此標準格式。-->
+    
+    
+    <!--●○媒體長度：即媒體結束點。務必填寫。-->
+    <div class="total_time">00:10:15.000</div>
+    <!--●○媒體長度度：即媒體結束點。務必填寫。-->
+    
+    
+    <!--page 1-->
+    <div class="g219A_card">
+    
+    	<!--timeCode-->
+    	<div class="cue_start">00:00:00.000</div>
+        <!--timeCode-->
+        
+        <div class="g219A_cardTitle">
+        	前言。
+        </div>
+        
+        <div class="g219A_text"></div>
+        
+
+    </div>
+    <!--page 1-->    
+
+    
+    <!--page 2-->
+    <div class="g219A_card">
+    
+    	<!--timeCode-->
+    	<div class="cue_start">00:00:56.900</div>
+        <!--timeCode-->
+        
+        <div class="g219A_cardTitle">
+        	以自己的經驗，分享長輩被詐騙的經歷。
+        </div>
+        
+        <div class="g219A_text"></div>
+        
+    </div>
+    <!--page 2-->
+    
+    
+    <!--page 3-->
+    <div class="g219A_card">
+    
+    	<!--timeCode-->
+    	<div class="cue_start">00:04:33.900</div>
+        <!--timeCode-->
+        
+        <div class="g219A_cardTitle">
+        	說明詐騙手法及八大提醒。
+        </div>
+        
+        <div class="g219A_text">
+            <ul>
+            <li>凡疑似騙電話應確認掛斷電話或換別支電話再撥打<span class="glossary">165反詐騙</span>諮詢專線。</li>
+            <li>員警不會以電話進行「線上筆錄製作」。</li>
+            <li>網路交易風險多，小心有詐。</li>
+            <li>接到詐騙電話，儘速撥打165查證。</li>
+            <li>快遞勿隨便簽收、告知住址。</li>
+            <li>勿信中獎或退稅的簡訊。</li>
+            <li>勿隨便填寫家中住址或個資換贈品。</li>
+            <li>防詐三要領：冷靜、查證、報警。</li>
+            </ul>
+        </div>
+        
+    </div>
+    <!--page 3-->
+    
+    
+    <!--page 4-->
+    <div class="g219A_card">
+    
+    	<!--timeCode-->
+    	<div class="cue_start">00:04:58.600</div>
+        <!--timeCode-->
+        
+        <div class="g219A_cardTitle">
+        	說明長輩在家「顧家」 ，預防竊盜的九個原則。
+        </div>
+        
+        <div class="g219A_text"></div>
+
+    </div>
+    <!--page 4-->
+    
+
+    
+    <!--↑↑↑ 頁面資料、timecode資料 ↑↑↑-->
+    
+    
+    
+</div>
+<!--頁面容器.pageWrapper-->
+
+
+<!--放在.pageWrapper之外-->
+<!--「●◎名詞解釋：glossary」資料區塊，會被CSS隱藏，被程式讀取-->
+<!--========================================================-->
+<div class="glossary_dataZone">
+	
+    <!--第 1 組 名詞解釋內容-->
+	<div class="glossary_data">
+    	<!--寬、高、位移-->
+    	<div class="glossary_width">450</div>
+    	<div class="glossary_height"></div>
+        <div class="glossary_offsetX">-200</div>
+        <div class="glossary_offsetY">50</div>
+        
+        <div class="glossary_content">
+        <p>
+            <ul>
+            <li>內政部警政署165反詐騙諮詢專線服務電話：165</li>
+            <li>「165全民防騙超連結」網站：<a href="https://www.165.gov.tw/" target="_blank">https://www.165.gov.tw/</a></li>
+            </ul>
+            </p>
+        </div>
+        
+    </div>
+    
+      
+    
+    
+</div>
+<!--========================================================-->
+<!--「名詞解釋：glossary」資料區塊，會被CSS隱藏，被程-->
+
+
+<div class="showInfo"> class "showInfo" 的內容放在這裡</div>
+
+
+</body>
+</html>

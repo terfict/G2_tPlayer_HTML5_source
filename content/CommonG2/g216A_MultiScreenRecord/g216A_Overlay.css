@@ -1,0 +1,822 @@
+﻿@charset "utf-8";
+/* CSS Document - G216A│g216A_Overlay.css */
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background-color: #768eb8;
+
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 100%;
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px*/
+	text-align:left;
+}
+
+
+/*頁面最大容器*/
+/*◎程式初始化時，會來抓取width和min-height的字串值*/
+.pageWrapper {
+	width:800px; 
+	height:600px;
+	background: url(images/bg.jpg) no-repeat;
+	display:block;
+	/**/
+	float:left;
+}
+
+/*以.g216A_verticalSpace的高度，控制.g216A_header的垂直方向位置*/
+.g216A_verticalSpace {
+	width:100%;
+	height:40px;
+	display:block;
+}
+
+/*標題列*/
+.g216A_header {
+	margin:0px auto 0px auto;
+	padding:5px 8px 5px 8px;
+	width:100%;
+	height:auto;
+	background: #F9F9F9;
+	text-align:center;
+	display:table;
+}
+/*標題列字串*/
+.g216A_headerStr {
+	display:table-cell;
+	vertical-align:middle;
+	
+	font-size:1.5em;
+	font-weight:500;
+	line-height: 1.2em;
+	color:#474747;
+}
+
+
+
+/*--------------------*/
+/*上一頁、下一頁 按鈕容器*/
+.g216A_prevNext {
+	position: absolute;
+	z-index: 1;
+	left: 0px;
+	top: 26px;
+	width: 800px;
+	height: 66px;
+	display: block;
+	/*background:#E75557;*/
+	text-align:center;
+}
+/*上一頁按鈕容器*/
+.g216A_prevBtn {
+	width:auto;
+	height:auto;
+	display: inline-block;
+	float:left;
+	cursor:pointer;
+}
+/*上一頁按鈕*/
+.g216A_prevBtn > img {
+	width:66px;
+}
+/*上一頁、下一頁 按鈕之間的間隔*/
+/*.g216A_spacing {
+	width:20px;
+	height:66px;
+	display:inline-block;
+	float:left;
+}*/
+/*下一頁按鈕容器*/
+.g216A_nextBtn {
+	width:auto;
+	height:auto;
+	display: inline-block;
+	float:right;
+	cursor:pointer;
+	/*background:#87494A;*/
+}
+/*上一頁按鈕*/
+.g216A_nextBtn > img {
+	width:66px;
+}
+/*--------------------*/
+
+
+/*--------------------*/
+/*所有[封面選單按鈕頁.g216A_btnPage]的容器*/
+.g216A_btnPageGroup {
+	margin:38px auto 0 auto;
+	width:700px;
+	height:auto;
+	/*background:#D13437;*/
+}
+
+/*一個 g216A_btnPage ：為一頁[封面選單按鈕頁]*/
+.g216A_btnPage {
+	margin:0px auto 0 auto; /*不可修改*/
+	width:700px;
+	height:380px;
+	border:#CCC dashed 1px;
+	display: none;
+}
+/*.g216A_btnPage裡面的標題 - 選擇性*/
+.g216A_btnPageTitle{
+	padding:20px 0 0 0;
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size:1.125em;
+	line-height:1.2em;
+	color:#666;
+	text-align:center;
+}
+/*--------------------*/
+
+
+/*--------------------*/
+/*一個選單按鈕：包括.label和.mediaIconDiv*/
+.g216A_card {
+	
+	/*●○預設選單按鈕為兩直行排列，若只有三顆按鈕或更少，
+	也可設定CSS，改為一直行、居中、寬度加大 --- 應設定於index.html的<style></style>裡面*/
+	/*========================================*/
+	/*●○改法舉例：
+	margin:15px auto 10px auto;
+	width:500px;
+	float:none;
+	*/
+	/*========================================*/
+	
+	display: table; /*以表格性質顯示*/
+	
+	/*設定按鈕間距*/
+	margin:10px 0 10px 32px;
+	/*向左浮動*/
+	float:left;
+	/*四邊內距各10px*/
+	padding:10px 10px 10px 10px;
+	
+	width:300px;
+	height:80px;
+	background: #eee;
+	cursor:pointer;
+}
+
+/*選單按鈕：左邊顏色色塊*/
+.g216A_card > .mediaIconDiv {
+	display:table-cell;
+	width:60px;
+	height:60px;
+	/*background:#768eb8;*/ /*●以程式填色。顏色設定在externalData.js裡的g216A.cardBgColor陣列*/
+}
+/*選單按鈕：左邊顏色色塊裡面的三角形圖示*/
+.g216A_card .mediaIconDiv > img {
+	margin:0 auto 0 auto;
+	display:table-cell;
+	vertical-align:middle;
+	width:60px;
+	height:auto;
+}
+/*選單按鈕：標籤文字：●○字太多時，請縮小字體。(可在HTML用行內CSS處理。例：font-size:1.2em)*/
+.g216A_card > .label {	
+	display: table-cell; /*以表格單元格性質顯示*/
+	vertical-align:middle; /*垂直居中*/
+	
+	padding:0px 0px 0px 0px;
+	width:auto;
+	height:60px;
+	/**/
+	border:#BBB 1px solid;
+	cursor:pointer;
+	/*background:#FFF;*/
+	
+	/*●○英文音標需以 'Arial Unicode MS' 排在第一個位置*/
+	font-family:'Arial Unicode MS', 'LiHei Pro', "微軟正黑體", sans-serif;
+	/*font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;*/
+	
+	font-size:1.5em;
+	line-height:1.0em;
+	color:#000;
+	text-align: center;
+	/*letter-spacing:1px;*/
+	overflow: visible;
+
+}
+
+/*影音路徑資訊：將資料隱藏*/
+.g216A_card > .video, .g216A_card > .mediaWidth, .g216A_card > .mediaHeight, .g216A_card > .mediaAutoPlay, .g216A_card > .beforeOrAfter {
+	display:none;
+}
+/*--------------------*/
+
+
+/*--------------------*/
+/*頁碼容器*/
+.g216A_pageNum {
+	display: table;
+	margin:20px auto 0 auto;
+	width: 200px;
+	height: 30px;
+	/*background:#6CDD4B;*/
+}
+/*頁碼字串*/
+.g216A_pageNumStr {
+	display:table-cell;
+	vertical-align:middle;
+	
+	width: 100%;
+	height: auto;
+	
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 1.5em;
+	font-weight: 400;
+	letter-spacing: normal;
+	color: #AAA;
+	text-align: center;
+}
+/*--------------------*/
+
+
+/*內頁：媒體檔的容器*/
+.innerWrapper {
+	display: inline-block;
+}
+
+
+
+/*-------------------------------------------------*/
+
+/*#numButtonNReturnContainerDiv承載.returnBtnDiv和.numButtonWrapper*/
+/*=================================================================*/
+/*內頁：數字按鈕的外圍容器 - 影音區塊左側的垂直長條狀*/
+.numButtonNReturnContainerDiv {
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	width:50px; /**/
+	height:50px;
+	background:#FFF;
+	/*text-align:center;*/
+	/*overflow:visible;*/
+	/**/
+	display:table; /*table*/
+	float:left;
+}
+
+/*--------------------*/
+/*返回鈕的容器*/
+.returnBtnDiv {
+	display: table;
+	width:50px;
+	height:50px;
+	text-align:center;
+	background:#eaeaea;
+	/**/
+	float:left;
+}
+/*.returnBtnDiv在rwd小尺寸視窗時的CSS修改，程式會來讀取*/
+.returnBtnDiv_RwdAddOffset {
+	background:none;
+}
+
+/*返回鈕*/
+.returnBtn {
+	display:table-cell;
+	vertical-align:middle;
+	width:auto;
+	height:auto;
+	cursor:pointer;
+}
+/*返回鈕圖形*/
+.returnBtn > img {
+	width:38px;
+	height:auto;
+}
+/*--------------------*/
+
+/*--------------------*/
+/*所有數字按鈕的容器*/
+.numButtonWrapper {
+	width:100%;
+	heigth:auto;
+}
+/*數字按鈕，按鈕圖形設定在背景*/
+.numButtonDiv {
+	margin:0 0 0 9px;
+	width:30px;
+	height:30px;
+	background:url(images/numCircle.png) no-repeat;
+	display: inline-block;
+	text-align:center;
+	cursor:pointer;
+	margin-top:7px;
+	/**/
+	float:left;
+}
+/*數字按鈕的數字填在這裡*/
+.numButtonLabel {
+	font-family: Georgia, Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size:1em;
+	line-height:26px;
+	font-weight:500;
+	color:#069;
+}
+/*數字按鈕的數字顏色 - mouseover*/
+.numButtonOverLabelTextColor {
+	color:#FFF;
+}
+/*數字按鈕的數字顏色 - 、mousedown、目前作用中*/
+.numButtonCurrLabelTextColor {
+	color:#FFF;
+}
+/*--------------------*/
+
+/*--------------------*/
+/*位於內頁時，滑鼠mouseover到數字按鈕上，出現的註解文字容器*/
+/*.bubble由.bubble_left、.bubble_center、.bubble_right三者所組成*/
+.bubble {
+	position:relative; /*必要*/
+	z-index:1000;
+	
+	display: block;
+	overflow:visible;
+	width:auto;
+	min-width:800px; 
+	height:50px;
+}
+/*.bubble的左側：裡面只有背景圖*/
+.bubble_left {
+	width:31px;
+	height:50px;
+	background:url(images/bubble_left.png) no-repeat;
+	float:left;
+}
+/*.bubble的中間：裡面就是註解文字：從 《.g216A_card > .label》 的資料抓過來顯示。*/
+.bubble_center {
+	padding:4px 8px 0 8px;
+	width:auto;
+	min-width:200px;
+	height:50px;
+	background:url(images/bubble_center.png) repeat;
+	float:left;
+	
+	/*●○英文音標需以 'Arial Unicode MS' 排在第一個位置*/
+	font-family:'Arial Unicode MS', 'LiHei Pro', "微軟正黑體", sans-serif;
+	/*font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;*/
+	
+	font-size:1.5em;
+	font-weight:500;
+	line-height:1.5em;
+	
+	/* 不斷行 */
+	white-space: nowrap; 
+	word-wrap: normal;
+	word-break: keep-all;
+}
+/*.bubble的右側：裡面只有背景圖*/
+.bubble_right {
+	width:22px;
+	height:50px;
+	background:url(images/bubble_right.png) no-repeat;
+	float:left;
+}
+/*--------------------*/
+
+/*-------------------------------------------------*/
+
+
+
+/*menu按鈕：在小尺寸視窗時出現*/
+/*=====================================*/
+/*menu按鈕外圍容器*/
+.g216A_menuBtnOuter {
+	padding:0px 0px 0px 0px;
+	display: table;
+	width:46px;
+	height:50px;
+	text-align:center;
+	/*float:left;*/
+}
+/*menu按鈕*/
+.g216A_menuBtn {
+	display:table-cell;
+	vertical-align:middle;
+	width:auto;
+	height:auto;
+	cursor: pointer;
+}
+.g216A_menuBtn > img {
+	width:38px;
+	height:auto;
+}
+/*關閉menu的按鈕*/
+.g216A_menuCloseBtn {
+	display:table-cell;
+	vertical-align:middle;
+	width:auto;
+	height:auto;
+	cursor: pointer;
+}
+.g216A_menuCloseBtn > img {
+	width:38px;
+	height:auto;
+}
+/*=====================================*/
+
+
+
+/*按下左上角選單按鈕，會出現選單區塊*/
+/*=====================================*/
+/*選單區塊：最大容器*/
+.g216A_menuZone {
+	position:absolute;
+	z-index:2010;
+	left:0px;
+	top:50px;
+	padding:0px 0px 0px 0px;
+	display:none;
+	width:100%;
+	height:auto;
+	background:#EEE;
+	
+	color:#333;
+	font-weight:500;
+	font-size: 1.0em;
+	line-height: 1.2em;
+	letter-spacing:0.0625em;
+	
+	box-shadow:12px 8px 12px rgba(20%,20%,20%,0.3);
+
+}
+/*選單區塊：標頭*/
+.g216A_menuHeader {
+	margin:0 0 0 0;
+	padding:3px 5px 0px 7px;
+	width:100%;
+	height:30px;
+	/*border-bottom:1px solid #333;*/
+	background: #6cadd8;
+	
+	font-size: 0.9em;
+	color:#FFF;
+	font-weight:600;
+}
+/*選單區塊：一個橫列*/
+.g216A_menuRow {
+	margin:0 0 0 0;
+	padding:5px 5px 5px 10px;
+	width:100%;
+	height:auto;
+	border-bottom:1px solid #AAA;
+	cursor:pointer;
+}
+/*選單區塊：一個橫列的滑鼠懸浮狀態*/
+.g216A_menuRow_hover{
+	background: #c0c6d6;
+}
+/*選單區塊：目前作用中的橫列。其內包括.g211B_menuRowOrder和.g211B_menuRowItem*/
+.g216A_menuRow_current{
+	background: #5f73a6;
+}
+/*選單區塊：一個橫列中的流水號*/
+.g216A_menuRowOrder {
+	margin:0 5px 0 0;
+	padding:0px 6px 0px 6px;
+	background:#CCC;
+}
+/*選單區塊：一個橫列流水號的滑鼠懸浮狀態*/
+.g216A_menuRowOrder_hover {
+	background:#FFF;
+}
+/*選單區塊：作用中橫列的流水號*/
+.g216A_menuRowOrder_current {
+	background:#FFF;
+	color:#21643c;
+}
+/*選單區塊：橫列的主題文字的外圍容器*/
+.g216A_menuRowItemOuter {
+	width:85%;
+	display:inline-block;
+	
+	/* 斷行 */
+	white-space: normal; 
+	word-wrap: break-word; 
+	word-break: break-all; 
+}
+/*選單區塊：橫列的主題文字*/
+.g216A_menuRowItem {
+	padding:2px 2px 2px 2px;
+	
+	/*●○英文音標需以 'Arial Unicode MS' 排在第一個位置*/
+	font-family:'Arial Unicode MS', 'LiHei Pro', "微軟正黑體", sans-serif;
+	/*font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;*/
+	
+}
+/*選單區塊：作用中橫列的主題文字*/
+.g216A_menuRowItem_current {
+	color: #FFF;
+	font-weight:500;
+}
+
+/*=====================================*/
+
+
+
+/*包裹 .mediaHeader、.mediaDiv、.playbackDiv ...等之外圍容器*/
+.mediaWrapper {
+	/*margin:0 auto 0 auto;*/
+
+	/*●藉由margin調整.mediaWrapper的位置*/
+	margin:0px 0px 0px 0px;
+	/*==================*/
+	width:800px;
+	height:600px;
+	
+	display: none; /*保持隱藏*/
+	/*==================*/
+	
+	
+}
+
+
+/*標題列*/
+/*--------------------*/
+/*媒體標題列-容器*/
+.mediaHeader {
+	/*取消圓角*/
+	border-top-left-radius:0; /*原border-top-left-radius:6px*/
+	border-top-right-radius:0; /*原border-top-right-radius:6px*/
+}
+/*標題列-icon-容器*/
+.icon {
+}
+/*標題列-icon-圖形*/
+.icon img {
+}
+/*標題列-字串-容器*/
+.mediaHeaderString {
+	font-weight:600; /*原font-weight:360*/
+	color:#993333; /*原color:#333*/
+	
+	/*●○英文音標需以 'Arial Unicode MS' 排在第一個位置*/
+	font-family:'Arial Unicode MS', 'LiHei Pro', "微軟正黑體", sans-serif;
+	/*font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;*/
+	
+}
+/*標題列右側.notebook和.help的容器*/
+.buttons {
+}
+/*新手上路按鈕*/
+.help {
+}
+.help img {
+}
+/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+.notebook {
+}
+.notebook img {
+}
+/*--------------------*/
+
+
+/*--------------------*/
+
+/*影音媒體-容器 - 包裝 媒體物件 和 .playbackDiv*/
+.mediaDiv {
+	width:800px; 
+	height:600px; 
+}
+
+/*●●●播放控制介面-外容器●●●*/
+/*.playbackDiv網頁瀏覽高度約28px*/
+.playbackDiv {
+	border-bottom:1px dotted #D9BCBC;
+	border-top:1px dotted #D9BCBC;
+}
+
+/* 《 2 》播放介面UI外觀元素佈署 - 《 2 》 */
+/*●●●播放控制介面-外容器●●●*/
+.playbackDiv_2 { 
+	border-top:0px; /*(.playbackDiv)原設定border-top:1px dotted #D9BCBC*/
+}
+
+/*.track_2和.progressBar_2的容器*/
+.barOuter_2 {
+	margin:10px 20px 3px 25px; /*(.barOuter)原margin:3px 0 0 0*/
+}
+/*--------------------*/
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ 
+
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:800px) {
+	
+	.pageWrapper {
+		width:100%; /*原width:800px*/
+		height:auto; /*原height:600px*/
+		background-image:none; /*原background:url(images/bg.jpg) no-repeat*/
+	}
+	
+	/*以.g216A_verticalSpace的高度，控制.g216A_header的垂直方向位置*/
+	.g216A_verticalSpace {
+		display:none; /*原display:block*/
+	}
+	
+	/*標題列*/
+	.g216A_header {
+	}
+	/*標題字串*/
+	.g216A_headerStr {
+		height:48px; /*原無height*/
+		/*原font-size:1.5em*/
+		font-size:1.3em; 
+	}
+	
+	
+	/*--------------------*/
+	/*上一頁、下一頁按鈕 的容器*/
+	.g216A_prevNext {
+		position:static; /*原position: absolute*/
+		width: 100%; /*原width: 800px*/
+		height:55px; /*原66px*/
+		background:#aabbff; /*原無background*/
+	}
+	
+	/*上一頁按鈕容器*/
+	.g216A_prevBtn {
+		/**/
+		width:15%; /*原width:auto*/
+		min-width:10%; /*原無min-width*/
+	}
+	/*上一頁按鈕*/
+	.g216A_prevBtn > img {
+		width:55px; /*原width:66px*/
+	}
+	
+	/*下一頁按鈕容器*/
+	.g216A_nextBtn {
+		/**/
+		width:15%; /*原width:auto*/
+		min-width:10%; /*原無min-width*/
+	}
+	/*上一頁按鈕*/
+	.g216A_nextBtn > img {
+		width:55px; /*原width:66px*/
+	}
+	
+	/*頁碼容器*/
+	.g216A_pageNum {
+		margin:10px auto 0 auto; /*原margin:20px auto 0 auto*/
+		float:left; /*原無float*/
+		max-width:80%; /*原無max-width*/
+		width:70%; /*原width: 200px*/
+	}
+	/*頁碼字串*/
+	.g216A_pageNumStr {
+		color: #FFF; /*原color: #AAA;*/
+	}
+	/*--------------------*/
+	
+	/*--------------------*/
+	/*所有[封面選單按鈕頁.g216A_btnPage]的容器*/
+	.g216A_btnPageGroup {
+		margin:0 auto 0px auto; /*原margin:38px auto 0 auto*/
+		width:100%; /*原width:700px*/
+		height:auto; /*原height:380px*/
+		background:#768eb8; /*原無background*/
+	}
+	/*一個 g216A_btnPage ：為一頁[封面選單按鈕頁]*/
+	.g216A_btnPage {
+		width:100%; /*原width:700px*/
+		height:auto; /*原height:380px*/
+		background:#eee; /*原無background*/
+	}
+	/*.g216A_btnPage裡面的標題 - 選擇性*/
+	.g216A_btnPageTitle{
+	}
+	/*--------------------*/
+	
+	/*--------------------*/
+	/*一個選單按鈕：包括.label和.mediaIconDiv*/
+	.g216A_card {
+		margin:0px auto 0px auto; /*margin:10px 0 10px 46px*/
+		width:100%; /*原width:300px*/
+	}
+	/*選單按鈕：左邊顏色色塊*/
+	.g216A_card > .mediaIconDiv {
+		display:none;
+	}
+	/*選單按鈕：標籤文字*/
+	.g216A_card > .label {
+		/*text-align:left;*/
+	}
+	/*--------------------*/
+	
+	
+	/*斷點另在[程式]中，多加[50]，以條件式處理多加50的RWD和Normal狀態的差異。*/
+	.numButtonNReturnContainerDiv {
+		background:#eee;
+	}
+	
+	/*RWD寫在程式裡了，在此不必處理。*/
+	.innerWrapper {
+	}
+	
+	
+	
+	/*媒體標題列*/
+	/*========================================*/
+	/*媒體標題列-容器*/
+	.mediaHeader {
+		padding:3px 0 0 0; /*在tPlayer.css原padding:5px 0 5px 0;*/
+	}
+	
+	/*標題列-icon-容器*/
+	.icon {
+		padding:0px 10px 0px 17px; /*原0px 10px 0px 23px*/
+	}
+	
+	/*標題列-字串-容器*/
+	.mediaHeaderString {
+		width:100%; /*原本與.buttons共用100%，為82%，在小尺寸視窗設為100%*/
+	}
+	/*標題列右側.notebook和.help的容器*/
+	.buttons {
+		/*與.mediaHeaderString共用100%，當.mediaHeaderString設為100%，.button自動歸0%*/
+		/*width:18%;*/
+	}
+	/*新手上路按鈕*/
+	.help {
+		display: none; /*原本為display: table-cell;*/
+	}
+	/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+	.notebook {
+		display: none; /*原本為display: table-cell;*/
+	}
+	/*========================================*/
+	
+	
+	
+	
+	
+}
+	
+
+	
+	
+	
+	

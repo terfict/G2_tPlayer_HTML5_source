@@ -1,0 +1,32 @@
+
+894
+g216A.getData = function(){}
+
+699
+g216A.gotoMedia = function(){}
+
+751
+g216A.createInnerPage(index);
+
+679
+g216A.createInnerPage = function(){}
+
+690
+g216A.createMedia();
+
+652
+g216A.createMedia = function(){}
+
+681
+g216A.createMediaWrapper = function(btnIndex){}
+
+
+g216A.mediaDivProp.label.push( $('.g216A_card:eq(' + index + ') > .label').html() );
+g216A.mediaDivProp.mediaTarget.push( $('.g216A_card:eq(' + index + ') > .video').text() );
+g216A.mediaDivProp.mediaAutoPlay.push( $('.mediaWrapper:eq(' + 0 + ') .mediaAutoPlay').text() );
+g216A.mediaDivProp.mediaWidth.push( parseInt($('.g216A_card:eq(' + index + ') > .mediaWidth').text()) );
+g216A.mediaDivProp.mediaHeight.push( parseInt($('.g216A_card:eq(' + index + ') > .mediaHeight').text()) );
+g216A.mediaDivProp.beforeOrAfter.push( $('.mediaWrapper:eq(' + 0 + ') .beforeOrAfter').text() );
+
+
+

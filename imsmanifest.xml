@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload version 2.5.5 SCORM 2004 Content Package document-->
+<!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:imsmd="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" identifier="MANIFEST-BC16A961787280105F2FDC1768C58AFE" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://ltsc.ieee.org/xsd/LOM lom.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>2004 3rd Edition</schemaversion>
+  </metadata>
+  <organizations default="ORG-C3C9A6B801E2A8E9127BC5250DBB19ED">
+    <organization identifier="ORG-C3C9A6B801E2A8E9127BC5250DBB19ED" structure="hierarchical">
+      <title>G2行動教材版型</title>
+      <item identifier="ITEM-CAAD0C5748199109B772D8F8115FBDDA" isvisible="true" identifierref="RES-0F5086BD31DDB544178B0C4372F5EB40">
+        <title>G200A「教學目標與課程概要」</title>
+      </item>
+      <item identifier="ITEM-A5FE0F86407F15851F53B45DC62AF7C7" isvisible="true" identifierref="RES-5A08869BF79F0DC1FB73E5FB429EFDC7">
+        <title>G301_Youtube360</title>
+      </item>
+      <item identifier="ITEM-EBED50E13955FCD2287847B88808083D" isvisible="true" identifierref="RES-B15D8EB3D03D573C601051AC778E1E43">
+        <title>G200A2「教學目標與課程概要」</title>
+      </item>
+      <item identifier="ITEM-0B26B8BCF7F3B1247AF01FA50CCB6EAF" isvisible="true" identifierref="RES-AC2A3F95CFD63283B997DA6CBF83FF3F">
+        <title>G200B「師資介紹」</title>
+      </item>
+      <item identifier="ITEM-D52D974F6F43B9DEC1C8185BDAFAB7E9" isvisible="true" identifierref="RES-D019E31E83FDDA5BE45C8853D9C87E8B">
+        <title>G200C「學習進度表﹝1﹞」</title>
+      </item>
+      <item identifier="ITEM-3148272A4BDC15049CA1625FC31578EE" isvisible="true" identifierref="RES-6883B8AD960BEDDDD2FE583FE151B9C4">
+        <title>G200C2「學習進度表﹝2﹞」</title>
+      </item>
+      <item identifier="ITEM-C392982539644D4A10D1C7DFDE7A7C59" isvisible="true" identifierref="RES-1AD5662D05B0E25272B5992763E2290D">
+        <title>G201A「影音400x300﹝A﹞」</title>
+      </item>
+      <item identifier="ITEM-5C8A36A7E71CD8ECD7A75BF5529EE09E" isvisible="true" identifierref="RES-3C0618E4D3BB5796B59680722877A596">
+        <title>G201B「影音400x300﹝B﹞」</title>
+      </item>
+      <item identifier="ITEM-0651C3343E97445B30579B24E2BAF3E3" isvisible="true" identifierref="RES-44FB85C2E87015561B6921654BF8E64D">
+        <title>G202「影音640x360」</title>
+      </item>
+      <item identifier="ITEM-34624292A93EB3E190FD3B00D16BB6F0" isvisible="true" identifierref="RES-097464D246E7EB38D63320121E332C95">
+        <title>G203「影音320x240+大綱文字」</title>
+      </item>
+      <item identifier="ITEM-9EACACAD31F03EF4E44B19D7375BBAA6" isvisible="true" identifierref="RES-E4872553D402F95EAEBC1002EE069BA4">
+        <title>G204A「影音640x360+大綱文字﹝A﹞」</title>
+      </item>
+      <item identifier="ITEM-71E04D305EDF8380F1A97CDD0E15EE27" isvisible="true" identifierref="RES-DC3B40958AAF12E8EC080E523E785D09">
+        <title>G204B「影音640x360+大綱文字﹝B﹞」</title>
+      </item>
+      <item identifier="ITEM-5705D2AC3058C62EF7E03B5ACFA71E1C" isvisible="true" identifierref="RES-25758E023A7610BA44AB735AA15B663F">
+        <title>G205「簡報語音800x600 (螢幕錄製)」</title>
+      </item>
+      <item identifier="ITEM-85702D7D9B22ECBCEBD5652FA323127B" isvisible="true" identifierref="RES-49B2D2D4371FCE0EB31081D51406A172">
+        <title>G206「軟體操作演示1024x768 (螢幕錄製)」</title>
+      </item>
+      <item identifier="ITEM-151E6B8E3366781D00642D6176CB1EFA" isvisible="true" identifierref="RES-85A77DED41B3320534E9DC9D6CC0029E">
+        <title>G207「影音內評量：是非、單選」(In-Video Quiz)</title>
+      </item>
+      <item identifier="ITEM-475CB1B36C48BDC9285A9E8D61EB88FB" isvisible="true" identifierref="RES-3DE65CEDB74F77420D70D4D90BAEC116">
+        <title>G207B「影音內評量﹝B﹞：單選+語音出題」</title>
+      </item>
+      <item identifier="ITEM-D229208CE92159ACFB20B463C60939F6" isvisible="true" identifierref="RES-00D67621A8F3CFDFBD576C1A1CECF6DA">
+        <title>G207B「影音內評量﹝B﹞：單選+語音出題」(實例)</title>
+      </item>
+      <item identifier="ITEM-4CD018122DBDC132DA681AB15A94DC11" isvisible="true" identifierref="RES-C11223A27E8A8BA6240E801E2573B225">
+        <title>G208「語音」</title>
+      </item>
+      <item identifier="ITEM-5DFE696F6806680DA1E2A0EE7BD8F761" isvisible="true" identifierref="RES-7B0E58DAD5A81087122AC2C2EF1706F7">
+        <title>G209A「圖文網頁﹝A﹞」</title>
+      </item>
+      <item identifier="ITEM-9B1EF6D797A5AF36938A2F5826B76915" isvisible="true" identifierref="RES-448CA13214916EDD511A5560F3079F58">
+        <title>G209B「圖文網頁﹝B﹞」</title>
+      </item>
+      <item identifier="ITEM-FCD073176A23CD4E942966E364CAFD54" isvisible="true" identifierref="RES-12528EB2C086FB20695680CAC8D4AC4B">
+        <title>G210A「語音+圖文網頁﹝A﹞」</title>
+      </item>
+      <item identifier="ITEM-9360EEC7FF571058AF39F0C7645B431E" isvisible="true" identifierref="RES-ABEDE113EE8845672B3DD99FFD07DDB0">
+        <title>G210B「語音+圖文網頁﹝B﹞」</title>
+      </item>
+      <item identifier="ITEM-572BC8A4253B6FDC427CF056325207FD" isvisible="true" identifierref="RES-0775164A5886DF4D9E864DB5C72B59A5">
+        <title>G211A「隨選多媒體﹝A﹞」(多頁)</title>
+      </item>
+      <item identifier="ITEM-461AE9D91C33B57299C4922F8E7B3687" isvisible="true" identifierref="RES-76F2651EC17D84ED5D133568ED37D302">
+        <title>G211B「隨選多媒體﹝B﹞」(多頁)</title>
+      </item>
+      <item identifier="ITEM-45B2E62B91A4E721F35CDABF6962D20B" isvisible="true" identifierref="RES-E89C00F832896A7E7FA6DA5B636ACC85">
+        <title>G211C「隨選多媒體﹝C﹞」(多頁)</title>
+      </item>
+      <item identifier="ITEM-17E98ED3599B5747BA4E056C10138161" isvisible="true" identifierref="RES-E0B0A5C537B3200354A1A9D498C8D02D">
+        <title>G212A「手風琴隨選多媒體﹝A﹞」(多頁)</title>
+      </item>
+      <item identifier="ITEM-10DC3C21F0A4D0932BE7AC9DBAF5B992" isvisible="true" identifierref="RES-EF039D5E8DF92056AAFB8935E57CCCCF">
+        <title>G213A「語音+同步提示 AudioCue﹝A﹞」</title>
+      </item>
+      <item identifier="ITEM-8AB6D3B5BA2544F302D43E4F017254C6" isvisible="true" identifierref="RES-177C6EC5F21B59D92424508083A2BCA0">
+        <title>G213A2「語音+同步提示 AudioCue﹝A﹞」(選單往下開展)</title>
+      </item>
+      <item identifier="ITEM-52B15F6B10E64315004C804DB03CEFDA" isvisible="true" identifierref="RES-142BA9CBE6150E6328EF6DAFCFC870DC">
+        <title>G214A「隨選語音圖文﹝A﹞」(多頁)</title>
+      </item>
+      <item identifier="ITEM-AF79D839BABCD7A03A928F7E4198516F" isvisible="true" identifierref="RES-2ADCF82DA45DC3DD856E8B5E807CB0A1">
+        <title>G215A「頁籤語音圖文﹝A﹞」(多頁)</title>
+      </item>
+      <item identifier="ITEM-946C338A2BB69D226EAFFD3B4D2356C3" isvisible="true" identifierref="RES-0774E0B2C73A7CD43F852D0EA2D165DD">
+        <title>G216A「隨選多重簡報語音」</title>
+      </item>
+      <item identifier="ITEM-81CA3ECBAC0D0D5A72E613B5FC6B7A79" isvisible="true" identifierref="RES-D08F3924E39C1FC7E316922BF5F9B715">
+        <title>G217A「影像語音+短註解﹝A﹞」(多頁)</title>
+      </item>
+      <item identifier="ITEM-CEEA6B4A642A059153B635A2A30F9056" isvisible="true" identifierref="RES-BB26B11326D801BE1E589D43AEB5850C">
+        <title>G218A「影音(簡報語音)+同步提示﹝A﹞」</title>
+      </item>
+      <item identifier="ITEM-4AA84DDD4BCFA009DFC604F6A5347C9B" isvisible="true" identifierref="RES-73ADFD4E0F29F361844E398C801C2388">
+        <title>G219A「影音+同步提示﹝A﹞」</title>
+      </item>
+      <item identifier="ITEM-34F5E9C599AFF715803F57110B10BDD1" isvisible="true" identifierref="RES-5D483703F3455CA0212450738C406E6C">
+        <title>G220A「自我評量：拖曳配合題﹝A﹞」</title>
+      </item>
+      <item identifier="ITEM-2FF2E3E2F465C4C85AE0C288A6211092" isvisible="true" identifierref="RES-F8A70F06267A12289D4AD43251297319">
+        <title>G220B「自我評量：拖曳配合題﹝B﹞」</title>
+      </item>
+      <item identifier="ITEM-427158A146EF9A89A5B1DC6430071461" isvisible="true" identifierref="RES-B6556391C3046EC7D20882C666CE24F4">
+        <title>G221A「影音+網路影音連結﹝A﹞」</title>
+      </item>
+      <item identifier="ITEM-762CD5B5AC1855F34BA1794D9F887483" isvisible="true" identifierref="RES-23B8C3317590A050E901974819211036">
+        <title>G222A「PPT+網路影音連結﹝B﹞」</title>
+      </item>
+      <item identifier="ITEM-38976472E4F0D82733BBF42678C8CA4E" isvisible="true" identifierref="RES-1237CE67D74703BD8840EABC46C6AE95">
+        <title>G223A「自我評量﹝A﹞：單選+語音出題」</title>
+      </item>
+      <item identifier="ITEM-3F8DC65D8BCB3021ABDB91ED62CEB346" isvisible="true" identifierref="RES-625DAE10663CC18505321F39BDB52A66">
+        <title>G223A「自我評量﹝A﹞：單選+語音出題」(實例)</title>
+      </item>
+      <item identifier="ITEM-47EF6AFC7F98951BFD5000E44CBE2378" isvisible="true" identifierref="RES-F07C135BE1296EF2EAF9B9FC17056D6A">
+        <title>G224A「自我評量﹝A﹞：單選、是非」</title>
+      </item>
+      <item identifier="ITEM-192DE97EB660D21C60A10094A4C32EF4" isvisible="true" identifierref="RES-2D386F3C98D09F94D6B07279D18D0254">
+        <title>G225A「影像地圖跳出燈箱﹝A﹞」</title>
+      </item>
+      <item identifier="ITEM-11FE0452542A5E961B498FF0702D5675" isvisible="true" identifierref="RES-0A12D4ED1EA327CB77E1376D06A70EDB">
+        <title>G226A「時間軸﹝A﹞」</title>
+      </item>
+      <item identifier="ITEM-2BEECC9271FC2859B4A73765035E212B" isvisible="true" identifierref="RES-FB8F91024143B1862930EE2EDEC67CED">
+        <title>G227A「影音+同步提示﹝A﹞+無障礙」</title>
+      </item>
+      <item identifier="ITEM-DE84F837A982B91DE71F96FA9B749363" isvisible="true" identifierref="RES-382C1B5C5F1408F696777FBF13432DA2">
+        <title>G229「影音+跳出影音」</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-0F5086BD31DDB544178B0C4372F5EB40" adlcp:scormType="sco" type="webcontent" href="content/w02/G200A_TeachingObjectives/index.html">
+      <file href="content/w02/G200A_TeachingObjectives/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-B15D8EB3D03D573C601051AC778E1E43" adlcp:scormType="sco" type="webcontent" href="content/w02/G200A2_TeachingObjectives/index.html">
+      <file href="content/w02/G200A2_TeachingObjectives/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-AC2A3F95CFD63283B997DA6CBF83FF3F" adlcp:scormType="sco" type="webcontent" href="content/w02/G200B_TeacherIntroduce/index.html">
+      <file href="content/w02/G200B_TeacherIntroduce/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-D019E31E83FDDA5BE45C8853D9C87E8B" adlcp:scormType="sco" type="webcontent" href="content/w02/G200C_LearningSchedules/index.html">
+      <file href="content/w02/G200C_LearningSchedules/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-6883B8AD960BEDDDD2FE583FE151B9C4" adlcp:scormType="sco" type="webcontent" href="content/w02/G200C2_LearningSchedules/index.html">
+      <file href="content/w02/G200C2_LearningSchedules/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-1AD5662D05B0E25272B5992763E2290D" adlcp:scormType="sco" type="webcontent" href="content/w02/G201A_Video400x300/index.html">
+      <file href="content/w02/G201A_Video400x300/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-3C0618E4D3BB5796B59680722877A596" adlcp:scormType="sco" type="webcontent" href="content/w02/G201B_Video400x300/index.html">
+      <file href="content/w02/G201B_Video400x300/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-44FB85C2E87015561B6921654BF8E64D" adlcp:scormType="sco" type="webcontent" href="content/w02/G202_Video640x360/index.html">
+      <file href="content/w02/G202_Video640x360/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-097464D246E7EB38D63320121E332C95" adlcp:scormType="sco" type="webcontent" href="content/w02/G203_Video320x240Outline/index.html">
+      <file href="content/w02/G203_Video320x240Outline/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-E4872553D402F95EAEBC1002EE069BA4" adlcp:scormType="sco" type="webcontent" href="content/w02/G204A_Video640x360Outline/index.html">
+      <file href="content/w02/G204A_Video640x360Outline/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-DC3B40958AAF12E8EC080E523E785D09" adlcp:scormType="sco" type="webcontent" href="content/w02/G204B_Video640x360Outline/index.html">
+      <file href="content/w02/G204B_Video640x360Outline/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-25758E023A7610BA44AB735AA15B663F" adlcp:scormType="sco" type="webcontent" href="content/w02/G205_ScreenRecordVideo800x600/index.html">
+      <file href="content/w02/G205_ScreenRecordVideo800x600/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-49B2D2D4371FCE0EB31081D51406A172" adlcp:scormType="sco" type="webcontent" href="content/w02/G206_ScreenRecordVideo1024x768/index.html">
+      <file href="content/w02/G206_ScreenRecordVideo1024x768/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-85A77DED41B3320534E9DC9D6CC0029E" adlcp:scormType="sco" type="webcontent" href="content/w02/G207_InVideoQuiz/index.html">
+      <file href="content/w02/G207_InVideoQuiz/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-3DE65CEDB74F77420D70D4D90BAEC116" adlcp:scormType="sco" type="webcontent" href="content/w02/G207B_IvqNAudio/index.html">
+      <file href="content/w02/G207B_IvqNAudio/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-00D67621A8F3CFDFBD576C1A1CECF6DA" adlcp:scormType="sco" type="webcontent" href="content/w02/G207B_IvqNAudio_example/index.html">
+      <file href="content/w02/G207B_IvqNAudio_example/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-C11223A27E8A8BA6240E801E2573B225" adlcp:scormType="sco" type="webcontent" href="content/w02/G208_Audio/index.html">
+      <file href="content/w02/G208_Audio/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-7B0E58DAD5A81087122AC2C2EF1706F7" adlcp:scormType="sco" type="webcontent" href="content/w02/G209A_WebTextPhoto/index.html">
+      <file href="content/w02/G209A_WebTextPhoto/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-448CA13214916EDD511A5560F3079F58" adlcp:scormType="sco" type="webcontent" href="content/w02/G209B_WebTextPhoto/index.html">
+      <file href="content/w02/G209B_WebTextPhoto/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-12528EB2C086FB20695680CAC8D4AC4B" adlcp:scormType="sco" type="webcontent" href="content/w02/G210A_WebAudio/index.html">
+      <file href="content/w02/G210A_WebAudio/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-ABEDE113EE8845672B3DD99FFD07DDB0" adlcp:scormType="sco" type="webcontent" href="content/w02/G210B_WebAudio/index.html">
+      <file href="content/w02/G210B_WebAudio/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-0775164A5886DF4D9E864DB5C72B59A5" adlcp:scormType="sco" type="webcontent" href="content/w02/G211A_SlideMultiMedia/index.html">
+      <file href="content/w02/G211A_SlideMultiMedia/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-76F2651EC17D84ED5D133568ED37D302" adlcp:scormType="sco" type="webcontent" href="content/w02/G211B_SlideMultiMedia/index.html">
+      <file href="content/w02/G211B_SlideMultiMedia/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-E89C00F832896A7E7FA6DA5B636ACC85" adlcp:scormType="sco" type="webcontent" href="content/w02/G211C_SlideMultiMedia/index.html">
+      <file href="content/w02/G211C_SlideMultiMedia/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-E0B0A5C537B3200354A1A9D498C8D02D" adlcp:scormType="sco" type="webcontent" href="content/w02/G212A_AccordionMedia/index.html">
+      <file href="content/w02/G212A_AccordionMedia/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-EF039D5E8DF92056AAFB8935E57CCCCF" adlcp:scormType="sco" type="webcontent" href="content/w02/G213A_AudioCue/index.html">
+      <file href="content/w02/G213A_AudioCue/index.html" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-177C6EC5F21B59D92424508083A2BCA0" adlcp:scormType="sco" type="webcontent" href="content/w02/G213A2_AudioCue/index.html">
+      <file href="content/w02/G213A2_AudioCue/index.html" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-142BA9CBE6150E6328EF6DAFCFC870DC" adlcp:scormType="sco" type="webcontent" href="content/w02/G214A_MultiPageAudio/index.html">
+      <file href="content/w02/G214A_MultiPageAudio/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-2ADCF82DA45DC3DD856E8B5E807CB0A1" adlcp:scormType="sco" type="webcontent" href="content/w02/G215A_TabAudioStraight/index.html">
+      <file href="content/w02/G215A_TabAudioStraight/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-0774E0B2C73A7CD43F852D0EA2D165DD" adlcp:scormType="sco" type="webcontent" href="content/w02/G216A_MultiScreenRecord/index.html">
+      <file href="content/w02/G216A_MultiScreenRecord/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-D08F3924E39C1FC7E316922BF5F9B715" adlcp:scormType="sco" type="webcontent" href="content/w02/G217A_ImageAudioNote/index.html">
+      <file href="content/w02/G217A_ImageAudioNote/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-47B71AD53A8BB4C9305E09A4BC1DBE5F" adlcp:scormType="sco" type="webcontent" href="content/w02/G217B_ImageAudioNote/index.html">
+      <file href="content/w02/G217B_ImageAudioNote/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-BB26B11326D801BE1E589D43AEB5850C" adlcp:scormType="sco" type="webcontent" href="content/w02/G218A_PresentationVideoCue/index.html">
+      <file href="content/w02/G218A_PresentationVideoCue/index.html" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-73ADFD4E0F29F361844E398C801C2388" adlcp:scormType="sco" type="webcontent" href="content/w02/G219A_VideoCue/index.html">
+      <file href="content/w02/G219A_VideoCue/index.html" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-5D483703F3455CA0212450738C406E6C" adlcp:scormType="sco" type="webcontent" href="content/w02/G220A_Droppable/index.html">
+      <file href="content/w02/G220A_Droppable/index.html" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-F8A70F06267A12289D4AD43251297319" adlcp:scormType="sco" type="webcontent" href="content/w02/G220B_Droppable/index.html">
+      <file href="content/w02/G220B_Droppable/index.html" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-B6556391C3046EC7D20882C666CE24F4" adlcp:scormType="sco" type="webcontent" href="content/w02/G221A_VideoExternalLinkVideo/index.html">
+      <file href="content/w02/G221A_VideoExternalLinkVideo/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-23B8C3317590A050E901974819211036" adlcp:scormType="sco" type="webcontent" href="content/w02/G222A_PPTExternalLinkVideo/index.html">
+      <file href="content/w02/G222A_PPTExternalLinkVideo/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-D719D2CBC2FCFD9BE2CD867FA728984C" adlcp:scormType="sco" type="webcontent" href="content/w02/G223A_quizNAudio/index.html">
+      <file href="content/w02/G223A_quizNAudio/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-EBB8012FF1A0FE896C078846BB53AE2A" adlcp:scormType="sco" type="webcontent" href="content/w02/G223A_quizNAudio_example/index.html">
+      <file href="content/w02/G223A_quizNAudio_example/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-F07C135BE1296EF2EAF9B9FC17056D6A" adlcp:scormType="sco" type="webcontent" href="content/w02/G224A_quiz/index.html">
+      <file href="content/w02/G224A_quiz/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-1237CE67D74703BD8840EABC46C6AE95" adlcp:scormType="sco" type="webcontent" href="content/w02/G223A_quizNAudio/index.html">
+      <file href="content/w02/G223A_quizNAudio/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-625DAE10663CC18505321F39BDB52A66" adlcp:scormType="sco" type="webcontent" href="content/w02/G223A_quizNAudio_example/index.html">
+      <file href="content/w02/G223A_quizNAudio_example/index.html" />
+      <file href="content/CommonG2/lib/jquery-1.11.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-migrate-1.2.1.min.js" />
+      <file href="content/CommonG2/lib/jquery-ui-1.11.4.min.js" />
+      <file href="content/CommonG2/lib/jquery.ui.touch-punch.min.js" />
+      <file href="content/CommonG2/prog/APIWrapper.js" />
+      <file href="content/CommonG2/prog/init.js" />
+      <file href="content/CommonG2/prog/SCOFunctions.js" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-2D386F3C98D09F94D6B07279D18D0254" adlcp:scormType="sco" type="webcontent" href="content/w02/G225A_ImageMapLightBox/index.html">
+      <file href="content/w02/G225A_ImageMapLightBox/index.html" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-0A12D4ED1EA327CB77E1376D06A70EDB" adlcp:scormType="sco" type="webcontent" href="content/w02/G226A_Timeline/index.html">
+      <file href="content/w02/G226A_Timeline/index.html" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-6F6E890564C168E8D2A1135AF95E4B01" adlcp:scormType="sco" type="webcontent" href="content/w02/G226A_Timeline/1061208/cod_video.html">
+      <file href="content/w02/G226A_Timeline/1061208/cod_video.html" />
+      <file href="content/w02/G226A_Timeline/1061208/movie.css" />
+    </resource>
+    <resource identifier="RES-6805C66D9FA8EAC2292F4AC131586C8D" adlcp:scormType="sco" type="webcontent" href="content/w02/G226A_Timeline/1061208/cod_audio.html">
+      <file href="content/w02/G226A_Timeline/1061208/cod_audio.html" />
+      <file href="content/w02/G226A_Timeline/1061208/movie.css" />
+    </resource>
+    <resource identifier="RES-FB8F91024143B1862930EE2EDEC67CED" adlcp:scormType="sco" type="webcontent" href="content/w02/G227A_VideoCueAccessible/index.html">
+      <file href="content/w02/G227A_VideoCueAccessible/index.html" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-0B69112FF81976A766AACBD17F0837F4" adlcp:scormType="sco" type="webcontent" href="content/w02/G227A_VideoCueAccessible/index_7-3-1.html">
+      <file href="content/w02/G227A_VideoCueAccessible/index_7-3-1.html" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-935841234977FB306C8429339C29E171" adlcp:scormType="sco" type="webcontent" href="content/w02/G227A_VideoCueAccessible/index_7-3-2.html">
+      <file href="content/w02/G227A_VideoCueAccessible/index_7-3-2.html" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-4AFAF129581073745E82B657668EDEF1" adlcp:scormType="sco" type="webcontent" href="content/w02/G227A_VideoCueAccessible/index_7-3-3.html">
+      <file href="content/w02/G227A_VideoCueAccessible/index_7-3-3.html" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+    <resource identifier="RES-5A08869BF79F0DC1FB73E5FB429EFDC7" adlcp:scormType="sco" type="webcontent" href="content/G3H5Cloud/content/pagesBox/G301_Youtube360/index.html">
+      <file href="content/G3H5Cloud/content/pagesBox/G301_Youtube360/index.html" />
+    </resource>
+    <resource identifier="RES-382C1B5C5F1408F696777FBF13432DA2" adlcp:scormType="sco" type="webcontent" href="content/w02/G229_VideoPopVideo/index.html">
+      <file href="content/w02/G229_VideoPopVideo/index.html" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe.css" />
+      <file href="content/CommonG2/tPlayer_CSS/preloadMe_img/284.gif" />
+      <file href="content/CommonG2/tPlayer_CSS/tPlayer.css" />
+    </resource>
+  </resources>
+</manifest>
+

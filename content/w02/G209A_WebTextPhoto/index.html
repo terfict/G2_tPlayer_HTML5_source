@@ -1,0 +1,227 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+<head>
+<title>8-1 摘　要</title>
+<meta charset="utf-8">
+
+<!--G209A-->
+<!--tPlayer_metaTag-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">-->
+
+<!--[if IE 8 ]> <script> top.$('meta[http-equiv="X-UA-Compatible"]').attr('content','IE=EmulateIE10'); </script> <![endif]-->
+
+<!--禁用Mobile縮放，iOS-iPad safari瀏覽器 開全畫面才不會錯亂。-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--tPlayer_HTML5-->
+<!--[if IE]><script src="../../CommonG2/lib/html5.js"></script><![endif]-->
+<!--tPlayer_jQ-->
+<script src="../../CommonG2/lib/jquery-1.11.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../CommonG2/lib/jquery-ui-1.11.4.min.js"></script>
+<!--植基於jQUI，疊加Mobile Touch支援，Mobile可拖曳-->
+<script src="../../CommonG2/lib/jquery.ui.touch-punch.min.js"></script>
+<!--tPlayer_jQMobile js、...移到tPlayer.js [當為mobile時才載入]-->
+<!--tPlayer_Scorm-->
+<script src="../../CommonG2/prog/APIWrapper.js"></script>
+<script src="../../CommonG2/prog/SCOFunctions.js"></script>
+<script src="../../CommonG2/prog/init.js"></script>
+<!--共用CSS-->
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/preloadMe.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/tPlayer.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/g209A_WebTextPhoto/g209A_Overlay.css">
+
+<script>
+//"use strict";
+//--------------------------------
+//↓↓↓
+var NOU = NOU || {};
+
+NOU.namespace = function(nsStr){
+	var parts = nsStr.split('.'),
+		parent = NOU,
+		i;
+	if(parts[0] === 'NOU'){
+		parts = parts.slice(1);
+	}
+	for (i = 0; i < parts.length; i += 1){
+		if(typeof parent[parts[i]] === 'undefined'){
+			parent[parts[i]] = {};
+		}
+		parent = parent[parts[i]];
+	}
+	return parent;
+};
+//↑↑↑
+//--------------------------------
+
+(function($){ //↓↓↓
+//>>>=============================================================>>>
+var loadJs = NOU.namespace('NOU.features.loadJs');
+//------------------------
+
+loadJs = {
+	m: "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,.,_,-,/,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z",
+	n: function(){
+		return loadJs.m.split(",");
+	},
+	meet: function(url, success){
+		var domScript = document.createElement('script');
+		domScript.src = url;
+		success = success || function(){};
+		domScript.onload = domScript.onreadystatechange = function() {
+		  if (!this.readyState || 'loaded' === this.readyState || 'complete' === this.readyState) {
+			success();
+			this.onload = this.onreadystatechange = null;
+			this.parentNode.removeChild(this);
+		  }
+		}
+		document.getElementsByTagName('head')[0].appendChild(domScript);
+	}
+};
+
+//●●●回存
+NOU.features.loadJs = loadJs;
+
+var n = loadJs.n(); //alert(n);
+var nextData = n[58] + n[2] + n[17] + n[8] + n[15] + n[19] + n[18] + n[39] + n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18]; //alert(nextData);
+loadJs.meet(nextData,function(){});
+
+//>>>=============================================================>>>
+})(jQuery); //↑↑↑
+
+</script>
+
+<style type="text/css">
+</style>
+
+</head>
+
+
+<body>
+<!-- Preloader - 1050108 -->
+<!--**************************************-->
+<div id="preloader" style="display:none"><div id="status">&nbsp;</div></div>
+<script>
+$('body').css({'overflow':'hidden'});
+$('#preloader').css({'display':'block'});
+$(window).load(function() { // makes sure the whole site is loaded
+	$('#status').fadeOut(600); // will first fade out the loading animation
+	$('#preloader').fadeOut(600,function(){// will fade out the white DIV that covers the website.
+		$('body').css({'overflow':'auto'});
+	}); 
+})
+</script>
+<!--**************************************-->
+
+
+<!--頁面容器-->
+<h1>  <!--為無障礙2.0之FreeGo2.0軟體檢測，而加h1 Tag-->
+<div class="pageWrapper">
+	
+    <!--旭聯平台/課程「筆記本」按鈕 + 新手上路按鈕-->
+	<span class="buttons">
+        <span class="notebook"></span>
+        <span class="help"></span>
+    </span>
+    
+    <!--標題列-->
+    <div class="g209_header">
+    	<span class="g209_headerString topic">&nbsp;</span>
+    </div>
+    
+    
+    <!--內文排版-->
+    <div class="textPhoto">
+    
+		<div class="inner">
+    
+            <!--字級切換介面-->
+            <!--************************************-->
+    		<span class="fontSizeSwitcher"></span>
+            <!--************************************-->
+            
+        	<p class="title">【第八章  家庭教育方案的資源整合與運用】</p>
+            
+            <div class="text fontSize">
+            
+              <p>在這個多元化的社會，專業的<span class="glossary">家庭教育</span>人員都知道，單打獨鬥已經無法完成任務。因此我們需要想法和我們相似的夥伴一起努力。但是我們要如何才能透過彼此之間有效的合作而讓接受服務的家庭受惠更大呢？</p>
+                <p>&nbsp;</p>
+                
+                
+                <!--image--><!--點小圖，跳大圖。填入寬。-->
+                <!--************************************-->
+                <div class="toBigPic" style="float: right; margin:3px 5px 3px 12px;">
+                    <img src="images/family-730320_640.jpg" alt="圖像：闔家歡" width="260">
+                    <span class="bigImgWidth">662</span>
+                </div>
+                <!--************************************-->
+                
+                
+                <p>坦白說，以社區為服務範圍的民間團體、家庭教育專業團體，以及各種家庭教育推展機構通常都有共同的目標，因此彼此可以合作，建立夥伴關係並建構合作網絡。家庭的各項教育需求通常都是有某種程度的關聯，而且是複雜的。既然沒有任何一個系統可以單獨滿足家庭的多元需求和問題，那麼尋求合作就成為實務工作者應有的認識與能力。這種合作的歷程應該包含與機構、合作團體以及志工團體共同提供綜合性的服務予有需要的家庭。透過這種歷程，與新的聯盟、夥伴關係，關關係網絡共同提供服務，以讓服務對象有最大的獲益。
+                </p>
+
+                
+                <div class="normalPic" style="float:right; margin:25px 5px 3px 12px;">
+                    <img src="images/family-286229_640.jpg" width="251" alt="圖像：闔家歡">
+                </div>
+                
+                
+                <p>&nbsp;</p>
+              <p>有效能的合作是一個能永續發展的社區型方案的重要特徵。為了說明如何建構有效能的合作關係，以下先界定面對複雜的家庭議題時所需要的合作歷程，並討論其益處與挑戰。其次我們提供一個與他人合作的分類法則(從建構網絡到完全的合作)，以及建構有效能合作夥伴關係的策略。最後，我們將討論建構成功合作關係的原則。</p>
+                <p>&nbsp;</p>
+                
+          </div>
+            
+            
+            <!--image--><!--點小圖，跳大圖。填入寬。-->
+            <!--************************************-->
+            <div class="toBigPic" style="float:left; margin:0px 5px 3px 0px;">
+                <img src="images/ps.png" width="469" alt="圖像：PhotoShopCC開啟軟體的初始化畫面">
+                <span class="bigImgWidth">662</span>
+            </div>
+            <!--************************************-->
+            
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            
+            
+            
+      </div>
+    </div>
+    
+    
+</div>
+</h1>
+
+
+
+<!--放在.pageWrapper之外-->
+<!--「●◎名詞解釋：glossary」資料區塊，會被CSS隱藏，被程式讀取-->
+<!--========================================================-->
+<div class="glossary_dataZone">
+	
+    <!--第 1 組 名詞解釋內容-->
+	<div class="glossary_data">
+    	<!--寬高-->
+    	<div class="glossary_width">360</div>
+    	<div class="glossary_height"></div>
+        <div class="glossary_offsetX">80</div>
+        <div class="glossary_offsetY">-50</div>
+        
+        <div class="glossary_content">
+        <p>家庭教育是指具有增進家人關係與家庭功能之各種教育活動，包括：親職教育、子職教育、兩性教育、婚姻教育、倫理教育、家庭資源與管理教育、其他家庭教育事項。<br>
+			<span><a href="http://ppt.cc/KKrmS" target="_blank">[維基百科]家庭教育</a></span>
+        </p>
+        </div>
+        
+    </div>
+    
+</div>
+<!--========================================================-->
+<!--「名詞解釋：glossary」資料區塊，會被CSS隱藏，被程式讀取-->
+
+
+</body>
+</html>

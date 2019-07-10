@@ -1,0 +1,1015 @@
+﻿@charset "utf-8";
+/* CSS Document - G207│g207_Overlay.css */
+
+
+/*CSS Reset - (CSS重置)此段落不需理會、不需變動*/
+/*================================================================*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    /*vertical-align:baseline;*/
+	vertical-align: top; /*設成top比較ok*/
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+/*================================================================*/
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background-color: #1f2437;
+	background-image: url(images/fzm_Denim_Jeans_Texture_07_400x400.jpg);
+
+	font-family: "微軟正黑體", "標楷體", Georgia, 'Times New Roman', serif;;
+	font-size: 100%; /*equates to 16px。也相當於1em*/
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px*/
+}
+p, ul, ol{
+	margin:0 0 1em 0;
+}
+
+/*頁面最大容器*/
+/*程式初始化時，會來抓取width和min-height的字串值*/
+.pageWrapper {
+	/*margin:0 auto 0 auto;*/
+	padding:0 0 30px 0; /*15px/520px=0.028846*/ /*30px/16px=1.875em*/
+	width:800px; /*800px/16px=50.687em*/
+	min-height:620px; /*520px/16px=32.5em*/
+	height:auto;
+	background:#182535;
+	/*當padding-top為0時，設為inline-block，開全畫面時，.pageWrapper才不會掉下來一些???*/
+	display:block;
+}
+
+/*包裹 .mediaHeader、.mediaDiv、.playbackDiv ...等之外圍容器*/
+.mediaWrapper {
+	/*●○ .mediaWrapper 不可使用以下這行，做水平居中(margin-left和margin-right設auto相對於父層做左右居中)
+	否則，由全畫面回到一般面時，拖曳播放頭，播放進度會失常。●1040907 - 重構拖曳功能後，已經可以使用auto*/
+	margin:0 auto 0 auto;
+
+	/*●藉由margin調整.mediaWrapper的位置*/
+	/*margin:0px 0px 0px 0px;*/
+	/*==================*/
+	width:640px; /*640px/800px=0.8*/ /*640px/16px=40em*/
+	height:auto;
+	/*background:#000;*/
+	display: block;
+
+}
+
+/*標提列*/
+/*========================================*/
+/*媒體標提列-容器*/
+.mediaHeader { /*.mediaHeader網頁瀏覽高度約48px*/
+	display:table;
+	width:100%;
+	hight:auto;
+	/*●這行若不隱藏，IE8從全畫面恢復一般畫面，.mediaHeader會向右位移*/
+	/*margin:0px auto 0px auto;*/
+	padding:5px 0 5px 0; 
+	background:#FFF;
+
+	border-top-left-radius:6px; 
+	border-top-right-radius:6px; 
+	border-bottom-right-radius:0;
+	border-bottom-left-radius:0;
+}
+/*標提列-icon-容器*/
+.icon {
+	width:auto;
+	height:38px; 
+	display: table-cell;
+	padding:0 10px 0 23px; 
+	vertical-align: middle;
+	/*background:#F00004;*/
+}
+/*標提列-icon-圖形*/
+.icon img {
+	width:45px; 
+	height:auto;
+	vertical-align: middle;
+}
+/*標提列-字串-容器*/
+.mediaHeaderString {
+	/*與.buttons共用100%，可因應狀況為調%*/
+	width:82%;
+	height:auto;
+	display: table-cell;
+	vertical-align:middle;
+
+	font-family: Georgia, "微軟正黑體";
+	font-size:17px;
+	font-weight:360;
+	color:#333;
+}
+/*標提列右側.notebook和.help的容器*/
+.buttons {
+	/*與.mediaHeaderString共用100%，可因應狀況為調%*/
+	width:18%;
+	height:auto;
+	display: table-cell;
+	vertical-align:middle;
+}
+/*新手上路按鈕*/
+.help {
+	display: table-cell;
+	margin:-1px 12px 0 0;
+	float:right;
+}
+.help img {
+	width:24px; 
+	cursor: pointer;
+	vertical-align: middle;
+}
+/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+.notebook {
+	display: table-cell;
+	margin:0px 12px 0 0; 
+	float:right;
+}
+.notebook img {
+	width:25px; 
+	cursor:pointer;
+	vertical-align: middle;
+}
+/*========================================*/
+
+/*=================================*/
+/*影音媒體-容器 - 包裝 媒體物件 和 .playbackDiv*/
+.mediaDiv {
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	width:640px; 
+	height:480px; 
+	display:block;
+	float:left;
+	background:#000;
+	overflow:hidden;
+}
+/*●○*/
+.mediaDivOverlay {
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	display: none;
+	background:#ff0;
+}
+/*目標媒體後半段路徑+檔名 - 純資料，需隱藏*/
+.mediaTarget {
+	display:none;
+}
+/*是否自動播放 - 純資料，需隱藏*/
+.mediaAutoPlay {
+	display:none;
+}
+.mediaWidth {
+	display:none;
+}
+.mediaHeight {
+	display:none;
+}
+.beforeOrAfter {
+	display:none;
+}
+/*------------------------*/
+video {
+	vertical-align:top;
+	/*寬高皆設為100%，HTML5播放Video時.coverPlayIcon的位置才會正確*/
+	width:100%;
+	height:100%;
+}
+/*object在「CSS Reset」之vertical-align屬性值被設為baseline*/
+/*造成.mediaDiv的高度稍高，下方露白*/
+/*因此需修正object的vertical-align屬性值為top或bottom或middle，解決露白問題*/
+/*於選擇Flash播放技術時，才會使用object Tag*/
+object {
+	vertical-align:top;
+	/*1041008*/
+	width:100%
+	height:100%;
+}
+/*------------------------*/
+/*非自動播放時，在影音區塊會出現的播放按鈕圖示 - 容器*/
+/*寬高明確給值*/
+.coverPlayIcon {
+	position:relative;
+	cursor:pointer;
+	display:none;
+	width:118px; 
+	height:118px; 
+	/*background:#F60;*/
+}
+/*非自動播放時，在影音區塊會出現的播放按鈕圖示*/
+/*寬高明確給值*/
+.coverPlayIcon > img {
+	width:118px; 
+	height:118px; 
+}
+/*------------------------*/
+
+/*=================================*/
+
+/*播放介面UI外觀元素佈署*/
+/*●○播放介面寬高單位除必要使用%之外，皆用px設定，因有程式操控*/
+/*=====================================================*/
+/*●●●播放控制介面-外容器●●●*/
+/*.playbackDiv網頁瀏覽高度約28px*/
+.playbackDiv {
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	width:100%;
+	height:28px; 
+
+	/*1040702 - 勿修改*/
+	/*-----------------------------*/
+	display: inline-block;
+	float:left;
+	/*-----------------------------*/
+	
+	background:url(../tPlayer_CSS/playerUI/bg_640px_2.png) #FFF repeat-x;
+
+}
+/*播放控制介面-內容器*/
+.pbDivInner {
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	width:100%;
+	height:28px; 
+	display:block;
+
+	font-family:Georgia, "Times New Roman", Times, serif;
+	
+	/*●◎●◎●◎.pbDivInner之內元素若使用em單位需考慮「級聯」關係*/
+	font-size:13px; 
+	line-height:1.5em;
+	
+	font-weight:500;
+	color:#4578bc;
+}
+/*左邊界*/
+.pbLeft {
+	width:20px; 
+	height:28px; 
+	display: inline-block;
+	float:left;
+	margin:3px 10px 0 0; 
+	padding:0 0 0 0;
+}
+/*播放/暫停按鈕-容器*/
+.playPause {
+	width:32px; 
+	height:28px; 
+	margin:3px 0 0 0;
+	padding:0 0 0 0;
+	display:inline-block;
+	text-align:center;
+	float:left;
+	cursor:pointer;
+
+}
+/*播放/暫停按鈕-圖形*/
+.playPause > img {
+	vertical-align: middle;
+}
+/*顯示目前播放時間-容器*/
+.currTime {
+	width:56px; 
+	height:28px; 
+	margin:3px 0 0 0;
+	padding:0 0 0 0;
+	display:inline-block;
+	float:left;
+	text-align:center;
+}
+
+/*******.barOuter、.track和.progressBar*******/
+/*↓↓↓--------------------------------*/
+/**/
+/*.track和.progressBar的容器*/
+.barOuter {
+	width:auto;
+	height:28px; 
+
+	/*margin和padding不要變動*/
+	margin:3px 0 0 0;
+	padding:0 0 0 0;
+
+	display:inline-block;
+	float:left;
+}
+/*播放進度列之下層軌道-容器*/
+.track {
+	/*position:relative勿變動*/
+	position:relative;
+	/*z-index:110;*/
+	left:9px; 
+	top:0;
+	
+	/*1040907 - 原為100%，改為auto。js裡定義.track的寬度*/
+	width:auto;
+	height:28px; 
+	display:block;
+
+	/*margin和padding不要變動*/
+	margin:0 0 0 0;
+	padding:0 0 0 0;	
+}
+.track > img {
+	width:100%;
+	height:6px; 
+	vertical-align:middle;
+}
+/*播放進度列-容器-隨播放時間伸縮*/
+.progressBar {
+	/*position:absolute勿變動*/
+	position: absolute;
+	/*z-index:120;*/
+	left:0;
+	top:0;
+
+	width:auto;
+	height:28px; 
+	display:block;
+
+	/*margin和padding不要變動*/
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+
+	background:transparent;
+}
+/*播放進度列-圖形-隨播放時間伸縮*/
+.progressBar > img {
+	width:0px;
+	height:6px; 
+	vertical-align:middle;
+}
+.slider {
+	/*position:absolute勿變動*/
+	position: absolute;
+	/*z-index:140;*/
+	
+	/*必要*/
+	left:0;
+	top:0;
+
+	width:auto;
+	height:28px; 
+	/**/
+	display:none;
+}
+.slider > img {
+	width:18px; 
+	height:18px; 
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+/*↑↑↑--------------------------------*/
+
+/*顯示媒體長度-容器*/
+.totalTime {
+	width:56px; 
+	height:28px; 
+	margin:3px 0 0 0;
+	padding:0 0 0 0;
+	display:inline-block;
+	float:left;
+	text-align:center;
+}
+/*全畫面/一般畫面按鈕-容器*/
+.fullNormalScreen {
+	width:38px; 
+	height:28px; 
+	margin:3px 0 0 0;
+	padding:0 0 0 0;
+	display:inline-block;
+	text-align:center;
+	float:left;
+	cursor:pointer;
+}
+/*全畫面/一般畫面按鈕-圖形*/
+.fullNormalScreen >img {
+	width:16px; 
+	height:15px; 
+	vertical-align:middle;
+	cursor:pointer;
+}
+/*右邊界*/
+.pbRight {
+	width:20px; 
+	height:28px; 
+	display:inline-block;
+	float:left;
+
+	margin:3px 0 0 10px; 
+	padding:0 0 0 0;
+}
+
+/*●○ timeCode暫停點的圖示容器*/
+.dotSpan {
+	position: absolute;
+	/*z-index:150;*/
+	top:16px; 
+	width:7px; 
+	height:9px; 
+	display:block;
+	background:url(../tPlayer_CSS/playerUI/dot.png) no-repeat;
+}
+/*=====================================================*/
+
+
+
+
+/*》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》*/
+/*●○●○●○第2組UI介面，用於小尺寸行動裝置●○●○●*/
+/*》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》*/
+
+
+
+
+/* 《 2 》播放介面UI外觀元素佈署 - 《 2 》 */
+/*=====================================================*/
+/*=====================================================*/
+/*=====================================================*/
+/*●●●播放控制介面-外容器●●●*/
+.playbackDiv_2 {
+	height:auto; /*原height:28px*/
+}
+
+/*******.barOuter_2、.track_2和.progressBar_2*******/
+/*↓↓↓--------------------------------*/
+
+/*.track_2和.progressBar_2的容器*/
+.barOuter_2 {
+	height:10px; /*原height:28px*/
+	margin:0 20px 3px 25px; /*原margin:3px 0 0 0*/
+}
+/*播放進度列之下層軌道-容器*/
+.track_2 {
+	height:10px; /*原height:28px*/
+	background:#FF0004; /*原為設定。即透明transparent*/
+}
+.track_2 > img {
+	height:10px; /*原height:6px*/
+	vertical-align: top; /*原vertical-align:middle*/
+}
+/*播放進度列-容器-隨播放時間伸縮*/
+.progressBar_2 {
+	height:10px; /*原height:28px*/
+}
+/*播放進度列-圖形-隨播放時間伸縮*/
+.progressBar_2 > img {
+	height:10px; /*原height:6px*/
+	vertical-align: top; /*原vertical-align:middle*/
+}
+.slider_2 {
+	top:-4px; /*原top:0px*/
+	height:18px; /*原height:28px*/
+}
+.slider_2 > img {
+	vertical-align: top; /*原vertical-align:middle*/
+}
+/*●○ timeCode暫停點的圖示容器*/
+.dotSpan_2 {
+	position: absolute;
+	top:-1px; /*原top:16px*/
+	width:1px; /*原width:7px*/
+	height:10px; /*原height:9px*/
+	display:block;
+	background: #000;
+	border-right: 1px dotted #FFF;
+}
+/*↑↑↑--------------------------------*/
+
+
+/*↓↓↓--------------------------------*/
+/*播放控制介面-內容器*/
+/*●○●○●.pbDivInner_2有用em設定font-size，所以其內層的元素使用em需注意「級聯」關係*/
+.pbDivInner_2 {
+	height:32px; /*原height:28px*/
+}
+/*左邊界*/
+.pbLeft_2 {
+	width:12px; /*原width:20px*/
+	margin:4px 7px 0 0; /*原margin:3px 10px 0 0*/
+}
+/*播放/暫停按鈕-容器*/
+.playPause_2 {
+	margin:4px 0 0 0; /*原margin:3px 0 0 0*/
+}
+/*播放/暫停按鈕-圖形*/
+.playPause_2 > img {
+}
+/*顯示目前播放時間-容器*/
+.currTime_2 {
+	margin:4px 0 0 0; /*原margin:3px 0 0 0*/
+}
+
+/*顯示媒體長度-容器*/
+.totalTime_2 {
+	margin:4px 20px 0 0; /*原margin:3px 0 0 0*/
+	float:right; /*原float:left*/
+}
+/*全畫面/一般畫面按鈕-容器*/
+.fullNormalScreen_2 {
+	margin:4px 0 0 0; /*原margin:3px 0 0 0*/
+}
+/*全畫面/一般畫面按鈕-圖形*/
+.fullNormalScreen_2 >img {
+}
+/*右邊界*/
+.pbRight_2 {
+	margin:4px 0 0 10px; /*原margin:3px 0 0 10px*/ 
+}
+/*=====================================================*/
+
+
+/*右鍵選單*/
+/*-----------------*/
+/*選單容器*/
+#contextMenuContainer {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+
+	position:absolute;
+	z-index:300;
+
+	width:auto;
+	height:auto;
+	padding:10px 10px 10px 10px; 
+	display:block;
+	background:#DDD;
+
+	-webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+	-moz-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+	box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+/*右鍵選單項目*/
+.contextMenuItem {
+	width:150px; 
+	height:30px; 
+	background:#FFF;
+	display:block;
+
+	margin-bottom:2px; 
+	padding:5px 5px 5px 10px; 
+	
+	/*●○●○●.contextMenuItem有用em設定font-size，所以其內層的元素使用em需注意「級聯」關係*/
+	font-size:16px; /*16px/16px=1em*/
+	
+	font-family: "微軟正黑體";
+	font-weight:700;
+	color:#333;
+	cursor:pointer;
+}
+/*-----------------*/
+/*影音全畫面時，下方出現遮檔其他網頁物件之用的div*/
+#mediaWall {
+	position:absolute;
+	z-index:2100;
+	left:0;
+	top:0;
+	background-color:#000;
+	background-image:url(../tPlayer_CSS/playerUI/overlay.png);
+}
+/*-----------------*/
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*================================================================*/
+
+
+
+/*●承載評量題的Div容器*/
+/*●#quizDiv被append()進入$('#mediaDiv')*/
+/*--------------------------------*/
+#quizDiv {
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:border-box;
+
+	position:relative;
+	padding:0 0 0 0;
+	width:100%;
+	height:100%;
+
+	/**/
+	display:none;
+	background:#999;
+}
+/*--------------------------------*/
+
+
+
+/*↓↓↓--------燈箱提示相關css--------↓↓↓*/
+#promptDiv,.focusDiv{
+	width:650px; 
+	height:470px; 
+}
+/*一開始進入In-VideoQuiz頁面的提示 - 「導學」*/
+/*------------------------------------------------*/
+/*「導學」大容器*/
+#promptDiv {
+	position: absolute;
+	z-index: 2200;
+	background: #b59469;
+	display: none;
+	padding: 15px; 
+}
+/*「導學」的內文資料和標題都在這裡面*/
+#promptData {
+	padding: 10px 10px 15px 20px; 
+	width: 100%;
+	height: 100%;
+	
+	/*●○●○●#promptData有用em設定font-size，所以其內層的元素使用em需注意「級聯」關係*/
+	font-size: 1.25em; 
+	
+	font-family: "微軟正黑體", "標楷體";
+	font-weight: 500;
+	color: #333;
+	line-height: 1.3em;
+	text-indent: 0.0em;
+	overflow: auto;
+	display: block;
+	
+	border: 2px #FFF solid; 
+	background: #EEE;
+
+	/*◎務必加上word-wrap:break-word這行，否則IE10在一開始跳出「導學」，會當掉*/
+	word-wrap: break-word;
+	text-align:justify;
+	text-justify:inter-ideograph;
+}
+/*「導學」的標題*/
+.promptTitle {
+	font-size: 1.3em;
+	color: #4e160f;
+	font-weight: 700;
+	text-indent: 0em;
+	line-height: 60%;
+	margin:20px;
+}
+#promptData .sub { text-indent: 1.0em;}
+#promptData .pic { width:56%; height:auto; display: block; margin:0 auto 0 auto; background:#FF0004; }
+#promptData .pic img { width:100%; height:auto; }
+#promptData ul { text-indent:0.0em; display:block; margin-left:45px;} /*45px/20px*/
+
+
+
+/*@@@燈箱使用的#wallDiv和#closeBtn*/
+/*------------------------------------------------*/
+/*跳出燈箱時，在圖形之下漸黑之DIV - 用來遮擋頁面其他物件*/
+#wallDiv {
+	position:absolute;
+	z-index:2190;
+	width:50px; 
+	height:50px; 
+	background:#000;
+	display:none;
+}
+#closeBtn {
+	position:relative;
+	z-index:2195;
+	width:48px;
+	height:48px;
+	display: inline-block;
+	background:url(../tPlayer_CSS/playerUI/closeBtn_w48px.png);
+	cursor:pointer;
+}
+/*------------------------------------------------*/
+
+
+/*--------「段落內容整理」相關css--------*/
+/*------------------------------------------------*/
+/*「段落內容整理」的大容器*/
+.focusDiv {
+	position:absolute;
+	z-index:2200;
+	background:#b59469;
+	display:none;
+	padding:16px 16px 16px 16px; 
+}
+/*「段落內容整理」的內文資料和標題都在這裡面*/
+.focusData {
+	padding:30px 30px 20px 30px; 
+	width:100%;
+	height:100%;
+
+	/*●○●○●.focusData有用em設定font-size，所以其內層的元素使用em需注意「級聯」關係*/
+	font-size:1em; /*16px/16px=1em --> ◎因為是1em，所以，其內層元素換算時，仍除以16px*/
+	
+	font-family: "微軟正黑體";
+	font-weight:500;
+	color:#333;
+	line-height:1.3em;
+	text-indent:2.1em;
+	overflow:auto;
+
+	display:block;
+	border: 2px #FFF solid; 
+	background:#EEE;
+
+	/*◎務必加上word-wrap:break-word這行，否則IE10遇到暫停點-跳出「段落內容整理」，會當掉*/
+	word-wrap: break-word;
+	text-align:justify;
+	text-justify:inter-ideograph;
+
+}
+.focusData p {
+	margin-bottom:10px;
+}
+/*「段落內容整理」的標題*/
+.focusTitle {
+	text-indent:-0.5em;
+	font-size:1.3em;
+	color: #900;
+	font-weight:700;
+}
+/*------------------------------------------------*/
+
+/*↑↑↑--------燈箱提示相關css--------↑↑↑*/
+
+
+
+/*↓↓↓--------「小反思」相關css--------↓↓↓*/
+/*------------------------------------------------*/
+/*「小反思」的最位外圍容器 - #reflectionDiv包著#reflectionContainer*/
+#reflectionDiv {
+	position:relative;
+	/**/
+	display:none;
+	width:100%;
+	height:100%;
+}
+/*「小反思」 - 在#reflectionContainer裡面顯示.reflection的.reflectionData*/
+#reflectionContainer {
+	padding:15px 15px 15px 15px; 
+	background: #EEE;
+	width:100%;
+	height:100%;
+}
+/*-------------------------------*/
+
+/*.reflection包著.reflectionData*/
+/*「小反思」 - 在html的.reflection這個tag裡填寫資料*/
+.reflection {
+	width:100%;
+	height:100%;
+	/**/
+	display:block;
+}
+/*.reflectionData除了內文外，也包著.reflectionTitle*/
+/*「小反思」 - 資料其實都填在.reflectionData裡面*/
+.reflectionData {
+	padding:30px 30px 20px 15px; 
+	width:100%;
+	height:100%;
+	
+	/*●○●○●.reflectionData有用em設定font-size，所以其內層的元素使用em需注意「級聯」關係*/
+	font-size:1em; /*16px/16px=1em --> ◎因為是1em，所以，其內層元素換算時，仍除以16px*/
+	
+	font-family: "微軟正黑體";
+	font-weight:500;
+	color:#333;
+	line-height:1.6em;
+	text-indent:2.1em;
+	overflow:auto;
+
+	display:block;
+	border:1px #CCC dashed; 
+	background:#FFF;
+
+	/*◎務必加上word-wrap:break-word這行，否則IE10遇到暫停點-「小反思」，恐會擋掉。因為靜態可能不會當掉*/
+	word-wrap: break-word;
+	text-align:justify;
+	text-justify:inter-ideograph;
+
+}
+.reflectionData p {
+	margin-bottom:10px; 
+}
+.reflectionData ol { text-indent:0.0em; display:block; margin-left:45px;} 
+/*小反思，標題*/
+.reflectionTitle {
+	text-indent:0.5em;
+	font-size:1.3em;
+	color: #900;
+	font-weight:700;
+}
+/*------------------------------------------------*/
+
+/*↑↑↑--------「小反思」相關css-------↑↑↑*/
+
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ 
+
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:769px) {
+	
+	/*●有媒體檔的頁面：.pageWrapper寬高不可設定，因，當以小尺寸視窗進入，此處若有設定寬高(100%也不行)，會抓不到大尺寸視窗的800px，而抓到此處縮小視窗寬度後的小尺寸視窗寬度。這時把視窗拉大，由於沒抓到大視窗在CSS中的初始寬度，因此無法恢復寬度 - ●已修改程式，所以可以設為100%了*/
+	.pageWrapper {
+		padding:0px 0 60px 0; /*原padding:0 0 30px 0*/
+		width:100%;
+	}
+	
+	/*標提列*/
+	/*========================================*/
+	/*媒體標提列-容器*/
+	.mediaHeader {
+		/*取消圓角*/
+		border-top-left-radius:0; /*原border-top-left-radius:6px*/
+		border-top-right-radius:0; /*原border-top-right-radius:6px*/
+	}
+	
+	/*標提列-icon-容器*/
+	.icon {
+		padding:0px 10px 0px 17px; /*原0px 10px 0px 23px*/
+	}
+	
+	/*標提列-字串-容器*/
+	.mediaHeaderString {
+		width:100%; /*原本與.buttons共用100%，為82%，在小尺寸視窗設為100%*/
+	}
+	/*標提列右側.notebook和.help的容器*/
+	.buttons {
+		/*與.mediaHeaderString共用100%，當.mediaHeaderString設為100%，.button自動歸0%*/
+		/*width:18%;*/
+	}
+	/*新手上路按鈕*/
+	.help {
+		display: none; /*原本為display: table-cell;*/
+	}
+	/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+	.notebook {
+		display: none; /*原本為display: table-cell;*/
+	}
+	/*========================================*/
+	
+	
+
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+

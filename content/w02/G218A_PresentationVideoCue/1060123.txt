@@ -1,0 +1,30 @@
+
+978
+g218A.controlMouseDown = function(index){ }
+
+
+613
+fontSizeSwitcher
+
+578---◎
+--> .g218A_text節點 無字串，或不存在，條件式需重新思考一下
+
+
+1385
+
+
+1571 - 已取消
+$('.fontSizeSwitcher').css({'display':'table'});
+1589 - 已取消
+$('.fontSizeSwitcher').css({'display':'none'});
+
+
+1575
+//1060124- 將字級+-模組插入到.g218A_minus_plus前面(左邊)，並附加修正用class - .fontSizeSwitcher_full
+					$('.g218A_minus_plus').before( $('.fontSizeSwitcher') );
+					$('.fontSizeSwitcher').addClass('fontSizeSwitcher_full');
+
+1599
+//1060124- 將字級+-模組插入到.g218A_minus_plus前面(左邊)，並附加修正用class - .fontSizeSwitcher_full
+					$('.g218A_menuZone').after( $('.fontSizeSwitcher') );
+					$('.fontSizeSwitcher').removeClass('fontSizeSwitcher_full');

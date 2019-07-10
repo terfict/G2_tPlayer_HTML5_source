@@ -1,0 +1,28 @@
+
+//
+3424
+
+//
+3882
+//¡´¡³
+tPlayer.seek = function(_targetTime, index){
+	if(param.playModeArr[0] === "flash"){
+		//tPlayer.swfMediaObj[index] = document.getElementById("tPlayer_"+index.toString());
+		tPlayer.swfMediaObj[index].as3_seek(_targetTime);
+	}else if(param.playModeArr[0] === "html5"){
+		tPlayer.h5MediaObj[index].currentTime = _targetTime;
+	}else{
+		//
+	}
+};
+
+
+//1273¡B4130
+method.attachH5MediaEvent
+
+//1215
+
+//3831
+
+
+g213A_menuButton

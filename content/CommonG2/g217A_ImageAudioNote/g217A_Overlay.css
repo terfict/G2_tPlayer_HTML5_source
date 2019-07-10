@@ -1,0 +1,620 @@
+﻿@charset "utf-8";
+/* CSS Document - G217A│g217A_Overlay.css */
+
+
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background-color: #67bad1;
+
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 100%;
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px*/
+}
+
+p, ul, ol{
+	margin:0 0 0 0;
+}
+
+/*●頁面最大容器*/
+.pageWrapper {
+	/*◎居中*/
+	/*margin:0 auto 0 auto;*/
+	/*◎從這裡調整.mediaWrapper播放介面的《垂直方向位置》 - padding-top*/
+	padding:0px 0px 0px 0px; 
+	width:800px;
+	height:auto;
+	background: #FFF;
+}
+
+/*小尺寸視窗會用到，包裹.g217A_prevBtn、.g217A_nextBtn、.g217A_pageNum*/
+.g217A_rwdNavDiv {
+	display:none;
+}
+
+/*上一頁按鈕*/
+.g217A_prevBtn {
+	position: absolute;
+	width:70px;
+	height:auto;
+	left:0px;
+	top:10px;
+	z-index:1010;
+	cursor:pointer;
+	display:block;
+}
+.g217A_prevBtn > img {
+	width:70px;
+	height:auto;
+}
+/*上一頁按鈕 - 滑鼠懸浮狀態CSS，程式會來取用*/
+.g217A_prevBtnOver {
+	/*background:#27309C;*/
+}
+/*上一頁按鈕 - 滑鼠按下狀態CSS，程式會來取用*/
+.g217A_prevBtnDown {
+	/*background: #B07300;*/
+}
+/*下一頁按鈕*/
+.g217A_nextBtn {
+	position: absolute;
+	width:70px;
+	height:auto;
+	left:730px;
+	top:10px;
+	z-index:1010;
+	/*padding:10px 18px 10px 18px;*/
+	/*background:#6ea261;*/
+	cursor:pointer;
+	display:block;
+	
+	border-top-left-radius:10px; 
+	border-top-right-radius:0px; 
+	border-bottom-right-radius:0px;
+	border-bottom-left-radius:10px;
+}
+.g217A_nextBtn > img {
+	width:70px;
+	height:auto;
+}
+/*下一頁按鈕 - 滑鼠懸浮狀態CSS，程式會來取用*/
+.g217A_nextBtnOver {
+	/*background:#27309C;*/
+}
+/*下一頁按鈕 - 滑鼠按下狀態CSS，程式會來取用*/
+.g217A_nextBtnDown {
+	/*background: #B07300;*/
+}
+
+
+/*最上方標題列.g217_header*/
+/*↓------------------------------↓*/
+/*●最上方標題列 - 大容器*/
+.g217A_header {
+	display:table;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	width:100%;
+	height:56px;
+	background:#FFF url(images/header_bg.jpg) 0px 0px;
+}
+
+/*NOU Media圖示*/
+.g217A_nouIcon {
+	padding:0 5px 0 90px;
+	display: table-cell;
+	vertical-align:middle;
+	width:58px;
+	height: auto;
+}
+.g217A_nouIcon > img {
+	width:45px;
+	height:auto;
+}
+/*↑------------------------------↑*/
+
+
+/*=====================================*/
+/*單元標題 - 標題容器*/
+.g217A_headerStringOuter {
+	display:table-cell;
+	vertical-align:middle;
+	text-align:left;
+}
+/*單元標題 - 標題字串*/
+.g217A_headerString {
+	padding:3px 12px 3px 12px; 
+	width:auto;
+	height:auto;
+	opacity:0.7;
+	
+	color:#566877;
+	font-weight:600;
+	font-size: 1.1em;
+	line-height: 1.1em;
+	letter-spacing:0.0625em;
+}
+/*=====================================*/
+
+
+/*=====================================*/
+/*.g217A_pageNum：頁碼容器*/
+.g217A_pageNum {
+	display: none; /*大尺寸視窗不出現頁碼，小尺寸是窗則出現*/
+}
+/*=====================================*/
+
+
+/*=====================================*/
+/*位於頁面最下方，裝載 方型數字按鈕.g217A_pageBtn 和 新手上路按鈕.g217A_help*/
+.g217A_pageBtnWrapper {
+	padding:5px 0 8px 20px;
+	display:block;
+	width:100%;
+	min-height:36px;
+	height:auto;
+	background:#FFF;
+	border-top:1px #DDD solid;
+}
+/*方型數字按鈕*/
+.g217A_pageBtn {
+	margin:3px 7px 1px 0;
+	padding:2px 2px 2px 2px;
+	display:inline-block;
+	width:25px;
+	height:20px;
+	background:#566877;
+	cursor:pointer;
+	
+	text-align:center;
+	font-size:0.9em;
+	color:#FFF;
+}
+/*滑鼠移到.g217A_pageBtn上方時，程式來取用此CSS選擇器*/
+.g217A_pageBtn_hover {
+	background:#b9defd;
+	color:#566877;
+}
+/*目前作用中的方形數字按鈕，程式來取用此CSS選擇器*/
+.g217A_pageBtn_current {
+	background:#173752;
+}
+
+
+/*新手上路按鈕 - 改放在.g217A_pageBtnWrapper*/
+.g217A_help {
+	display: inline-block;
+	float:right;
+	margin:1px 20px 0 0;
+}
+.g217A_help img {
+	width:24px; 
+	cursor: pointer;
+}
+/*=====================================*/
+
+
+/*=====================================*/
+/*●所有.g217A_card的容器*/
+.g217A_cardSet {
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px; 
+	width:100%;
+	height:auto;
+	display:block;
+}
+/*各頁資料*/
+.g217A_card {
+	width:100%;
+	height:auto;
+}
+/*=====================================*/
+
+
+
+/*圖文區塊*/
+/*↓------------------------------↓*/
+/*圖文區塊 - 容器外層*/
+.textPhoto {
+	
+	/*●必要：clear:both
+		因IE進平台，渲染(解譯成像)引擎被降低版本，在大尺寸喊和小尺寸視窗之間切換，會產生瑕疵
+		但做此處理後，所有IE版本可能會出現1px縫隙，露出底色 (.mediaWrapper和.textPhoto之間)
+		所以必須把.pageWrapper的背景色設為#FFF白色，以與播放介面之白色相符，視覺上就不會有縫隙*/
+	/*==========================*/
+	clear:both;
+	/*==========================*/
+	
+	display:block;
+	margin:0 auto 0px auto;
+	padding:0px 0px 0px 0px;
+	width:100%;
+	height:auto;
+	
+	/*底色統一設在.textPhoto。才能單純化*/
+	background:#FFF;
+	
+	/*圓角*/
+	border-top-left-radius:0px; 
+	border-top-right-radius:0px;
+	border-bottom-left-radius:0px; 
+	border-bottom-right-radius:0px; 
+	
+	/*box-shadow:6px 6px 12px rgba(20%,20%,20%,0.4);*/
+}
+/*圖文區塊 - 容器內層*/
+.textPhoto .inner {
+	display:block;
+	margin:0 0 0 0;
+	padding:0px 0px 0px 0px;
+	width:100%;
+	height:auto;
+	
+	/*圓角*/
+	/*border-top-left-radius:0px; 
+	border-top-right-radius:0px;
+	border-bottom-left-radius:10px; 
+	border-bottom-right-radius:10px; */
+	
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+/*圖文區塊 - 容器內層裡面的標題*/
+.textPhoto .inner .title {
+	display: block;
+	margin:0px 0 0px 0px;
+	padding:15px 10px 15px 10px;
+	width:100%;
+	height:auto;
+	background:#e7aa35;
+	
+	font-family: 'LiHei Pro', "微軟正黑體", sans-serif;
+	color:#FFF;
+	font-size: 1.3em;
+	font-weight:600;
+	line-height: 1.3em;
+	text-indent:0.0em;
+	text-align: center;
+	
+	text-shadow: 2px 2px 2px #AAA;
+	-moz-text-shadow: 2px 2px 2px #CCC;
+	-webkit-text-shadow: 2px 2px 2px #CCC;
+}
+
+/*圖文區塊 - 容器內層裡面的內文*/
+.textPhoto .inner .text {
+	width:100%;
+	height:auto;
+	
+	/*1050909：禁用text-align*/
+	
+	/*此處不設底色，底色統一設在.textPhoto。才能單純化*/
+	/*background:#DFDFDF;*/
+}
+
+/*↑------------------------------↑*/
+
+
+
+
+
+/*↓↓↓--------「點小圖跳大圖功能」--------↓↓↓*/
+
+/*有「點小圖跳大圖」功能<img>的外圍容器的class*/
+.toBigPic {
+	/*1050909 - 禁用居中語法 margin:0 auto 0 auto*/
+}
+/*有「點小圖跳大圖」功能<img>*/
+.toBigPic > img {
+	border: none;
+}
+
+.normalPic {
+	/*1050909 - 禁用居中語法 margin:0 auto 0 auto*/
+}
+.normalPic > img {
+	border: none;
+}
+
+/*↑↑↑--------「點小圖跳大圖功能」--------↑↑↑*/
+
+
+
+
+
+/*↓↓↓--------「名詞解釋：glossary」--------↓↓↓*/
+
+/*解釋內容面板區塊裡面的文字說明內容*/
+.glossary_content {
+}
+.glossary_content p {
+	margin:0 0 3px 0;
+}
+
+/*↑↑↑--------「名詞解釋：glossary」--------↑↑↑*/
+
+
+
+/*在g217A版型：.mediaWrapperOuter 為 .mediaWrapper 的容器*/
+.mediaWrapperOuter {
+	width:100%;
+	/*播放控制介面左右兩側才不會透出下方底色*/
+	background:#FFF url(../tPlayer_CSS/playerUI/bg_640px_2.png);
+}
+
+
+/*========================================*/
+/*↓↓↓↓↓↓ 媒體播放介面 ↓↓↓↓↓↓*/
+/*包裹 .mediaHeader、.mediaDiv、.playbackDiv ...等之外圍容器*/
+.mediaWrapper {
+	/*◎居中*/
+	margin:0 auto 0 auto;
+
+	/*◎從這裡調整.mediaWrapper播放介面的《水平方向位置》*/
+	/*margin:0px 0px 0px 0px;*/
+	/*==================*/
+	width:640px; 
+	height:auto;
+	display: block;
+	
+	/*box-shadow:6px 6px 12px rgba(20%,20%,20%,0.4);*/
+}
+
+/*影音媒體-容器 - 包裝 媒體物件 和 .playbackDiv*/
+.mediaDiv {
+	width:640px; 
+	height:auto;
+	background:transparent;
+}
+/*========================================*/
+
+
+/*播放界面UI - 右邊界*/
+.pbRight {
+	margin:3px 0 0 0px; /*原margin:3px 0 0 10px*/
+}
+
+/*RWD小尺寸視窗的barOuter，名稱為barOuter_2。*/
+.barOuter_2 {
+	/*使與上方的.g217A_rwdNavDiv拉出一點間距。*/
+	margin-top:5px; 
+}
+
+/*↑↑↑↑↑↑ 媒體播放介面 ↑↑↑↑↑↑*/
+
+
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ */
+
+
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:769px) {
+	
+	/*●頁面最大容器*/
+	.pageWrapper {
+		width:100%; /*原width:800px*/
+	}
+	
+	/*標題列*/
+	.g217A_header {
+	}
+	
+	/*NOU Media圖示*/
+	.g217A_nouIcon {
+		padding:0 10px 0 20px; /*原padding:0 15px 0 90px*/
+	}
+	.g217A_nouIcon > img {
+	}
+	
+	/*單元標題 - 標題容器*/
+	.g217A_headerStringOuter {
+	}
+	/*單元標題 - 標題字串*/
+	.g217A_headerString {
+		padding:3px 12px 3px 0px; /*原padding:3px 12px 3px 12px*/
+		/*原font-size: 1.1em*/
+		font-size:1.0em; 
+	}
+	
+	/*小尺寸視窗會用到，包裹.g217A_prevBtn、.g217A_nextBtn、.g217A_pageNum*/
+	.g217A_rwdNavDiv {
+		display:table; /*原display:none;*/
+		width:100%; /*原無width*/
+		height:auto; /*原無height*/
+		/**/
+		background:#FFF; /*原無background*/
+	}
+	
+	/*---------------------------------------*/
+	/*上一頁按鈕*/
+	.g217A_prevBtn {
+		position: static; /*原position:fixed;*/
+		display: inline-block; /*原display:block*/
+		float:left; /*原無float*/
+		text-align:center; /*原無text-align*/
+		
+		width:15%; /*原無width*/
+		min-width:10%; /*原無min-width*/
+	}
+	.g217A_prevBtn > img {
+		width:50px; /*原width:70px*/
+	}
+	
+	/*下一頁按鈕*/
+	.g217A_nextBtn {
+		position: static; /*原position:fixed;*/
+		display: inline-block; /*原display:block*/
+		float:right; /*原無float*/
+		text-align:center; /*原無text-align*/
+		
+		width:15%; /*原無width*/
+		min-width:10%; /*原無min-width*/
+	}
+	.g217A_nextBtn > img {
+		width:50px; /*原width:70px*/
+	}
+	/*---------------------------------------*/
+	
+	
+	/*所有.g217A_card的容器*/
+	.g217A_cardSet {
+	}
+	
+	
+	/*媒體檔標題列*/
+	/*========================================*/
+	/*媒體檔標題列-容器*/
+	.mediaHeader {
+		/*取消圓角*/
+		border-top-left-radius:0; /*原border-top-left-radius:6px*/
+		border-top-right-radius:0; /*原border-top-right-radius:6px*/
+	}
+	/*標題列-icon-容器*/
+	.icon {
+	}
+	/*標題列-字串-容器*/
+	.mediaHeaderString {
+		/*原本與.buttons共用100%，為82%*/
+		width:100%;
+	}
+	/*標題列右側.notebook和.help的容器*/
+	.buttons {
+		/*與.mediaHeaderString共用100%*/
+		/*width:18%;*/
+	}
+	/*新手上路按鈕*/
+	.help {
+		/*原本為display: table-cell;*/
+		display: none;
+	}
+	/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+	.notebook {
+		/*原本為display: table-cell;*/
+		display: none;
+	}
+	/*========================================*/
+	
+	
+	.g217A_help {
+		display: none; /*原display: inline-block*/
+	}
+	
+	
+	
+	/*圖文區塊*/
+	/*↓------------------------------↓*/
+	/*圖文區塊 - 容器外層*/
+	.textPhoto {
+	}
+	
+	/*圖文區塊 - 容器內層*/
+	.textPhoto .inner {
+	}
+	/*圖文區塊 - 內層裡面的標題*/
+	.textPhoto .inner .title {
+	}
+	/*圖文區塊 - 內層裡面的文字、圖形*/
+	.textPhoto .inner .text {
+	}
+	/*↑------------------------------↑*/
+	
+	
+	/*↓------------------------------↓*/
+	/* 放大鏡圖示的容器 (圖形具備放大功能時，自動附加放大鏡圖示)，小尺寸視窗因無法定位，所以需隱藏*/
+	.zoomIconSpan {
+		display:none; /*原在TPlayer.css - display:block*/
+	}
+	/*↑------------------------------↑*/
+	
+
+	
+	/*▲☆★ 「點小圖跳大圖」、「無點小圖跳大圖」*/
+	/*↓------------------------------↓*/
+	/*▲☆★ - 「點小圖跳大圖」、「無點小圖跳大圖」 的容器div 
+	--- 已由程式根據externalData.js的param.rwdSmallWindowImgPercent操控寬度，高度自動比例*/
+	/*.toBigPic, normalPic {
+	}*/
+	
+	/*▲☆★ - 已在程式中設為100%*/
+	/*「.toBigPic > img」小圖本身寬度設為100%，則寬度由「.toBigPic」的寬度來決定*/
+	/*.toBigPic > img {
+	}*/
+	
+	/*▲☆★ - 已在程式中設為100%*/
+	/*==============================================================*/
+	/*.normalPic > img {
+	}*/
+	/*==============================================================*/
+	
+	
+	
+}
+	
+	
+	
+

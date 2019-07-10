@@ -1,0 +1,15 @@
+
+
+//●○1040513 - 暫停所有媒體檔
+//------------------------
+method.pauseAllMedia = function(_currIndex){
+	$('.mediaWrapper').each(function(index) {
+		if(_currIndex !== index){
+			//1051117 - 增加條件式
+			if( param.playingFlagArr[index] ){
+				tPlayer.pause(index);
+			}
+		}
+	});
+};
+//------------------------

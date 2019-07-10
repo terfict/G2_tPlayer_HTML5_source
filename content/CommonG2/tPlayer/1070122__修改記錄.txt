@@ -1,0 +1,48 @@
+
+923 @tPlayer.js
+
+
+case 'hlsHtml5':
+//param.currMediaURL = param.playModeArr[1];
+method.embedHlsJsH5Media(index);
+break;
+
+¡´1116
+method.embedHlsJsH5Media = function(index){}
+
+5538
+method.getStreamingData = function(index){}
+5648
+method.choosePlayMode = function(){ }
+
+6460
+}else if(param.playModeArr[0] === 'html5' || param.playModeArr[0] === 'hlsHtml5'){}
+
+//¡´·j´M
+param.playModeArr[0]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

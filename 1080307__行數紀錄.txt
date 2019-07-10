@@ -1,0 +1,158 @@
+
+416
+addShortcut
+
+1470
+method.embedHlsJsH5Media = function(index){
+
+4692
+method.playbackMouseEvent = function(index){
+
+3505
+tPlayer.updateCurrTime = function(_currTime, index){}
+
+
+method.updateProgress(index)
+
+5187
+method.jqUITouchPunchDrag = function(index){}\
+
+5614
+tPlayer.seek = function(_targetTime, index){}
+
+tPlayer.seek(_targetTime, index)
+
+=======================================================
+
+410
+$(document).keydown(function(e){  //alert(e.keyCode);
+
+2456
+'<span class="settings"><img width=20 src="data:image/svg+xml;base64,...........
+
+2493
+//1070604 - ★建立設定面板---大項 (目前只有速度)
+method.createSettingPannel = function(index){   }
+
+4422
+method.menu1F_videoRateOnClick = function(e, index){     }
+
+4644
+method.settingPanelMEvent_remove = function(index){     }
+
+4664
+參數初始化
+
+4671
+method.settingPanelMEvent = function(index){     }
+
+4708
+//★.settings按鈕
+$('.mediaWrapper:eq(' + index + ') .settings').on('mousedown', function(e){
+
+4785★★★★★★
+ .menu1F_videoRate 的 CSS
+$('.mediaWrapper:eq(' + index + ') .settingPanel .menu1F_videoRate').css({
+
+4968★★★★★★
+// 增加音量 (+)
+$('.mediaWrapper:eq(' + index + ') .settingPanel .menu1_volume .plus').on('mousedown',function(e){
+
+
+========================================================
+389
+//1080308
+	param.defaultVolume = 1.0;
+	param.currVolume = param.defaultVolume;
+	param.volumeOffset = 0.05;
+	//1080307
+	param.tmpState;
+
+413------------★★★★★★★★★★★★★
+method.addShortcut = function(index){ 
+
+486------------★★★★★★★★★★★★★
+$('.mediaWrapper:eq(' + param.tmpState + ') .settings').trigger('mousedown');
+========================================================
+
+localStorage
+==========
+
+1360
+method.storageAvailable = function(type){   }
+
+1390
+method.embedHlsJsH5Media = function(index){}裡
+
+1492
+if (method.storageAvailable('localStorage')) {
+
+
+
+
+
+//1080314
+					if ( method.storageAvailable('localStorage') ) {
+						if(utils.os === "Windows 7" && utils.currentBrowser === "msie"){
+							// alert(utils.currentBrowser);
+						}else{
+							localStorage.setItem('currVolume', param.currVolume);
+						}
+					}
+
+
+1578、1877、2237
+method.localStorage_volume(index);
+5234
+method.localStorage_volume = function(index){
+
+4694
+method.settingPanelMEvent_remove = function(index){
+
+496 --- ★★★★★★★★★
+//1080314
+		//《s》鍵 - 開啟 設定面板.setting
+		if(e.keyCode === 83){ 
+			$('.mediaWrapper:eq(' + param.tmpState + ') .settings').trigger('mousedown');
+		}
+alert(param.G2ID);
+
+5470
+$('.mediaWrapper:eq(' + index + ') .fullNormalScreen').on('mousedown'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

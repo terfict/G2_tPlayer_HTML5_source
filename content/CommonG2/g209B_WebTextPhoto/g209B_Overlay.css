@@ -1,0 +1,357 @@
+﻿@charset "utf-8";
+/* CSS Document - G209B│g209B_Overlay.css */
+
+
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background-color: #d72324;
+
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 100%;
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px*/
+}
+
+p, ul, ol{
+	margin:0 0 0 0;
+}
+
+/*頁面最大容器*/
+/*程式初始化時，會來抓取width和min-height的字串值*/
+.pageWrapper {
+	/*◎居中*/
+	/*margin:0 auto 0 auto;*/
+	/*◎從這裡調整.mediaWrapper播放介面的《垂直方向位置》 - padding-top*/
+	padding:0px 0px 0px 0px; 
+	width:800px; 
+	min-height:520px; 
+	height:auto;
+	background: #099bd6;
+	display:block;
+}
+
+/*最上方標題列.g203_header*/
+/*↓------------------------------↓*/
+.g209_header {
+	display:table;
+	margin:0 0 0px 0;
+	padding:78px 0px 0px 0px;
+	width:100%;
+	height:150px;
+	text-align:center;
+	background:#FFF url(images/title.jpg) no-repeat;
+	
+}
+.g209_headerString {
+	display:table-cell;
+	vertical-align:middle;
+	padding:0 30px 0 30px;
+	width:auto;
+	height:auto;
+	/*background:#82FFA7;*/
+	
+	font-family: 'LiHei Pro', "微軟正黑體", sans-serif;
+	color: #412a08;
+	font-weight:500;
+	font-size: 1.4em;
+	line-height: 1.2em;
+	letter-spacing:0.0625em; 
+	
+	/*text-shadow: 2px 2px 2px #CCC;
+	-moz-text-shadow: 2px 2px 2px #CCC;
+	-webkit-text-shadow: 2px 2px 2px #CCC;*/
+}
+/*↑------------------------------↑*/
+
+/*圖文區塊*/
+/*↓------------------------------↓*/
+/*圖文區塊 - 容器外層*/
+.textPhoto {
+	display:block;
+	margin:0 auto 0px auto;
+	padding:30px 0px 80px 0px;
+	width:100%;
+	height:auto;
+	/*border: solid #CFCFCF 1px;*/
+	background:#D3DBC5 url(images/10.png) -20px 0px;
+	
+	/*圓角*/
+	border-top-left-radius:0px; 
+	border-top-right-radius:0px;
+	border-bottom-left-radius:0px; 
+	border-bottom-right-radius:0px; 
+}
+/*圖文區塊 - 容器內層*/
+.textPhoto .inner {
+	display:block;
+	margin:0 0 0 0;
+	padding:20px 36px 36px 36px;
+	background:#EEE url(images/textPhoto_inner_bg.png) no-repeat right bottom;
+	width:100%;
+	height:auto;
+	border: solid #CFCFCF 1px;
+	
+	/*圓角*/
+	border-top-left-radius:0px; 
+	border-top-right-radius:0px;
+	border-bottom-left-radius:10px; 
+	border-bottom-right-radius:10px; 
+}
+
+/*圖文區塊 - 容器內層裡面的標題*/
+.textPhoto .inner .title {
+	display: inline-block;
+	margin:0px 0 25px 0;
+	padding:0px 0px 0px 0px;
+	width:100%;
+	height:auto;
+	float:left;
+	
+	font-family: 'LiHei Pro', "微軟正黑體", sans-serif;
+	color:#000;
+	font-size: 1.4em;
+	font-weight:400;
+	line-height: 1.3em;
+	text-indent:0.0em;
+	text-align:center;
+	
+	text-shadow: 2px 2px 2px #CCC;
+	-moz-text-shadow: 2px 2px 2px #CCC;
+	-webkit-text-shadow: 2px 2px 2px #CCC;
+}
+
+/*圖文區塊 - 容器內層裡面的內文*/
+.textPhoto .inner .text {
+	width:100%;
+	height:auto;
+	
+	font-family: 'LiHei Pro', "微軟正黑體", sans-serif;
+	color:#000;
+	font-size: 1.0em;
+	font-weight:360;
+	line-height: 1.6em;
+	letter-spacing:0.0625em;
+	/**/
+	text-indent:2.1em;
+	
+	/*◎若有動態縮放文字區塊，務必加入word-wrap:break-word這行在上方，否則IE10可能會當掉*/
+	word-wrap: break-word;
+	text-align:justify;
+	text-justify:inter-ideograph;
+}
+
+/*圖文區塊 - 容器內層裡面的圖形*/
+/*。「.textPhoto .inner .normalPic」*/
+/*●◎將此處text-indent恢復為0px。因為「.textPhoto .inner .text」的text-indent為2.1em*/
+/*●◎圖形若在.textPhoto .inner .text裡面，會受到text-indent的數值影響*/
+/*.textPhoto .inner .normalPic {
+	text-indent:0px;
+}*/
+/*↑------------------------------↑*/
+
+
+
+
+
+/*↓↓↓--------「點小圖跳大圖功能」--------↓↓↓*/
+
+/*有「點小圖跳大圖」功能<img>的外圍容器的class*/
+.toBigPic {
+}
+/*有「點小圖跳大圖」功能<img>*/
+.toBigPic > img {
+}
+
+/*無跳圖之小圖*/
+.normalPic > img {
+}
+
+/*↑↑↑--------「點小圖跳大圖功能」--------↑↑↑*/
+
+
+
+
+/*.notebook和.help*/
+/*串接覆蓋tPlayer.css的相關css設定*/
+/*↓------------------------------↓*/
+/*.notebook和.help的容器*/
+.buttons {
+	margin:-145px 7px 0 0px;
+	display: block;
+	float:right;
+}
+/*新手上路按鈕*/
+.help {
+	display: inline-block;
+	margin:0px 0px 0 0;
+	float:right;
+}
+.help img {
+	width:24px;
+	cursor: pointer;
+}
+/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+.notebook {
+	display: inline-block;
+	margin:0px 0px 0 7px;
+	float:right;
+}
+.notebook img {
+	width:25px; 
+	cursor:pointer;
+}
+/*↑------------------------------↑*/
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ */
+
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:769px) {
+	
+	/*●無媒體檔的頁面：需設定寬高*/
+	.pageWrapper {
+		width:100%; /*原width:800px*/
+	}
+	
+	
+	/*最上方標題列.g203_header*/
+	/*↓------------------------------↓*/
+	.g209_header {
+	}
+	.g209_headerString {
+	}
+	/*↑------------------------------↑*/
+	
+	
+	/*圖文區塊*/
+	/*↓------------------------------↓*/
+	/*圖文區塊 - 容器外層*/
+	.textPhoto {
+	}
+	
+	/*圖文區塊 - 容器內層*/
+	.textPhoto .inner {
+		padding:20px 30px 36px 30px; /*原padding:20px 36px 36px 36px;*/
+	}
+	/*圖文區塊 - 內層裡面的標題*/
+	.textPhoto .inner .title {
+	}
+	/*圖文區塊 - 內層裡面的文字、圖形*/
+	.textPhoto .inner .text {
+		line-height: 1.7em; /*原line-height: 1.6em;*/
+	}
+	/*↑------------------------------↑*/
+	
+	
+	/*▲☆★ 「點小圖跳大圖」*/
+	/*↓------------------------------↓*/
+	/*▲☆★ - 點小圖跳大圖的圖形、一般的圖形 的容器div 
+	--- 已由程式根據externalData.js的param.rwdSmallWindowImgPercent操控寬度比例*/
+	/*.toBigPic, .normalPic {
+	}*/
+	
+	/*▲☆★ - 已在程式中設為100%*/
+	/*「.toBigPic > img」小圖本身寬度設為100%，寬度大小比例由「.toBigPic」的寬度來決定*/
+	/*.toBigPic > img {
+		width:100%;
+	}*/
+	
+	/* 放大鏡圖示的容器 (圖形具備放大功能時，自動附加放大鏡圖示)，小尺寸視窗因無法定位，所以需隱藏*/
+	.zoomIconSpan {
+		display:none; /*原display:block*/
+	}
+	/*↑------------------------------↑*/
+	
+	
+	/*「文字大小切換」*/
+	/*↓------------------------------↓*/
+	.fontSizeSwitcher {
+		background:url(); /*原在TPlayer.css - background:url(images/fontSizeSwitcherBg.png) no-repeat;*/
+	}
+	/*↑------------------------------↑*/
+	
+	
+	/*.notebook和.help*/
+	/*↓------------------------------↓*/
+	/*.notebook和.help的容器*/
+	.buttons {
+		display:none; /*原display:block*/
+	}
+	/*新手上路按鈕*/
+	.help {
+	}
+	/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+	.notebook {
+	}
+	/*↓------------------------------↓*/
+	
+	
+}
+	
+	
+/*額外為手機處理 - 小於等於380px - 所以，IE9以下，不須針對此項目處理*/
+@media screen and (max-width:380px) {
+	.g209_header {
+		-moz-background-size:890px auto;
+		-webkit-background-size:890px auto;
+		-o-background-size:890px auto;
+		background-size:890px auto;
+	}
+}	

@@ -1,0 +1,217 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+<head>
+<title>G226A「時間軸﹝A﹞」</title>
+<meta charset="utf-8">
+
+<!--G226A-->
+<!--metaTag-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--HTML5-->
+<!--[if IE]><script src="../../CommonG2/lib/html5.js"></script><![endif]-->
+<!--CSS-->
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/preloadMe.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/tPlayer_CSS/tPlayer.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/g226A_Timeline/g226A_Overlay.css">
+<link type="text/css" rel="stylesheet" href="../../CommonG2/g226A_Timeline/colorbox/colorbox.css">
+<style type="text/css">
+</style>
+
+<script>
+//--------------------------------
+var mainPath = "../../CommonG2/";
+var g226ADir = "g226A_Timeline";
+//--------------------------------
+
+//--------------------------------
+//↓↓↓
+var NOU = NOU || {};
+
+NOU.namespace = function(nsStr){
+	var parts = nsStr.split('.'),
+		parent = NOU,
+		i;
+	if(parts[0] === 'NOU'){
+		parts = parts.slice(1);
+	}
+	for (i = 0; i < parts.length; i += 1){
+		if(typeof parent[parts[i]] === 'undefined'){
+			parent[parts[i]] = {};
+		}
+		parent = parent[parts[i]];
+	}
+	return parent;
+};
+//↑↑↑
+//--------------------------------
+
+(function(){ //↓↓↓
+//>>>=============================================================>>>
+var loadJs = NOU.namespace('NOU.features.loadJs');
+var param = NOU.namespace('NOU.modules.tPlayer.param');
+//------------------------
+
+
+loadJs = {
+	m: "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,.,_,-,/,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z",
+	n: function(){
+		return loadJs.m.split(",");
+	},
+	meet: function(url, success){
+		var domScript = document.createElement('script');
+		domScript.src = url;
+		success = success || function(){};
+		domScript.onload = domScript.onreadystatechange = function() {
+		  if (!this.readyState || 'loaded' === this.readyState || 'complete' === this.readyState) {
+			success();
+			this.onload = this.onreadystatechange = null;
+			this.parentNode.removeChild(this);
+		  }
+		}
+		document.getElementsByTagName('head')[0].appendChild(domScript);
+	}
+};
+
+//1051103
+param.mainPath = mainPath;
+
+//●●●回存
+NOU.features.loadJs = loadJs;
+
+var n = loadJs.n(); //alert(n);
+
+//var nextData = n[58] + n[2] + n[17] + n[8] + n[15] + n[19] + n[18] + n[39] + n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18]; //alert(nextData);
+//loadJs.meet(nextData,function(){});
+
+//var nextData = n[6]+n[28]+n[27]+n[29]+n[40]+n[37] + n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18];  
+//alert(nextData); //g226A_next.js
+
+var nextData = n[13] + n[4] + n[23] + n[19] + n[55]+ n[0] + n[6] + n[4] + n[36] + n[9] + n[18];  
+//alert(nextData); //nextPage.js
+loadJs.meet(param.mainPath + g226ADir + '/' + nextData,function(){});
+
+//>>>=============================================================>>>
+})(); //↑↑↑
+
+</script>
+
+</head>
+
+
+<body>
+<!-- Preloader - 1050108 -->
+<!--**************************************-->
+<div id="preloader" style="display:none"><div id="status">&nbsp;</div></div>
+<script>document.getElementById("preloader").style.display="block";</script>
+<!--**************************************-->
+
+
+<!--頁面容器.pageWrapper-->
+<div class="pageWrapper">
+
+<!--標題列-->
+<div class="g226A_header">
+	<span class="menuBtnOuter">
+    	<sapn class="menuBtn"></sapn>
+    </span>
+    <!--為無障礙2.0之FreeGo2.0軟體檢測，而改為h1 Tag-->
+	<h1 class="topic"></h1>
+</div>
+
+<!--rwd小尺寸式窗時，用來關閉分頁內容的關閉按鈕所在的橫列-->
+<!--<div class="rwdCloseContentColumn">
+	<span class="rwdCloseContentBtn"></span>
+</div>-->
+
+
+<!--.g226A_workArea：在g226A_header下方的整個工作區塊-->
+<div class="g226A_workArea">
+<!--============================================-->
+    
+    <!--<div class="help"><a><img alt="前往新手上路" title="前往「新手上路」"></a></div>-->
+    
+    <div class="timelineWrapper">
+        <div class="leftBtn" alt="載入前一組選單" title="載入前一組選單"></div>
+        <div class="timeline"></div>
+        <div class="rightBtn" alt="載入下一組選單" title="載入下一組選單"></div>
+	</div>
+	
+	<iframe class="iframeTag" name="iframeTag" title="子頁面載入此iframe"></iframe>
+
+<!--============================================-->
+</div>
+<!--.g226A_workArea-->
+
+
+
+<!--分頁資料-->
+<div class="linkDataZone">
+
+	<div class="set"><!--用以下方式可個別控制.label的字級大小-->
+		<div class="label"><span style="font-size:0.95em">G209A_<br>WebTextPhoto</span></div>
+		<div class="linkData">../G209A_WebTextPhoto/index.html</div>
+	</div>
+
+	<div class="set"><!--用以下方式可個別控制.label的字級大小-->
+		<div class="label"><span style="font-size:0.95em">G207_<br>InVideoQuiz</span></div>
+		<div class="linkData">../G207_InVideoQuiz/index.html</div>
+	</div>
+
+	<div class="set"><!--用以下方式可個別控制.label的字級大小-->
+		<div class="label"><span style="font-size:0.95em">G202_<br>Video640x360</span></div>
+		<div class="linkData">../G202_Video640x360/index.html</div>
+	</div>
+
+	<div class="set"><!--用以下方式可個別控制.label的字級大小-->
+		<div class="label"><span style="font-size:0.9em">G205_<br>ScreenRecordVideo</span></div>
+		<div class="linkData">../G205_ScreenRecordVideo800x600/index.html</div>
+	</div>
+	
+    <!--一組資料-->
+	<div class="set"><!--用以下方式可個別控制.label的字級大小-->
+    	<div class="label"><span style="font-size:1.0em">前言</span></div>
+    	<div class="linkData">../g226A_pages/p1.html</div>
+    </div>
+    
+    <div class="set">
+    	<div class="label">1968-1976</div>
+    	<div class="linkData">../g226A_pages/p2.html</div>
+    </div>
+    
+    <div class="set">
+    	<div class="label">1980年代</div>
+    	<div class="linkData">../g226A_pages/p3.html</div>
+    </div>
+    
+    <div class="set">
+    	<div class="label">1990年代上半期</div>
+    	<div class="linkData">../g226A_pages/p4.html</div>
+    </div>
+    
+    <div class="set">
+    	<div class="label">1990年代下半期</div>
+    	<div class="linkData">../g226A_pages/p5.html</div>
+    </div>
+    
+    <div class="set">
+    	<div class="label">2000年以後</div>
+    	<div class="linkData">../g226A_pages/p6.html</div>
+    </div>
+
+    
+</div>
+
+
+                
+    
+</div>
+<!--頁面容器.pageWrapper-->
+
+
+<!--測試用，已在CSS裡面隱藏-->
+<div class="showInfo"></div>
+
+</body>
+</html>

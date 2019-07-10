@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無標題文件</title>
+
+<!-- optimize mobile versions -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Flowplayer skin -->
+   <link rel="stylesheet" href="http://releases.flowplayer.org/7.2.2/skin/skin.css">
+   
+   <!-- Minimal styling for this standalone page, can be removed -->
+   <link rel="stylesheet" href="http://demos.flowplayer.com/media/css/demo.css">
+   <!-- Syntax highlighting of source code, can be removed -->
+   <link rel="stylesheet" href="http://demos.flowplayer.com/media/css/pygments.css">
+
+<!-- Flowplayer library -->
+<script src="http://releases.flowplayer.org/7.2.2/flowplayer.min.js"></script>
+<!-- Flowplayer hlsjs engine (light) -->
+<script src="http://releases.flowplayer.org/hlsjs/flowplayer.hlsjs.light.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="player" class="fp-slim"></div>
+
+<script>
+
+flowplayer("#player", {
+  aspectRatio: "12:5",
+  clip: {
+    sources: [
+      { type: "application/x-mpegurl", src: "http://lodm.nou.edu.tw:1935/vod/_definst_/5298/mp4:g202/5-1.mp4/playlist.m3u8" },
+      { type: "video/mp4",             src: "http://edge.flowplayer.org/bauhaus.mp4"  }
+    ],
+    title: "Javascript setup"
+  }
+});
+
+</script>
+
+</body>
+</html>

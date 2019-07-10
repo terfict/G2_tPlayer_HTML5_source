@@ -1,0 +1,358 @@
+﻿@charset "utf-8";
+/* CSS Document - G201A│g201A_Overlay.css */
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background: #B39B82;
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 100%;
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px=0.0625em*/
+}
+
+
+/*頁面最大容器*/
+/*程式初始化時，會來抓取width和min-height的字串值*/
+.pageWrapper {
+	/*margin:0 auto 0 auto;*/
+	padding:65px 0px 0px 0px; 
+	width:800px;
+	min-height:520px;
+	height:auto;
+	background:transparent url(images/viedo_1.jpg) no-repeat;
+	background-position:0 0;
+	display:block;
+}
+
+/*包裹 .mediaHeader、.mediaDiv、.playbackDiv ...之外圍容器*/
+.mediaWrapper {
+	width:400px;
+	height:auto;
+}
+
+/*標題列*/
+/*========================================*/
+/*媒體標題列-容器*/
+.mediaHeader {
+	padding:2px 0 2px 0; /*原padding:5px 0 5px 0*/
+}
+/*標題列-icon-容器*/
+.icon {
+	padding:0 18px 0 23px; /*原padding:0 10px 0 23px*/
+}
+/*標題列-icon-圖形*/
+.icon img {
+}
+
+/*標題列-字串-容器*/
+.mediaHeaderString {
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-weight:500; /*原font-weight:360*/
+	color:#006B10; /*原color:#333*/
+	/**/
+	width:78%;
+	/*background:#FF5456;*/
+}
+
+/*標題列右側.notebook和.help的容器*/
+.buttons {
+	/*background:#88FD83;*/
+	/**/
+	width:10%; /*若.notebook有出現，此處width改為22%*/
+}
+/*新手上路按鈕*/
+.help {
+	margin:0px 15px 0 0; /*若.notebook有出現，此處改為margin:0px 8px 0 0*/
+}
+.help img {
+}
+/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+.notebook {
+	margin:0px 8px 0 0;
+}
+.notebook img {
+}
+
+/*========================================*/
+
+/*=================================*/
+/*影音媒體-容器 - 包裝 媒體物件 和 .playbackDiv*/
+.mediaDiv {
+	width:400px; 
+	height:300px; 
+}
+
+/*播放介面UI外觀元素佈署*/
+/*=====================================================*/
+/*●●●播放控制介面-外容器●●●*/
+.playbackDiv {
+}
+/*播放控制介面-內容器*/
+/*●○●○●.pbDivInner_2有用em設定font-size，所以其內層的元素使用em需注意「級聯」關係*/
+.pbDivInner {
+}
+/*左邊界*/
+.pbLeft {
+	margin:3px 0 0 0; /*原margin:3px 10px 0 0*/
+}
+/*播放/暫停按鈕-容器*/
+.playPause {
+	/*●1070529*/
+	margin:3px 0 0 -5px; /*原margin:3px 0 0 0 ---> 3px 0 0 -15px*/
+}
+/*播放/暫停按鈕-圖形*/
+.playPause > img {
+}
+/*顯示目前播放時間-容器*/
+.currTime {
+	margin:3px 0 0 -5px; /*原margin:3px 0 0 0*/
+}
+
+/*******.barOuter、.track和.progressBar*******/
+/*↓↓↓--------------------------------*/
+
+/*.track和.progressBar的容器*/
+.barOuter {
+}
+/*播放進度列之下層軌道-容器*/
+.track {
+}
+.track > img {
+}
+/*播放進度列-容器-隨播放時間伸縮*/
+.progressBar {
+}
+/*播放進度列-圖形-隨播放時間伸縮*/
+.progressBar > img {
+}
+.slider {
+}
+.slider > img {
+}
+
+/*↑↑↑--------------------------------*/
+
+/*顯示媒體長度-容器*/
+.totalTime {
+	margin:3px -5px 0 0; /*原margin:3px 0 0 0 */
+}
+/*全畫面/一般畫面按鈕-容器*/
+.fullNormalScreen {
+	/*●1070529*/
+	margin:3px -5px 0px 0px; /*原margin:3px 0 0 0 ---> 3px -15px 0px 0px*/ 
+}
+/*全畫面/一般畫面按鈕-圖形*/
+.fullNormalScreen >img {
+}
+/*右邊界*/
+.pbRight {
+	margin:3px 0 0 0; /*原margin:3px 0 0 10px*/
+}
+
+/*●○ timeCode暫停點的圖示容器*/
+.dotSpan {
+	top:19px; /*原top:16px*/
+}
+/*=====================================================*/
+
+
+
+
+
+
+/*》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》*/
+/*●○●○●○第2組UI介面，用於小尺寸行動裝置●○●○●*/
+/*》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》*/
+
+
+
+
+
+/* 《 2 》播放介面UI外觀元素佈署 - 《 2 》 */
+/*=====================================================*/
+/*=====================================================*/
+/*=====================================================*/
+/*●●●播放控制介面-外容器●●●*/
+.playbackDiv_2 {
+}
+
+/*******.barOuter_2、.track_2和.progressBar_2*******/
+/*↓↓↓--------------------------------*/
+
+/*.track_2和.progressBar_2的容器*/
+.barOuter_2 {
+}
+/*播放進度列之下層軌道-容器*/
+.track_2 {
+}
+.track_2 > img {
+}
+/*播放進度列-容器-隨播放時間伸縮*/
+.progressBar_2 {
+}
+/*播放進度列-圖形-隨播放時間伸縮*/
+.progressBar_2 > img {
+}
+.slider_2 {
+}
+.slider_2 > img {
+}
+/*●○ timeCode暫停點的圖示容器*/
+.dotSpan_2 {
+}
+/*↑↑↑--------------------------------*/
+
+/*播放控制介面-內容器*/
+/*●○●○●.pbDivInner_2有用em設定font-size，所以其內層的元素使用em需注意「級聯」關係*/
+.pbDivInner_2 {
+}
+/*左邊界*/
+.pbLeft_2 {
+	margin:4px 7px 0px 0px; /*(.pbLeft)原 margin:3px 0 0 0*/
+}
+/*播放/暫停按鈕-容器*/
+.playPause_2 {
+	margin:4px 0 0 0; /*(.playPause)原margin:3px 0 0 -15px*/
+}
+/*播放/暫停按鈕-圖形*/
+.playPause_2 > img {
+}
+/*顯示目前播放時間-容器*/
+.currTime_2 {
+	margin:4px 0 0 0; /*(.currTime)原margin:3px 0 0 -5px*/
+}
+
+/*顯示媒體長度-容器*/
+.totalTime_2 {
+	margin:4px 20px 0 0; /*((.totalTime)原margin:3px -5px 0 0)*/
+}
+/*全畫面/一般畫面按鈕-容器*/
+.fullNormalScreen_2 {
+	margin:4px 0 0 0; /*(.fullNormalScreen)原margin:3px -15px 0px 0px*/
+}
+/*全畫面/一般畫面按鈕-圖形*/
+.fullNormalScreen_2 >img {
+}
+/*右邊界*/
+.pbRight_2 {
+	margin:4px 0 0 10px; /*(.pbRight)原margin:3px 0 0 0*/
+}
+/*=====================================================*/
+
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ */
+
+
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:769px) {
+	
+	/*●有媒體檔的頁面：.pageWrapper寬高不可設定，因，當以小尺寸視窗進入，此處若有設定寬高(100%也不行)，會抓不到大尺寸視窗的800px，而抓到此處縮小視窗寬度後的小尺寸視窗寬度。這時把視窗拉大，由於沒抓到大視窗在CSS中的初始寬度，因此無法恢復寬度 - ●已修改程式，所以可以設為100%了*/
+	.pageWrapper {
+		padding:0 0 60px 0; /*原padding:65px 0px 0px 0px*/
+		width:100%; /*原width:800px*/
+	}
+	
+	/*標題列*/
+	/*========================================*/
+	/*媒體標題列-容器*/
+	.mediaHeader {
+		/*取消圓角*/
+		border-top-left-radius:0; /*原border-top-left-radius:6px*/
+		border-top-right-radius:0; /*原border-top-right-radius:6px*/
+		
+		padding:5px 0 5px 0; /*原padding:2px 0 2px 0 - (RWD狀態下，padding的上下皆5px，高度比較合適)*/
+	}
+	
+	/*標題列-icon-容器*/
+	.icon {
+		padding:0 10px 0 23px; /*原0 18px 0 23px*/
+	}
+	
+	/*標題列-字串-容器*/
+	.mediaHeaderString {
+		/*原本與.buttons共用100%，為82%，在小尺寸視窗設為100%*/
+		width:100%;
+	}
+	/*標題列右側.notebook和.help的容器*/
+	.buttons {
+		/*與.mediaHeaderString共用100%，當.mediaHeaderString設為100%，.button自動歸0%*/
+		/*width:0%;*/
+	}
+	/*新手上路按鈕*/
+	.help {
+		/*原本為display: table-cell;*/
+		display: none;
+	}
+	/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+	.notebook {
+		/*原本為display: table-cell;*/
+		display: none;
+	}
+	/*========================================*/
+	
+
+
+
+}
+	
+	
+	
+	
+	

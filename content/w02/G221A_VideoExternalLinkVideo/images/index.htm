@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>404-error</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+
+<style type="text/css">
+body { margin:0 0 0 0; background:#e6e6e6; font-size:100%}
+#img404 { margin:0 auto 0 auto; width:1240px; height:auto; display:table; text-align:center  }
+#img404 img { width:100%; height:auto; display:none}
+#text404 { width:300px; height:660px; display: table-cell; vertical-align:middle; font-size:15em; line-height:0.6em; font-weight:800; font-family: Verdana, sans-serif; border: #FFF 1px dashed; background: #F4EBEB; border-radius:20px 20px 20px 20px; }
+#ooops { color:#000; font-size:35px; font-weight:800; line-height:5.0em }
+#description { color:#999999; font-size:0.0799em; letter-spacing:0.01em; font-weight:500; line-height:0px; margin-top:-30px; font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif }
+@media screen and (max-width:1239px) {
+	#img404 { margin:0 auto 0 auto; width:100%; height:auto; }
+}
+</style>
+<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.4.0.min.js" integrity="sha256-nxdiQ4FdTm28eUNNQIJz5JodTMCF5/l32g5LwfUwZUo=" crossorigin="anonymous"></script>
+<script>$(document).ready(function(e) {$('#img404 img').attr('src','../../../CommonG2/tPlayer_CSS/images/404-error.png');$('#img404 img').load(function(e) {$('#text404').fadeOut(480,function(){$('#img404>img').show(360);});});});
+</script>
+</head>
+
+<body>
+<div id="img404">
+	<div id="text404">
+		<span style=" color:#1f9eeb">4</span><span style=" color:#ff5146">0</span><span style=" color:#0bc59c">4</span>
+        <div id="ooops">Ooops looks like a ghost.</div>
+        <div id="description">The page you are looking for can't be found.This is a <span style=" color:#1f9eeb">404-error</span> page.</div>
+    </div>
+    
+	<img alt="404-error photo">
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+
+Dear ALL
+
+提醒一下：
+千萬記得，若要使用新釋出的 @G213A「語音+同步提示﹝A﹞」版型，必須搭配更新 tPlayer.js、tPlayer_Overlay.js
+Thanks a lot.
+
+Jack

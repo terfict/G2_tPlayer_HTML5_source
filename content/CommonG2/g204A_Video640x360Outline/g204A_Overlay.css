@@ -1,0 +1,318 @@
+﻿@charset "utf-8";
+/* CSS Document - G204A│g204A_Overlay.css */
+
+
+/* ↓↓↓ 以下CSS實際排版 */
+/*================================================================*/
+html {
+	/*捲軸顏色 - 僅適用IE，其他瀏覽器都不支援*/
+	SCROLLBAR-FACE-COLOR: #ffffff;
+	SCROLLBAR-HIGHLIGHT-COLOR:#B2BBA3;
+	SCROLLBAR-SHADOW-COLOR: #B2BBA3; 
+	SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-ARROW-COLOR: #B77743;
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+}
+
+body {
+	margin:0 0 0 0;
+	background-color: #b0d3ba;
+
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-size: 100%; 
+	line-height: 1.0em; /*100%*/
+	letter-spacing:0.0625em; /*1px/16px*/
+}
+
+/*頁面最大容器*/
+/*程式初始化時，會來抓取width和min-height的字串值*/
+.pageWrapper {
+	/*margin:0 auto 0 auto;*/
+	padding:0px 0px 0px 0px; 
+	width:830px; 
+	min-height:520px; 
+	height:620px;
+	background:#0e2539 url(images/congruent_pentagon.png);
+	background-position:-80px 0px; 
+	display:block;
+}
+
+.g204A_container {
+	margin:0 auto 0 auto;
+	width:640px;
+	height:auto;
+	display:block;
+}
+
+/*最上方標題列.g203_header*/
+/*↓------------------------------↓*/
+.g204A_header {
+	display:table;
+	margin:0 0 0px 0;
+	padding:0px 0px 0px 0px;
+	width:100%;
+	height:65px;
+}
+.g204A_headerString {
+	display:table-cell;
+	vertical-align:middle;
+	padding:2px 0px 0px 62px;
+	width:100%;
+	height:100%;
+	
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	color:#1f262f;
+	font-weight: 500;
+	font-size: 1.3em;
+	line-height: 1.0em;
+	letter-spacing:0.0625em; 
+	
+	text-shadow: 2px 2px 2px #CCC;
+	-moz-text-shadow: 2px 2px 2px #CCC;
+	-webkit-text-shadow: 2px 2px 2px #CCC;
+}
+/*↑------------------------------↑*/
+
+
+/*包裹 .mediaHeader、.mediaDiv、.playbackDiv ...等之外圍容器*/
+.mediaWrapper {
+	margin:0px auto 0px auto;
+
+	/*●藉由margin調整.mediaWrapper的位置*/
+	/*margin:0px 0px 0px 0px;*/
+	/*==================*/
+	width:640px; 
+	height:auto;
+	display: block;
+}
+
+/*大綱文字*/
+/*↓------------------------------↓*/
+.g204A_outline {
+	margin:0px auto 0px auto;
+	padding:0px 15px 5px 15px;
+	width:640px;
+	height:150px;
+	display: block;
+	overflow: auto;
+	background: #FFFFFF;
+	/**/
+	clear:both;
+}
+.g204A_subtitle {
+	margin:0px 0px 12px 2px;
+	color: #CC3300;
+	font-weight: bold;
+	font-size: 1.1em;
+	line-height: 1.0em;
+	letter-spacing:0.0625em; 
+}
+ul.g204A_ul {
+	width:100%;
+	height:auto;
+}
+ul.g204A_ul li {
+	margin:0px 0px 0px 26px;
+	color: #330000;
+	font-size: 1.0em;
+	line-height: 1.5em;
+	letter-spacing:0.0625em; 
+}
+/*↑------------------------------↑*/
+
+
+
+
+/*↓↓↓--------「點小圖跳大圖功能」--------↓↓↓*/
+
+/*有「點小圖跳大圖」功能<img>的外圍容器的class*/
+.toBigPic {
+}
+/*有「點小圖跳大圖」功能<img>*/
+.toBigPic > img {
+}
+
+/*無跳圖之小圖*/
+.normalPic > img {
+}
+
+/*↑↑↑--------「點小圖跳大圖功能」--------↑↑↑*/
+
+
+
+
+/*標提列*/
+/*========================================*/
+/*媒體標提列-容器*/
+.mediaHeader {
+}
+/*標提列-icon-容器*/
+.icon {
+	padding:0 15px 0 23px; /*原padding:0 10px 0 23px*/
+}
+/*標提列-icon-圖形*/
+.icon img {
+}
+/*標提列-字串-容器*/
+.mediaHeaderString {
+	font-family: Helvetica, Arial, 'LiHei Pro', "微軟正黑體", sans-serif;
+	font-weight:500; /*原font-weight:360*/
+	color:#252525; /*原color:#333*/
+}
+/*標提列右側.notebook和.help的容器*/
+.buttons {
+}
+/*新手上路按鈕*/
+.help {
+}
+.help img {
+}
+/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+.notebook {
+}
+.notebook img {
+}
+/*========================================*/
+
+
+.fontSizeSwitcher {
+	/*margin-top的負值會讓.fontSizeSwitcher和.g204A_outline同時往上跑*/
+	/*position的top位置，則只讓.fontSizeSwitcher往下跑*/
+	/*藉以調整.fontSizeSwitcher和.g204A_outline的垂直方向之相對位置*/
+	/*================================================================*/
+	margin:-15px -5px 0px auto; /*原margin:-10px -10px 5px auto*/ 
+	position:relative; /*原為static*/
+	top:25px; /*原無*/
+}
+
+
+
+
+/* ↓-------- Chrome、Opera等Webkit內核瀏覽器設定捲軸顏色 --------↓ */
+/* 捲軸底色 */
+::-webkit-scrollbar { 
+	background-color:#FFF;
+}
+/* 捲軸上方的箭頭 */
+::-webkit-scrollbar-button:vertical:decrement { 
+	background: url(../tPlayer_CSS/images/arrow_up.png) center center no-repeat ;
+}
+/* 捲軸下方的箭頭 */
+::-webkit-scrollbar-button:vertical:increment {
+	background: url(../tPlayer_CSS/images/arrow_down.png) center center no-repeat ;
+}
+/* 捲軸拉的軸軌的顏色 */
+::-webkit-scrollbar-thumb{
+	background-color:#FFF;
+} 
+/* 捲軸拉的垂直軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color:#FFF;
+	border-radius: 3px;
+	border:1px #B2BBA3 solid;
+}
+/* 捲軸拉的橫向軸軌設成圓角及顏色 */
+::-webkit-scrollbar-thumb:horizontal {
+	width: 50px;
+	background-color:#FFF;
+	border-radius: 3px; 
+	border:1px #B2BBA3 solid;
+}
+/*滾動軸上下左右的最上端角*/
+::-webkit-scrollbar-corner{
+	background-color: #FFF;
+} 
+/* ↑-------- Chrome、Opera等Webkit內瀏覽器設定捲軸顏色 --------↑ 
+
+
+
+
+
+
+/*--------RWD：小尺寸視窗css--------*/
+/*------------------------------------------------*/
+/*externalData.js的[param.breakpoint]所設的斷點數值 必須和這裏一致。*/
+@media screen and (max-width:769px) {
+	
+	/*●有媒體檔的頁面：.pageWrapper寬高不可設定，因，當以小尺寸視窗進入，此處若有設定寬高(100%也不行)，會抓不到大尺寸視窗的800px，而抓到此處縮小視窗寬度後的小尺寸視窗寬度。這時把視窗拉大，由於沒抓到大視窗在CSS中的初始寬度，因此無法恢復寬度 - ●已修改程式，所以可以設為100%了*/
+	.pageWrapper {
+		padding:0 0 60px 0; /*原padding:0px 0px 0px 0px*/
+		width:100%;
+	}
+	
+	/*標提列*/
+	/*========================================*/
+	/*媒體標提列-容器*/
+	.mediaHeader {
+		/*取消圓角*/
+		border-top-left-radius:0; /*原border-top-left-radius:6px*/
+		border-top-right-radius:0; /*原border-top-right-radius:6px*/
+	}
+	
+	/*標提列-icon-容器*/
+	.icon {
+		padding:0 10px 0 17px; /*原padding:0 15px 0 23px*/
+	}
+	
+	/*標提列-字串-容器*/
+	.mediaHeaderString {
+		width:100%; /*原本與.buttons共用100%，為82%，在小尺寸視窗設為100%*/
+	}
+	/*標提列右側.notebook和.help的容器*/
+	.buttons {
+		/*與.mediaHeaderString共用100%，當.mediaHeaderString設為100%，.button自動歸0%*/
+		/*width:18%;*/
+	}
+	/*新手上路按鈕*/
+	.help {
+		display: none; /*原本為display: table-cell;*/
+	}
+	/*◎旭聯平台/課程「筆記本」(原名：個人筆記)*/
+	.notebook {
+		display: none; /*原本為display: table-cell;*/
+	}
+	/*========================================*/
+	
+	
+	.g204A_outline {
+		width:100%;
+		height:auto;
+	}
+	
+	.fontSizeSwitcher {
+		background:url(); /*原在TPlayer.css - background:url(images/fontSizeSwitcherBg.png) no-repeat*/
+	}
+	
+	
+	/*▲☆★ 「點小圖跳大圖」、「無點小圖跳大圖」*/
+	/*↓------------------------------↓*/
+	/*▲☆★ - 「點小圖跳大圖」、「無點小圖跳大圖」 的容器div 
+	--- 已由程式根據externalData.js的param.rwdSmallWindowImgPercent操控寬度，高度自動比例*/
+	/*.toBigPic, normalPic {
+	}*/
+	
+	/*▲☆★ - 已在程式中設為100%*/
+	/*「.toBigPic > img」小圖本身寬度設為100%，則寬度由「.toBigPic」的寬度來決定*/
+	/*.toBigPic > img {
+	}*/
+	
+	/*▲☆★ - 已在程式中設為100%*/
+	/*==============================================================*/
+	/*.normalPic > img {
+	}*/
+	/*==============================================================*/
+	
+	
+	/* 放大鏡圖示的容器 (圖形具備放大功能時，自動附加放大鏡圖示)，小尺寸視窗因無法定位，所以需隱藏*/
+	.zoomIconSpan {
+		display:none; /*原display:block*/
+	}
+	/*↑------------------------------↑*/
+
+	
+}
+	
+	
+	

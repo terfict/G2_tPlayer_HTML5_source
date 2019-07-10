@@ -1,0 +1,19 @@
+
+753
+
+//1051115
+	//1070507 - 為無障礙版型G227A，新增param.fontSizeOffsetMax、param.fontSizeOffsetMin
+	//定義在 G227A的external.js。當然也可定義在 g227A_Overlay.js裡。
+	var fontSizeOffsetMax = param.fontSizeOffsetMax || 8;
+	var fontSizeOffsetMin = param.fontSizeOffsetMin || -6;
+
+
+
+
+
+
+
+
+
+
+
